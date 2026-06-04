@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NCard, NButton, NUpload, NAlert, NProgress, useMessage } from 'naive-ui'
+import { NCard, NButton, NUpload, NAlert, NProgress, NInput, useMessage } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { getProjects, getCategories, getSettings, saveSettings, saveJSON } from '../../utils/api'
 import { DEFAULT_SETTINGS } from '../../defaults'
+import { commitAllData } from '../../utils/githubRepo'
 
 const message = useMessage()
 
@@ -103,6 +104,24 @@ function resetDefaults() {
   saveSettings(DEFAULT_SETTINGS)
   message.success('设置已恢复为默认值')
 }
+
+/* ========== 发布到 GitHub ========== */
+const publishing = ref(false)
+const commitUrl = ref('')
+
+async function publishToRepo() {
+  publishing.value = true
+  commitUrl.value = ''
+  try {
+    const result = await commitAllData()
+    commitUrl.value = `https://github.com/${result.repo}/commits/main`
+    message.success(`已提交 ${result.files} 个文件到 ${result.repo}，等待构建部署...`)
+  } catch (e: any) {
+    message.error('发布失败: ' + e.message)
+  } finally {
+    publishing.value = false
+  }
+}
 </script>
 
 <template>
@@ -114,6 +133,16 @@ function resetDefaults() {
       <NButton type="primary" :loading="exporting" :disabled="exporting" @click="exportData">
         导出数据
       </NButton>
+    </NCard>
+
+    <NCard title="🚀 发布到 GitHub" size="small" class="action-card">
+      <p class="card-desc">将 localStorage 中的所有数据（项目、分类、设置）提交到仓库，触发 GitHub Pages 重新构建，所有用户即可看到更新</p>
+      <div class="publish-actions">
+        <NButton type="primary" :loading="publishing" :disabled="publishing" @click="publishToRepo">
+          {{ publishing ? '提交中...' : '发布到 GitHub' }}
+        </NButton>
+        <a v-if="commitUrl" :href="commitUrl" target="_blank" class="commit-link">查看提交记录 →</a>
+      </div>
     </NCard>
 
     <NCard title="📥 导入数据" size="small" class="action-card">
@@ -147,6 +176,9 @@ function resetDefaults() {
 .card-desc { font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0 0 12px; }
 .import-progress { margin-top: 12px; }
 .bake-actions { display: flex; align-items: center; gap: 12px; }
+.publish-actions { display: flex; align-items: center; gap: 12px; }
+.commit-link { font-size: 0.85rem; color: var(--primary-color, #18a058); text-decoration: none; }
+.commit-link:hover { text-decoration: underline; }
 .info-alert { max-width: 680px; }
 .info-alert code { font-size: 0.8rem; background: var(--code-bg, #f5f5f5); padding: 1px 4px; border-radius: 3px; }
 </style>
