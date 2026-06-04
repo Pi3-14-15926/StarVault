@@ -5,7 +5,7 @@ import type { UploadFileInfo } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { getProjects, getCategories, getSettings, saveSettings, saveJSON } from '../../utils/api'
 import { DEFAULT_SETTINGS } from '../../defaults'
-import { commitAllData } from '../../utils/githubRepo'
+import { commitAllData, triggerSync, triggerSyncBackup } from '../../utils/githubRepo'
 
 const message = useMessage()
 
@@ -105,6 +105,34 @@ function resetDefaults() {
   message.success('设置已恢复为默认值')
 }
 
+/* ========== GitHub Actions 触发 ========== */
+const syncing = ref(false)
+const backingUp = ref(false)
+
+async function runSync() {
+  syncing.value = true
+  try {
+    await triggerSync()
+    message.success('已触发同步工作流，可在 Actions 中查看进度')
+  } catch (e: any) {
+    message.error('触发失败: ' + e.message)
+  } finally {
+    syncing.value = false
+  }
+}
+
+async function runBackup() {
+  backingUp.value = true
+  try {
+    await triggerSyncBackup()
+    message.success('已触发备份工作流，可在 Actions 中查看进度')
+  } catch (e: any) {
+    message.error('触发失败: ' + e.message)
+  } finally {
+    backingUp.value = false
+  }
+}
+
 /* ========== 发布到 GitHub ========== */
 const publishing = ref(false)
 const commitUrl = ref('')
@@ -133,6 +161,19 @@ async function publishToRepo() {
       <NButton type="primary" :loading="exporting" :disabled="exporting" @click="exportData">
         导出数据
       </NButton>
+    </NCard>
+
+    <NCard title="🔄 GitHub Actions" size="small" class="action-card">
+      <p class="card-desc">在 GitHub 服务器上自动执行，无需本地环境</p>
+      <div class="action-row">
+        <NButton :loading="syncing" :disabled="syncing" @click="runSync">
+          同步 Release
+        </NButton>
+        <NButton type="primary" :loading="backingUp" :disabled="backingUp" @click="runBackup">
+          同步 + WebDAV 备份
+        </NButton>
+        <span class="hint-text">每 6 小时自动执行，也可手动触发</span>
+      </div>
     </NCard>
 
     <NCard title="🚀 发布到 GitHub" size="small" class="action-card">
@@ -177,6 +218,8 @@ async function publishToRepo() {
 .import-progress { margin-top: 12px; }
 .bake-actions { display: flex; align-items: center; gap: 12px; }
 .publish-actions { display: flex; align-items: center; gap: 12px; }
+.action-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.hint-text { font-size: 0.8rem; color: var(--text-secondary, #888); }
 .commit-link { font-size: 0.85rem; color: var(--primary-color, #18a058); text-decoration: none; }
 .commit-link:hover { text-decoration: underline; }
 .info-alert { max-width: 680px; }

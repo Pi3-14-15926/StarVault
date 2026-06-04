@@ -72,6 +72,33 @@ async function commitFile(path: string, content: string, message: string): Promi
   }
 }
 
+/** 触发 GitHub Actions 工作流 */
+export async function triggerWorkflow(workflow: string): Promise<void> {
+  const token = getToken()
+  if (!token) throw new Error('未登录，请先登录')
+  const { owner, repo } = getRepoInfo()
+
+  const res = await fetch(`${API_BASE}/repos/${owner}/${repo}/actions/workflows/${workflow}/dispatches`, {
+    method: 'POST',
+    headers: headers(),
+    body: JSON.stringify({ ref: 'main' }),
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ message: `HTTP ${res.status}` }))
+    throw new Error(err.message || '触发失败')
+  }
+}
+
+/** 触发同步 Release 工作流 */
+export async function triggerSync(): Promise<void> {
+  await triggerWorkflow('sync.yml')
+}
+
+/** 触发同步 + WebDAV 备份工作流 */
+export async function triggerSyncBackup(): Promise<void> {
+  await triggerWorkflow('sync-backup.yml')
+}
+
 /** 将所有数据提交到仓库，触发 GitHub Pages 重新构建 */
 export async function commitAllData(): Promise<{ files: number; repo: string }> {
   const token = getToken()

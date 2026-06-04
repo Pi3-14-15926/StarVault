@@ -23,10 +23,11 @@ export function saveJSON<T>(key: string, data: T): void {
 }
 
 /* ========== 远程数据加载 (GitHub Pages) ========== */
+const BASE = import.meta.env.BASE_URL || '/'
 const DATA_FILES: Record<string, string> = {
-  sh_projects: '/data/projects.json',
-  sh_categories: '/data/categories.json',
-  sh_settings: '/data/settings.json',
+  sh_projects: `${BASE}data/projects.json`,
+  sh_categories: `${BASE}data/categories.json`,
+  sh_settings: `${BASE}data/settings.json`,
 }
 
 async function fetchRemoteJSON<T>(key: string, fallback: T): Promise<T> {
