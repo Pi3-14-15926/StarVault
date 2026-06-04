@@ -6,6 +6,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch: # 支持手动触发
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT || github.token }}
+          token: ${{ secrets.GH_TOKEN || github.token }}
 
       - name: 安装 Node.js
         uses: actions/setup-node@v4
@@ -26,7 +29,7 @@ jobs:
       - name: 执行同步脚本
         run: npx tsx scripts/syncReleases.ts
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT || '' }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: 提交变更
         run: |
