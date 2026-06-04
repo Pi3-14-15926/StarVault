@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "mpwplwvrfti2db",
+    "name": "阅读",
+    "slug": "yuedu",
+    "sortOrder": 0,
+    "icon": "📖",
+    "description": "阅读软件"
+  },
+  {
+    "id": "mpwqe2ab42aot0",
+    "name": "音乐",
+    "slug": "music",
+    "sortOrder": 1,
+    "icon": "🎵",
+    "description": "音乐软件"
+  },
+  {
+    "id": "mpzijdnwrchrgw",
+    "name": "动漫",
+    "slug": "dongman",
+    "icon": "📺",
+    "description": "动漫软件",
+    "sortOrder": 2
+  }
+]
