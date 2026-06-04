@@ -2,6 +2,7 @@
 import type { Project, Category, Settings, SyncResult } from '../types'
 import { uid } from './index'
 import { fetchReleases, releaseToVersion, fetchRepoInfo } from './github'
+import { DEFAULT_SETTINGS } from '../defaults'
 
 /* ========== 本地存储键名 ========== */
 const KEY_PROJECTS = 'sh_projects'
@@ -9,7 +10,7 @@ const KEY_CATEGORIES = 'sh_categories'
 const KEY_SETTINGS = 'sh_settings'
 
 /* ========== 读取 / 写入 ========== */
-function loadJSON<T>(key: string, fallback: T): T {
+export function loadJSON<T>(key: string, fallback: T): T {
   try {
     const raw = localStorage.getItem(key)
     return raw ? JSON.parse(raw) : fallback
@@ -17,7 +18,7 @@ function loadJSON<T>(key: string, fallback: T): T {
     return fallback
   }
 }
-function saveJSON<T>(key: string, data: T): void {
+export function saveJSON<T>(key: string, data: T): void {
   localStorage.setItem(key, JSON.stringify(data))
 }
 
@@ -135,21 +136,7 @@ export function deleteCategory(id: string): void {
 
 /* ========== 设置 ========== */
 export function getSettings(): Settings {
-  return loadJSON<Settings>(KEY_SETTINGS, {
-    siteName: 'Software Hub',
-    logo: 'https://i.postimg.cc/j5yhCmXp/dog.png',
-    admins: ['Pi3-14-15926'],
-    footer: 'Powered by Software Hub',
-    storageNote: '收藏精品软件',
-    ghProxyEnabled: false,
-    ghProxyUrl: 'https://gh.api.99988866.xyz/',
-    schedule: {
-      syncEnabled: false,
-      syncIntervalHours: 6,
-      backupEnabled: false,
-      backupIntervalHours: 24,
-    },
-  })
+  return loadJSON<Settings>(KEY_SETTINGS, DEFAULT_SETTINGS)
 }
 export function saveSettings(s: Settings): void {
   saveJSON(KEY_SETTINGS, s)

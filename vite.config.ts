@@ -11,6 +11,5 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  // GitHub Pages 部署时修改为你的仓库名
-  // base: '/software-hub/',
+  base: '/SoftwareHub/',
 })

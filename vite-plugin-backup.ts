@@ -1,6 +1,8 @@
 import type { Plugin, ViteDevServer } from 'vite'
 import type { IncomingMessage, ServerResponse } from 'http'
 import { createClient, type WebDAVClient, type FileStat } from 'webdav'
+import { writeFileSync } from 'fs'
+import { resolve } from 'path'
 
 interface BackupProject {
   categoryName: string
@@ -398,6 +400,25 @@ function handleWebdavConfig(req: IncomingMessage, res: ServerResponse) {
   req.on('error', () => res.end())
 }
 
+function handleBakeDefaults(req: IncomingMessage, res: ServerResponse) {
+  let raw = ''
+  req.on('data', (chunk: string) => (raw += chunk))
+  req.on('end', () => {
+    try {
+      const settings = JSON.parse(raw)
+      const code = `import type { Settings } from './types'\n\nexport const DEFAULT_SETTINGS: Settings = ${JSON.stringify(settings, null, 2)}\n`
+      const filePath = resolve(__dirname, 'src', 'defaults.ts')
+      writeFileSync(filePath, code, 'utf-8')
+      res.writeHead(200, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ success: true }))
+    } catch (e: any) {
+      res.writeHead(500, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ success: false, error: e.message }))
+    }
+  })
+  req.on('error', () => res.end())
+}
+
 export function backupPlugin(): Plugin {
   return {
     name: 'backup-plugin',
@@ -428,6 +449,11 @@ export function backupPlugin(): Plugin {
 
         if (req.url === '/__backup-webdav-config') {
           handleWebdavConfig(req, res)
+          return
+        }
+
+        if (req.method === 'POST' && req.url === '/__bake-defaults') {
+          handleBakeDefaults(req, res)
           return
         }
 

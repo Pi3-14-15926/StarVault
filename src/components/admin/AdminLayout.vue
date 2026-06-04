@@ -15,6 +15,7 @@ const menuOptions: MenuOption[] = [
   { label: '软件管理', key: '/admin/projects', icon: () => '📦' },
   { label: '页面管理', key: '/admin/categories', icon: () => '📂' },
   { label: 'WebDAV 备份', key: '/admin/backup', icon: () => '💾' },
+  { label: '导入导出', key: '/admin/backup-data', icon: () => '📋' },
   { label: '网站设置', key: '/admin/settings', icon: () => '⚙️' },
 ]
 
