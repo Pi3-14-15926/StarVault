@@ -58,6 +58,14 @@ function writeJSON(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8')
 }
 
+/** 给 Promise 加超时 */
+function withTimeout(promise, ms) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error(`操作超时 (${ms}ms)`)), ms)),
+  ])
+}
+
 /** 安全 fetch（支持超时和认证） */
 async function apiFetch(url, options = {}) {
   const headers = {
@@ -81,6 +89,20 @@ async function fetchReleases(repo) {
   if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText}`)
   return res.json()
 }
+
+/** 解析文件大小（如 "150.2 MB" → 字节） */
+function parseSize(sizeStr) {
+  const m = String(sizeStr).match(/^([\d.]+)\s*(KB|MB|GB)/i)
+  if (!m) return 0
+  const num = parseFloat(m[1])
+  const unit = m[2].toUpperCase()
+  if (unit === 'KB') return num * 1024
+  if (unit === 'MB') return num * 1024 * 1024
+  if (unit === 'GB') return num * 1024 * 1024 * 1024
+  return 0
+}
+
+const MAX_FILE_SIZE = 200 * 1024 * 1024  // 200MB 跳过
 
 /** 从文件名猜平台 */
 function guessPlatform(name) {
@@ -165,6 +187,13 @@ function getCategoryName(categories, categoryId) {
   return c ? c.name : '未分类'
 }
 
+/** 给 WebDAV 操作加超时 */
+function webdavOp(promise, label) {
+  return withTimeout(promise, 30000).catch(e => {
+    throw new Error(`${label}: ${e.message}`)
+  })
+}
+
 /** 创建 WebDAV 远程目录（递归） */
 async function ensureRemoteDir(client, dirPath) {
   const parts = dirPath.split('/').filter(Boolean)
@@ -172,11 +201,11 @@ async function ensureRemoteDir(client, dirPath) {
   for (const p of parts) {
     acc += '/' + p
     try {
-      if (!(await client.exists(acc))) {
-        await client.createDirectory(acc)
+      if (!(await webdavOp(client.exists(acc), `检查目录 ${acc}`))) {
+        await webdavOp(client.createDirectory(acc), `创建目录 ${acc}`)
       }
     } catch {
-      try { await client.createDirectory(acc) } catch { /* ignore */ }
+      try { await webdavOp(client.createDirectory(acc), `重试创建目录 ${acc}`) } catch { /* ignore */ }
     }
   }
 }
@@ -184,7 +213,7 @@ async function ensureRemoteDir(client, dirPath) {
 /** WebDAV 清理旧版本 */
 async function cleanupOldBackups(client, projectDir) {
   try {
-    const entries = await client.getDirectoryContents(projectDir)
+    const entries = await webdavOp(client.getDirectoryContents(projectDir), `列出目录 ${projectDir}`)
     const dirs = entries
       .filter(e => e.type === 'directory')
       .sort((a, b) => {
@@ -193,7 +222,7 @@ async function cleanupOldBackups(client, projectDir) {
         return bm - am
       })
     for (const entry of dirs.slice(KEEP_VERSIONS)) {
-      await client.deleteFile(entry.filename)
+      await webdavOp(client.deleteFile(entry.filename), `删除 ${entry.basename || entry.filename}`)
       log(`  清理旧版本: ${entry.basename || entry.filename}`)
     }
   } catch { /* ignore */ }
@@ -220,7 +249,8 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
   const versionDir = `${WEBDAV_BASE_DIR}/${safeCategory}/${safeProject}/${dateStr}_${safeVer}`
 
   try {
-    if (await client.exists(versionDir)) {
+    const exists = await webdavOp(client.exists(versionDir), `检查版本目录 ${versionDir}`)
+    if (exists) {
       return { version: version.version, status: 'skip', message: '已存在' }
     }
 
@@ -228,16 +258,23 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
     let fileCount = 0
 
     for (const dl of version.downloads) {
+      // 跳过过大的文件
+      if (parseSize(dl.size) > MAX_FILE_SIZE) {
+        log(`    ⏭ ${dl.filename} 文件过大 (${dl.size})，跳过`)
+        continue
+      }
       try {
         const original = dl.url.replace(/^https?:\/\//, '')
         const url = ghProxy ? ghProxy.replace(/\/+$/, '') + '/' + original : dl.url
-        const resp = await fetchWithTimeout(url, 120000)
+        log(`    ↓ 下载 ${dl.filename} (${dl.size})`)
+        const resp = await fetchWithTimeout(url, 300000)
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
         const buffer = Buffer.from(await resp.arrayBuffer())
-        await client.putFileContents(`${versionDir}/${dl.filename}`, buffer)
+        log(`    ↑ 上传 ${dl.filename} → WebDAV`)
+        await webdavOp(client.putFileContents(`${versionDir}/${dl.filename}`, buffer), `上传 ${dl.filename}`)
         fileCount++
       } catch (e) {
-        log(`    ✗ ${dl.filename} 下载失败: ${e.message}`)
+        log(`    ✗ ${dl.filename}: ${e.message}`)
       }
     }
 
