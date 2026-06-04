@@ -21,6 +21,36 @@ function saveJSON<T>(key: string, data: T): void {
   localStorage.setItem(key, JSON.stringify(data))
 }
 
+/* ========== 远程数据加载 (GitHub Pages) ========== */
+const DATA_FILES: Record<string, string> = {
+  sh_projects: '/data/projects.json',
+  sh_categories: '/data/categories.json',
+  sh_settings: '/data/settings.json',
+}
+
+async function fetchRemoteJSON<T>(key: string, fallback: T): Promise<T> {
+  try {
+    const res = await fetch(DATA_FILES[key])
+    if (!res.ok) return fallback
+    return await res.json()
+  } catch {
+    return fallback
+  }
+}
+
+/** 生产环境下从 GitHub Pages JSON 文件加载数据到 localStorage */
+export async function loadRemoteData(): Promise<void> {
+  if (!import.meta.env.PROD) return
+  const [projects, categories, settings] = await Promise.all([
+    fetchRemoteJSON<Project[]>('sh_projects', []),
+    fetchRemoteJSON<Category[]>('sh_categories', []),
+    fetchRemoteJSON<Settings>('sh_settings', null as any),
+  ])
+  if (projects.length) saveJSON(KEY_PROJECTS, projects)
+  if (categories.length) saveJSON(KEY_CATEGORIES, categories)
+  if (settings) saveJSON(KEY_SETTINGS, settings)
+}
+
 /* ========== 项目 ========== */
 export function getProjects(): Project[] {
   return loadJSON<Project[]>(KEY_PROJECTS, [])
@@ -111,6 +141,14 @@ export function getSettings(): Settings {
     admins: ['Pi3-14-15926'],
     footer: 'Powered by Software Hub',
     storageNote: '收藏精品软件',
+    ghProxyEnabled: false,
+    ghProxyUrl: 'https://gh.api.99988866.xyz/',
+    schedule: {
+      syncEnabled: false,
+      syncIntervalHours: 6,
+      backupEnabled: false,
+      backupIntervalHours: 24,
+    },
   })
 }
 export function saveSettings(s: Settings): void {

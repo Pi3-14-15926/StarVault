@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /* ===== 网站设置 ===== */
 import { ref, onMounted } from 'vue'
-import { NButton, NInput, NCard, NForm, NFormItem, useMessage } from 'naive-ui'
+import { NButton, NInput, NSwitch, NSelect, NCard, NForm, NFormItem, useMessage } from 'naive-ui'
 import { useSettingStore } from '../../store/settings'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 
@@ -11,28 +11,33 @@ const message = useMessage()
 const form = ref({
   siteName: '',
   logo: '',
-  announcement: '',
   footer: '',
   admins: '',
-  seoTitle: '',
-  seoDesc: '',
-  seoKeywords: '',
   storageNote: '',
+  ghProxyEnabled: false,
+  ghProxyUrl: '',
+  syncEnabled: false,
+  syncIntervalHours: 6,
+  backupEnabled: false,
+  backupIntervalHours: 24,
 })
 
 onMounted(() => {
   store.refresh()
   const s = store.settings
+  const sc = s.schedule
   form.value = {
     siteName: s.siteName,
     logo: s.logo,
-    announcement: s.announcement || '',
     footer: s.footer || '',
     admins: (s.admins || []).join(', '),
-    seoTitle: s.seo?.title || '',
-    seoDesc: s.seo?.description || '',
-    seoKeywords: (s.seo?.keywords || []).join(', '),
     storageNote: s.storageNote || '',
+    ghProxyEnabled: s.ghProxyEnabled ?? false,
+    ghProxyUrl: s.ghProxyUrl || '',
+    syncEnabled: sc?.syncEnabled ?? false,
+    syncIntervalHours: sc?.syncIntervalHours ?? 6,
+    backupEnabled: sc?.backupEnabled ?? false,
+    backupIntervalHours: sc?.backupIntervalHours ?? 24,
   }
 })
 
@@ -40,21 +45,20 @@ function doSave() {
   store.save({
     siteName: form.value.siteName,
     logo: form.value.logo,
-    announcement: form.value.announcement || undefined,
     footer: form.value.footer || undefined,
     admins: form.value.admins
       .split(/[,，]/)
       .map((a) => a.trim())
       .filter(Boolean),
-    seo: {
-      title: form.value.seoTitle || undefined,
-      description: form.value.seoDesc || undefined,
-      keywords: form.value.seoKeywords
-        .split(/[,，]/)
-        .map((k) => k.trim())
-        .filter(Boolean),
-    },
     storageNote: form.value.storageNote || undefined,
+    ghProxyEnabled: form.value.ghProxyEnabled,
+    ghProxyUrl: form.value.ghProxyUrl || undefined,
+    schedule: {
+      syncEnabled: form.value.syncEnabled,
+      syncIntervalHours: form.value.syncIntervalHours,
+      backupEnabled: form.value.backupEnabled,
+      backupIntervalHours: form.value.backupIntervalHours,
+    },
   })
   message.success('设置已保存')
 }
@@ -65,7 +69,7 @@ function doSave() {
   <AdminLayout>
     <h2 class="page-title">⚙️ 网站设置</h2>
 
-    <NCard class="form-card">
+    <NCard title="网站配置" class="form-card">
       <NForm :model="form" label-placement="top">
         <NFormItem label="站点名称">
           <NInput v-model:value="form.siteName" placeholder="Software Hub" />
@@ -73,10 +77,6 @@ function doSave() {
 
         <NFormItem label="网站图标">
           <NInput v-model:value="form.logo" placeholder="网站图标图片链接（可选）" />
-        </NFormItem>
-
-        <NFormItem label="公告">
-          <NInput v-model:value="form.announcement" type="textarea" rows="2" placeholder="显示在首页顶部的公告" />
         </NFormItem>
 
         <NFormItem label="页脚文字">
@@ -90,24 +90,71 @@ function doSave() {
         <NFormItem label="管理员（GitHub 用户名，逗号分隔）">
           <NInput v-model:value="form.admins" placeholder="如: user1, user2" />
         </NFormItem>
+      </NForm>
+    </NCard>
 
-        <NFormItem label="SEO 标题">
-          <NInput v-model:value="form.seoTitle" placeholder="浏览器标题" />
+    <NCard title="定时设置" class="form-card" style="margin-top:16px">
+      <NForm :model="form" label-placement="top">
+        <NFormItem label="自动同步 GitHub">
+          <NSwitch v-model:value="form.syncEnabled" />
+          <span style="margin-left:10px;font-size:0.85rem;color:var(--text-sec)">
+            {{ form.syncEnabled ? '已开启' : '已关闭' }}
+          </span>
+        </NFormItem>
+        <NFormItem v-if="form.syncEnabled" label="同步间隔">
+          <NSelect
+            v-model:value="form.syncIntervalHours"
+            :options="[
+              { label: '每 1 小时', value: 1 },
+              { label: '每 6 小时', value: 6 },
+              { label: '每 12 小时', value: 12 },
+              { label: '每天', value: 24 },
+            ]"
+          />
         </NFormItem>
 
-        <NFormItem label="SEO 描述">
-          <NInput v-model:value="form.seoDesc" type="textarea" rows="2" placeholder="页面描述" />
+        <NFormItem label="自动 WebDAV 备份">
+          <NSwitch v-model:value="form.backupEnabled" />
+          <span style="margin-left:10px;font-size:0.85rem;color:var(--text-sec)">
+            {{ form.backupEnabled ? '已开启' : '已关闭' }}
+          </span>
         </NFormItem>
-
-        <NFormItem label="SEO 关键词（逗号分隔）">
-          <NInput v-model:value="form.seoKeywords" placeholder="如: 软件下载, 多版本, 聚合" />
+        <NFormItem v-if="form.backupEnabled" label="备份间隔">
+          <NSelect
+            v-model:value="form.backupIntervalHours"
+            :options="[
+              { label: '每 1 小时', value: 1 },
+              { label: '每 6 小时', value: 6 },
+              { label: '每 12 小时', value: 12 },
+              { label: '每天', value: 24 },
+              { label: '每 3 天', value: 72 },
+              { label: '每周', value: 168 },
+            ]"
+          />
         </NFormItem>
       </NForm>
-
-      <div class="form-actions">
-        <NButton type="primary" size="large" @click="doSave">保存设置</NButton>
-      </div>
     </NCard>
+
+    <NCard title="其它" class="form-card" style="margin-top:16px">
+      <NForm :model="form" label-placement="top">
+        <NFormItem label="GitHub 下载加速">
+          <NSwitch v-model:value="form.ghProxyEnabled" />
+          <span style="margin-left:10px;font-size:0.85rem;color:var(--text-sec)">
+            {{ form.ghProxyEnabled ? '已开启' : '已关闭' }}
+          </span>
+        </NFormItem>
+        <NFormItem v-if="form.ghProxyEnabled" label="加速代理地址">
+          <NInput v-model:value="form.ghProxyUrl" placeholder="https://gh.api.99988866.xyz/" />
+          <template #feedback>
+            使用 <a href="https://github.com/hunshcn/gh-proxy" target="_blank">gh-proxy</a> 加速下载 GitHub Release 文件，默认使用公共加速节点
+          </template>
+        </NFormItem>
+      </NForm>
+    </NCard>
+
+    <div class="form-actions">
+      <NButton type="primary" size="large" @click="doSave">保存设置</NButton>
+    </div>
   </AdminLayout>
 </template>
 

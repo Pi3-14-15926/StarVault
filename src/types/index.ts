@@ -50,22 +50,33 @@ export interface Category {
   sortOrder?: number
 }
 
-/** SEO 设置 */
-export interface SeoConfig {
-  title?: string
-  description?: string
-  keywords?: string[]
+/** 定时调度设置 */
+export interface ScheduleConfig {
+  syncEnabled: boolean
+  syncIntervalHours: number
+  backupEnabled: boolean
+  backupIntervalHours: number
+}
+
+/** WebDAV 配置 */
+export interface WebDAVConfig {
+  url: string
+  username: string
+  password: string
+  baseDir: string
 }
 
 /** 站点设置 */
 export interface Settings {
   siteName: string
   logo: string
-  announcement?: string
   footer?: string
   admins: string[]
-  seo?: SeoConfig
   storageNote?: string
+  ghProxyEnabled?: boolean
+  ghProxyUrl?: string
+  schedule?: ScheduleConfig
+  webdav?: WebDAVConfig
 }
 
 /** GitHub Release API 返回的 Asset */

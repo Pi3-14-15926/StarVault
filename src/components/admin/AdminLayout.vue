@@ -3,14 +3,18 @@ import { useRouter, useRoute } from 'vue-router'
 import { NMenu, NButton, NDrawer, NDrawerContent } from 'naive-ui'
 import { ref } from 'vue'
 import type { MenuOption } from 'naive-ui'
+import { useScheduler } from '../../composables/useScheduler'
 
 const router = useRouter()
 const route = useRoute()
+
+useScheduler()
 
 const menuOptions: MenuOption[] = [
   { label: '仪表盘', key: '/admin/dashboard', icon: () => '📊' },
   { label: '软件管理', key: '/admin/projects', icon: () => '📦' },
   { label: '页面管理', key: '/admin/categories', icon: () => '📂' },
+  { label: 'WebDAV 备份', key: '/admin/backup', icon: () => '💾' },
   { label: '网站设置', key: '/admin/settings', icon: () => '⚙️' },
 ]
 

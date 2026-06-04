@@ -63,6 +63,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../views/admin/ProjectList.vue'),
   },
   {
+    path: '/admin/backup',
+    name: 'AdminBackup',
+    component: () => import('../views/admin/BackupManager.vue'),
+  },
+  {
     path: '/admin/settings',
     name: 'AdminSettings',
     component: () => import('../views/admin/SettingsForm.vue'),

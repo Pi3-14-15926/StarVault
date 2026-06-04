@@ -3,7 +3,6 @@ import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useProjectStore } from '../store/project'
 import { useCategoryStore } from '../store/category'
-import { useSettingStore } from '../store/settings'
 import ProjectCard from '../components/ProjectCard.vue'
 import AmbientOrbs from '../components/AmbientOrbs.vue'
 
@@ -11,7 +10,6 @@ const route = useRoute()
 const router = useRouter()
 const projects = useProjectStore()
 const categories = useCategoryStore()
-const settings = useSettingStore()
 
 const cat = computed(() => categories.bySlug(route.params.slug as string))
 const list = computed(() =>
@@ -36,7 +34,7 @@ const sorted = computed(() => {
       <router-link to="/" class="back-link">← 返回首页</router-link>
       <h1>{{ cat ? `${cat.icon} ${cat.name}` : '页面' }}</h1>
       <p v-if="cat?.description" class="page-desc">{{ cat.description }}</p>
-      <div class="subtitle">{{ list.length }} 个软件 · {{ settings.settings.siteName }}</div>
+      <div class="subtitle">{{ list.length }} 个软件</div>
     </header>
 
     <div class="controls" v-if="sorted.length > 1">
@@ -83,7 +81,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
-.subtitle { color: var(--text-sec); font-size: 0.92rem; }
+.subtitle { color: var(--text-sec); font-size: 0.92rem; text-align: center; }
 .back-link {
   position: absolute; top: 12px; left: 0;
   font-size: 0.85rem; color: var(--text-sec);

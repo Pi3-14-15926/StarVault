@@ -1,0 +1,44 @@
+name: Sync & Backup
+
+on:
+  schedule:
+    # 每 6 小时运行一次
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # 支持手动触发
+
+jobs:
+  sync-backup:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          # 使用 GITHUB_TOKEN 提交
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync GitHub releases & backup to WebDAV
+        run: node scripts/sync-backup.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDAV_BASE_DIR: ${{ secrets.WEBDAV_BASE_DIR || '/SoftwareHub' }}
+          GH_PROXY: ${{ secrets.GH_PROXY }}
+          KEEP_VERSIONS: ${{ vars.KEEP_VERSIONS || '2' }}

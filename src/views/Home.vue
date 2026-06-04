@@ -14,7 +14,6 @@ const accentColors = ['#2a9d8f', '#dd5e43', '#4a7cba', '#b88b4a', '#8a6db0', '#c
 
   <div class="container">
     <header>
-      <div v-if="settings.settings.announcement" class="announcement">{{ settings.settings.announcement }}</div>
       <h1>{{ settings.settings.siteName }}</h1>
       <p class="tagline">发现优质软件 · 一站下载</p>
       <div class="card-grid">
@@ -69,16 +68,6 @@ h1 {
   font-size: 0.92rem;
   margin: 0 0 32px;
 }
-.announcement {
-  background: rgba(42, 157, 143, 0.08);
-  color: var(--accent-teal);
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-
 .card-grid {
   display: flex;
   flex-wrap: wrap;

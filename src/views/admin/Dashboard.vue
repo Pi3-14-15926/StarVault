@@ -4,14 +4,12 @@ import { useRouter } from 'vue-router'
 import { NButton, NCard, NSpace } from 'naive-ui'
 import { useProjectStore } from '../../store/project'
 import { useCategoryStore } from '../../store/category'
-import { useSettingStore } from '../../store/settings'
 import { syncAllGitHub } from '../../utils/api'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 
 const router = useRouter()
 const projects = useProjectStore()
 const categories = useCategoryStore()
-const settings = useSettingStore()
 
 const syncing = ref(false)
 const syncResult = ref('')
@@ -39,7 +37,6 @@ async function doSync() {
 onMounted(() => {
   projects.refresh()
   categories.refresh()
-  settings.refresh()
 })
 </script>
 
