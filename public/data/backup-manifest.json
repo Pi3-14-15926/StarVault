@@ -599,28 +599,6 @@
     },
     {
       "category": "阅读",
-      "project": "阅读_Max",
-      "versionDir": "2026-06-04_beta-3.26.060423",
-      "files": [
-        {
-          "name": "legado_beta_3.26.060423_release.apk",
-          "size": 23924137,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-04_beta-3.26.060423/legado_beta_3.26.060423_release.apk"
-        },
-        {
-          "name": "legado_compat_3.26.060423_legacy.apk",
-          "size": 23924077,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-04_beta-3.26.060423/legado_compat_3.26.060423_legacy.apk"
-        },
-        {
-          "name": "legado_plus_3.26.060423_releaseS.apk",
-          "size": 23924084,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-04_beta-3.26.060423/legado_plus_3.26.060423_releaseS.apk"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
       "project": "阅读_MD3",
       "versionDir": "2026-05-31_3.26.13-beta.8",
       "files": [
@@ -807,5 +785,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-06-05T09:59:21.403Z"
+  "updatedAt": "2026-06-05T15:14:35.419Z"
 }

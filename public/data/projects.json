@@ -956,7 +956,7 @@
         ]
       }
     ],
-    "stars": 4279,
+    "stars": 4282,
     "forks": 413
   },
   {
@@ -1603,9 +1603,35 @@
     "featured": false,
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "latestVersion": "beta-3.26.060423",
-    "latestUpdateTime": "2026-06-04T15:18:17Z",
+    "latestVersion": "beta-3.26.060522",
+    "latestUpdateTime": "2026-06-05T14:32:41Z",
     "versions": [
+      {
+        "id": "mq11tvlhvt716l",
+        "version": "beta-3.26.060522",
+        "publishedAt": "2026-06-05T14:32:41Z",
+        "changelog": "### 更新内容\n* docs：增加java/Android的api文档\n* docs：文档修改\n* feat：增加自定义帮助文档数据模型\n* feat：实现自定义帮助文档管理器核心功能\n* feat：帮助文档管理器支持自定义文档\n* feat：帮助搜索支持自定义文档\n* feat：文本弹窗显示自定义文档分组\n* feat：增加自定义文档字符串资源\n* feat：增加自定义分组添加弹窗\n* fix：补充帮助文档相关导入\n* feat：增加自定义文档添加弹窗\n* feat：文本弹窗增加自定义文档管理按钮\n* feat：文本弹窗支持编辑自定义文档\n* feat：文档级联选择增加自定义分组和文件\n* fix：添加的文档分组显示在最后\n* cleanup：删除废弃的自定义帮助文档弹窗\n* fix：修复复用 WebView 没有恢复导致搜索页空白的问题\n* 更新\n\n",
+        "downloads": [
+          {
+            "platform": "Android",
+            "filename": "legado_beta_3.26.060522_release.apk",
+            "size": "22.9 MB",
+            "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.060522/legado_beta_3.26.060522_release.apk"
+          },
+          {
+            "platform": "Android",
+            "filename": "legado_compat_3.26.060522_legacy.apk",
+            "size": "22.9 MB",
+            "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.060522/legado_compat_3.26.060522_legacy.apk"
+          },
+          {
+            "platform": "Android",
+            "filename": "legado_plus_3.26.060522_releaseS.apk",
+            "size": "22.9 MB",
+            "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.060522/legado_plus_3.26.060522_releaseS.apk"
+          }
+        ]
+      },
       {
         "id": "mq09gfemcsp4bw",
         "version": "beta-3.26.060423",
@@ -5465,7 +5491,7 @@
         ]
       }
     ],
-    "stars": 51380,
+    "stars": 51381,
     "forks": 6847
   },
   {
@@ -8887,7 +8913,7 @@
         ]
       }
     ],
-    "stars": 18151,
+    "stars": 18154,
     "forks": 482
   },
   {
@@ -9905,7 +9931,7 @@
         ]
       }
     ],
-    "stars": 26078,
+    "stars": 26080,
     "forks": 750
   }
 ]
