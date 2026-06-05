@@ -5,23 +5,25 @@ const settings = useSettingStore()
 
 <template>
   <footer class="site-footer">
-    <p>{{ settings.settings.footer || 'Powered by Software Hub' }}</p>
-    <p v-if="settings.settings.storageNote" class="footer-note">{{ settings.settings.storageNote }}</p>
+    <div class="footer-inner">
+      <p class="footer-text">{{ settings.settings.footer || 'Powered by Software Hub' }}</p>
+      <p v-if="settings.settings.storageNote" class="footer-note">{{ settings.settings.storageNote }}</p>
+      <p class="footer-copy">© 2024 Software Hub. All rights reserved.</p>
+    </div>
   </footer>
 </template>
 
 <style scoped>
 .site-footer {
   text-align: center;
-  padding: 24px 20px;
+  padding: 32px 20px;
   color: var(--text-sec);
   font-size: 0.85rem;
-  border-top: 1px solid var(--border-color);
-  margin-top: 60px;
+  position: relative;
+  z-index: 1;
 }
-.footer-note {
-  font-size: 0.78rem;
-  opacity: 0.7;
-  margin-top: 4px;
-}
+.footer-inner { max-width: 1180px; margin: 0 auto; }
+.footer-text { margin: 0 0 4px; font-weight: 500; color: var(--text-sec); }
+.footer-note { font-size: 0.78rem; opacity: 0.7; margin: 4px 0; }
+.footer-copy { font-size: 0.78rem; color: var(--text-tertiary); margin: 8px 0 0; }
 </style>

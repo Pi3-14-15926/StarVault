@@ -1,5 +1,5 @@
 <script setup lang="ts">
-/* ===== 背景装饰浮动光球 ===== */
+/* 背景装饰浮动光球 — HyperOS 风格柔和渐变 */
 </script>
 
 <template>
@@ -12,32 +12,45 @@
 
 <style scoped>
 .ambient {
-  position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 .orb {
   position: absolute;
-  width: 420px; height: 420px;
   border-radius: 50%;
-  opacity: 0.45;
-  mix-blend-mode: multiply;
-  animation: float 14s ease-in-out infinite;
+  filter: blur(60px);
+  opacity: 0.55;
+  animation: float 18s ease-in-out infinite;
+  will-change: transform;
 }
 .orb-1 {
-  top: -120px; left: -80px;
-  background: radial-gradient(circle at 30% 30%, #f2b39b, transparent 70%);
+  width: 480px;
+  height: 480px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(52, 120, 246, 0.35) 0%, transparent 70%);
 }
 .orb-2 {
-  top: 20%; right: -160px;
-  background: radial-gradient(circle at 30% 30%, #9fd3c7, transparent 70%);
-  animation-delay: 1.5s;
+  width: 520px;
+  height: 520px;
+  top: 20%;
+  right: -180px;
+  background: radial-gradient(circle, rgba(140, 108, 255, 0.35) 0%, transparent 70%);
+  animation-delay: 2s;
 }
 .orb-3 {
-  bottom: -180px; left: 30%;
-  background: radial-gradient(circle at 40% 40%, #f5d76e, transparent 70%);
-  animation-delay: 3s;
+  width: 460px;
+  height: 460px;
+  bottom: -200px;
+  left: 25%;
+  background: radial-gradient(circle, rgba(79, 193, 255, 0.3) 0%, transparent 70%);
+  animation-delay: 4s;
 }
 @keyframes float {
   0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-  50%      { transform: translateY(30px) translateX(-20px) scale(1.05); }
+  50%      { transform: translateY(40px) translateX(-30px) scale(1.08); }
 }
 </style>

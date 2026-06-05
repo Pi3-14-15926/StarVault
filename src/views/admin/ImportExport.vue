@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NCard, NButton, NUpload, NAlert, NProgress, NInput, useMessage } from 'naive-ui'
+import { NUpload, NProgress, NAlert, useMessage } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { getProjects, getCategories, getSettings, saveSettings, saveJSON } from '../../utils/api'
@@ -8,8 +8,14 @@ import { DEFAULT_SETTINGS } from '../../defaults'
 import { commitAllData, triggerSync, triggerSyncBackup } from '../../utils/githubRepo'
 
 const message = useMessage()
-
 const exporting = ref(false)
+const importing = ref(false)
+const importProgress = ref(0)
+const baking = ref(false)
+const syncing = ref(false)
+const backingUp = ref(false)
+const publishing = ref(false)
+const commitUrl = ref('')
 
 function exportData() {
   exporting.value = true
@@ -36,33 +42,26 @@ function exportData() {
   }
 }
 
-const importing = ref(false)
-const importProgress = ref(0)
-
 function importFromJSON({ file }: { file: UploadFileInfo }) {
   if (importing.value || !file.file) return
   importing.value = true
   importProgress.value = 0
-
   const reader = new FileReader()
   reader.onload = (e) => {
     try {
       const text = e.target?.result as string
       const data = JSON.parse(text)
-
       if (!data.projects || !data.categories || !data.settings) {
-        message.error('无效的备份文件：缺少必需字段 (projects, categories, settings)')
+        message.error('无效的备份文件：缺少必需字段')
         importing.value = false
         return
       }
-
       saveJSON('sh_projects', data.projects)
       importProgress.value = 33
       saveJSON('sh_categories', data.categories)
       importProgress.value = 66
       saveJSON('sh_settings', data.settings)
       importProgress.value = 100
-
       message.success(`导入成功！共 ${data.projects.length} 个项目、${data.categories.length} 个分类`)
     } catch (e: any) {
       message.error('导入失败: ' + e.message)
@@ -70,14 +69,9 @@ function importFromJSON({ file }: { file: UploadFileInfo }) {
       importing.value = false
     }
   }
-  reader.onerror = () => {
-    message.error('文件读取失败')
-    importing.value = false
-  }
+  reader.onerror = () => { message.error('文件读取失败'); importing.value = false }
   reader.readAsText(file.file as Blob)
 }
-
-const baking = ref(false)
 
 async function bakeDefaults() {
   baking.value = true
@@ -105,38 +99,24 @@ function resetDefaults() {
   message.success('设置已恢复为默认值')
 }
 
-/* ========== GitHub Actions 触发 ========== */
-const syncing = ref(false)
-const backingUp = ref(false)
-
 async function runSync() {
   syncing.value = true
   try {
     await triggerSync()
-    message.success('已触发同步工作流，可在 Actions 中查看进度')
+    message.success('已触发同步工作流')
   } catch (e: any) {
     message.error('触发失败: ' + e.message)
-  } finally {
-    syncing.value = false
-  }
+  } finally { syncing.value = false }
 }
-
 async function runBackup() {
   backingUp.value = true
   try {
     await triggerSyncBackup()
-    message.success('已触发备份工作流，可在 Actions 中查看进度')
+    message.success('已触发备份工作流')
   } catch (e: any) {
     message.error('触发失败: ' + e.message)
-  } finally {
-    backingUp.value = false
-  }
+  } finally { backingUp.value = false }
 }
-
-/* ========== 发布到 GitHub ========== */
-const publishing = ref(false)
-const commitUrl = ref('')
-
 async function publishToRepo() {
   publishing.value = true
   commitUrl.value = ''
@@ -146,82 +126,170 @@ async function publishToRepo() {
     message.success(`已提交 ${result.files} 个文件到 ${result.repo}，等待构建部署...`)
   } catch (e: any) {
     message.error('发布失败: ' + e.message)
-  } finally {
-    publishing.value = false
-  }
+  } finally { publishing.value = false }
 }
 </script>
 
 <template>
   <AdminLayout>
-    <h2 class="page-title">📋 导入导出</h2>
+    <div class="io-page">
+      <h2 class="page-title">📋 导入导出</h2>
+      <p class="page-desc">数据备份、发布到 GitHub、触发同步任务</p>
 
-    <NCard title="📤 导出数据" size="small" class="action-card">
-      <p class="card-desc">将所有数据（项目、分类、设置）导出为 JSON 文件下载</p>
-      <NButton type="primary" :loading="exporting" :disabled="exporting" @click="exportData">
-        导出数据
-      </NButton>
-    </NCard>
+      <div class="io-grid">
+        <!-- 导出 -->
+        <div class="io-card">
+          <div class="io-icon">📤</div>
+          <div class="io-content">
+            <h3 class="io-title">导出数据</h3>
+            <p class="io-desc">将所有数据（项目、分类、设置）导出为 JSON 文件下载</p>
+            <button class="btn-primary" :disabled="exporting" @click="exportData">
+              {{ exporting ? '导出中...' : '导出数据' }}
+            </button>
+          </div>
+        </div>
 
-    <NCard title="🔄 GitHub Actions" size="small" class="action-card">
-      <p class="card-desc">在 GitHub 服务器上自动执行，无需本地环境</p>
-      <div class="action-row">
-        <NButton :loading="syncing" :disabled="syncing" @click="runSync">
-          同步 Release
-        </NButton>
-        <NButton type="primary" :loading="backingUp" :disabled="backingUp" @click="runBackup">
-          同步 + WebDAV 备份
-        </NButton>
-        <span class="hint-text">每 6 小时自动执行，也可手动触发</span>
+        <!-- 导入 -->
+        <div class="io-card">
+          <div class="io-icon">📥</div>
+          <div class="io-content">
+            <h3 class="io-title">导入数据</h3>
+            <p class="io-desc">从备份 JSON 文件恢复所有数据到 localStorage</p>
+            <NUpload accept=".json" :max="1" :show-file-list="false" :disabled="importing" @change="importFromJSON">
+              <button class="btn-primary" :disabled="importing">
+                {{ importing ? '导入中...' : '选择备份文件' }}
+              </button>
+            </NUpload>
+            <NProgress v-if="importing" type="line" :percentage="importProgress" class="import-progress" />
+          </div>
+        </div>
+
+        <!-- GitHub Actions -->
+        <div class="io-card io-card-wide">
+          <div class="io-icon">⚡</div>
+          <div class="io-content">
+            <h3 class="io-title">GitHub Actions 同步</h3>
+            <p class="io-desc">在 GitHub 服务器上自动执行 Release 同步和 WebDAV 备份，无需本地环境</p>
+            <div class="action-row">
+              <button class="btn-secondary" :disabled="syncing" @click="runSync">
+                {{ syncing ? '触发中...' : '同步 Release' }}
+              </button>
+              <button class="btn-primary" :disabled="backingUp" @click="runBackup">
+                {{ backingUp ? '触发中...' : '同步 + WebDAV 备份' }}
+              </button>
+              <span class="hint-text">每 6 小时自动执行，也可手动触发</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 发布到 GitHub -->
+        <div class="io-card io-card-wide io-card-highlight">
+          <div class="io-icon">🚀</div>
+          <div class="io-content">
+            <h3 class="io-title">发布到 GitHub</h3>
+            <p class="io-desc">
+              将 localStorage 中的所有数据（项目、分类、设置）提交到仓库，触发 GitHub Pages 重新构建，所有用户即可看到更新
+            </p>
+            <div class="action-row">
+              <button class="btn-primary" :disabled="publishing" @click="publishToRepo">
+                {{ publishing ? '提交中...' : '发布到 GitHub' }}
+              </button>
+              <a v-if="commitUrl" :href="commitUrl" target="_blank" class="commit-link">查看提交记录 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 写入默认配置 -->
+        <div class="io-card">
+          <div class="io-icon">🔧</div>
+          <div class="io-content">
+            <h3 class="io-title">写入默认配置</h3>
+            <p class="io-desc">将当前设置烘焙到前端源码中，构建后所有设备样式一致</p>
+            <div class="action-row">
+              <button class="btn-primary" :disabled="baking" @click="bakeDefaults">
+                {{ baking ? '写入中...' : '写入当前设置' }}
+              </button>
+              <button class="btn-ghost" @click="resetDefaults">恢复默认</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </NCard>
 
-    <NCard title="🚀 发布到 GitHub" size="small" class="action-card">
-      <p class="card-desc">将 localStorage 中的所有数据（项目、分类、设置）提交到仓库，触发 GitHub Pages 重新构建，所有用户即可看到更新</p>
-      <div class="publish-actions">
-        <NButton type="primary" :loading="publishing" :disabled="publishing" @click="publishToRepo">
-          {{ publishing ? '提交中...' : '发布到 GitHub' }}
-        </NButton>
-        <a v-if="commitUrl" :href="commitUrl" target="_blank" class="commit-link">查看提交记录 →</a>
-      </div>
-    </NCard>
-
-    <NCard title="📥 导入数据" size="small" class="action-card">
-      <p class="card-desc">从备份 JSON 文件恢复所有数据到 localStorage</p>
-      <NUpload accept=".json" :max="1" :show-file-list="false" :disabled="importing" @change="importFromJSON">
-        <NButton :loading="importing" :disabled="importing">选择备份文件</NButton>
-      </NUpload>
-      <NProgress v-if="importing" type="line" :percentage="importProgress" class="import-progress" />
-    </NCard>
-
-    <NCard title="🔧 写入默认配置" size="small" class="action-card">
-      <p class="card-desc">将当前设置烘焙到前端源码中，构建后所有设备样式一致</p>
-      <div class="bake-actions">
-        <NButton type="primary" :loading="baking" :disabled="baking" @click="bakeDefaults">
-          写入当前设置
-        </NButton>
-        <NButton quaternary size="tiny" @click="resetDefaults">恢复默认</NButton>
-      </div>
-    </NCard>
-
-    <NAlert type="info" :bordered="false" class="info-alert">
-      <strong>注意：</strong>「写入默认配置」会将当前后台设置覆盖到 <code>src/defaults.ts</code> 文件中。
-      执行 <code>npm run build</code> 后新用户将自动使用此配置。
-    </NAlert>
+      <NAlert type="info" :bordered="false" class="info-alert">
+        <strong>注意：</strong>「写入默认配置」会将当前后台设置覆盖到 <code>src/defaults.ts</code> 文件中。执行 <code>npm run build</code> 后新用户将自动使用此配置。
+      </NAlert>
+    </div>
   </AdminLayout>
 </template>
 
 <style scoped>
-.page-title { margin: 0 0 20px; font-size: 1.3rem; }
-.action-card { max-width: 680px; margin-bottom: 16px; }
-.card-desc { font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0 0 12px; }
-.import-progress { margin-top: 12px; }
-.bake-actions { display: flex; align-items: center; gap: 12px; }
-.publish-actions { display: flex; align-items: center; gap: 12px; }
-.action-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.hint-text { font-size: 0.8rem; color: var(--text-secondary, #888); }
-.commit-link { font-size: 0.85rem; color: var(--primary-color, #18a058); text-decoration: none; }
+.io-page { display: flex; flex-direction: column; gap: 16px; max-width: 900px; }
+.page-title { margin: 0; font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
+.page-desc { margin: 0; font-size: 0.88rem; color: var(--text-tertiary); }
+
+.io-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.io-card {
+  display: flex;
+  gap: 16px;
+  background: var(--color-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 22px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.io-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.io-card-wide { grid-column: 1 / -1; }
+.io-card-highlight {
+  background: var(--gradient-primary-soft);
+  border-color: rgba(52, 120, 246, 0.2);
+}
+.io-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.io-content { flex: 1; min-width: 0; }
+.io-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 4px;
+}
+.io-desc {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+.action-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hint-text { font-size: 0.78rem; color: var(--text-tertiary); }
+.commit-link { font-size: 0.88rem; color: var(--color-primary); text-decoration: none; font-weight: 500; }
 .commit-link:hover { text-decoration: underline; }
-.info-alert { max-width: 680px; }
-.info-alert code { font-size: 0.8rem; background: var(--code-bg, #f5f5f5); padding: 1px 4px; border-radius: 3px; }
+.import-progress { margin-top: 12px; }
+
+.info-alert {
+  background: rgba(52, 120, 246, 0.06) !important;
+  border-color: rgba(52, 120, 246, 0.2) !important;
+}
+.info-alert code {
+  font-size: 0.8rem;
+  background: var(--color-card);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .io-grid { grid-template-columns: 1fr; }
+  .io-card { flex-direction: column; }
+  .io-icon { width: 36px; height: 36px; font-size: 1.2rem; }
+}
 </style>
