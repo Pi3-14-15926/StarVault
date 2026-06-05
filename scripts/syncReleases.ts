@@ -54,8 +54,8 @@ interface Project {
   versions: Version[]
 }
 
-// 数据文件路径
-const DATA_DIR = path.resolve(process.cwd(), 'data')
+// 数据文件路径（以 public/data 为准，与发布到仓库保持一致）
+const DATA_DIR = path.resolve(process.cwd(), 'public/data')
 const PROJECTS_FILE = path.join(DATA_DIR, 'projects.json')
 
 const GITHUB_API = 'https://api.github.com'

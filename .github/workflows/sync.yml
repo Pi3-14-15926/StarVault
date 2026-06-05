@@ -33,9 +33,11 @@ jobs:
 
       - name: 提交变更
         run: |
-          cp data/projects.json public/data/projects.json
+          cp public/data/projects.json data/projects.json
+          cp public/data/categories.json data/categories.json 2>/dev/null || true
+          cp public/data/settings.json data/settings.json 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/projects.json public/data/projects.json
+          git add data/ public/data/
           git diff --staged --quiet || git commit -m "chore: 自动同步 GitHub Release [skip ci]"
           git push

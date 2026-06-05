@@ -117,8 +117,11 @@ export async function commitAllData(): Promise<{ files: number; repo: string }> 
 
   const files = [
     { path: 'public/data/projects.json', content: JSON.stringify(projects, null, 2) },
+    { path: 'data/projects.json', content: JSON.stringify(projects, null, 2) },
     { path: 'public/data/categories.json', content: JSON.stringify(categories, null, 2) },
+    { path: 'data/categories.json', content: JSON.stringify(categories, null, 2) },
     { path: 'public/data/settings.json', content: JSON.stringify(settings, null, 2) },
+    { path: 'data/settings.json', content: JSON.stringify(settings, null, 2) },
   ]
 
   for (const file of files) {
