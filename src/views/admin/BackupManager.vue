@@ -92,7 +92,7 @@ async function saveWebdavConfig() {
       const res = await fetch('/__backup-webdav-config', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(webdavForm.value),
+        body: JSON.stringify(s.webdav),
       })
       const data = await res.json()
       if (data.success) {
