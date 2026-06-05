@@ -229,8 +229,8 @@
         ]
       }
     ],
-    "stars": 1669,
-    "forks": 237
+    "stars": 1671,
+    "forks": 238
   },
   {
     "id": "mpwouieuddbq2d",
@@ -956,8 +956,8 @@
         ]
       }
     ],
-    "stars": 4282,
-    "forks": 413
+    "stars": 4289,
+    "forks": 415
   },
   {
     "id": "mpwowqbvn123ig",
@@ -992,7 +992,7 @@
         ]
       }
     ],
-    "stars": 33,
+    "stars": 34,
     "forks": 9
   },
   {
@@ -1007,9 +1007,29 @@
     "featured": false,
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "latestVersion": "archive-v3-3.26.06041519",
-    "latestUpdateTime": "2026-06-04T07:32:27Z",
+    "latestVersion": "archive-v3-3.26.06060257",
+    "latestUpdateTime": "2026-06-05T19:10:35Z",
     "versions": [
+      {
+        "id": "mq1bjlaasb7xb4",
+        "version": "archive-v3-3.26.06060257",
+        "publishedAt": "2026-06-05T19:10:35Z",
+        "changelog": "阅读Archive 第九版补充更新\n\n新增：\n- 新增标准世界书功能，支持世界书管理、导入、匹配注入、角色绑定，以及在 AI 对话和阅读页中快速启用。\n- 新增 AI 角色助手侧栏，支持默认助手、角色助手、按助手隔离会话、角色卡展示和会话历史管理。\n- 新增 AI 聊天语音播放能力，支持调用角色绑定的 HTTP TTS 发言人进行播放。\n- 新增 AI 工具能力，支持角色正文检索、书籍关键词搜索和世界书编辑管理。\n- 新增 Agent 规划、工具校验、失败重试和任务检查点能力，提升复杂工具调用的稳定性。\n\n修复：\n- 修复 AI 聊天头像资源在部分场景下可能导致崩溃的问题。\n- 修复阅读页刷新目录时影响已缓存正文阅读的问题，目录刷新改为静默执行。\n- 修复正文替换净化、移除规则和缩进等设置修改后不能实时生效的问题。\n- 修复多角色自动建卡部分场景下没有创建角色卡的问题。\n- 修复多角色工具返回新角色后未正确校验和补全的问题。\n- 修复部分多角色 TTS 路由失败时频繁弹出报错的问题。\n- 修复情景演绎气泡在部分设备上可能出现异常高亮和按压残留的问题。\n",
+        "downloads": [
+          {
+            "platform": "Android",
+            "filename": "legado-arm64-v8a_app_3.26.06060257_29678097.apk",
+            "size": "34.6 MB",
+            "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06060257/legado-arm64-v8a_app_3.26.06060257_29678097.apk"
+          },
+          {
+            "platform": "Android",
+            "filename": "legado-armeabi-v7a_app_3.26.06060257_29678097.apk",
+            "size": "34.5 MB",
+            "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06060257/legado-armeabi-v7a_app_3.26.06060257_29678097.apk"
+          }
+        ]
+      },
       {
         "id": "mq09gedtfzef1m",
         "version": "archive-v3-3.26.06041519",
@@ -1435,7 +1455,7 @@
         ]
       }
     ],
-    "stars": 207,
+    "stars": 210,
     "forks": 11
   },
   {
@@ -1588,7 +1608,7 @@
         ]
       }
     ],
-    "stars": 181,
+    "stars": 180,
     "forks": 14
   },
   {
@@ -2283,7 +2303,7 @@
         ]
       }
     ],
-    "stars": 165,
+    "stars": 167,
     "forks": 17
   },
   {
@@ -5491,7 +5511,7 @@
         ]
       }
     ],
-    "stars": 51381,
+    "stars": 51387,
     "forks": 6847
   },
   {
@@ -8913,7 +8933,7 @@
         ]
       }
     ],
-    "stars": 18154,
+    "stars": 18156,
     "forks": 482
   },
   {
@@ -9931,7 +9951,7 @@
         ]
       }
     ],
-    "stars": 26080,
+    "stars": 26089,
     "forks": 750
   }
 ]
