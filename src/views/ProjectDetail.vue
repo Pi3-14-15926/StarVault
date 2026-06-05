@@ -17,8 +17,39 @@ const category = computed(() =>
 )
 
 const expanded = ref(false)
+const showAllLatestDownloads = ref(false)
+const expandedHistory = ref<Set<string>>(new Set())
 const latestVer = computed(() => project.value?.versions[0] ?? null)
 const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
+
+/* 最新版本下载：超过 5 个时默认折叠 */
+const DOWNLOAD_LIMIT = 5
+const HISTORY_DL_LIMIT = 3
+const visibleDownloads = computed(() => {
+  if (!latestVer.value) return []
+  if (showAllLatestDownloads.value) return latestVer.value.downloads
+  return latestVer.value.downloads.slice(0, DOWNLOAD_LIMIT)
+})
+const hiddenDownloadCount = computed(() => {
+  if (!latestVer.value) return 0
+  return Math.max(0, latestVer.value.downloads.length - DOWNLOAD_LIMIT)
+})
+
+/* 历史版本下载：超过 3 个时默认折叠 */
+function visibleHistoryDownloads(v: any) {
+  if (expandedHistory.value.has(v.id)) return v.downloads
+  return v.downloads.slice(0, HISTORY_DL_LIMIT)
+}
+function hiddenHistoryDownloadCount(v: any): number {
+  return Math.max(0, v.downloads.length - HISTORY_DL_LIMIT)
+}
+function toggleHistoryDownloads(v: any) {
+  if (expandedHistory.value.has(v.id)) {
+    expandedHistory.value.delete(v.id)
+  } else {
+    expandedHistory.value.add(v.id)
+  }
+}
 </script>
 
 <template>
@@ -80,9 +111,10 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
         <div v-if="latestVer.changelog" class="release-notes">
           <pre>{{ latestVer.changelog }}</pre>
         </div>
+        <div class="list-label">资源列表</div>
         <div class="download-list">
           <a
-            v-for="dl in latestVer.downloads"
+            v-for="dl in visibleDownloads"
             :key="dl.url"
             :href="dl.url"
             target="_blank"
@@ -93,6 +125,14 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
             <span class="apk-size">{{ dl.size }}</span>
           </a>
           <div v-if="latestVer.downloads.length === 0" class="empty-state">该版本暂无文件</div>
+        </div>
+        <div v-if="hiddenDownloadCount > 0" class="dl-more">
+          <button v-if="!showAllLatestDownloads" class="more-btn" @click="showAllLatestDownloads = true">
+            展开更多下载资源 <span class="more-badge">+{{ hiddenDownloadCount }}</span>
+          </button>
+          <button v-else class="more-btn more-btn-collapse" @click="showAllLatestDownloads = false">
+            收起
+          </button>
         </div>
       </div>
 
@@ -111,9 +151,10 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
             <div v-if="v.changelog" class="release-notes-mini">
               <pre>{{ v.changelog }}</pre>
             </div>
+            <div class="list-label list-label-sm">资源列表</div>
             <div class="download-list">
               <a
-                v-for="dl in v.downloads"
+                v-for="dl in visibleHistoryDownloads(v)"
                 :key="dl.url"
                 :href="dl.url"
                 target="_blank"
@@ -123,6 +164,18 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
                 <span class="apk-name">{{ dl.filename }}</span>
                 <span class="apk-size">{{ dl.size }}</span>
               </a>
+            </div>
+            <div v-if="v.downloads.length > HISTORY_DL_LIMIT" class="dl-more">
+              <button
+                v-if="!expandedHistory.has(v.id)"
+                class="more-btn more-btn-sm"
+                @click="toggleHistoryDownloads(v)"
+              >
+                展开更多 <span class="more-badge">+{{ hiddenHistoryDownloadCount(v) }}</span>
+              </button>
+              <button v-else class="more-btn more-btn-sm more-btn-collapse" @click="toggleHistoryDownloads(v)">
+                收起
+              </button>
             </div>
           </div>
         </div>
@@ -295,6 +348,25 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
   flex-direction: column;
   gap: 8px;
 }
+.list-label {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+.list-label-sm {
+  height: 22px;
+  padding: 0 10px;
+  font-size: 0.72rem;
+  margin-bottom: 8px;
+}
 .download-btn {
   display: flex;
   align-items: center;
@@ -342,6 +414,49 @@ const historyVers = computed(() => project.value?.versions.slice(1) ?? [])
   border-radius: var(--radius-md);
   border: 1px dashed var(--border-color);
 }
+
+/* === 展开更多下载 === */
+.dl-more {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 20px;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-full);
+  background: var(--color-card-soft);
+  color: var(--text-sec);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.more-btn:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.more-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.more-btn-collapse { color: var(--text-tertiary); }
+.more-btn-sm { height: 30px; padding: 0 14px; font-size: 0.78rem; }
 
 /* === 历史版本 === */
 .history-toggle {

@@ -26,13 +26,11 @@ function goManage() { router.push('/admin') }
     <div class="nav-inner glass-card">
       <a class="logo-link" @click="goHome" role="button" tabindex="0" @keyup.enter="goHome">
         <img v-if="settings.settings.logo" :src="settings.settings.logo" :alt="settings.settings.siteName" class="logo-img" />
-        <template v-else>
-          <span class="logo-mark">🐺</span>
-          <div class="logo-text">
-            <div class="logo-name">{{ settings.settings.siteName }}</div>
-            <div class="logo-slogan">发现优质软件，一站下载</div>
-          </div>
-        </template>
+        <span v-else class="logo-mark">🐺</span>
+        <div class="logo-text">
+          <div class="logo-name">{{ settings.settings.siteName }}</div>
+          <div class="logo-slogan">发现优质软件，一站下载</div>
+        </div>
       </a>
 
       <div class="search-box">
@@ -50,7 +48,7 @@ function goManage() { router.push('/admin') }
       <nav class="nav-links">
         <router-link to="/" class="nav-link" active-class="nav-active" exact-active-class="nav-active">首页</router-link>
         <router-link :to="{ name: 'Search' }" class="nav-link" active-class="nav-active">探索</router-link>
-        <router-link to="/admin" class="nav-link" active-class="nav-active">排行</router-link>
+        <router-link :to="{ name: 'Ranking' }" class="nav-link" active-class="nav-active">排行</router-link>
         <button v-if="!showUser" class="nav-pill" @click="goManage">管理</button>
         <div v-else class="nav-user" :title="user?.login">
           <img v-if="user?.avatar_url" :src="user.avatar_url" :alt="user?.login" class="nav-avatar" />

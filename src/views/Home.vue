@@ -16,8 +16,45 @@ const categoryIconColors: Record<string, string> = {
   default: 'linear-gradient(135deg, #3478F6 0%, #8C6CFF 100%)',
 }
 
+/* 默认推荐（无数据时兜底显示） */
+const defaultFeatured: any[] = [
+  {
+    id: 'default-1',
+    name: 'Legado 阅读',
+    description: '开源免费 · 跨平台阅读神器',
+    longDescription: '支持多种书源，界面简洁，功能强大',
+    logo: '',
+    iconEmoji: '📖',
+    slug: 'legado',
+    githubUrl: 'https://github.com/gedoor/legado',
+  },
+  {
+    id: 'default-2',
+    name: 'Obsidian 笔记',
+    description: '知识管理 · 双向链接笔记工具',
+    longDescription: '本地存储 Markdown 文件，构建专属知识网络',
+    logo: '',
+    iconEmoji: '💎',
+    slug: 'obsidian',
+    githubUrl: '',
+  },
+  {
+    id: 'default-3',
+    name: 'VS Code',
+    description: '代码编辑器 · 开发者首选工具',
+    longDescription: '免费开源，跨平台支持，插件生态丰富',
+    logo: '',
+    iconEmoji: '💻',
+    slug: 'vscode',
+    githubUrl: 'https://github.com/microsoft/vscode',
+  },
+]
+
 /* 特色项目（featured），用于 Hero 轮播 */
-const featured = computed(() => projects.projects.filter(p => p.featured))
+const featured = computed(() => {
+  const real = projects.projects.filter(p => p.featured)
+  return real.length > 0 ? real : defaultFeatured
+})
 const carouselIndex = ref(0)
 let timer: number | null = null
 function nextSlide() {
@@ -49,7 +86,7 @@ const hotProjects = computed(() => {
   return [...projects.projects]
     .filter(p => p.sourceType === 'github' && (p.stars ?? 0) > 0)
     .sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0))
-    .slice(0, 6)
+    .slice(0, 3)
 })
 
 /* 最近更新（按 latestUpdateTime 倒序） */
@@ -57,7 +94,7 @@ const recentlyUpdated = computed(() => {
   return [...projects.projects]
     .filter(p => p.latestUpdateTime)
     .sort((a, b) => new Date(b.latestUpdateTime).getTime() - new Date(a.latestUpdateTime).getTime())
-    .slice(0, 5)
+    .slice(0, 3)
 })
 
 /* 本周下载榜（按 downloads 累计） */
@@ -67,7 +104,7 @@ function totalDownloads(p: any): number {
 const topDownloads = computed(() => {
   return [...projects.projects]
     .sort((a, b) => totalDownloads(b) - totalDownloads(a))
-    .slice(0, 5)
+    .slice(0, 3)
 })
 
 function categoryFor(cid: string) {
@@ -80,7 +117,7 @@ function categoryFor(cid: string) {
 
   <div class="home">
     <!-- Hero Banner 轮播 -->
-    <section v-if="featured.length > 0" class="hero">
+    <section class="hero">
       <button v-if="featured.length > 1" class="hero-arrow hero-arrow-left" @click="prevSlide" aria-label="上一张">‹</button>
       <div class="hero-track" :style="{ transform: `translateX(-${carouselIndex * 100}%)` }">
         <div
@@ -92,6 +129,7 @@ function categoryFor(cid: string) {
             <span class="hero-tag">⭐ 今日推荐</span>
             <h1 class="hero-title">{{ p.name }}</h1>
             <p class="hero-desc">{{ p.description }}</p>
+            <p v-if="p.longDescription" class="hero-desc hero-desc-sub">{{ p.longDescription }}</p>
             <div class="hero-actions">
               <router-link :to="`/software/${p.slug}`" class="btn-primary">
                 <span>↓</span> 立即下载
@@ -110,6 +148,7 @@ function categoryFor(cid: string) {
           <div class="hero-visual">
             <div class="hero-icon-wrap">
               <img v-if="p.logo" :src="p.logo" :alt="p.name" class="hero-icon" />
+              <span v-else-if="p.iconEmoji" class="hero-icon-emoji">{{ p.iconEmoji }}</span>
               <span v-else class="hero-icon-text">{{ p.name[0] }}</span>
             </div>
           </div>
@@ -188,10 +227,7 @@ function categoryFor(cid: string) {
               </div>
               <div class="row-info">
                 <div class="row-name">{{ p.name }} <span class="row-version">{{ p.latestVersion }}</span></div>
-                <div class="row-meta">
-                  <span v-if="categoryFor(p.categoryId)" class="tag tag-blue">{{ categoryFor(p.categoryId)?.name }}</span>
-                  <span class="row-desc">{{ p.description }}</span>
-                </div>
+                <div class="row-desc-line" :title="p.description">{{ p.description }}</div>
               </div>
               <div class="row-date">{{ fmtDate(p.latestUpdateTime) }}</div>
             </router-link>
@@ -294,9 +330,14 @@ function categoryFor(cid: string) {
 .hero-desc {
   font-size: 1rem;
   color: var(--text-sec);
-  margin: 0 0 24px;
+  margin: 0 0 4px;
   line-height: 1.5;
   max-width: 460px;
+}
+.hero-desc-sub {
+  color: var(--text-tertiary);
+  font-size: 0.92rem;
+  margin-bottom: 24px;
 }
 .hero-actions {
   display: flex;
@@ -327,6 +368,10 @@ function categoryFor(cid: string) {
   height: 88px;
   object-fit: contain;
   border-radius: var(--radius-lg);
+}
+.hero-icon-emoji {
+  font-size: 5rem;
+  line-height: 1;
 }
 .hero-icon-text {
   font-size: 3.6rem;
@@ -452,18 +497,13 @@ function categoryFor(cid: string) {
   color: var(--text-tertiary);
 }
 .cat-card-more {
-  background: transparent;
-  border-style: dashed;
-  box-shadow: none;
-}
-.cat-card-more .cat-icon {
-  background: var(--color-card-soft);
+  background: var(--color-card);
 }
 
 /* === 热门 === */
 .hot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -478,17 +518,19 @@ function categoryFor(cid: string) {
   background: var(--color-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 18px 18px;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+  overflow: hidden;
 }
 .panel-head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .panel-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   margin: 0;
   color: var(--text-main);
@@ -504,6 +546,8 @@ function categoryFor(cid: string) {
   text-decoration: none;
   color: var(--text-main);
   transition: background 0.18s;
+  min-width: 0;
+  overflow: hidden;
 }
 .row-item:hover, .rank-item:hover { background: var(--color-card-soft); }
 .row-icon {
@@ -516,14 +560,14 @@ function categoryFor(cid: string) {
   justify-content: center;
   color: var(--color-primary);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   flex-shrink: 0;
   overflow: hidden;
 }
 .row-icon img { width: 100%; height: 100%; object-fit: cover; }
-.row-info { flex: 1; min-width: 0; }
+.row-info { flex: 1; min-width: 0; overflow: hidden; }
 .row-name {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
@@ -531,36 +575,36 @@ function categoryFor(cid: string) {
   display: flex;
   align-items: center;
   gap: 6px;
+  max-width: 100%;
 }
 .row-version {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--color-primary);
   font-weight: 500;
   font-family: var(--font-mono);
+  flex-shrink: 0;
 }
-.row-meta {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 2px;
-  font-size: 0.78rem;
+.row-desc-line {
+  font-size: 0.8rem;
   color: var(--text-tertiary);
-}
-.row-desc {
+  margin-top: 3px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex: 1;
+  max-width: 100%;
   min-width: 0;
+  display: block;
 }
 .row-date {
   font-size: 0.78rem;
   color: var(--text-tertiary);
   white-space: nowrap;
   font-family: var(--font-mono);
+  flex-shrink: 0;
+  margin-left: auto;
 }
 .row-dl {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-sec);
   font-weight: 600;
   white-space: nowrap;
@@ -582,11 +626,12 @@ function categoryFor(cid: string) {
   background: var(--gradient-primary);
   color: white;
 }
-.rank-stars { color: var(--text-tertiary); font-size: 0.78rem; }
+.rank-stars { color: var(--text-tertiary); font-size: 0.72rem; }
 
 /* === 响应式 === */
 @media (max-width: 1024px) {
   .cat-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .hot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 }
 @media (max-width: 768px) {
   .hero-slide { padding: 32px 24px; }
@@ -595,7 +640,7 @@ function categoryFor(cid: string) {
   .cat-card { padding: 16px 8px; }
   .cat-icon { width: 44px; height: 44px; font-size: 1.3rem; }
   .double-col { grid-template-columns: 1fr; }
-  .hot-grid { grid-template-columns: 1fr; }
+  .hot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 }
 @media (max-width: 480px) {
   .hero { min-height: 220px; }
@@ -603,6 +648,7 @@ function categoryFor(cid: string) {
   .hero-title { font-size: 1.5rem; }
   .hero-desc { font-size: 0.88rem; }
   .cat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .section { margin-top: 32px; }
 }
 </style>

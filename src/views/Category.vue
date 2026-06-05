@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useProjectStore } from '../store/project'
 import { useCategoryStore } from '../store/category'
-import ProjectCard from '../components/ProjectCard.vue'
 import AmbientOrbs from '../components/AmbientOrbs.vue'
 import { fmtDate } from '../utils'
 
@@ -19,6 +18,25 @@ type Tab = 'list' | 'featured' | 'updated' | 'top'
 const activeTab = ref<Tab>('list')
 type Sort = 'updated' | 'name' | 'stars'
 const sortKey = ref<Sort>('updated')
+
+/* 分页：每页 5 个 */
+const PAGE_SIZE = 5
+const listPage = ref(1)
+const updatedPage = ref(1)
+const topPage = ref(1)
+const currentPage = computed(() => {
+  if (activeTab.value === 'list') return listPage.value
+  if (activeTab.value === 'updated') return updatedPage.value
+  if (activeTab.value === 'top') return topPage.value
+  return 1
+})
+function setPage(n: number) {
+  if (activeTab.value === 'list') listPage.value = n
+  else if (activeTab.value === 'updated') updatedPage.value = n
+  else if (activeTab.value === 'top') topPage.value = n
+}
+/* 切 tab 时重置到第 1 页 */
+watch(activeTab, () => { /* 由各 tab 的 setter 自行处理 */ })
 
 /* 软件数量 / 平均评分 / 总下载数 / 热门标签  */
 const totalCount = computed(() => list.value.length)
@@ -63,9 +81,69 @@ const sorted = computed(() => {
   return arr
 })
 
+/* 分页后的列表 */
+const pagedSorted = computed(() => {
+  const start = (listPage.value - 1) * PAGE_SIZE
+  return sorted.value.slice(start, start + PAGE_SIZE)
+})
+const pagedUpdated = computed(() => {
+  const start = (updatedPage.value - 1) * PAGE_SIZE
+  return recentlyUpdated.value.slice(start, start + PAGE_SIZE)
+})
+const pagedTopRanked = computed(() => {
+  const start = (topPage.value - 1) * PAGE_SIZE
+  return topRanked.value.slice(start, start + PAGE_SIZE)
+})
+
+/* 总页数 */
+const totalListPages = computed(() => Math.max(1, Math.ceil(sorted.value.length / PAGE_SIZE)))
+const totalUpdatedPages = computed(() => Math.max(1, Math.ceil(recentlyUpdated.value.length / PAGE_SIZE)))
+const totalTopPages = computed(() => Math.max(1, Math.ceil(topRanked.value.length / PAGE_SIZE)))
+const currentTotalPages = computed(() => {
+  if (activeTab.value === 'list') return totalListPages.value
+  if (activeTab.value === 'updated') return totalUpdatedPages.value
+  if (activeTab.value === 'top') return totalTopPages.value
+  return 1
+})
+
+/* 切换 tab 时把对应页码重置为 1 */
+watch(activeTab, () => {
+  listPage.value = 1
+  updatedPage.value = 1
+  topPage.value = 1
+})
+/* 切排序时也回到第 1 页 */
+watch(sortKey, () => { listPage.value = 1 })
+
+/* 翻页工具：当前页码周围显示哪些页 */
+const visiblePages = computed(() => {
+  const total = currentTotalPages.value
+  const cur = currentPage.value
+  const pages: number[] = []
+  for (let i = 1; i <= total; i++) {
+    if (i === 1 || i === total || (i >= cur - 1 && i <= cur + 1)) pages.push(i)
+  }
+  return pages
+})
+function goPage(n: number) {
+  if (n < 1 || n > currentTotalPages.value) return
+  setPage(n)
+  /* 滚动到该 tab 顶部 */
+  document.querySelector('.cat-main')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+/* 平台标签：根据项目名/描述简单识别 */
+function platformLabel(p: any): string {
+  const text = `${p.name} ${p.description || ''}`.toLowerCase()
+  if (text.includes('android') || text.includes('安卓') || text.includes('apk')) return 'Android'
+  if (text.includes('ios') || text.includes('ipa')) return 'iOS'
+  if (text.includes('mac') || text.includes('osx')) return 'macOS'
+  if (text.includes('linux')) return 'Linux'
+  return 'Windows'
+}
+
 const tabs: { key: Tab; label: string; icon: string }[] = [
   { key: 'list', label: '软件列表', icon: '📋' },
-  { key: 'featured', label: '推荐软件', icon: '⭐' },
   { key: 'updated', label: '最新更新', icon: '🆕' },
   { key: 'top', label: '排行榜', icon: '🏆' },
 ]
@@ -128,17 +206,45 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
               </label>
             </div>
             <div v-if="sorted.length === 0" class="empty-state">该分类下暂无软件</div>
-            <div v-else class="cat-card-list">
-              <ProjectCard v-for="p in sorted" :key="p.id" :project="p" />
-            </div>
-          </div>
-
-          <!-- 推荐 -->
-          <div v-else-if="activeTab === 'featured'" class="panel">
-            <h3 class="panel-title">⭐ 推荐软件</h3>
-            <div v-if="featured.length === 0" class="empty-state">暂无推荐</div>
-            <div v-else class="cat-card-list">
-              <ProjectCard v-for="p in featured" :key="p.id" :project="p" />
+            <div v-else class="cat-list">
+              <router-link
+                v-for="p in pagedSorted"
+                :key="p.id"
+                :to="`/software/${p.slug}`"
+                class="cat-row"
+              >
+                <div class="cat-row-icon">
+                  <img v-if="p.logo" :src="p.logo" :alt="p.name" />
+                  <span v-else>{{ p.name[0] }}</span>
+                </div>
+                <div class="cat-row-main">
+                  <div class="cat-row-head">
+                    <span class="cat-row-name">{{ p.name }}</span>
+                    <span v-if="p.featured" class="cat-row-badge">推荐</span>
+                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                  </div>
+                  <div class="cat-row-desc">{{ p.description }}</div>
+                </div>
+                <div class="cat-row-side">
+                  <div v-if="p.latestVersion" class="cat-row-version">{{ p.latestVersion }}</div>
+                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                </div>
+              </router-link>
+              <div v-if="totalListPages > 1" class="pagination">
+                <button class="page-btn" :disabled="listPage === 1" @click="goPage(listPage - 1)">‹</button>
+                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                  <button
+                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
+                    class="page-ellipsis"
+                    disabled
+                  >…</button>
+                  <button
+                    :class="['page-btn', { active: listPage === n }]"
+                    @click="goPage(n)"
+                  >{{ n }}</button>
+                </template>
+                <button class="page-btn" :disabled="listPage === totalListPages" @click="goPage(listPage + 1)">›</button>
+              </div>
             </div>
           </div>
 
@@ -146,8 +252,44 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
           <div v-else-if="activeTab === 'updated'" class="panel">
             <h3 class="panel-title">🆕 最新更新</h3>
             <div v-if="recentlyUpdated.length === 0" class="empty-state">暂无更新</div>
-            <div v-else class="cat-card-list">
-              <ProjectCard v-for="p in recentlyUpdated" :key="p.id" :project="p" />
+            <div v-else class="cat-list">
+              <router-link
+                v-for="p in pagedUpdated"
+                :key="p.id"
+                :to="`/software/${p.slug}`"
+                class="cat-row"
+              >
+                <div class="cat-row-icon">
+                  <img v-if="p.logo" :src="p.logo" :alt="p.name" />
+                  <span v-else>{{ p.name[0] }}</span>
+                </div>
+                <div class="cat-row-main">
+                  <div class="cat-row-head">
+                    <span class="cat-row-name">{{ p.name }}</span>
+                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                  </div>
+                  <div class="cat-row-desc">{{ p.description }}</div>
+                </div>
+                <div class="cat-row-side">
+                  <div v-if="p.latestVersion" class="cat-row-version">{{ p.latestVersion }}</div>
+                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                </div>
+              </router-link>
+              <div v-if="totalUpdatedPages > 1" class="pagination">
+                <button class="page-btn" :disabled="updatedPage === 1" @click="goPage(updatedPage - 1)">‹</button>
+                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                  <button
+                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
+                    class="page-ellipsis"
+                    disabled
+                  >…</button>
+                  <button
+                    :class="['page-btn', { active: updatedPage === n }]"
+                    @click="goPage(n)"
+                  >{{ n }}</button>
+                </template>
+                <button class="page-btn" :disabled="updatedPage === totalUpdatedPages" @click="goPage(updatedPage + 1)">›</button>
+              </div>
             </div>
           </div>
 
@@ -155,24 +297,45 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
           <div v-else class="panel">
             <h3 class="panel-title">🏆 排行榜</h3>
             <div v-if="topRanked.length === 0" class="empty-state">暂无数据</div>
-            <div v-else class="rank-list">
+            <div v-else class="cat-list">
               <router-link
-                v-for="(p, i) in topRanked"
+                v-for="(p, i) in pagedTopRanked"
                 :key="p.id"
                 :to="`/software/${p.slug}`"
-                class="rank-row"
+                class="cat-row"
               >
-                <span :class="['rank-num', { 'rank-top': i < 3 }]">{{ i + 1 }}</span>
-                <div class="row-icon">
+                <span :class="['rank-num', { 'rank-top': i < 3 }]">{{ (topPage - 1) * PAGE_SIZE + i + 1 }}</span>
+                <div class="cat-row-icon">
                   <img v-if="p.logo" :src="p.logo" :alt="p.name" />
                   <span v-else>{{ p.name[0] }}</span>
                 </div>
-                <div class="row-info">
-                  <div class="row-name">{{ p.name }} <span class="row-version">{{ p.latestVersion }}</span></div>
-                  <div class="row-meta">{{ p.description }}</div>
+                <div class="cat-row-main">
+                  <div class="cat-row-head">
+                    <span class="cat-row-name">{{ p.name }}</span>
+                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                  </div>
+                  <div class="cat-row-desc">{{ p.description }}</div>
                 </div>
-                <div class="row-date">⭐ {{ (p.stars ?? 0).toLocaleString() }}</div>
+                <div class="cat-row-side">
+                  <div v-if="p.latestVersion" class="cat-row-version">{{ p.latestVersion }}</div>
+                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                </div>
               </router-link>
+              <div v-if="totalTopPages > 1" class="pagination">
+                <button class="page-btn" :disabled="topPage === 1" @click="goPage(topPage - 1)">‹</button>
+                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                  <button
+                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
+                    class="page-ellipsis"
+                    disabled
+                  >…</button>
+                  <button
+                    :class="['page-btn', { active: topPage === n }]"
+                    @click="goPage(n)"
+                  >{{ n }}</button>
+                </template>
+                <button class="page-btn" :disabled="topPage === totalTopPages" @click="goPage(topPage + 1)">›</button>
+              </div>
             </div>
           </div>
         </div>
@@ -198,15 +361,6 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
                 <div class="stat-value">{{ list.length > 0 ? '98%' : '—' }}</div>
                 <div class="stat-label">好评率</div>
               </div>
-            </div>
-          </div>
-
-          <div v-if="hotTags.length > 0" class="aside-block">
-            <h4 class="aside-title">热门标签</h4>
-            <div class="tag-cloud">
-              <span v-for="[name, count] in hotTags" :key="name" class="cloud-tag">
-                {{ name }} <em>{{ count }}</em>
-              </span>
             </div>
           </div>
 
@@ -449,6 +603,194 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/* === 软件列表（横向条目） === */
+.cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cat-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.cat-row:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+.cat-row-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.cat-row .rank-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-card-soft);
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.cat-row .rank-num.rank-top {
+  background: var(--gradient-primary);
+  color: white;
+}
+.cat-row-icon img { width: 100%; height: 100%; object-fit: cover; }
+.cat-row-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cat-row-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cat-row-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.cat-row-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #FFB347 0%, #FF8C42 100%);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.cat-row-version {
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-family: var(--font-mono);
+  background: var(--color-primary-soft);
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+}
+.cat-row-desc {
+  font-size: 0.85rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+.cat-row-meta {
+  display: none;
+}
+.cat-row-stars {
+  color: #F5A623;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.cat-row-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.cat-row-version {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+.cat-row-date {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+@media (max-width: 640px) {
+  .cat-row { padding: 12px; gap: 12px; }
+  .cat-row-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+  .cat-row-name { font-size: 0.92rem; }
+  .cat-row-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
+  .cat-row-version { font-size: 0.78rem; }
+  .cat-row-date { font-size: 0.72rem; }
+}
+
+/* === 分页 === */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.page-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-card);
+  color: var(--text-sec);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+}
+.page-btn:hover:not(:disabled) {
+  background: var(--color-card-soft);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+.page-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-primary);
+  font-weight: 600;
+}
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.page-ellipsis {
+  min-width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  cursor: default;
 }
 
 /* === 排行榜 === */
