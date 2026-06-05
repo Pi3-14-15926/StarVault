@@ -11,7 +11,7 @@ interface BackupProject {
   versions: {
     version: string
     publishedAt: string
-    downloads: { filename: string; url: string }[]
+    downloads: { filename: string; url: string; size?: string }[]
   }[]
 }
 
@@ -39,7 +39,8 @@ interface WebdavConfig {
   username: string
   password: string
   baseDir: string
-  uploadTimeout?: number  // 上传超时(ms)，默认60000
+  uploadTimeout?: number   // 上传超时(ms)，默认300000
+  maxFileSize?: number     // 文件大小限制(MB)，默认500
 }
 
 const KEEP_LATEST = 2
@@ -212,6 +213,23 @@ async function handleBackup(req: IncomingMessage, res: ServerResponse) {
 
           for (const dl of ver.downloads) {
             await checkPause(res)
+
+            // 检查文件大小限制
+            const maxFileSizeMB = webdavConfig?.maxFileSize || 500
+            if (dl.size) {
+              const fileSizeMB = parseFloat(String(dl.size).replace(/[^0-9.]/g, ''))
+              if (fileSizeMB > maxFileSizeMB) {
+                writeNdjson(res, {
+                  type: 'skip',
+                  project: project.projectName,
+                  version: ver.version,
+                  file: dl.filename,
+                  message: `文件过大 (${dl.size})，超过限制 ${maxFileSizeMB}MB，跳过`,
+                })
+                continue
+              }
+            }
+
             try {
               const original = dl.url.replace(/^https?:\/\//, '')
               const url = ghProxy ? ghProxy.replace(/\/+$/, '') + '/' + original : dl.url
@@ -222,7 +240,7 @@ async function handleBackup(req: IncomingMessage, res: ServerResponse) {
               if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
               const buffer = Buffer.from(await resp.arrayBuffer())
 
-              const uploadTimeout = webdavConfig?.uploadTimeout || 60000
+              const uploadTimeout = webdavConfig?.uploadTimeout || 300000
               await Promise.race([
                 client.putFileContents(versionDir + '/' + dl.filename, buffer),
                 new Promise((_, reject) => setTimeout(() => reject(new Error(`上传超时 (${uploadTimeout}ms)`)), uploadTimeout)),
@@ -398,7 +416,8 @@ function handleWebdavConfig(req: IncomingMessage, res: ServerResponse) {
         username: incoming.username ?? webdavConfig?.username ?? '',
         password: incoming.password ?? webdavConfig?.password ?? '',
         baseDir: incoming.baseDir ?? webdavConfig?.baseDir ?? '/SoftwareHub',
-        uploadTimeout: incoming.uploadTimeout ?? webdavConfig?.uploadTimeout ?? 60000,
+        uploadTimeout: incoming.uploadTimeout ?? webdavConfig?.uploadTimeout ?? 300000,
+        maxFileSize: incoming.maxFileSize ?? webdavConfig?.maxFileSize ?? 500,
       }
       webdavClient = null
       res.writeHead(200, { 'Content-Type': 'application/json' })

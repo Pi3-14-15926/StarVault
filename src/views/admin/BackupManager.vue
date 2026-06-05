@@ -41,7 +41,8 @@ const webdavForm = ref({
   username: '',
   password: '',
   baseDir: '/SoftwareHub',
-  uploadTimeout: 60,
+  uploadTimeout: 300,
+  maxFileSize: 500,
 })
 const webdavTesting = ref(false)
 const webdavTested = ref(false)
@@ -56,7 +57,8 @@ async function loadWebdavConfig() {
       username: wd.username || '',
       password: '',
       baseDir: wd.baseDir || '/SoftwareHub',
-      uploadTimeout: wd.uploadTimeout ?? 60,
+      uploadTimeout: wd.uploadTimeout ?? 300,
+      maxFileSize: wd.maxFileSize ?? 500,
     }
   }
   /* 本地开发时再从服务端加载（覆盖密码） */
@@ -71,6 +73,7 @@ async function loadWebdavConfig() {
           password: '',
           baseDir: data.baseDir || webdavForm.value.baseDir,
           uploadTimeout: data.uploadTimeout ?? webdavForm.value.uploadTimeout,
+          maxFileSize: data.maxFileSize ?? webdavForm.value.maxFileSize,
         }
       }
     } catch { /* ignore */ }
@@ -92,6 +95,7 @@ async function saveWebdavConfig() {
     password: resolvedPwd,
     baseDir: webdavForm.value.baseDir,
     uploadTimeout: webdavForm.value.uploadTimeout,
+    maxFileSize: webdavForm.value.maxFileSize,
   }
   settings.save(s)
 
@@ -227,10 +231,11 @@ async function doBackup() {
       versions: p.versions.map((v) => ({
         version: v.version,
         publishedAt: v.publishedAt,
-        downloads: v.downloads.map((d) => ({
-          filename: d.filename,
-          url: d.url,
-        })),
+    downloads: v.downloads.map((d) => ({
+      filename: d.filename,
+      url: d.url,
+      size: d.size,
+    })),
       })),
     }))
 
@@ -404,8 +409,13 @@ onMounted(() => {
         </div>
         <div class="action-row" style="margin-top: 12px">
           <span class="hint-text">上传超时:</span>
-          <NInputNumber v-model:value="webdavForm.uploadTimeout" :min="10" :max="600" style="width:100px" />
-          <span class="hint-text">秒（默认60秒，大文件请加长）</span>
+          <NInputNumber v-model:value="webdavForm.uploadTimeout" :min="10" :max="1800" style="width:100px" />
+          <span class="hint-text">秒（默认300秒，大文件请加长）</span>
+        </div>
+        <div class="action-row" style="margin-top: 12px">
+          <span class="hint-text">文件限制:</span>
+          <NInputNumber v-model:value="webdavForm.maxFileSize" :min="1" :max="10000" style="width:100px" />
+          <span class="hint-text">MB（默认500MB，超过此大小的文件跳过不备份）</span>
         </div>
         <div class="action-row" style="margin-top: 12px">
           <NButton type="primary" @click="saveWebdavConfig" :disabled="!webdavForm.url">保存配置</NButton>

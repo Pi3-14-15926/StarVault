@@ -64,7 +64,8 @@ export interface WebDAVConfig {
   username: string
   password: string
   baseDir: string
-  uploadTimeout?: number
+  uploadTimeout?: number    // 上传超时(秒)，默认 300
+  maxFileSize?: number      // 文件大小限制(MB)，默认 500
 }
 
 /** 站点设置 */

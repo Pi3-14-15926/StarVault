@@ -30,7 +30,7 @@ const WEBDAV_PASSWORD = process.env.WEBDAV_PASSWORD || ''
 const WEBDAV_BASE_DIR = (process.env.WEBDAV_BASE_DIR || '/SoftwareHub').replace(/\/+$/, '')
 const GH_PROXY = process.env.GH_PROXY || ''
 const KEEP_VERSIONS = parseInt(process.env.KEEP_VERSIONS || '2', 10)
-const WEBDAV_TIMEOUT = parseInt(process.env.WEBDAV_TIMEOUT || '120000', 10)
+const WEBDAV_TIMEOUT = parseInt(process.env.WEBDAV_TIMEOUT || '300000', 10)
 
 let changed = false  // 是否有数据变更，后续需要 commit
 
@@ -103,7 +103,8 @@ function parseSize(sizeStr) {
   return 0
 }
 
-const MAX_FILE_SIZE = 200 * 1024 * 1024  // 200MB 跳过
+// 文件大小限制，在 main() 中从 settings / 环境变量读取
+let MAX_FILE_SIZE = 500 * 1024 * 1024  // 默认 500MB
 
 /** 从文件名猜平台 */
 function guessPlatform(name) {
@@ -291,6 +292,13 @@ async function main() {
   const projects = readJSON(PROJECTS_FILE, [])
   const categories = readJSON(CATEGORIES_FILE, [])
   let settings = readJSON(SETTINGS_FILE, null)
+
+  // 从 settings.json → webdav.maxFileSize 读取，环境变量 MAX_FILE_SIZE_MB 可覆盖
+  const maxFileSizeMB = parseInt(process.env.MAX_FILE_SIZE_MB || '0', 10)
+    || settings?.webdav?.maxFileSize
+    || 500
+  MAX_FILE_SIZE = maxFileSizeMB * 1024 * 1024
+  log(`文件大小限制: ${maxFileSizeMB}MB (超过此大小的文件跳过)`)
 
   if (!projects.length) {
     log('没有找到项目数据，跳过')
