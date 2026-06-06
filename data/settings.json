@@ -4,13 +4,21 @@
   "admins": [
     "Pi3-14-15926"
   ],
+  "footer": "Powered by Software Hub",
   "storageNote": "收藏精品软件",
   "ghProxyEnabled": true,
   "ghProxyUrl": "https://js.qiyinqin.ccwu.cc/",
+  "iconCdnMode": "jsdelivr",
   "schedule": {
     "syncEnabled": true,
     "syncIntervalHours": 24,
     "backupEnabled": true,
     "backupIntervalHours": 24
+  },
+  "webdav": {
+    "url": "https://webdav.123pan.cn/webdav/Webdav/资源/",
+    "username": "13249599730",
+    "password": "2mi1ft82",
+    "baseDir": "/SoftwareHub"
   }
 }
