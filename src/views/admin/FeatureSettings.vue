@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { NInput, NInputNumber, NSwitch, NSelect, useMessage } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import { useSettingStore } from '../../store/settings'
+import { encryptSecret, decryptSecret, isEncrypted } from '../../utils/secretStore'
 
 const store = useSettingStore()
 const message = useMessage()
@@ -63,7 +64,7 @@ const webdavConfigured = computed(() =>
   !!(webForm.value.url && webForm.value.username && webForm.value.password),
 )
 
-onMounted(() => {
+onMounted(async () => {
   store.refresh()
   const sc = store.settings.schedule
   taskForm.value = {
@@ -73,23 +74,26 @@ onMounted(() => {
     backupIntervalHours: sc?.backupIntervalHours ?? 24,
   }
   const wd = store.settings.webdav
+  const storedPwd = wd?.password ?? ''
+  // 兼容老明文 + 新密文
+  const plainPwd = isEncrypted(storedPwd) ? await decryptSecret(storedPwd) : storedPwd
   webForm.value = {
     url: wd?.url ?? '',
     username: wd?.username ?? '',
-    password: wd?.password ?? '',
+    password: plainPwd,
     baseDir: wd?.baseDir ?? '/SoftwareHub',
     uploadTimeout: wd?.uploadTimeout ?? 300,
     maxFileSize: wd?.maxFileSize ?? 500,
   }
 })
 
-function saveWebdavConfig() {
+async function saveWebdavConfig() {
   const s = { ...store.settings }
   s.webdav = {
     ...(s.webdav || {}),
     url: webForm.value.url,
     username: webForm.value.username,
-    password: webForm.value.password,
+    password: webForm.value.password ? await encryptSecret(webForm.value.password) : '',
     baseDir: webForm.value.baseDir,
   }
   store.save(s)
@@ -285,6 +289,8 @@ async function testConnection() {
 
           <p class="webdav-hint">
             💡 配置完成后，<a href="/admin/backup-files" class="link">备份管理</a>页面即可读取云盘上的文件列表。
+            <br />
+            🔒 密码使用浏览器内置 <code>AES-GCM 256</code> 加密后存储；同源 XSS 仍可解密，敏感环境请使用专用账号 + 限 IP。
           </p>
 
           <div class="webdav-actions">

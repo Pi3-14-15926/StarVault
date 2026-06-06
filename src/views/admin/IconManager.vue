@@ -344,7 +344,7 @@ async function copyUrl(url: string) {
                   </svg>
                   URL
                 </button>
-                <NPopconfirm positive-text="删除" negative-text="取消" @positive-click="doDelete(icon)">
+                <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="doDelete(icon)">
                   <template #trigger>
                     <button class="icon-btn danger" :disabled="deleting.has(icon.name)">删除</button>
                   </template>

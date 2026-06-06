@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { NPopconfirm, NAlert, useMessage } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
+import AdminSearchBar from '../../components/admin/AdminSearchBar.vue'
 import { useSettingStore } from '../../store/settings'
 
 interface BackupFile {
@@ -328,19 +329,14 @@ onMounted(() => { loadFiles() })
       </div>
 
       <!-- 搜索框 -->
-      <div class="search-bar">
-        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16">
-          <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"/>
-        </svg>
-        <input
+      <div class="search-row">
+        <AdminSearchBar
           v-model="keyword"
           placeholder="搜索项目名 / 版本 / 文件名..."
-          class="search-input"
         />
         <span v-if="filteredGroups.length !== projectGroups.length" class="search-result-count">
           {{ filteredGroups.length }} / {{ projectGroups.length }}
         </span>
-        <button v-if="keyword" class="search-clear" @click="keyword = ''" aria-label="清空">×</button>
       </div>
 
       <!-- 列表 -->
@@ -609,36 +605,12 @@ onMounted(() => { loadFiles() })
 .source-text strong { color: var(--text-main); font-weight: 600; }
 
 /* === 搜索 === */
-.search-bar {
-  position: relative;
-  background: var(--admin-card);
-  border: 1px solid var(--admin-border);
-  border-radius: var(--radius-full);
-  box-shadow: var(--admin-shadow-card);
+.search-row {
   display: flex;
   align-items: center;
-  padding: 0 18px;
-  height: 48px;
   gap: 10px;
   flex-shrink: 0;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.search-bar:focus-within {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px var(--color-primary-soft);
-}
-.search-icon { color: var(--text-tertiary); flex-shrink: 0; }
-.search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.92rem;
-  color: var(--text-main);
-  height: 100%;
-  min-width: 0;
-}
-.search-input::placeholder { color: var(--text-tertiary); }
 .search-result-count {
   font-size: 0.75rem;
   color: var(--text-tertiary);
@@ -648,22 +620,6 @@ onMounted(() => { loadFiles() })
   border-radius: var(--radius-full);
   flex-shrink: 0;
 }
-.search-clear {
-  width: 22px; height: 22px;
-  border: none;
-  background: var(--color-card-soft);
-  color: var(--text-tertiary);
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.15s;
-}
-.search-clear:hover { background: var(--color-primary-soft); color: var(--color-primary); transform: scale(1.05); }
 
 /* === 项目卡片列表 === */
 .project-list { display: flex; flex-direction: column; gap: 14px; }

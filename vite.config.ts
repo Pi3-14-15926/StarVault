@@ -21,5 +21,20 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules')) {
+            if (id.includes('naive-ui')) return 'vendor-ui'
+            if (id.includes('/webdav/') || id.includes('webdav/')) return 'vendor-webdav'
+            if (id.includes('/vue/') || id.includes('/vue-router/') || id.includes('/pinia/') || id.includes('/@vue/')) return 'vendor-vue'
+          }
+          return undefined
+        },
+      },
+    },
+  },
   base: '/',
 })

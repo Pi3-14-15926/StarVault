@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Software Hub - 多版本软件聚合下载站" />
     <meta name="keywords" content="软件下载, 多版本, 聚合, GitHub" />
+    <meta name="theme-color" content="#4F8CFF" />
+    <!--
+      Content Security Policy
+      - default-src 'self'：只允许同源资源
+      - script-src 'self' 'unsafe-inline' (Vue 模板编译) 'unsafe-eval' (Vite dev)
+      - connect-src 允许 GitHub API (api.github.com)、jsDelivr (cdn.jsdelivr.net)、WebDAV (任何 https)、dev server
+      - img-src 允许 data: (缩略图) 和 https (jsDelivr 图标)
+      - style-src 'self' 'unsafe-inline' (Naive UI 内联样式)
+      - object-src 'none' / base-uri 'self' / frame-ancestors 'none'
+      ⚠️ 生产部署若用 nginx，建议改用响应头形式（更安全）并移除 'unsafe-eval'
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'unsafe-inline' 'unsafe-eval';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https: blob:;
+               font-src 'self' data:;
+               connect-src 'self' https://api.github.com https://cdn.jsdelivr.net https://raw.githubusercontent.com https: ws: wss:;
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';
+               frame-ancestors 'none';"
+    />
     <title>Software Hub</title>
   </head>
   <body>
