@@ -12,6 +12,9 @@ import { useIconUrl } from '../../composables/useIconUrl'
 import { platformClass, platformIcon } from '../../utils/platformTag'
 import { refreshEnabledState } from '../../composables/useEnabled'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
+import AdminSearchBar from '../../components/admin/AdminSearchBar.vue'
+import AdminSortGroup, { type SortOption } from '../../components/admin/AdminSortGroup.vue'
+import AdminPager from '../../components/admin/AdminPager.vue'
 
 const router = useRouter()
 const route = useRoute()
@@ -37,6 +40,11 @@ function setSort(by: SortBy) {
   if (sortBy.value === by) sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc'
   else { sortBy.value = by; sortOrder.value = by === 'name' ? 'asc' : 'desc' }
 }
+const sortOptions: SortOption[] = [
+  { key: 'time', label: '最近更新', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>', defaultOrder: 'desc' },
+  { key: 'name', label: '名称', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h13M3 12h9M3 18h5M17 10v10M17 10l-3 3M17 10l3 3"/></svg>', defaultOrder: 'asc' },
+  { key: 'featured', label: '推荐', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', defaultOrder: 'desc' },
+]
 
 /* 版本展开状态：softwareId */
 const expandedProjs = ref<Set<string>>(new Set())
@@ -133,104 +141,7 @@ function jumpPage(p: number) {
   if (p < 1 || p > totalPages.value) return
   page.value = p
 }
-const pageNumbers = computed(() => {
-  const total = totalPages.value
-  const cur = page.value
-  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1)
-  const set = new Set<number>([1, total, cur, cur - 1, cur + 1])
-  return [...set].filter((n) => n >= 1 && n <= total).sort((a, b) => a - b)
-})
-
-const allSelected = computed(() => pagedList.value.length > 0 && pagedList.value.every((s) => selectedIds.value.has(s.id)))
-const someSelected = computed(() => pagedList.value.some((s) => selectedIds.value.has(s.id)) && !allSelected.value)
-function toggleSelectAll() {
-  if (allSelected.value) pagedList.value.forEach((s) => selectedIds.value.delete(s.id))
-  else pagedList.value.forEach((s) => selectedIds.value.add(s.id))
-}
-function toggleSelectOne(id: string) {
-  if (selectedIds.value.has(id)) selectedIds.value.delete(id)
-  else selectedIds.value.add(id)
-}
-function clearSelection() { selectedIds.value.clear() }
-
-function bulkDelete() {
-  if (selectedIds.value.size === 0) return
-  if (!confirm(`确定要删除选中的 ${selectedIds.value.size} 个软件吗？此操作不可恢复。`)) return
-  selectedIds.value.forEach((id) => projects.remove(id))
-  message.success(`已删除 ${selectedIds.value.size} 个软件`)
-  clearSelection()
-}
-function bulkFeature(feature: boolean) {
-  const ids = [...selectedIds.value]
-  ids.forEach((id) => {
-    const s = projects.software.find((x) => x.id === id)
-    if (s && s.featured !== feature) projects.save({ ...s, featured: feature })
-  })
-  message.success(feature ? `已推荐 ${ids.length} 个软件` : `已取消推荐 ${ids.length} 个软件`)
-}
-function bulkToggleEnabled(enable: boolean) {
-  selectedIds.value.forEach((id) => {
-    if (enable) disabledIds.value.delete(id)
-    else disabledIds.value.add(id)
-  })
-  localStorage.setItem(DISABLED_KEY, JSON.stringify([...disabledIds.value]))
-  refreshEnabledState()
-  message.success(enable ? `已启用 ${selectedIds.value.size} 个软件` : `已禁用 ${selectedIds.value.size} 个软件`)
-}
-
-function goEdit(id: string) { router.push(`/admin/projects/${id}/edit`) }
-function goVersions(id: string) { router.push(`/admin/projects/${id}/versions`) }
-function goNew() {
-  const q = categoryId.value ? `?categoryId=${categoryId.value}` : ''
-  router.push(`/admin/projects/new${q}`)
-}
-
-function toggleExpand(pid: string) {
-  if (expandedProjs.value.has(pid)) expandedProjs.value.delete(pid)
-  else expandedProjs.value.add(pid)
-}
-
-async function doSync(software: Software) {
-  if (software.sourceType !== 'github') return
-  syncStates.value[software.id] = { state: 'syncing', msg: '正在同步...' }
-  try {
-    const res = await api.syncGitHubProject(software)
-    if (res.success) {
-      syncStates.value[software.id] = { state: 'success', msg: res.newVersions ? `+${res.newVersions} 个新版本` : '已是最新' }
-      projects.refresh()
-      message.success(`「${software.name}」同步完成`)
-    } else {
-      syncStates.value[software.id] = { state: 'error', msg: res.error || '失败' }
-      message.error(`「${software.name}」同步失败：${res.error}`)
-    }
-  } catch (e: any) {
-    syncStates.value[software.id] = { state: 'error', msg: e.message || '请求失败' }
-    message.error(`「${software.name}」同步失败：${e.message}`)
-  }
-}
-
-function deleteVersion(software: Software, v: Version) {
-  if (!confirm(`确定删除版本「${v.version}」？`)) return
-  api.deleteVersion(v.id)
-  projects.refresh()
-  message.success('版本已删除')
-}
-
-function setAsLatest(software: Software, v: Version) {
-  /* 直接设置 software.latestVersionId 指向该版本 */
-  const updated: Software = { ...software, latestVersionId: v.id, latestUpdateTime: v.publishedAt }
-  projects.save(updated)
-  message.success(`已将 ${v.version} 标记为最新`)
-}
-
-const featuredCount = computed(() => projects.software.filter((s) => s.featured).length)
-const githubCount = computed(() => projects.software.filter((s) => s.sourceType === 'github').length)
-const customCount = computed(() => projects.software.filter((s) => s.sourceType === 'custom').length)
-
-onMounted(() => {
-  projects.refresh()
-  categories.refresh()
-})
+/* 智能分页：已抽到 AdminPager 组件 */
 
 watch(sortBy, () => { page.value = 1 })
 </script>
@@ -251,39 +162,16 @@ watch(sortBy, () => { page.value = 1 })
           </p>
         </div>
         <div class="head-actions">
-          <div class="search-bar">
-            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16">
-              <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"/>
-            </svg>
-            <input v-model="keyword" placeholder="搜索名称 / Slug / 仓库 / 分类..." class="search-input" />
-            <button v-if="keyword" class="search-clear" @click="keyword = ''">×</button>
-          </div>
-          <div class="sort-group">
-            <button :class="['sort-btn', { active: sortBy === 'time' }]" @click="setSort('time')" title="按最近更新时间排序">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              最近更新
-              <span class="sort-arrow">{{ sortBy === 'time' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
-            </button>
-            <button :class="['sort-btn', { active: sortBy === 'name' }]" @click="setSort('name')" title="按名称排序">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 6h13M3 12h9M3 18h5M17 10v10M17 10l-3 3M17 10l3 3"/>
-              </svg>
-              名称
-              <span class="sort-arrow">{{ sortBy === 'name' ? (sortOrder === 'desc' ? '↓' : '↑') : '↑' }}</span>
-            </button>
-            <button :class="['sort-btn', { active: sortBy === 'featured' }]" @click="setSort('featured')" title="按推荐状态排序">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-              推荐
-              <span class="sort-arrow">{{ sortBy === 'featured' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
-            </button>
-          </div>
+          <AdminSearchBar
+            v-model="keyword"
+            placeholder="搜索名称 / Slug / 仓库 / 分类..."
+          />
+          <AdminSortGroup
+            :sort-key="sortBy"
+            :sort-order="sortOrder"
+            :options="sortOptions"
+            @update="(p) => { sortBy = p.key as SortBy; sortOrder = p.order }"
+          />
           <button class="btn-primary btn-add" @click="goNew">
             <span class="add-icon">＋</span>
             新增软件
@@ -528,15 +416,13 @@ watch(sortBy, () => { page.value = 1 })
       </div>
 
       <!-- 分页 -->
-      <nav v-if="totalPages > 1" class="pager">
-        <button class="pg-btn" :disabled="page === 1" @click="jumpPage(page - 1)">‹</button>
-        <template v-for="(n, i) in pageNumbers" :key="i">
-          <span v-if="i > 0 && n - pageNumbers[i - 1] > 1" class="pg-ellipsis">…</span>
-          <button :class="['pg-btn', { active: n === page }]" @click="jumpPage(n)">{{ n }}</button>
-        </template>
-        <button class="pg-btn" :disabled="page === totalPages" @click="jumpPage(page + 1)">›</button>
-        <span class="pg-info">第 {{ page }} / {{ totalPages }} 页 · 共 {{ sortedList.length }} 个</span>
-      </nav>
+      <AdminPager
+        :page="page"
+        :total-pages="totalPages"
+        :total="sortedList.length"
+        item-name="个"
+        @update:page="jumpPage"
+      />
     </div>
   </AdminLayout>
 </template>
@@ -596,66 +482,7 @@ watch(sortBy, () => { page.value = 1 })
   font-weight: 800;
 }
 
-.search-bar {
-  position: relative;
-  background: var(--admin-card);
-  border: 1px solid var(--admin-border);
-  border-radius: var(--radius-full);
-  box-shadow: var(--admin-shadow-card);
-  display: flex;
-  align-items: center;
-  padding: 0 18px;
-  height: 48px;
-  width: 320px;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.search-bar:focus-within {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px var(--color-primary-soft);
-}
-.search-icon { color: var(--text-tertiary); flex-shrink: 0; }
-.search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.92rem;
-  color: var(--text-main);
-  margin-left: 10px;
-  height: 100%;
-}
-.search-input::placeholder { color: var(--text-tertiary); }
-.search-clear {
-  width: 22px; height: 22px;
-  border: none;
-  background: var(--color-card-soft);
-  color: var(--text-tertiary);
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 0.95rem;
-  line-height: 1;
-}
-.search-clear:hover { background: var(--color-primary-soft); color: var(--color-primary); }
-
-/* === 排序 === */
-.sort-group { display: flex; gap: 6px; }
-.sort-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  height: 48px; padding: 0 12px;
-  border-radius: var(--radius-full);
-  background: var(--admin-card);
-  color: var(--text-sec);
-  border: 1px solid var(--admin-border);
-  font-size: 0.85rem; font-weight: 500;
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-  box-shadow: var(--admin-shadow-card);
-}
-.sort-btn:hover { background: var(--color-primary-soft); color: var(--color-primary); border-color: var(--color-primary-soft); }
-.sort-btn.active { background: var(--color-primary-soft); color: var(--color-primary); border-color: var(--color-primary); }
-.sort-arrow { font-size: 0.95rem; line-height: 1; opacity: 0.55; font-weight: 700; }
-.sort-btn.active .sort-arrow { opacity: 1; }
+/* search-bar / sort-group 已抽到 AdminSearchBar / AdminSortGroup 组件 */
 
 /* === 批量操作 === */
 .bulk-bar {
@@ -1093,14 +920,19 @@ watch(sortBy, () => { page.value = 1 })
 }
 .empty-icon { font-size: 3.5rem; margin-bottom: 8px; }
 
-/* === 分页 === */
-.pager {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  padding: 8px 0 4px;
+/* pager 已抽到 AdminPager 组件 */
+
+@media (max-width: 1024px) {
+  .project-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+}
+@media (max-width: 768px) {
+  .page-head { flex-direction: column; align-items: stretch; }
+  .head-actions { width: 100%; }
+  .btn-add { flex: 1; }
+  .project-grid { grid-template-columns: 1fr; }
+  .pc-actions { justify-content: flex-end; }
+  .pc-foot { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .pc-status { width: 100%; justify-content: space-between; }
 }
 .pg-btn {
   display: inline-flex;

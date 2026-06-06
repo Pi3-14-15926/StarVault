@@ -2,6 +2,9 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { NPopconfirm, useMessage } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
+import AdminSearchBar from '../../components/admin/AdminSearchBar.vue'
+import AdminSortGroup, { type SortOption } from '../../components/admin/AdminSortGroup.vue'
+import AdminPager from '../../components/admin/AdminPager.vue'
 import { useProjectStore } from '../../store/project'
 import { useIconUrl } from '../../composables/useIconUrl'
 import {
@@ -37,6 +40,10 @@ function setSort(by: SortBy) {
   if (sortBy.value === by) sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc'
   else { sortBy.value = by; sortOrder.value = 'desc' }
 }
+const sortOptions: SortOption[] = [
+  { key: 'date', label: '日期', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>', defaultOrder: 'desc' },
+  { key: 'name', label: '名称', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h13M3 12h9M3 18h5M17 10v10M17 10l-3 3M17 10l3 3"/></svg>', defaultOrder: 'asc' },
+]
 
 /* ============== 使用情况统计 ============== */
 const usedByMap = computed(() => {
@@ -78,13 +85,7 @@ function jumpPage(p: number) {
   if (p < 1 || p > totalPages.value) return
   page.value = p
 }
-const pageNumbers = computed(() => {
-  const total = totalPages.value
-  const cur = page.value
-  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1)
-  const set = new Set<number>([1, total, cur, cur - 1, cur + 1])
-  return [...set].filter((n) => n >= 1 && n <= total).sort((a, b) => a - b)
-})
+/* 智能分页：已抽到 AdminPager 组件 */
 watch(keyword, () => { page.value = 1 })
 watch(sortBy, () => { page.value = 1 })
 
@@ -269,31 +270,19 @@ async function copyUrl(url: string) {
             <p class="library-sub">{{ icons.length }} 个图标 · 共 {{ fmtSize(totalSize) }}</p>
           </div>
           <div class="library-actions">
-            <div class="search-bar">
-              <svg class="search-icon" viewBox="0 0 24 24" width="14" height="14">
-                <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"/>
-              </svg>
-              <input v-model="keyword" placeholder="搜索文件名..." class="search-input" />
-            </div>
-            <div class="sort-group">
-              <button :class="['sort-btn', { active: sortBy === 'date' }]" @click="setSort('date')" title="按上传日期排序">
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2"/>
-                  <line x1="16" y1="2" x2="16" y2="6"/>
-                  <line x1="8" y1="2" x2="8" y2="6"/>
-                  <line x1="3" y1="10" x2="21" y2="10"/>
-                </svg>
-                日期
-                <span class="sort-arrow">{{ sortBy === 'date' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
-              </button>
-              <button :class="['sort-btn', { active: sortBy === 'name' }]" @click="setSort('name')" title="按名称排序">
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 6h13M3 12h9M3 18h5M17 10v10M17 10l-3 3M17 10l3 3"/>
-                </svg>
-                名称
-                <span class="sort-arrow">{{ sortBy === 'name' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
-              </button>
-            </div>
+            <AdminSearchBar
+              v-model="keyword"
+              placeholder="搜索文件名..."
+              :height="40"
+              :show-clear="false"
+            />
+            <AdminSortGroup
+              :sort-key="sortBy"
+              :sort-order="sortOrder"
+              :options="sortOptions"
+              :height="40"
+              @update="(p) => { sortBy = p.key as SortBy; sortOrder = p.order }"
+            />
             <button v-if="selected.size > 0" class="btn-danger-soft" @click="doBatchDelete">
               删除选中 ({{ selected.size }})
             </button>
@@ -367,15 +356,13 @@ async function copyUrl(url: string) {
         </div>
 
         <!-- 分页 -->
-        <nav v-if="totalPages > 1" class="pager">
-          <button class="pg-btn" :disabled="page === 1" @click="jumpPage(page - 1)">‹</button>
-          <template v-for="(n, i) in pageNumbers" :key="i">
-            <span v-if="i > 0 && n - pageNumbers[i - 1] > 1" class="pg-ellipsis">…</span>
-            <button :class="['pg-btn', { active: n === page }]" @click="jumpPage(n)">{{ n }}</button>
-          </template>
-          <button class="pg-btn" :disabled="page === totalPages" @click="jumpPage(page + 1)">›</button>
-          <span class="pg-info">第 {{ page }} / {{ totalPages }} 页 · 共 {{ sortedIcons.length }} 个</span>
-        </nav>
+        <AdminPager
+          :page="page"
+          :total-pages="totalPages"
+          :total="sortedIcons.length"
+          item-name="个"
+          @update:page="jumpPage"
+        />
       </section>
     </div>
   </AdminLayout>
@@ -432,44 +419,6 @@ async function copyUrl(url: string) {
 .library-title { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 0 0 2px; }
 .library-sub { font-size: 0.82rem; color: var(--text-tertiary); margin: 0; }
 .library-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-
-.search-bar {
-  position: relative;
-  background: var(--color-card-soft);
-  border: 1px solid var(--admin-border);
-  border-radius: var(--radius-full);
-  display: flex; align-items: center;
-  padding: 0 14px;
-  height: 40px;
-  gap: 8px;
-  min-width: 220px;
-  transition: all 0.18s;
-}
-.search-bar:focus-within { border-color: var(--color-primary); background: var(--admin-card); box-shadow: 0 0 0 3px var(--color-primary-soft); }
-.search-icon { color: var(--text-tertiary); }
-.search-input {
-  flex: 1; border: none; outline: none; background: transparent;
-  font-size: 0.88rem; color: var(--text-main); min-width: 0;
-}
-
-/* === 排序 === */
-.sort-group { display: flex; gap: 6px; }
-.sort-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  height: 40px; padding: 0 12px;
-  border-radius: var(--admin-radius-btn);
-  background: var(--color-card-soft);
-  color: var(--text-sec);
-  border: 1px solid var(--admin-border);
-  font-size: 0.82rem; font-weight: 500;
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-.sort-btn:hover { background: var(--color-primary-soft); color: var(--color-primary); border-color: var(--color-primary-soft); }
-.sort-btn.active { background: var(--color-primary-soft); color: var(--color-primary); border-color: var(--color-primary); }
-.sort-arrow { font-size: 0.92rem; line-height: 1; opacity: 0.55; font-weight: 700; }
-.sort-btn.active .sort-arrow { opacity: 1; }
 
 .icon-grid {
   display: grid;
@@ -563,48 +512,6 @@ async function copyUrl(url: string) {
 .icon-btn.danger:hover { background: rgba(229, 83, 83, 0.1); border-color: rgba(229, 83, 83, 0.2); color: #E55353; }
 .icon-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* === 分页 === */
-.pager {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  padding: 16px 0 4px;
-  flex-shrink: 0;
-}
-.pg-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 34px;
-  height: 34px;
-  padding: 0 10px;
-  background: var(--color-card-soft);
-  color: var(--text-sec);
-  border: 1px solid var(--admin-border);
-  border-radius: 9px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.18s, color 0.18s, transform 0.18s;
-  font-variant-numeric: tabular-nums;
-}
-.pg-btn:hover:not(:disabled) {
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
-  transform: scale(1.05);
-}
-.pg-btn.active {
-  background: var(--admin-gradient);
-  color: #FFFFFF;
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(79, 140, 255, 0.28);
-}
-.pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.pg-ellipsis { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 34px; color: var(--text-tertiary); }
-.pg-info { margin-left: 10px; font-size: 0.76rem; color: var(--text-tertiary); }
-
 /* === 通用 === */
 .btn-danger-soft {
   display: inline-flex;
@@ -651,10 +558,5 @@ async function copyUrl(url: string) {
   .head-actions button { flex: 1; }
   .icon-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
   .library-actions { width: 100%; }
-  .search-bar { flex: 1; min-width: 0; }
-  .sort-group { width: 100%; }
-  .sort-btn { flex: 1; justify-content: center; }
-  .pager { gap: 4px; }
-  .pg-info { width: 100%; text-align: center; margin-left: 0; margin-top: 4px; }
 }
 </style>

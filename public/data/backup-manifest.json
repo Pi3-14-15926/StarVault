@@ -1,4 +1,750 @@
 {
-  "entries": [],
-  "updatedAt": "2026-06-05T04:06:20.535Z"
+  "entries": [
+    {
+      "category": "动漫",
+      "project": "Animeko",
+      "versionDir": "2026-05-26_v5.5.2",
+      "files": [
+        {
+          "name": "ani-5.5.2-arm64-v8a.apk",
+          "size": 23160206,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-arm64-v8a.apk"
+        },
+        {
+          "name": "ani-5.5.2-arm64-v8a.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-arm64-v8a.apk.sha1"
+        },
+        {
+          "name": "ani-5.5.2-armeabi-v7a.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-armeabi-v7a.apk.sha1"
+        },
+        {
+          "name": "ani-5.5.2-linux-x86_64.appimage.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-linux-x86_64.appimage.sha1"
+        },
+        {
+          "name": "ani-5.5.2-macos-aarch64.dmg.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-macos-aarch64.dmg.sha1"
+        },
+        {
+          "name": "ani-5.5.2-macos-x86_64.zip.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-macos-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.5.2-universal.apk.cloudflare.qrcode.png",
+          "size": 1671,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-universal.apk.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.5.2-universal.apk.cloudflare.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-universal.apk.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.5.2-universal.apk.github.qrcode.png",
+          "size": 1933,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-universal.apk.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.5.2-universal.apk.github.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-universal.apk.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.5.2-universal.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-universal.apk.sha1"
+        },
+        {
+          "name": "ani-5.5.2-windows-x86_64.zip.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-windows-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.5.2-x86_64.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2-x86_64.apk.sha1"
+        },
+        {
+          "name": "ani-5.5.2.ipa.cloudflare.qrcode.png",
+          "size": 1309,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2.ipa.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.5.2.ipa.cloudflare.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2.ipa.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.5.2.ipa.github.qrcode.png",
+          "size": 1971,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2.ipa.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.5.2.ipa.github.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2.ipa.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.5.2.ipa.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-26_v5.5.2/ani-5.5.2.ipa.sha1"
+        }
+      ]
+    },
+    {
+      "category": "动漫",
+      "project": "Animeko",
+      "versionDir": "2026-05-28_v5.6.0",
+      "files": [
+        {
+          "name": "ani-5.6.0-arm64-v8a.apk",
+          "size": 23719240,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-arm64-v8a.apk"
+        },
+        {
+          "name": "ani-5.6.0-arm64-v8a.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-arm64-v8a.apk.sha1"
+        },
+        {
+          "name": "ani-5.6.0-armeabi-v7a.apk",
+          "size": 23184432,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-armeabi-v7a.apk"
+        },
+        {
+          "name": "ani-5.6.0-armeabi-v7a.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-armeabi-v7a.apk.sha1"
+        },
+        {
+          "name": "ani-5.6.0-linux-x86_64.appimage.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-linux-x86_64.appimage.sha1"
+        },
+        {
+          "name": "ani-5.6.0-macos-aarch64.dmg.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-macos-aarch64.dmg.sha1"
+        },
+        {
+          "name": "ani-5.6.0-macos-x86_64.zip.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-macos-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.6.0-universal.apk.cloudflare.qrcode.png",
+          "size": 1661,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-universal.apk.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.6.0-universal.apk.cloudflare.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-universal.apk.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.6.0-universal.apk.github.qrcode.png",
+          "size": 1945,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-universal.apk.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.6.0-universal.apk.github.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-universal.apk.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.6.0-universal.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-universal.apk.sha1"
+        },
+        {
+          "name": "ani-5.6.0-windows-x86_64.zip.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-windows-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.6.0-x86_64.apk",
+          "size": 23815804,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-x86_64.apk"
+        },
+        {
+          "name": "ani-5.6.0-x86_64.apk.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0-x86_64.apk.sha1"
+        },
+        {
+          "name": "ani-5.6.0.ipa",
+          "size": 30337983,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa"
+        },
+        {
+          "name": "ani-5.6.0.ipa.cloudflare.qrcode.png",
+          "size": 1308,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.6.0.ipa.cloudflare.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.6.0.ipa.github.qrcode.png",
+          "size": 2005,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.6.0.ipa.github.qrcode.png.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.6.0.ipa.sha1",
+          "size": 40,
+          "url": "/SoftwareHub/动漫/Animeko/2026-05-28_v5.6.0/ani-5.6.0.ipa.sha1"
+        }
+      ]
+    },
+    {
+      "category": "动漫",
+      "project": "Kazumi",
+      "versionDir": "2026-05-21_2.1.2",
+      "files": [
+        {
+          "name": "Kazumi_android_2.1.2.apk",
+          "size": 30554457,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_android_2.1.2.apk"
+        },
+        {
+          "name": "Kazumi_ios_2.1.2_no_sign.ipa",
+          "size": 28000908,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_ios_2.1.2_no_sign.ipa"
+        },
+        {
+          "name": "Kazumi_linux_2.1.2_amd64.deb",
+          "size": 24870368,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_linux_2.1.2_amd64.deb"
+        },
+        {
+          "name": "Kazumi_linux_2.1.2_amd64.tar.gz",
+          "size": 29581345,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_linux_2.1.2_amd64.tar.gz"
+        },
+        {
+          "name": "Kazumi_macos_2.1.2.dmg",
+          "size": 53019899,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_macos_2.1.2.dmg"
+        },
+        {
+          "name": "Kazumi_windows_2.1.2.msix",
+          "size": 46037181,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_windows_2.1.2.msix"
+        },
+        {
+          "name": "Kazumi_windows_2.1.2.zip",
+          "size": 41198554,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-21_2.1.2/Kazumi_windows_2.1.2.zip"
+        }
+      ]
+    },
+    {
+      "category": "动漫",
+      "project": "Kazumi",
+      "versionDir": "2026-05-29_2.1.3",
+      "files": [
+        {
+          "name": "Kazumi_android_2.1.3.apk",
+          "size": 30619993,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_android_2.1.3.apk"
+        },
+        {
+          "name": "Kazumi_ios_2.1.3_no_sign.ipa",
+          "size": 28024764,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_ios_2.1.3_no_sign.ipa"
+        },
+        {
+          "name": "Kazumi_linux_2.1.3_amd64.tar.gz",
+          "size": 29643882,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_linux_2.1.3_amd64.tar.gz"
+        },
+        {
+          "name": "Kazumi_macos_2.1.3.dmg",
+          "size": 53018657,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_macos_2.1.3.dmg"
+        },
+        {
+          "name": "Kazumi_windows_2.1.3.msix",
+          "size": 46101538,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_windows_2.1.3.msix"
+        },
+        {
+          "name": "Kazumi_windows_2.1.3.zip",
+          "size": 41268662,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-05-29_2.1.3/Kazumi_windows_2.1.3.zip"
+        }
+      ]
+    },
+    {
+      "category": "音乐",
+      "project": "落雪音乐桌面版",
+      "versionDir": "2026-02-16_v2.12.1",
+      "files": [
+        {
+          "name": "latest-linux-arm.yml",
+          "size": 365,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/latest-linux-arm.yml"
+        },
+        {
+          "name": "latest-linux-arm64.yml",
+          "size": 363,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/latest-linux-arm64.yml"
+        },
+        {
+          "name": "latest-linux.yml",
+          "size": 365,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/latest-linux.yml"
+        },
+        {
+          "name": "latest-mac.yml",
+          "size": 364,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/latest-mac.yml"
+        },
+        {
+          "name": "latest.yml",
+          "size": 373,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/latest.yml"
+        },
+        {
+          "name": "lx-music-desktop-2.12.1-arm64.dmg",
+          "size": 120850756,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-2.12.1-arm64.dmg"
+        },
+        {
+          "name": "lx-music-desktop-2.12.1-arm64.dmg.blockmap",
+          "size": 128315,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-2.12.1-arm64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.1-x64.dmg.blockmap",
+          "size": 133445,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-2.12.1-x64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.1.x64.rpm",
+          "size": 90026585,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-2.12.1.x64.rpm"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-arm64-Setup.exe",
+          "size": 99339108,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-arm64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-arm64-Setup.exe.blockmap",
+          "size": 103766,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-arm64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win7_x64-green.7z",
+          "size": 71355656,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win7_x64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win7_x64-Setup.exe",
+          "size": 79584043,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win7_x64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win7_x64-Setup.exe.blockmap",
+          "size": 84430,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win7_x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win7_x86-green.7z",
+          "size": 67589222,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win7_x86-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win_arm64-green.7z",
+          "size": 90654475,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win_arm64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-win_x64-green.7z",
+          "size": 88813133,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-win_x64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.1-x64-Setup.exe.blockmap",
+          "size": 103376,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop-v2.12.1-x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop_2.12.1_arm64.deb",
+          "size": 96075832,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop_2.12.1_arm64.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.1_armv7l.deb",
+          "size": 93496616,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-02-16_v2.12.1/lx-music-desktop_2.12.1_armv7l.deb"
+        }
+      ]
+    },
+    {
+      "category": "音乐",
+      "project": "落雪音乐桌面版",
+      "versionDir": "2026-05-01_v2.12.2",
+      "files": [
+        {
+          "name": "latest-linux-arm.yml",
+          "size": 365,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/latest-linux-arm.yml"
+        },
+        {
+          "name": "latest-linux-arm64.yml",
+          "size": 363,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/latest-linux-arm64.yml"
+        },
+        {
+          "name": "latest-linux.yml",
+          "size": 365,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/latest-linux.yml"
+        },
+        {
+          "name": "latest-mac.yml",
+          "size": 364,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/latest-mac.yml"
+        },
+        {
+          "name": "latest.yml",
+          "size": 374,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/latest.yml"
+        },
+        {
+          "name": "lx-music-desktop-2.12.2-arm64.dmg",
+          "size": 124320718,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-2.12.2-arm64.dmg"
+        },
+        {
+          "name": "lx-music-desktop-2.12.2-arm64.dmg.blockmap",
+          "size": 132231,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-2.12.2-arm64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.2-x64.dmg.blockmap",
+          "size": 135691,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-2.12.2-x64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.2.x64.rpm",
+          "size": 90316685,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-2.12.2.x64.rpm"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-arm64-Setup.exe",
+          "size": 109549480,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-arm64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-arm64-Setup.exe.blockmap",
+          "size": 115461,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-arm64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-win7_x64-green.7z",
+          "size": 71298775,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-win7_x64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-win7_x64-Setup.exe",
+          "size": 79507152,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-win7_x64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-win7_x64-Setup.exe.blockmap",
+          "size": 84533,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-win7_x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-win7_x86-green.7z",
+          "size": 67526279,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-win7_x86-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-win_arm64-green.7z",
+          "size": 99870949,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-win_arm64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.2-x64-Setup.exe.blockmap",
+          "size": 114178,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop-v2.12.2-x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop_2.12.2_amd64.deb",
+          "size": 101943848,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop_2.12.2_amd64.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.2_arm64.deb",
+          "size": 96767892,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop_2.12.2_arm64.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.2_armv7l.deb",
+          "size": 94664808,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop_2.12.2_armv7l.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.2_x64.AppImage",
+          "size": 129676013,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop_2.12.2_x64.AppImage"
+        },
+        {
+          "name": "lx-music-desktop_2.12.2_x64.pacman",
+          "size": 92300712,
+          "url": "/SoftwareHub/音乐/落雪音乐桌面版/2026-05-01_v2.12.2/lx-music-desktop_2.12.2_x64.pacman"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读Sigma",
+      "versionDir": "2026-03-07_3.26.030717",
+      "files": [
+        {
+          "name": "legado_beta_3.26.03071721_release.apk",
+          "size": 20460589,
+          "url": "/SoftwareHub/阅读/阅读Sigma/2026-03-07_3.26.030717/legado_beta_3.26.03071721_release.apk"
+        },
+        {
+          "name": "legado_plus_3.26.03071721_releaseS.apk",
+          "size": 20460589,
+          "url": "/SoftwareHub/阅读/阅读Sigma/2026-03-07_3.26.030717/legado_plus_3.26.03071721_releaseS.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读Sigma",
+      "versionDir": "2026-03-21_beta",
+      "files": [
+        {
+          "name": "legado_beta_3.26.03212203_release.apk",
+          "size": 20469311,
+          "url": "/SoftwareHub/阅读/阅读Sigma/2026-03-21_beta/legado_beta_3.26.03212203_release.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_Archive",
+      "versionDir": "2026-06-05_archive-v3-3.26.06060257",
+      "files": [
+        {
+          "name": "legado-arm64-v8a_app_3.26.06060257_29678097.apk",
+          "size": 36230438,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-05_archive-v3-3.26.06060257/legado-arm64-v8a_app_3.26.06060257_29678097.apk"
+        },
+        {
+          "name": "legado-armeabi-v7a_app_3.26.06060257_29678097.apk",
+          "size": 36177505,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-05_archive-v3-3.26.06060257/legado-armeabi-v7a_app_3.26.06060257_29678097.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_MD3",
+      "versionDir": "2026-05-31_3.26.13-beta.8",
+      "files": [
+        {
+          "name": "legado-3.26.13-beta.8-arm64-v8a.apk",
+          "size": 17124600,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.8-armeabi-v7a.apk",
+          "size": 16664425,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.8-noR8-arm64-v8a.apk",
+          "size": 44044754,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8-noR8-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.8-noR8-armeabi-v7a.apk",
+          "size": 43584573,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8-noR8-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.8-noR8.apk",
+          "size": 50617207,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8-noR8.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.8.apk",
+          "size": 23697128,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-05-31_3.26.13-beta.8/legado-3.26.13-beta.8.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_MD3",
+      "versionDir": "2026-06-03_3.26.13-beta.9",
+      "files": [
+        {
+          "name": "legado-3.26.13-beta.9-arm64-v8a.apk",
+          "size": 17150550,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.9-armeabi-v7a.apk",
+          "size": 16690376,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.9-noR8-arm64-v8a.apk",
+          "size": 44070788,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9-noR8-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.9-noR8-armeabi-v7a.apk",
+          "size": 43610612,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9-noR8-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.9-noR8.apk",
+          "size": 50643252,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9-noR8.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.9.apk",
+          "size": 23723062,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-03_3.26.13-beta.9/legado-3.26.13-beta.9.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_Tauri",
+      "versionDir": "2026-05-28_v0.9.10-20260528233614-b00000037",
+      "files": [
+        {
+          "name": "legado_tauri-0.9.10-20260528233614-b00000037-windows.exe",
+          "size": 52078592,
+          "url": "/SoftwareHub/阅读/阅读_Tauri/2026-05-28_v0.9.10-20260528233614-b00000037/legado_tauri-0.9.10-20260528233614-b00000037-windows.exe"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_Tauri",
+      "versionDir": "2026-05-28_v0.9.11-20260529004059-b00000038",
+      "files": [
+        {
+          "name": "legado_tauri-0.9.11-20260529004059-b00000038-windows.exe",
+          "size": 52079104,
+          "url": "/SoftwareHub/阅读/阅读_Tauri/2026-05-28_v0.9.11-20260529004059-b00000038/legado_tauri-0.9.11-20260529004059-b00000038-windows.exe"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读官方版",
+      "versionDir": "2026-05-24_3.26.052421",
+      "files": [
+        {
+          "name": "legado_all.apk",
+          "size": 16679950,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-05-24_3.26.052421/legado_all.apk"
+        },
+        {
+          "name": "legado_arm64.apk",
+          "size": 10403266,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-05-24_3.26.052421/legado_arm64.apk"
+        },
+        {
+          "name": "legado_armv7.apk",
+          "size": 9952084,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-05-24_3.26.052421/legado_armv7.apk"
+        },
+        {
+          "name": "legado_x64.apk",
+          "size": 10666523,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-05-24_3.26.052421/legado_x64.apk"
+        },
+        {
+          "name": "legado_x86.apk",
+          "size": 10736134,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-05-24_3.26.052421/legado_x86.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读官方版",
+      "versionDir": "2026-06-03_beta",
+      "files": [
+        {
+          "name": "all.apk",
+          "size": 15177475,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/all.apk"
+        },
+        {
+          "name": "all_releaseA.apk",
+          "size": 15177493,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/all_releaseA.apk"
+        },
+        {
+          "name": "arm64.apk",
+          "size": 8900788,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/arm64.apk"
+        },
+        {
+          "name": "arm64_releaseA.apk",
+          "size": 8900797,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/arm64_releaseA.apk"
+        },
+        {
+          "name": "armv7.apk",
+          "size": 8449613,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/armv7.apk"
+        },
+        {
+          "name": "armv7_releaseA.apk",
+          "size": 8449599,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/armv7_releaseA.apk"
+        },
+        {
+          "name": "x64.apk",
+          "size": 9164048,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/x64.apk"
+        },
+        {
+          "name": "x64_releaseA.apk",
+          "size": 9164039,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/x64_releaseA.apk"
+        },
+        {
+          "name": "x86.apk",
+          "size": 9233649,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/x86.apk"
+        },
+        {
+          "name": "x86_releaseA.apk",
+          "size": 9233653,
+          "url": "/SoftwareHub/阅读/阅读官方版/2026-06-03_beta/x86_releaseA.apk"
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-06-06T08:38:52.864Z"
 }
