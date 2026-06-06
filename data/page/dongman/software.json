@@ -1,0 +1,48 @@
+[
+  {
+    "id": "mpzjjzg2ylm14p",
+    "slug": "animeko",
+    "sourceType": "github",
+    "name": "Animeko",
+    "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
+    "logo": "https://avatars.githubusercontent.com/u/166622089?v=4",
+    "categorySlug": "dongman",
+    "featured": true,
+    "githubRepo": "open-ani/animeko",
+    "githubUrl": "https://github.com/open-ani/animeko",
+    "stars": 18160,
+    "forks": 483,
+    "platforms": [
+      "Android",
+      "Linux",
+      "MacOS",
+      "Windows",
+      "Other"
+    ],
+    "latestVersionId": "mpzjjudy9mstsw",
+    "latestUpdateTime": "2026-05-28T19:26:21Z"
+  },
+  {
+    "id": "mpzjkpvzeuh3zl",
+    "slug": "kazumi",
+    "sourceType": "github",
+    "name": "Kazumi",
+    "description": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
+    "logo": "https://avatars.githubusercontent.com/u/34627277?v=4",
+    "categorySlug": "dongman",
+    "featured": false,
+    "githubRepo": "Predidit/Kazumi",
+    "githubUrl": "https://github.com/Predidit/Kazumi",
+    "stars": 26106,
+    "forks": 750,
+    "platforms": [
+      "Android",
+      "Other",
+      "Linux",
+      "MacOS",
+      "Windows"
+    ],
+    "latestVersionId": "mpzjknwaomh2fi",
+    "latestUpdateTime": "2026-05-29T03:00:35Z"
+  }
+]
