@@ -1032,36 +1032,40 @@
     ]
   },
   {
-    "id": "mpzipgp53oltxn",
-    "projectId": "mpziqif08u08yz",
-    "version": "beta",
-    "publishedAt": "2026-06-03T03:40:18Z",
-    "changelog": "## 更新日志\n- fix(manga): 修复gif自动翻页导致的闪退（大概修好了）                      (41f1830a7)",
+    "id": "mq1ygoieurmp4a",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06060257",
+    "publishedAt": "2026-06-05T19:10:35Z",
+    "changelog": "阅读Archive 第九版补充更新\n\n新增：\n- 新增标准世界书功能，支持世界书管理、导入、匹配注入、角色绑定，以及在 AI 对话和阅读页中快速启用。\n- 新增 AI 角色助手侧栏，支持默认助手、角色助手、按助手隔离会话、角色卡展示和会话历史管理。\n- 新增 AI 聊天语音播放能力，支持调用角色绑定的 HTTP TTS 发言人进行播放。\n- 新增 AI 工具能力，支持角色正文检索、书籍关键词搜索和世界书编辑管理。\n- 新增 Agent 规划、工具校验、失败重试和任务检查点能力，提升复杂工具调用的稳定性。\n\n修复：\n- 修复 AI 聊天头像资源在部分场景下可能导致崩溃的问题。\n- 修复阅读页刷新目录时影响已缓存正文阅读的问题，目录刷新改为静默执行。\n- 修复正文替换净化、移除规则和缩进等设置修改后不能实时生效的问题。\n- 修复多角色自动建卡部分场景下没有创建角色卡的问题。\n- 修复多角色工具返回新角色后未正确校验和补全的问题。\n- 修复部分多角色 TTS 路由失败时频繁弹出报错的问题。\n- 修复情景演绎气泡在部分设备上可能出现异常高亮和按压残留的问题。\n",
     "downloadIds": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      "mq1ygoieejqisc",
+      "mq1ygoiglv2k0r"
     ]
   },
   {
-    "id": "mpzipgp5zxyrd3",
-    "projectId": "mpziqif08u08yz",
+    "id": "mq1zlwkh40byby",
+    "projectId": "mq1yoxoecx1loi",
     "version": "3.26.052421",
-    "publishedAt": "2026-05-24T13:14:27Z",
+    "publishedAt": "2026-05-24T00:00:00.000Z",
     "changelog": "## 更新日志\n\n- perf(search): 优化书架内搜索逻辑，将过滤移动到代码中并优化 ui 性能 (c5b3f605f)\n- refactor(dao): 优化数据库性能 (0f1deef31)\n- refactor(dao): 移除数据库查询中的多余排序逻辑 (8bdbdfe98)\n- feat(bookshelf): 优化书籍自动更新逻辑，改为进入分组时触发并增加更新频率限制。 (2cbdf1bdf)\n- ci: 更新发布频率并重构构建工作流 (d11908306)\n- refactor(ui): 更新对话框和列表样式，使用 bottomBackground 作为背景颜色，移除多余颜色设置并移除列表分割线 (097c7f7be)\n- refactor(explore): 优化列表展开收起动画逻辑，统一动画时长并简化滚动同步处理。 (72c597698)",
     "downloadIds": [
-      null,
-      null,
-      null,
-      null,
-      null
+      "mq1zlwkqhhtpo2",
+      "mq1zlwl19oonhy",
+      "mq1zlwlcby4geq",
+      "mq1zlwlo8dq09r",
+      "mq1zlwlzpifdto"
+    ]
+  },
+  {
+    "id": "mq20s3m3cab22x",
+    "projectId": "mpwp1hvpsn5ffl",
+    "version": "beta-3.26.060522",
+    "publishedAt": "2026-06-05T14:32:41Z",
+    "changelog": "### 更新内容\r\n* docs：增加java/Android的api文档\r\n* feat：帮助文档管理器支持自定义文档\r\n* feat：帮助搜索支持自定义文档\r\n* fix：添加的文档分组显示在最后\r\n* fix：修复复用 WebView 没有恢复导致搜索页空白的问题\r\n\r\n",
+    "downloadIds": [
+      "mq20s3m39jghy5",
+      "mq20s3m5l25x3b",
+      "mq20s3m8kwu4e1"
     ]
   }
 ]
