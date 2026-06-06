@@ -1,0 +1,133 @@
+[
+  {
+    "id": "mpwomjebv153ry",
+    "slug": "readersigma",
+    "sourceType": "github",
+    "name": "阅读Sigma",
+    "description": "阅读Sigma是gedoor/legado的一个分支版本，在原有基础上增加更多功能，为书源带来更多可能性。",
+    "logo": "https://avatars.githubusercontent.com/u/59725261?v=4",
+    "categorySlug": "yuedu",
+    "featured": false,
+    "githubRepo": "Luoyacheng/legado",
+    "githubUrl": "https://github.com/Luoyacheng/legado",
+    "stars": 1676,
+    "forks": 243,
+    "platforms": [
+      "Android"
+    ],
+    "latestVersionId": "mpwomcwxfes2c9",
+    "latestUpdateTime": "2026-03-21T14:12:43Z"
+  },
+  {
+    "id": "mpwouieuddbq2d",
+    "slug": "readermd3",
+    "sourceType": "github",
+    "name": "阅读 MD3",
+    "description": "使用 Material Design 3 全新设计的阅读 3.0",
+    "logo": "https://avatars.githubusercontent.com/u/63206378?v=4",
+    "categorySlug": "yuedu",
+    "featured": false,
+    "githubRepo": "HapeLee/legado-with-MD3",
+    "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
+    "stars": 4297,
+    "forks": 415,
+    "platforms": [
+      "Android"
+    ],
+    "latestVersionId": "mq09gdgxjqukdv",
+    "latestUpdateTime": "2026-06-03T17:11:22Z"
+  },
+  {
+    "id": "mpwowqbvn123ig",
+    "slug": "readert",
+    "sourceType": "github",
+    "name": "阅读 T",
+    "description": "开源阅读修改版，添加基于cron的定时任务支持。",
+    "logo": "https://avatars.githubusercontent.com/u/70464410?v=4",
+    "categorySlug": "yuedu",
+    "featured": false,
+    "githubRepo": "skybbk1001/legadoT",
+    "githubUrl": "https://github.com/skybbk1001/legadoT",
+    "stars": 34,
+    "forks": 9,
+    "platforms": [
+      "Android"
+    ],
+    "latestVersionId": "mpwow55qsslhd1",
+    "latestUpdateTime": "2026-05-29T20:44:25Z"
+  },
+  {
+    "id": "mpwoxcif3y72eu",
+    "slug": "readerarchive",
+    "sourceType": "github",
+    "name": "阅读 Archive",
+    "description": "阅读Sigma是gedoor/legado的一个分支版本，在原有基础上增加更多功能，为书源带来更多可能性。",
+    "logo": "https://avatars.githubusercontent.com/u/104863909?v=4",
+    "categorySlug": "yuedu",
+    "featured": false,
+    "githubRepo": "Rimchars/legado",
+    "githubUrl": "https://github.com/Rimchars/legado",
+    "stars": 217,
+    "forks": 11,
+    "platforms": [
+      "Android"
+    ],
+    "latestVersionId": "mq1ygoieurmp4a",
+    "latestUpdateTime": "2026-06-05T19:10:35Z"
+  },
+  {
+    "id": "mpwoyw5uynpmko",
+    "slug": "readertauri",
+    "sourceType": "github",
+    "name": "阅读 Tauri",
+    "description": "",
+    "logo": "https://avatars.githubusercontent.com/u/223791923?v=4",
+    "categorySlug": "yuedu",
+    "featured": false,
+    "githubRepo": "LegadoTeam/Legado-Tauri-Release",
+    "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
+    "stars": 180,
+    "forks": 14,
+    "platforms": [
+      "Windows",
+      "Android"
+    ],
+    "latestVersionId": "mpwoxp6fccaoac",
+    "latestUpdateTime": "2026-05-28T16:44:14Z"
+  },
+  {
+    "id": "mpwp1hvpsn5ffl",
+    "slug": "readermax",
+    "sourceType": "github",
+    "name": "阅读 Max",
+    "description": "Legado 3.0 Book Reader with powerful controls & full functions❤️阅读3.0Max, 阅读Max是一款可以自定义来源阅读网络内容的工具，为网络爱好者提供一种方便、快捷舒适的试读体验。",
+    "logo": "https://avatars.githubusercontent.com/u/110210241?v=4",
+    "categorySlug": "yuedu",
+    "featured": true,
+    "githubRepo": "youfengknight/Legado_Max",
+    "githubUrl": "https://github.com/youfengknight/Legado_Max",
+    "stars": 168,
+    "forks": 17,
+    "platforms": [
+      "Android"
+    ],
+    "latestVersionId": "mq20s3m3cab22x",
+    "latestUpdateTime": "2026-06-05T14:32:41Z"
+  },
+  {
+    "id": "mq1yoxoecx1loi",
+    "slug": "legado",
+    "sourceType": "github",
+    "name": "legado",
+    "description": "阅读3.0, 阅读是一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/yuedu_mq1yodts.webp",
+    "categorySlug": "yuedu",
+    "featured": true,
+    "githubRepo": "gedoor/legado",
+    "githubUrl": "https://github.com/gedoor/legado",
+    "latestUpdateTime": "2026-05-24T00:00:00.000Z",
+    "stars": 46893,
+    "forks": 5717,
+    "latestVersionId": "mq1zlwkh40byby"
+  }
+]
