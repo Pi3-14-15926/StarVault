@@ -49,13 +49,13 @@
     "name": "阅读 Archive",
     "slug": "readerarchive",
     "categorySlug": "yuedu",
-    "description": "阅读Sigma是gedoor/legado的一个分支版本，在原有基础上增加更多功能，为书源带来更多可能性。",
-    "logo": "https://avatars.githubusercontent.com/u/104863909?v=4",
+    "description": "阅读Archive继承自 Lyc 维护的 Legado 分支，增强界面、AI、EPUB、漫画、视频和主题能力。",
+    "logo": "https://raw.githubusercontent.com/Rimchars/legado/main/docs/archive_icon.svg",
     "featured": false,
     "latestVersionId": "mq1ygoieurmp4a",
     "latestUpdateTime": "2026-06-05T19:10:35Z",
-    "githubRepo": "Rimchars/legado",
-    "githubUrl": "https://github.com/Rimchars/legado",
+    "githubRepo": "/Rimchars/legado",
+    "githubUrl": "https://github.com//Rimchars/legado",
     "stars": 217,
     "forks": 11
   },
@@ -91,11 +91,11 @@
   },
   {
     "id": "mq1yoxoecx1loi",
-    "name": "legado",
+    "name": "Legado",
     "slug": "legado",
     "categorySlug": "yuedu",
     "description": "阅读3.0, 阅读是一款可以自定义来源阅读网络内容的工具，为广大网络文学爱好者提供一种方便、快捷舒适的试读体验。",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/yuedu_mq1yodts.webp",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/Legado.webp",
     "featured": true,
     "latestVersionId": "mq1zlwkh40byby",
     "latestUpdateTime": "2026-05-24T00:00:00.000Z",
@@ -103,21 +103,6 @@
     "githubUrl": "https://github.com/gedoor/legado",
     "stars": 46893,
     "forks": 5717
-  },
-  {
-    "id": "mpwreu1xdmxt5v",
-    "name": "落雪音乐桌面版",
-    "slug": "lx-music-desktop",
-    "categorySlug": "music",
-    "description": "一个基于 Electron 的音乐软件",
-    "logo": "https://avatars.githubusercontent.com/u/20365169?v=4",
-    "featured": true,
-    "latestVersionId": "mpwreeavwjr9sc",
-    "latestUpdateTime": "2026-05-01T05:35:34Z",
-    "githubRepo": "lyswhut/lx-music-desktop",
-    "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51390,
-    "forks": 6848
   },
   {
     "id": "mpzjjzg2ylm14p",
@@ -148,5 +133,20 @@
     "githubUrl": "https://github.com/Predidit/Kazumi",
     "stars": 26106,
     "forks": 750
+  },
+  {
+    "id": "mpwreu1xdmxt5v",
+    "name": "落雪音乐桌面版",
+    "slug": "lx-music-desktop",
+    "categorySlug": "music",
+    "description": "一个基于 Electron 的音乐软件",
+    "logo": "https://avatars.githubusercontent.com/u/20365169?v=4",
+    "featured": true,
+    "latestVersionId": "mpwreeavwjr9sc",
+    "latestUpdateTime": "2026-05-01T05:35:34Z",
+    "githubRepo": "lyswhut/lx-music-desktop",
+    "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
+    "stars": 51390,
+    "forks": 6848
   }
 ]
