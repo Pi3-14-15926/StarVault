@@ -7,10 +7,10 @@
     "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
     "logo": "https://avatars.githubusercontent.com/u/166622089?v=4",
     "categorySlug": "dongman",
-    "featured": false,
+    "featured": true,
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18138,
+    "stars": 18160,
     "forks": 483,
     "platforms": [
       "Android",
@@ -33,8 +33,8 @@
     "featured": false,
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26040,
-    "forks": 748,
+    "stars": 26106,
+    "forks": 750,
     "platforms": [
       "Android",
       "Other",
