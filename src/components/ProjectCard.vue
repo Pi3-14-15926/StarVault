@@ -190,13 +190,13 @@ onMounted(() => {
   .desc { font-size: 0.68rem; -webkit-line-clamp: 1; }
   .stats { gap: 6px; font-size: 0.68rem; }
   .stats svg { width: 10px; height: 10px; }
-  /* 手机模式：标签更紧凑 */
+  /* 手机模式：标签更紧凑，一行至少 3 个 */
   .plat-row { margin-top: 1px; gap: 2px; }
   .plat-tag {
-    height: 14px;
-    padding: 0 4px;
-    border-radius: 4px;
-    font-size: 0.54rem;
+    height: 10px;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-size: 0.33rem;
     gap: 1px;
   }
   .dl-btn { height: 24px; font-size: 0.72rem; }

@@ -645,18 +645,19 @@ onMounted(() => {
   .podium-name { font-size: 0.85rem; }
   .podium-meta { font-size: 0.7rem; }
   .podium-btn { height: 24px; padding: 0 10px; font-size: 0.72rem; }
-  /* 平板模式：标签稍小 */
-  .cat-row-platline { gap: 3px; }
+  /* 平板模式：标签与 ProjectCard 热门卡片对齐，一行至少 3 个 */
+  .cat-row-platline { gap: 2px; }
   .cat-row-platline .plat-tag {
-    height: 18px;
-    padding: 0 6px;
-    border-radius: 6px;
-    font-size: 0.62rem;
+    height: 10px;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-size: 0.33rem;
+    gap: 1px;
   }
   .cat-row-platline .plat-more {
-    height: 18px;
-    padding: 0 4px;
-    font-size: 0.62rem;
+    height: 10px;
+    padding: 0 2px;
+    font-size: 0.33rem;
   }
 }
 @media (max-width: 480px) {
@@ -667,19 +668,19 @@ onMounted(() => {
   .cat-row-extra { display: none; }
   .cat-row-version { font-size: 0.78rem; }
   .cat-row-date { font-size: 0.72rem; }
-  /* 手机模式：标签更紧凑 */
-  .cat-row-platline { gap: 2px; min-height: 14px; }
+  /* 手机模式：标签更紧凑，一行至少 3 个 */
+  .cat-row-platline { gap: 2px; min-height: 10px; }
   .cat-row-platline .plat-tag {
-    height: 14px;
-    padding: 0 4px;
-    border-radius: 4px;
-    font-size: 0.54rem;
+    height: 10px;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-size: 0.33rem;
     gap: 1px;
   }
   .cat-row-platline .plat-more {
-    height: 14px;
-    padding: 0 3px;
-    font-size: 0.54rem;
+    height: 10px;
+    padding: 0 2px;
+    font-size: 0.33rem;
   }
 }
 @media (max-width: 640px) {
@@ -688,7 +689,15 @@ onMounted(() => {
   .cat-row-name { font-size: 0.92rem; }
   .cat-row-desc { font-size: 0.8rem; }
   .cat-row-extra { display: none; }
-  .cat-row-version { font-size: 0.78rem; }
+  .cat-row-side { flex-shrink: 1; min-width: 0; max-width: 120px; overflow: hidden; }
+  .cat-row-version {
+    max-width: 100%;
+    align-self: flex-start;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .cat-row-date { font-size: 0.72rem; }
 }
 </style>

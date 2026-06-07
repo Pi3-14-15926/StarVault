@@ -75,8 +75,32 @@ onMounted(() => {
   if (featured.value.length > 1) {
     timer = window.setInterval(nextSlide, 5000)
   }
+  updateCatCols()
+  window.addEventListener('resize', updateCatCols)
 })
-onUnmounted(() => { if (timer) clearInterval(timer) })
+onUnmounted(() => {
+  if (timer) clearInterval(timer)
+  window.removeEventListener('resize', updateCatCols)
+})
+
+/* 分类卡片分页：每页 2 行，列数随窗口变化 */
+const catPage = ref(0)
+const catCols = ref(8)
+function updateCatCols() {
+  const w = window.innerWidth
+  if (w < 480) catCols.value = 3
+  else if (w < 768) catCols.value = 4
+  else if (w < 1024) catCols.value = 6
+  else catCols.value = 8
+}
+const catPageSize = computed(() => catCols.value * 2 - 1) /* 预留 1 个给「更多」卡片，刚好 2 行 */
+const catTotalPages = computed(() => Math.max(1, Math.ceil(categories.categories.length / catPageSize.value)))
+const catPaginated = computed(() => {
+  const start = catPage.value * catPageSize.value
+  return categories.categories.slice(start, start + catPageSize.value)
+})
+function prevCatPage() { if (catPage.value > 0) catPage.value-- }
+function nextCatPage() { if (catPage.value < catTotalPages.value - 1) catPage.value++ }
 
 /* 分类下软件数量 */
 function projectCountByCategory(cslug: string): number {
@@ -210,7 +234,7 @@ function latestVersionText(s: Software): string {
       </div>
       <div class="cat-grid">
         <router-link
-          v-for="c in categories.categories"
+          v-for="c in catPaginated"
           :key="c.id"
           :to="`/category/${c.slug}`"
           class="cat-card"
@@ -228,6 +252,11 @@ function latestVersionText(s: Software): string {
           <div class="cat-name">更多</div>
           <div class="cat-count">探索所有</div>
         </router-link>
+      </div>
+      <div v-if="catTotalPages > 1" class="cat-pages">
+        <button class="cat-page-btn" :disabled="catPage === 0" @click="prevCatPage" aria-label="上一页">‹</button>
+        <span class="cat-page-info">{{ catPage + 1 }} / {{ catTotalPages }}</span>
+        <button class="cat-page-btn" :disabled="catPage === catTotalPages - 1" @click="nextCatPage" aria-label="下一页">›</button>
       </div>
     </section>
 
@@ -560,6 +589,36 @@ function latestVersionText(s: Software): string {
 .cat-card-more {
   background: var(--color-card);
 }
+.cat-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.cat-page-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: var(--color-card);
+  color: var(--text-main);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, border-color 0.18s;
+}
+.cat-page-btn:hover:not(:disabled) { background: var(--color-card-soft); border-color: var(--color-primary); }
+.cat-page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.cat-page-info {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  min-width: 44px;
+  text-align: center;
+}
 
 /* === 热门 === */
 .hot-grid {
@@ -729,5 +788,27 @@ function latestVersionText(s: Software): string {
   .cat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .section { margin-top: 32px; }
+  /* 手机模式：平台标签与 ProjectCard 热门卡片同尺寸，一行至少 3 个 */
+  .row-platline { gap: 2px; min-height: 10px; }
+  .row-platline .plat-tag {
+    height: 10px;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-size: 0.33rem;
+    gap: 1px;
+  }
+  .row-platline .plat-more {
+    height: 10px;
+    padding: 0 2px;
+    font-size: 0.33rem;
+  }
+  /* 手机模式：缩排行/列表行，让软件名（如"LX Music 桌面版"）显示完整 */
+  .panel { padding: 14px 12px; }
+  .row-item, .rank-item { padding: 10px 6px; gap: 8px; }
+  .rank-num { width: 20px; height: 20px; font-size: 0.7rem; }
+  .row-icon { width: 30px; height: 30px; font-size: 0.85rem; }
+  .row-name { font-size: 0.85rem; }
+  .row-dl { font-size: 0.78rem; }
+  .row-date { font-size: 0.72rem; }
 }
 </style>

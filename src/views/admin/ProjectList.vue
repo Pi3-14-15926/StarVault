@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { NPopconfirm, NSwitch, NCheckbox, NProgress, NTag, useMessage } from 'naive-ui'
+import { NPopconfirm, NSwitch, NCheckbox, NProgress, NTag, NModal, useMessage } from 'naive-ui'
 import { useProjectStore } from '../../store/project'
 import { useCategoryStore } from '../../store/category'
 import type { Software, Version, Download } from '../../types'
@@ -25,6 +25,9 @@ const category = computed(() => categories.categories.find((c) => c.id === categ
 
 const keyword = ref('')
 const selectedIds = ref<Set<string>>(new Set())
+const showDeleteModal = ref(false)
+const deletingProj = ref<Software | null>(null)
+const showBulkDeleteModal = ref(false)
 const page = ref(1)
 const pageSize = 9
 
@@ -91,7 +94,16 @@ function platformList(s: Software): string[] {
 /* 来源链接：GitHub → 仓库地址；自定义 → 官网；无链接则空串 */
 function sourceLink(p: Software): string {
   if (p.sourceType === 'github') {
-    return p.githubUrl || (p.githubRepo ? `https://github.com/${p.githubRepo}` : '')
+    if (p.githubUrl) return p.githubUrl
+    if (p.githubRepo) {
+      /* 清洗：去掉开头的 /、github.com/ 前缀等 */
+      const clean = p.githubRepo
+        .replace(/^https?:\/\/github\.com\//i, '')
+        .replace(/^github\.com\//i, '')
+        .replace(/^\/+/, '')
+        .trim()
+      return clean ? `https://github.com/${clean}` : ''
+    }
   }
   return p.website || ''
 }
@@ -161,12 +173,19 @@ function toggleSelectOne(id: string) {
 }
 function clearSelection() { selectedIds.value.clear() }
 
-function bulkDelete() {
-  if (selectedIds.value.size === 0) return
-  if (!confirm(`确定要删除选中的 ${selectedIds.value.size} 个软件吗？此操作不可恢复。`)) return
-  selectedIds.value.forEach((id) => projects.remove(id))
-  message.success(`已删除 ${selectedIds.value.size} 个软件`)
+function confirmDelete() {
+  if (!deletingProj.value) return
+  projects.remove(deletingProj.value.id)
+  message.success('已删除')
+  showDeleteModal.value = false
+  deletingProj.value = null
+}
+function confirmBulkDelete() {
+  const ids = [...selectedIds.value]
+  ids.forEach((id) => projects.remove(id))
+  message.success(`已删除 ${ids.length} 个软件`)
   clearSelection()
+  showBulkDeleteModal.value = false
 }
 function bulkFeature(feature: boolean) {
   const ids = [...selectedIds.value]
@@ -311,12 +330,7 @@ watch(sortBy, () => { page.value = 1 })
             <button class="btn-ghost" @click="bulkFeature(false)">取消推荐</button>
             <button class="btn-ghost" @click="bulkToggleEnabled(true)">✓ 批量启用</button>
             <button class="btn-ghost" @click="bulkToggleEnabled(false)">⏸ 批量禁用</button>
-            <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="bulkDelete">
-              <template #trigger>
-                <button class="btn-ghost bulk-danger">🗑 批量删除</button>
-              </template>
-              确定要删除选中的 {{ selectedIds.size }} 个软件吗？此操作不可恢复。
-            </NPopconfirm>
+            <button class="btn-ghost bulk-danger" @click="showBulkDeleteModal = true">🗑 批量删除</button>
             <button class="btn-ghost" @click="clearSelection">取消</button>
           </div>
         </div>
@@ -348,7 +362,7 @@ watch(sortBy, () => { page.value = 1 })
               :title="p.featured ? '取消推荐' : '设为推荐'"
               @click.stop="toggleFeatured(p)"
             >
-              {{ p.featured ? '⭐' : '☆' }}
+              ★
             </button>
             <a
               v-if="sourceLink(p)"
@@ -489,18 +503,12 @@ watch(sortBy, () => { page.value = 1 })
               </svg>
               同步
             </button>
-            <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="projects.remove(p.id)">
-              <template #trigger>
-                <button class="pc-btn pc-btn-danger" title="删除">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
-                    <path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-                  </svg>
-                  删除
-                </button>
-              </template>
-              确定删除「{{ p.name }}」？<br />
-              <small style="color: var(--text-tertiary);">所有版本和下载文件都会一并删除</small>
-            </NPopconfirm>
+            <button class="pc-btn pc-btn-danger" title="删除" @click="deletingProj = p; showDeleteModal = true">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                <path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+              </svg>
+              删除
+            </button>
             <button
               class="pc-btn pc-btn-toggle"
               :title="expandedProjs.has(p.id) ? '收起版本' : '展开版本'"
@@ -565,6 +573,35 @@ watch(sortBy, () => { page.value = 1 })
         <span class="pg-info">第 {{ page }} / {{ totalPages }} 页 · 共 {{ sortedList.length }} 个</span>
       </nav>
     </div>
+
+    <!-- 单删确认弹窗 -->
+    <NModal v-model:show="showDeleteModal" preset="card" title="删除软件" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定要删除 <strong>{{ deletingProj?.name }}</strong> 吗？</p>
+        <p class="del-modal-warn">所有版本和下载文件都会一并删除</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDelete">确认删除</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 批量删除确认弹窗 -->
+    <NModal v-model:show="showBulkDeleteModal" preset="card" title="批量删除软件" style="max-width: 460px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定要删除选中的 <strong>{{ selectedIds.size }}</strong> 个软件吗？<br />此操作不可恢复。</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showBulkDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmBulkDelete">确认删除</button>
+        </div>
+      </template>
+    </NModal>
   </AdminLayout>
 </template>
 
@@ -760,9 +797,10 @@ watch(sortBy, () => { page.value = 1 })
   font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.18s, transform 0.18s;
+  color: var(--text-tertiary);
 }
 .star-btn:hover { background: var(--color-primary-soft); transform: scale(1.1); }
-.star-btn.starred { background: linear-gradient(135deg, rgba(255, 200, 0, 0.15), rgba(255, 165, 0, 0.15)); border-color: rgba(255, 200, 0, 0.3); }
+.star-btn.starred { background: linear-gradient(135deg, rgba(255, 200, 0, 0.15), rgba(255, 165, 0, 0.15)); border-color: rgba(255, 200, 0, 0.3); color: #FFA500; }
 
 .src-tag {
   display: inline-flex;
@@ -1163,6 +1201,14 @@ watch(sortBy, () => { page.value = 1 })
 .pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .pg-ellipsis { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 36px; color: var(--text-tertiary); }
 .pg-info { margin-left: 12px; font-size: 0.78rem; color: var(--text-tertiary); }
+
+/* === 删除确认弹窗 === */
+.del-modal-body { text-align: center; padding: 8px 0; }
+.del-modal-icon { font-size: 2.8rem; margin-bottom: 8px; }
+.del-modal-title { font-size: 1.05rem; color: var(--text-main); margin: 0 0 8px; line-height: 1.5; }
+.del-modal-title strong { color: #E55353; }
+.del-modal-warn { font-size: 0.85rem; color: var(--text-tertiary); margin: 0; line-height: 1.4; }
+.del-modal-footer { display: flex; justify-content: center; gap: 12px; }
 
 @media (max-width: 1024px) {
   .project-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }

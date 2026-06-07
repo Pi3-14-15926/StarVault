@@ -228,7 +228,10 @@ export async function uploadIcon(filename: string, contentBase64: string): Promi
     branchCreated = true
   }
 
-  const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 80)
+  const safeName = filename
+    .replace(/[\/\\\x00-\x1f]/g, '_')
+    .replace(/^[.\s]+|[.\s]+$/g, '')
+    .slice(0, 80) || 'icon'
   const fullPath = `${ICON_PATH.replace(/^\/+|\/+$/, '')}/${safeName}`
 
   // 查 sha（如果存在）

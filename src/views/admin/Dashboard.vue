@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { useMessage, NUpload, NProgress, NAlert, NDrawer, NDrawerContent, NTag, NInput, NSpace } from 'naive-ui'
+import { useMessage, NUpload, NProgress, NAlert, NDrawer, NDrawerContent, NTag } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
 import { useProjectStore } from '../../store/project'
 import { useCategoryStore } from '../../store/category'
 import { useSettingStore } from '../../store/settings'
 import { syncAllGitHub, getSoftwareVersions } from '../../utils/api'
-import { triggerSyncBackup, getRepoInfo, setRepoInfo, clearRepoInfo } from '../../utils/githubRepo'
+import { triggerSyncBackup, getRepoInfo } from '../../utils/githubRepo'
 import { commitAllData } from '../../utils/githubRepo'
 import { DEFAULT_SETTINGS } from '../../defaults'
 import { getToken } from '../../utils/auth'
@@ -24,11 +24,26 @@ const scheduleNote = computed(() => {
   if (!sc) return '定时任务未配置'
   const sync = sc.syncEnabled ? `同步 ${sc.syncIntervalHours}h` : '同步已禁用'
   const backup = sc.backupEnabled ? `备份 ${sc.backupIntervalHours}h` : '备份已禁用'
-  return `自动：${sync} · ${backup}`
+  return `${sync}  ${backup}`
 })
 
 const syncing = ref(false)
 const syncResult = ref('')
+const syncErrors = ref<Array<{ name: string; repo: string; status?: number; message: string }>>([])
+const showSyncErrorsDrawer = ref(false)
+const LAST_SYNC_KEY = 'dashboard_lastSyncTime'
+const lastSyncTime = ref<Date | null>(loadLastSyncTime())
+function loadLastSyncTime(): Date | null {
+  try {
+    const v = localStorage.getItem(LAST_SYNC_KEY)
+    if (!v) return null
+    const d = new Date(v)
+    return isNaN(d.getTime()) ? null : d
+  } catch { return null }
+}
+function saveLastSyncTime(d: Date) {
+  try { localStorage.setItem(LAST_SYNC_KEY, d.toISOString()) } catch {}
+}
 const backingUp = ref(false)
 
 const githubCount = computed(() => projects.software.filter((p) => p.sourceType === 'github').length)
@@ -40,11 +55,26 @@ const totalVersions = computed(() =>
 async function doSync() {
   syncing.value = true
   syncResult.value = ''
+  syncErrors.value = []
   try {
     const results = await syncAllGitHub()
     const ok = results.filter((r) => r.success).length
+    const failed = results.filter((r) => !r.success)
+    syncErrors.value = failed.map((r) => ({
+      name: r.projectName || r.projectId,
+      repo: r.repo || '',
+      status: r.status,
+      message: r.error || '未知错误',
+    }))
     syncResult.value = `同步完成：${ok}/${results.length} 个项目成功`
-    message.success(syncResult.value)
+    lastSyncTime.value = new Date()
+    saveLastSyncTime(lastSyncTime.value)
+    if (failed.length === 0) {
+      message.success(syncResult.value)
+    } else {
+      message.warning(syncResult.value + `，${failed.length} 个失败`)
+    }
+    projects.refresh()
   } catch (e: any) {
     syncResult.value = `同步失败：${e.message}`
     message.error(syncResult.value)
@@ -65,6 +95,19 @@ async function doSyncBackup() {
 
 const refreshing = ref(false)
 const refreshResult = ref('')
+const LAST_REFRESH_KEY = 'dashboard_lastRefreshTime'
+const lastRefreshTime = ref<Date | null>(loadLastRefreshTime())
+function loadLastRefreshTime(): Date | null {
+  try {
+    const v = localStorage.getItem(LAST_REFRESH_KEY)
+    if (!v) return null
+    const d = new Date(v)
+    return isNaN(d.getTime()) ? null : d
+  } catch { return null }
+}
+function saveLastRefreshTime(d: Date) {
+  try { localStorage.setItem(LAST_REFRESH_KEY, d.toISOString()) } catch {}
+}
 const refreshProgress = ref(0)
 const refreshErrors = ref<EnrichError[]>([])
 const showErrorsDrawer = ref(false)
@@ -105,6 +148,8 @@ async function doRefreshDownloads() {
       ? `（${lastRateLimited} 个仓库命中 GitHub API 限速，建议稍后重试或检查 Token 有效性）`
       : (skipped > 0 ? '（部分 URL 解析失败或仓库不可访问）' : '')
     refreshResult.value = `已更新 ${updated} 个文件，跳过 ${skipped} 个${limitNote}`
+    lastRefreshTime.value = new Date()
+    saveLastRefreshTime(lastRefreshTime.value)
     message.success(refreshResult.value)
     projects.refresh()
   } catch (e: any) {
@@ -134,34 +179,12 @@ const importProgress = ref(0)
 const baking = ref(false)
 const publishing = ref(false)
 const commitUrl = ref('')
-const repoInput = ref('')
 const currentRepo = ref('')
 
 onMounted(() => {
   const r = getRepoInfo()
   currentRepo.value = `${r.owner}/${r.repo}`
-  repoInput.value = currentRepo.value
 })
-
-function saveRepoConfig() {
-  const v = repoInput.value.trim()
-  if (!v || !v.includes('/')) {
-    message.error('请输入 owner/repo 格式，例如 Pi3-14-15926/SoftwareHub')
-    return
-  }
-  setRepoInfo(v)
-  const r = getRepoInfo()
-  currentRepo.value = `${r.owner}/${r.repo}`
-  message.success(`仓库已设为 ${currentRepo.value}`)
-}
-
-function resetRepoConfig() {
-  clearRepoInfo()
-  const r = getRepoInfo()
-  currentRepo.value = `${r.owner}/${r.repo}`
-  repoInput.value = currentRepo.value
-  message.success(`已重置为默认 ${currentRepo.value}`)
-}
 
 function exportData() {
   exporting.value = true
@@ -321,6 +344,12 @@ onMounted(() => {
   projects.refresh()
   categories.refresh()
 })
+
+function fmtDateTime(d: Date | null): string {
+  if (!d) return '—'
+  const pad = (n: number) => n.toString().padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
+}
 </script>
 
 <template>
@@ -359,21 +388,41 @@ onMounted(() => {
                 {{ syncing ? '同步中...' : '同步Release' }}
               </button>
             </div>
-            <div v-if="syncResult" class="action-result">{{ syncResult }}</div>
+            <div v-if="syncResult" class="action-result">
+              <span>{{ syncResult }}</span>
+            </div>
+            <button
+              v-if="syncErrors.length > 0"
+              class="view-errors-btn"
+              @click="showSyncErrorsDrawer = true"
+            >
+              ⚠️ 查看 {{ syncErrors.length }} 个失败详情 →
+            </button>
+            <div class="sync-time">
+              <span class="green-pill">
+                <span class="pill-label">上次同步时间</span>
+                <span class="pill-value"> {{ fmtDateTime(lastSyncTime) }}</span>
+              </span>
+            </div>
           </div>
         </div>
 
         <div class="action-card">
           <div class="action-icon">☁️</div>
           <div class="action-content">
-            <h3 class="action-title">GitHub 同步 + 备份</h3>
+            <h3 class="action-title">GitHub 同步并备份</h3>
             <p class="action-desc">同步 Release 同时执行 WebDAV 云盘备份</p>
             <div class="action-buttons">
               <button class="btn-primary" :disabled="backingUp" @click="doSyncBackup">
-                {{ backingUp ? '触发中...' : '同步 + WebDAV 备份' }}
+                {{ backingUp ? '触发中...' : '同步并备份' }}
               </button>
             </div>
-            <p class="action-result">{{ scheduleNote }}</p>
+            <div class="sync-time">
+              <span class="green-pill">
+                <span class="pill-label">设定同步时刻</span>
+                <span class="pill-value"> {{ scheduleNote }}</span>
+              </span>
+            </div>
           </div>
         </div>
 
@@ -397,13 +446,19 @@ onMounted(() => {
             />
             <div v-if="refreshResult" class="action-result">
               <span>{{ refreshResult }}</span>
-              <a
-                v-if="refreshErrors.length > 0"
-                class="action-result-link"
-                @click="showErrorsDrawer = true"
-              >
-                查看 {{ refreshErrors.length }} 个失败详情 →
-              </a>
+            </div>
+            <button
+              v-if="refreshErrors.length > 0"
+              class="view-errors-btn"
+              @click="showErrorsDrawer = true"
+            >
+              ⚠️ 查看 {{ refreshErrors.length }} 个失败详情 →
+            </button>
+            <div class="sync-time">
+              <span class="green-pill">
+                <span class="pill-label">上次刷新时间</span>
+                <span class="pill-value"> {{ fmtDateTime(lastRefreshTime) }}</span>
+              </span>
             </div>
           </div>
         </div>
@@ -464,19 +519,12 @@ onMounted(() => {
             <div class="io-content">
               <h4 class="io-title">发布到 GitHub</h4>
               <p class="io-desc">将 localStorage 中的所有数据提交到仓库，触发 GitHub Pages 重新构建</p>
-              <div class="repo-config">
-                <NInput
-                  v-model:value="repoInput"
-                  placeholder="owner/repo"
-                  size="small"
-                  @keyup.enter="saveRepoConfig"
-                >
-                  <template #prefix>🐙</template>
-                </NInput>
-                <button class="btn-ghost btn-sm" @click="saveRepoConfig">保存</button>
-                <button class="btn-ghost btn-sm" @click="resetRepoConfig">重置</button>
+              <div class="io-meta">
+                <span class="green-pill">
+                  <span class="pill-label">当前目标</span>
+                  <span class="pill-value"> {{ currentRepo || '未配置' }}</span>
+                </span>
               </div>
-              <p class="io-meta">当前目标：<code>{{ currentRepo || '未配置' }}</code></p>
               <div class="action-row">
                 <button class="btn-primary" :disabled="publishing" @click="publishToRepo">
                   {{ publishing ? '提交中...' : '立即发布' }}
@@ -488,33 +536,59 @@ onMounted(() => {
             </div>
           </div>
         </div>
+    </section>
+    </div>
 
-         <NAlert type="info" :bordered="false" class="info-alert">
-           <strong>注意：</strong>「写入默认」会把当前后台设置覆盖到 <code>src/defaults.ts</code> 文件中。执行 <code>npm run build</code> 后新用户将自动使用此配置。
-         </NAlert>
-       </section>
-     </div>
+    <NModal v-model:show="showErrorsDrawer" preset="card" title="刷新失败详情" style="max-width: 560px; border-radius: var(--radius-lg);" :mask-closable="true">
+      <div class="errors-modal-body">
+        <p class="errors-hint">
+          以下 {{ refreshErrors.length }} 个 release 调用 GitHub API 失败。常见原因：仓库私有、release 被删除、tag 不存在。点击链接可手动打开查看。
+        </p>
+        <div class="error-list">
+          <div v-for="(e, i) in refreshErrors" :key="i" class="error-item">
+            <div class="error-head">
+              <NTag :type="e.status === 404 ? 'warning' : (e.status === 403 || e.status === 429 ? 'error' : 'default')" size="small">
+                {{ e.status ? `HTTP ${e.status}` : '网络/超时' }}
+              </NTag>
+              <a :href="e.url" target="_blank" rel="noopener" class="error-link">{{ e.group }}</a>
+            </div>
+            <div class="error-msg">{{ e.message }}</div>
+          </div>
+        </div>
+      </div>
+      <template #footer>
+        <div class="modal-actions">
+          <button class="btn-secondary" @click="showErrorsDrawer = false">关闭</button>
+        </div>
+      </template>
+    </NModal>
 
-     <NDrawer v-model:show="showErrorsDrawer" :width="640" placement="right">
-       <NDrawerContent title="失败详情" closable>
-         <p class="errors-hint">
-           以下 {{ refreshErrors.length }} 个 release 调用 GitHub API 失败。常见原因：仓库私有、release 被删除、tag 不存在。点击链接可手动打开查看。
-         </p>
-         <div class="error-list">
-           <div v-for="(e, i) in refreshErrors" :key="i" class="error-item">
-             <div class="error-head">
-               <NTag :type="e.status === 404 ? 'warning' : (e.status === 403 || e.status === 429 ? 'error' : 'default')" size="small">
-                 {{ e.status ? `HTTP ${e.status}` : '网络/超时' }}
-               </NTag>
-               <a :href="e.url" target="_blank" rel="noopener" class="error-link">{{ e.group }}</a>
-             </div>
-             <div class="error-msg">{{ e.message }}</div>
-           </div>
-         </div>
-       </NDrawerContent>
-     </NDrawer>
-   </AdminLayout>
- </template>
+    <NModal v-model:show="showSyncErrorsDrawer" preset="card" title="同步失败详情" style="max-width: 560px; border-radius: var(--radius-lg);" :mask-closable="true">
+      <div class="errors-modal-body">
+        <p class="errors-hint">
+          以下 {{ syncErrors.length }} 个项目同步失败。常见原因：仓库不存在、仓库为私有、Token 无效、API 限速。
+        </p>
+        <div class="error-list">
+          <div v-for="(e, i) in syncErrors" :key="i" class="error-item">
+            <div class="error-head">
+              <NTag :type="e.status === 404 ? 'warning' : (e.status === 403 || e.status === 429 ? 'error' : 'default')" size="small">
+                {{ e.status ? `HTTP ${e.status}` : '网络/超时' }}
+              </NTag>
+              <a v-if="e.repo" :href="`https://github.com/${e.repo}`" target="_blank" rel="noopener" class="error-link">{{ e.name }}</a>
+              <span v-else class="error-link">{{ e.name }}</span>
+            </div>
+            <div class="error-msg">{{ e.message }}</div>
+          </div>
+        </div>
+      </div>
+      <template #footer>
+        <div class="modal-actions">
+          <button class="btn-secondary" @click="showSyncErrorsDrawer = false">关闭</button>
+        </div>
+      </template>
+    </NModal>
+  </AdminLayout>
+</template>
 
 <style scoped>
 .dash-scroll {
@@ -655,6 +729,31 @@ onMounted(() => {
   color: var(--color-success);
   font-weight: 500;
 }
+.sync-time {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.sync-time .meta-label {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+.green-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  background: rgba(60, 179, 113, 0.12);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid rgba(60, 179, 113, 0.25);
+}
+.green-pill .pill-label { color: #3478F6; }
+.green-pill .pill-value { color: #2D8F5A; }
 
 /* === 导入导出卡片 === */
 .settings-card {
@@ -752,24 +851,27 @@ onMounted(() => {
 .commit-link:hover { text-decoration: underline; }
 .import-progress { margin-top: 10px; }
 
-.repo-config {
+.io-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.repo-config .n-input { flex: 1; min-width: 0; }
-.io-meta {
-  font-size: 0.76rem;
-  color: var(--text-tertiary);
+  gap: 6px;
+  flex-wrap: wrap;
   margin: 0 0 10px;
+}
+.io-meta .meta-label {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
 }
 .io-meta code {
   font-family: var(--font-mono);
-  background: var(--color-card-soft);
-  padding: 1px 5px;
-  border-radius: 4px;
-  color: var(--text-sec);
+  background: rgba(60, 179, 113, 0.12);
+  color: #2D8F5A;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid rgba(60, 179, 113, 0.25);
+  letter-spacing: 0.2px;
 }
 .btn-sm { padding: 6px 12px !important; font-size: 0.82rem !important; }
 
@@ -798,11 +900,38 @@ onMounted(() => {
 }
 .action-result-link:hover { opacity: 0.8; }
 
+.view-errors-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  background: rgba(255, 193, 7, 0.15);
+  color: #C28A1A;
+  border: 1px solid rgba(255, 193, 7, 0.45);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s;
+}
+.view-errors-btn:hover {
+  background: rgba(255, 193, 7, 0.25);
+  transform: translateY(-1px);
+}
+
+.errors-modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 4px 2px;
+}
 .errors-hint {
   font-size: 0.86rem;
   color: var(--text-sec);
   line-height: 1.6;
   margin: 0 0 16px;
+  padding: 10px 14px;
+  background: rgba(255, 193, 7, 0.08);
+  border-left: 3px solid #C28A1A;
+  border-radius: 6px;
 }
 .error-list {
   display: flex;
@@ -814,32 +943,44 @@ onMounted(() => {
   border: 1px solid var(--admin-border);
   border-radius: 12px;
   padding: 12px 14px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+.error-item:hover {
+  border-color: rgba(52, 120, 246, 0.3);
+  box-shadow: 0 2px 8px rgba(52, 120, 246, 0.08);
 }
 .error-head {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
 }
 .error-link {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--color-primary);
   text-decoration: none;
   word-break: break-all;
+  font-weight: 500;
 }
 .error-link:hover { text-decoration: underline; }
 .error-msg {
   font-size: 0.78rem;
   color: var(--text-tertiary);
-  margin-top: 2px;
+  margin-top: 4px;
   font-family: var(--font-mono);
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-card { padding: 16px 18px; }
-  .stat-value { font-size: 1.3rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-card { flex-direction: column; align-items: center; text-align: center; padding: 14px 10px; gap: 8px; }
+  .stat-icon { width: 36px; height: 36px; font-size: 1.2rem; border-radius: 10px; }
+  .stat-value { font-size: 1.25rem; }
+  .stat-title { font-size: 0.82rem; }
+  .stat-desc { display: none; }
   .action-grid { grid-template-columns: 1fr; }
   .action-card { flex-direction: column; }
   .action-buttons .btn-primary,
@@ -847,5 +988,13 @@ onMounted(() => {
   .io-grid { grid-template-columns: 1fr; }
   .io-card { padding: 16px; }
   .io-mini-icon { width: 36px; height: 36px; font-size: 1.1rem; }
+
+  /* 移动端：错误弹窗占满宽度、列表紧凑 */
+  :deep(.n-modal) { width: calc(100vw - 32px) !important; max-width: calc(100vw - 32px) !important; margin: 16px !important; }
+  .errors-modal-body { max-height: 65vh; }
+  .errors-hint { font-size: 0.8rem; padding: 8px 12px; }
+  .error-item { padding: 10px 12px; }
+  .error-link { font-size: 0.8rem; }
+  .error-msg { font-size: 0.74rem; }
 }
 </style>

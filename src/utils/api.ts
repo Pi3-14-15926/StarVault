@@ -402,35 +402,49 @@ export function saveSettings(s: Settings): void {
 /* ========== GitHub 同步 ========== */
 export async function syncGitHubProject(software: Software, token?: string): Promise<SyncResult> {
   if (software.sourceType !== 'github' || !software.githubRepo) {
-    return { projectId: software.id, success: false, error: '非 GitHub 项目' }
+    return { projectId: software.id, projectName: software.name, success: false, error: '非 GitHub 项目' }
   }
+  const baseInfo = { projectId: software.id, projectName: software.name, repo: software.githubRepo }
   try {
     const releases = await fetchReleases(software.githubRepo, token)
     if (!releases.length) {
-      return { projectId: software.id, success: false, error: '无 Release' }
+      return { ...baseInfo, success: false, error: '无 Release' }
     }
     const existingVers = new Set(getSoftwareVersions(software.id).map((v) => v.version))
     let newCount = 0
+    let fixedCount = 0
     for (const r of releases) {
       if (!existingVers.has(r.tag_name)) {
         const v = releaseToVersion(r, software.id)
-        // 转换 downloads 到独立 Download 实体
-        const downloadIds: string[] = []
+        addVersion(v)
         for (const a of r.assets) {
           const dl: Download = {
             id: uid(),
             versionId: v.id,
-            platform: 'Android',  // 默认平台，admin 可后续调整
+            platform: guessPlatform(a.name),
             filename: a.name,
             size: `${(a.size / 1024 / 1024).toFixed(1)} MB`,
             url: a.browser_download_url,
           }
           addDownload(dl)
-          downloadIds.push(dl.id)
         }
-        v.downloadIds = downloadIds
-        addVersion(v)
         newCount++
+      } else {
+        const existingV = getSoftwareVersions(software.id).find((v) => v.version === r.tag_name)
+        if (existingV && getVersionDownloads(existingV.id).length === 0) {
+          for (const a of r.assets) {
+            const dl: Download = {
+              id: uid(),
+              versionId: existingV.id,
+              platform: guessPlatform(a.name),
+              filename: a.name,
+              size: `${(a.size / 1024 / 1024).toFixed(1)} MB`,
+              url: a.browser_download_url,
+            }
+            addDownload(dl)
+          }
+          fixedCount++
+        }
       }
     }
     // 更新 stars/forks
@@ -444,9 +458,9 @@ export async function syncGitHubProject(software: Software, token?: string): Pro
       rebuildIndexInPlace(d)
       saveAppData(d)
     }
-    return { projectId: software.id, success: true, newVersions: newCount }
+    return { ...baseInfo, success: true, newVersions: newCount, fixedVersions: fixedCount }
   } catch (e: any) {
-    return { projectId: software.id, success: false, error: e.message }
+    return { ...baseInfo, success: false, error: e.message, status: e.status }
   }
 }
 

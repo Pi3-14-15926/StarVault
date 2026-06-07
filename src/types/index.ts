@@ -144,9 +144,13 @@ export interface GitHubRelease {
 /** 同步结果 */
 export interface SyncResult {
   projectId: string
+  projectName?: string
+  repo?: string
   success: boolean
   error?: string
+  status?: number
   newVersions?: number
+  fixedVersions?: number
 }
 
 /** enrichDownloadCounts 单个失败详情 */

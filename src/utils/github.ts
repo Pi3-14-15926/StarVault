@@ -23,6 +23,15 @@ function ghError(message: string, status: number, retryAfter?: number): Error {
   return e
 }
 
+/** 清洗 repo 字符串：去掉协议、域名、前后斜杠、空白 */
+function normalizeRepo(repo: string): string {
+  return repo
+    .replace(/^https?:\/\/github\.com\//i, '')
+    .replace(/^github\.com\//i, '')
+    .replace(/^\/+|\/+$/g, '')
+    .trim()
+}
+
 /** 从 GitHub Release API 获取版本列表 */
 export async function fetchReleases(repo: string, token?: string): Promise<GitHubRelease[]> {
   const headers: Record<string, string> = {
@@ -30,9 +39,14 @@ export async function fetchReleases(repo: string, token?: string): Promise<GitHu
   }
   if (token) headers.Authorization = `Bearer ${token}`
 
-  const res = await fetchWithTimeout(`${GITHUB_API}/repos/${repo}/releases?per_page=20`, { headers })
-  if (!res.ok) throw ghError(`GitHub API 错误: ${res.status} ${res.statusText}`, res.status)
-  return res.json()
+  const cleanRepo = normalizeRepo(repo)
+  const res = await fetchWithTimeout(`${GITHUB_API}/repos/${cleanRepo}/releases?per_page=20`, { headers })
+  if (res.ok) return res.json()
+  const retryAfter = Number(res.headers.get('retry-after') || 0) || undefined
+  if (res.status === 404) throw ghError(`仓库 ${cleanRepo} 不存在、为私有或无访问权限`, 404)
+  if (res.status === 401) throw ghError('Token 无效或已过期，请重新登录', 401)
+  if (res.status === 403 || res.status === 429) throw ghError(`GitHub API 限速 (HTTP ${res.status})`, res.status, retryAfter)
+  throw ghError(`GitHub API 错误: ${res.status} ${res.statusText}`, res.status)
 }
 
 /** 从 GitHub Release API 获取单个 release（按 owner/repo/tag）
@@ -94,7 +108,8 @@ export function inferPlatforms(downloads: { platform: Platform }[]): Platform[] 
 /** 从 GitHub API 获取仓库信息（Star/Fork 数） */
 export async function fetchRepoInfo(repo: string): Promise<{ stars: number; forks: number }> {
   try {
-    const res = await fetchWithTimeout(`${GITHUB_API}/repos/${repo}`)
+    const cleanRepo = normalizeRepo(repo)
+    const res = await fetchWithTimeout(`${GITHUB_API}/repos/${cleanRepo}`)
     if (!res.ok) return { stars: 0, forks: 0 }
     const data = await res.json()
     return { stars: data.stargazers_count ?? 0, forks: data.forks_count ?? 0 }

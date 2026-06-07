@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
-import { NPopconfirm, NInput, useMessage } from 'naive-ui'
+import { NModal, NInput, useMessage } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import AdminSearchBar from '../../components/admin/AdminSearchBar.vue'
 import AdminSortGroup, { type SortOption } from '../../components/admin/AdminSortGroup.vue'
@@ -25,12 +25,20 @@ const fileInput = ref<HTMLInputElement | null>(null)
 const customName = ref('')
 const pendingCount = ref(0)
 
+/** 保留 Unicode（中文等），只过滤路径分隔符 + 控制字符 + 首尾点/空格 */
+function sanitizeFilename(name: string, max = 60): string {
+  return name
+    .replace(/[\/\\\x00-\x1f]/g, '_')
+    .replace(/^[.\s]+|[.\s]+$/g, '')
+    .slice(0, max) || 'icon'
+}
+
 /** 根据用户输入 + 文件索引拼出最终 filename（不含时间戳后缀） */
 function buildFilename(rawFilename: string, index: number, total: number): string {
   const ext = rawFilename.split('.').pop() || 'webp'
   const base = customName.value.trim()
   if (!base) return rawFilename
-  const safe = base.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 60)
+  const safe = sanitizeFilename(base)
   if (total <= 1) return `${safe}.${ext}`
   return `${safe}-${index}.${ext}`
 }
@@ -43,6 +51,9 @@ const loading = ref(false)
 const keyword = ref('')
 const selected = ref<Set<string>>(new Set())
 const deleting = ref<Set<string>>(new Set())
+const showSingleDeleteModal = ref(false)
+const deletingIcon = ref<IconListItem | null>(null)
+const showBatchDeleteModal = ref(false)
 const totalSize = ref(0)
 const page = ref(1)
 const pageSize = 30
@@ -127,6 +138,17 @@ async function loadIcons() {
   loading.value = false
 }
 
+/** 后台静默同步：失败/返回旧数据也不影响 UI */
+async function syncIconsInBackground() {
+  try {
+    const r = await listIcons()
+    if (!r.error && r.items.length >= icons.value.length) {
+      icons.value = r.items
+      totalSize.value = r.items.reduce((s, i) => s + i.size, 0)
+    }
+  } catch { /* 静默 */ }
+}
+
 /* ============== 上传逻辑 ============== */
 function pickFiles() { fileInput.value?.click() }
 
@@ -153,6 +175,25 @@ async function handleFiles(files: FileList | File[]) {
       okCount++
       const tag = result.branchCreated ? ' [新分支已创建]' : ''
       message.success(`${result.overwritten ? '已更新' : '已上传'}: ${result.name} (${fmtSize(result.size)})${tag}`)
+      /* 乐观更新：把新图标直接 push 到数组，UI 立即显示 */
+      const newItem: IconListItem = {
+        name: result.name,
+        path: result.path,
+        sha: result.sha,
+        size: result.size,
+        rawUrl: result.rawUrl,
+        downloadUrl: null,
+        htmlUrl: result.commitUrl,
+        uploadedAt: new Date().toISOString(),
+      }
+      if (result.overwritten) {
+        const idx = icons.value.findIndex((i) => i.name === result.name)
+        if (idx >= 0) icons.value[idx] = newItem
+        else icons.value.push(newItem)
+      } else {
+        icons.value.push(newItem)
+      }
+      totalSize.value = icons.value.reduce((s, i) => s + i.size, 0)
     } catch (e: any) {
       failCount++
       message.error(`${file.name} 上传失败: ${e.message}`)
@@ -161,8 +202,9 @@ async function handleFiles(files: FileList | File[]) {
   }
   uploading.value = false
   if (okCount > 0) {
-    await loadIcons()
     if (useCustom) clearCustomName()
+    /* 后台静默同步真实数据（不阻塞 UI，GitHub CDN 缓存可能延迟） */
+    syncIconsInBackground()
   }
   if (failCount === 0) message.success(`全部 ${okCount} 个图标上传完成`)
 }
@@ -217,11 +259,19 @@ function selectAll() {
 }
 async function doDelete(item: IconListItem) {
   deleting.value.add(item.name)
+  /* 乐观更新：立即从数组中移除（避免选中状态被误判） */
+  const snapshot = [...icons.value]
+  icons.value = icons.value.filter((i) => i.name !== item.name)
+  selected.value.delete(item.name)
+  totalSize.value = icons.value.reduce((s, i) => s + i.size, 0)
   try {
     await deleteIcon(item.path, item.sha)
     message.success(`已删除: ${item.name}`)
-    await loadIcons()
+    syncIconsInBackground()
   } catch (e: any) {
+    /* 失败：回滚 */
+    icons.value = snapshot
+    totalSize.value = snapshot.reduce((s, i) => s + i.size, 0)
     message.error(`删除失败: ${e.message}`)
   }
   deleting.value.delete(item.name)
@@ -299,20 +349,21 @@ async function copyUrl(url: string) {
       </section>
 
       <!-- 自定义文件名（可选） -->
-      <div class="name-row">
-        <NInput
-          v-model:value="customName"
-          placeholder="自定义名称（可选，留空用原文件名）"
-          size="medium"
-          clearable
-          :disabled="uploading"
-        >
-          <template #prefix>📝</template>
-        </NInput>
-        <span class="name-hint">
-          {{ customName.trim()
-            ? `将上传为：${customName.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 60)}.webp${pendingCount > 1 ? '、…-' + pendingCount + '.webp' : ''}`
-            : '留空 → 使用原文件名' }}
+      <div class="name-section">
+        <div class="name-input-row">
+          <NInput
+            v-model:value="customName"
+            placeholder="自定义名称（可选，留空用原文件名）"
+            size="medium"
+            clearable
+            :disabled="uploading"
+          >
+            <template #prefix>📝</template>
+          </NInput>
+        </div>
+        <span class="name-hint">📎 留空 → 使用原文件名</span>
+        <span v-if="customName.trim()" class="name-preview">
+          将上传为：{{ sanitizeFilename(customName) }}.webp{{ pendingCount > 1 ? '、…-' + pendingCount + '.webp' : '' }}
         </span>
       </div>
 
@@ -337,7 +388,7 @@ async function copyUrl(url: string) {
               :height="40"
               @update="(p) => { sortBy = p.key as SortBy; sortOrder = p.order }"
             />
-            <button v-if="selected.size > 0" class="btn-danger-soft" @click="doBatchDelete">
+            <button v-if="selected.size > 0" class="btn-danger-soft" @click="showBatchDeleteModal = true">
               删除选中 ({{ selected.size }})
             </button>
             <button v-if="sortedIcons.length > 0" class="btn-ghost" @click="selectAll">
@@ -398,12 +449,7 @@ async function copyUrl(url: string) {
                   </svg>
                   URL
                 </button>
-                <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="doDelete(icon)">
-                  <template #trigger>
-                    <button class="icon-btn danger" :disabled="deleting.has(icon.name)">删除</button>
-                  </template>
-                  确定删除图标 <strong>{{ icon.name }}</strong> 吗？
-                </NPopconfirm>
+                <button class="icon-btn danger" :disabled="deleting.has(icon.name)" @click="deletingIcon = icon; showSingleDeleteModal = true">删除</button>
               </div>
             </div>
           </div>
@@ -419,6 +465,34 @@ async function copyUrl(url: string) {
         />
       </section>
     </div>
+
+    <!-- 单删确认弹窗 -->
+    <NModal v-model:show="showSingleDeleteModal" preset="card" title="删除图标" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定要删除图标 <strong>{{ deletingIcon?.name }}</strong> 吗？</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showSingleDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="deletingIcon && doDelete(deletingIcon); showSingleDeleteModal = false">确认删除</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 批量删除确认弹窗 -->
+    <NModal v-model:show="showBatchDeleteModal" preset="card" title="批量删除图标" style="max-width: 460px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定要删除选中的 <strong>{{ selected.size }}</strong> 个图标吗？<br />此操作不可恢复。</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showBatchDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="doBatchDelete(); showBatchDeleteModal = false">确认删除</button>
+        </div>
+      </template>
+    </NModal>
   </AdminLayout>
 </template>
 
@@ -457,18 +531,33 @@ async function copyUrl(url: string) {
 .upload-title { font-size: 0.92rem; font-weight: 600; color: var(--text-main); }
 .upload-desc { font-size: 0.78rem; color: var(--text-tertiary); }
 
-.name-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+.name-section {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-card);
+  padding: 16px 20px;
 }
-.name-row .n-input { flex: 1; min-width: 240px; }
+.name-input-row .n-input { min-width: 240px; }
 .name-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.name-preview {
+  display: block;
+  margin-top: 6px;
   font-size: 0.78rem;
   color: var(--text-tertiary);
   font-family: var(--font-mono);
-  white-space: nowrap;
 }
 
 /* === 图标库 === */
@@ -626,7 +715,13 @@ async function copyUrl(url: string) {
   .head-actions button { flex: 1; }
   .icon-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
   .library-actions { width: 100%; }
-  .name-row { flex-direction: column; align-items: stretch; }
-  .name-hint { white-space: normal; }
+  .name-input-row .n-input { min-width: 0; }
 }
+
+/* === 删除确认弹窗 === */
+.del-modal-body { text-align: center; padding: 8px 0; }
+.del-modal-icon { font-size: 2.8rem; margin-bottom: 8px; }
+.del-modal-title { font-size: 1.05rem; color: var(--text-main); margin: 0 0 8px; line-height: 1.5; }
+.del-modal-title strong { color: #E55353; }
+.del-modal-footer { display: flex; justify-content: center; gap: 12px; }
 </style>

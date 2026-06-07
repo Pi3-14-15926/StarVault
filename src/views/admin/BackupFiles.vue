@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { NPopconfirm, NAlert, useMessage } from 'naive-ui'
+import { NModal, NAlert, useMessage } from 'naive-ui'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 import AdminSearchBar from '../../components/admin/AdminSearchBar.vue'
 import { useSettingStore } from '../../store/settings'
@@ -227,6 +227,32 @@ function deleteProject(p: ProjectGroup) {
   deleteItems(items, `项目 ${p.project} 的所有备份`)
 }
 
+/* ========== 删除确认弹窗 ========== */
+const showProjectDeleteModal = ref(false)
+const projectToDelete = ref<ProjectGroup | null>(null)
+const showVersionDeleteModal = ref(false)
+const versionToDelete = ref<{ p: ProjectGroup; v: BackupEntry } | null>(null)
+const showFileDeleteModal = ref(false)
+const fileToDelete = ref<{ p: ProjectGroup; v: BackupEntry; f: BackupFile } | null>(null)
+function confirmDeleteProject() {
+  if (!projectToDelete.value) return
+  deleteProject(projectToDelete.value)
+  showProjectDeleteModal.value = false
+  projectToDelete.value = null
+}
+function confirmDeleteVersion() {
+  if (!versionToDelete.value) return
+  deleteVersion(versionToDelete.value.p, versionToDelete.value.v)
+  showVersionDeleteModal.value = false
+  versionToDelete.value = null
+}
+function confirmDeleteFile() {
+  if (!fileToDelete.value) return
+  deleteFile(fileToDelete.value.p, fileToDelete.value.v, fileToDelete.value.f)
+  showFileDeleteModal.value = false
+  fileToDelete.value = null
+}
+
 onMounted(() => { loadFiles() })
 </script>
 
@@ -333,6 +359,7 @@ onMounted(() => { loadFiles() })
         <AdminSearchBar
           v-model="keyword"
           placeholder="搜索项目名 / 版本 / 文件名..."
+          width="100%"
         />
         <span v-if="filteredGroups.length !== projectGroups.length" class="search-result-count">
           {{ filteredGroups.length }} / {{ projectGroups.length }}
@@ -410,18 +437,13 @@ onMounted(() => { loadFiles() })
               </div>
             </div>
             <div class="proj-head-right" @click.stop>
-              <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="deleteProject(p)">
-                <template #trigger>
-                  <button class="btn-danger-soft" :disabled="deletingPaths.has(`${p.category}/${p.project}/`)">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="3 6 5 6 21 6"/>
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                    </svg>
-                    全部删除
-                  </button>
-                </template>
-                确定删除项目「{{ p.project }}」的所有备份文件吗？此操作不可恢复。
-              </NPopconfirm>
+              <button class="btn-danger-soft" :disabled="deletingPaths.has(`${p.category}/${p.project}/`)" @click="projectToDelete = p; showProjectDeleteModal = true">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="3 6 5 6 21 6"/>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                全部删除
+              </button>
               <span class="caret" :class="{ open: expandedProjects.has(`${p.category}/${p.project}`) }">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="9 18 15 12 9 6"/>
@@ -445,14 +467,9 @@ onMounted(() => { loadFiles() })
                   </span>
                   <span class="version-meta">{{ v.files.length }} 个文件</span>
                 </div>
-                <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="deleteVersion(p, v)">
-                  <template #trigger>
-                    <button class="btn-text-danger" :disabled="deletingPaths.has(`${p.category}/${p.project}/${v.versionDir}/`)">
-                      删除版本
-                    </button>
-                  </template>
-                  确定删除版本「{{ v.versionDir }}」的所有文件吗？
-                </NPopconfirm>
+                <button class="btn-text-danger" :disabled="deletingPaths.has(`${p.category}/${p.project}/${v.versionDir}/`)" @click="versionToDelete = { p, v }; showVersionDeleteModal = true">
+                  删除版本
+                </button>
               </div>
               <ul class="file-list">
                 <li v-for="f in v.files" :key="f.name" class="file-item">
@@ -470,14 +487,9 @@ onMounted(() => { loadFiles() })
                       </svg>
                     </span>
                   </a>
-                  <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="deleteFile(p, v, f)">
-                    <template #trigger>
-                      <button class="btn-text-danger file-del" :disabled="deletingPaths.has(`${p.category}/${p.project}/${v.versionDir}/${f.name}`)">
-                        删除
-                      </button>
-                    </template>
-                    确定删除文件「{{ f.name }}」吗？
-                  </NPopconfirm>
+                  <button class="btn-text-danger file-del" :disabled="deletingPaths.has(`${p.category}/${p.project}/${v.versionDir}/${f.name}`)" @click="fileToDelete = { p, v, f }; showFileDeleteModal = true">
+                    删除
+                  </button>
                 </li>
               </ul>
             </div>
@@ -485,6 +497,48 @@ onMounted(() => { loadFiles() })
         </article>
       </div>
     </div>
+
+    <!-- 删除项目确认弹窗 -->
+    <NModal v-model:show="showProjectDeleteModal" preset="card" title="删除项目" style="max-width: 460px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定删除项目 <strong>{{ projectToDelete?.project }}</strong> 的所有备份文件吗？<br />此操作不可恢复。</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showProjectDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDeleteProject">确认删除</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 删除版本确认弹窗 -->
+    <NModal v-model:show="showVersionDeleteModal" preset="card" title="删除版本" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定删除版本 <strong>{{ versionToDelete?.v.versionDir }}</strong> 的所有文件吗？</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showVersionDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDeleteVersion">确认删除</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 删除文件确认弹窗 -->
+    <NModal v-model:show="showFileDeleteModal" preset="card" title="删除文件" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定删除文件 <strong>{{ fileToDelete?.f.name }}</strong> 吗？</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showFileDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDeleteFile">确认删除</button>
+        </div>
+      </template>
+    </NModal>
   </AdminLayout>
 </template>
 
@@ -610,7 +664,9 @@ onMounted(() => { loadFiles() })
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  width: 100%;
 }
+.search-row :deep(.admin-search-bar) { flex: 1; }
 .search-result-count {
   font-size: 0.75rem;
   color: var(--text-tertiary);
@@ -934,6 +990,13 @@ onMounted(() => { loadFiles() })
   line-height: 1.5;
 }
 .empty-state .btn-secondary, .empty-state .btn-primary { height: 38px; padding: 0 18px; font-size: 0.88rem; }
+
+/* === 删除确认弹窗 === */
+.del-modal-body { text-align: center; padding: 8px 0; }
+.del-modal-icon { font-size: 2.8rem; margin-bottom: 8px; }
+.del-modal-title { font-size: 1.05rem; color: var(--text-main); margin: 0; line-height: 1.5; }
+.del-modal-title strong { color: #E55353; }
+.del-modal-footer { display: flex; justify-content: center; gap: 12px; }
 
 @media (max-width: 768px) {
   .stats-row { grid-template-columns: 1fr; }

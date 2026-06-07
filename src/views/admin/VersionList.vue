@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, h } from 'vue'
+import { ref, computed, onMounted, watch, h } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { NButton, NInput, NDataTable, NSpace, NPopconfirm, NModal, NForm, NFormItem } from 'naive-ui'
+import { NInput, NDataTable, NSpace, NSelect, NModal, NForm, NFormItem } from 'naive-ui'
 import { useProjectStore } from '../../store/project'
 import { useCategoryStore } from '../../store/category'
 import type { Version, Download, Platform } from '../../types'
@@ -18,7 +18,11 @@ const categories = useCategoryStore()
 
 const projectId = computed(() => route.params.id as string)
 const software = computed(() => projects.byId(projectId.value))
-const versions = computed(() => (projectId.value ? api.getSoftwareVersions(projectId.value) : []))
+/* 订阅 projects.software 是为了让 store 变更时强制重算 versions */
+const versions = computed(() => {
+  void projects.software
+  return projectId.value ? api.getSoftwareVersions(projectId.value) : []
+})
 
 /* 表单中的下载项（编辑态） */
 interface DownloadForm {
@@ -39,6 +43,14 @@ const showImport = ref(false)
 const importUrl = ref('')
 const importing = ref(false)
 const importMsg = ref<{ ok: boolean; text: string } | null>(null)
+
+const showDeleteModal = ref(false)
+const deletingVersionId = ref('')
+function confirmDeleteVersion() {
+  doDeleteVersion(deletingVersionId.value)
+  showDeleteModal.value = false
+  deletingVersionId.value = ''
+}
 
 function openNew() {
   editingVersion.value = null
@@ -181,25 +193,22 @@ async function doImport() {
 
 const columns = [
   {
-    title: '版本号', key: 'version', width: 130,
+    title: '版本号', key: 'version',
     render: (row: Version) => h('span', { class: 'version-badge' }, row.version),
   },
   {
-    title: '发布日期', key: 'publishedAt', width: 130,
+    title: '发布日期', key: 'publishedAt',
     render: (row: Version) => fmtDate(row.publishedAt),
   },
   {
-    title: '下载项数', key: 'downloadCount', width: 100,
+    title: '下载项数', key: 'downloadCount',
     render: (row: Version) => h('span', { class: 'count-pill' }, `${row.downloadIds.length} 个`),
   },
   {
-    title: '操作', key: 'actions', width: 180,
-    render: (row: Version) => h(NSpace, { size: 'small' }, () => [
-      h(NButton, { size: 'small', type: 'primary', onClick: () => openEdit(row) }, () => '编辑'),
-      h(NPopconfirm, { positiveText: '确认', negativeText: '取消', onPositiveClick: () => doDeleteVersion(row.id) }, {
-        default: () => '确定删除此版本？',
-        trigger: () => h(NButton, { size: 'small', type: 'error', tertiary: true }, () => '删除'),
-      }),
+    title: '操作', key: 'actions',
+    render: (row: Version) => h('div', { class: 'actions-cell' }, [
+      h('button', { class: 'row-btn-sec', onClick: () => openEdit(row) }, ['✏️ 编辑']),
+      h('button', { class: 'row-btn-pri', onClick: () => { deletingVersionId.value = row.id; showDeleteModal.value = true } }, ['🗑️ 删除']),
     ]),
   },
 ]
@@ -207,6 +216,13 @@ const columns = [
 onMounted(() => {
   projects.refresh()
   categories.refresh()
+})
+
+/* 监听项目是否存在：被删后自动返回列表 */
+watch(software, (sw) => {
+  if (!sw && projectId.value) {
+    router.replace('/admin/projects')
+  }
 })
 </script>
 
@@ -313,17 +329,31 @@ onMounted(() => {
       </div>
 
       <template #footer>
-        <NSpace justify="end">
-          <NButton @click="showModal = false">取消</NButton>
-          <NButton type="primary" @click="doSaveVersion">保存</NButton>
-        </NSpace>
+        <div class="modal-actions">
+          <button class="btn-secondary" @click="showModal = false">取消</button>
+          <button class="btn-primary" @click="doSaveVersion">保存</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 删除确认弹窗 -->
+    <NModal v-model:show="showDeleteModal" preset="card" title="删除版本" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="del-modal-body">
+        <div class="del-modal-icon">🗑</div>
+        <p class="del-modal-title">确定删除此版本吗？</p>
+      </div>
+      <template #footer>
+        <div class="del-modal-footer">
+          <button class="btn-secondary" @click="showDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDeleteVersion">确认删除</button>
+        </div>
       </template>
     </NModal>
   </AdminLayout>
 </template>
 
 <style scoped>
-.list-page { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; }
+.list-page { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; padding: 0 25px; }
 .page-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
 .page-title { margin: 0; font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
 .page-desc { margin: 4px 0 0; font-size: 0.88rem; color: var(--text-tertiary); }
@@ -334,9 +364,10 @@ onMounted(() => {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   padding: 20px;
-  flex: 1;
-  min-height: 0;
+  min-width: 0;
 }
+.content-card :deep(.n-data-table) { min-width: 0; }
+.actions-cell { display: flex; gap: 6px; flex-wrap: wrap; }
 .empty-state { text-align: center; padding: 60px 20px; }
 .empty-icon { font-size: 3rem; margin-bottom: 12px; opacity: 0.5; }
 .empty-state p { color: var(--text-tertiary); margin: 0 0 16px; }
@@ -444,13 +475,65 @@ onMounted(() => {
 }
 .btn-icon:hover { background: rgba(255, 107, 107, 0.08); color: var(--color-error); border-color: var(--color-error); }
 
+/* === 弹窗按钮 === */
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+
+/* === 删除确认弹窗 === */
+.del-modal-body { text-align: center; padding: 8px 0; }
+.del-modal-icon { font-size: 2.8rem; margin-bottom: 8px; }
+.del-modal-title { font-size: 1.05rem; color: var(--text-main); margin: 0; line-height: 1.5; }
+.del-modal-footer { display: flex; justify-content: center; gap: 12px; }
+
 @media (max-width: 768px) {
   .form-grid { grid-template-columns: 1fr; }
   .header-actions { width: 100%; }
   .header-actions .btn-primary, .header-actions .btn-secondary { flex: 1; }
+  .content-card { padding: 12px; }
+  .content-card :deep(.n-data-table-th__title), .content-card :deep(.n-data-table-td) { padding: 8px 6px !important; font-size: 0.82rem; }
+  .actions-cell { flex-direction: column; gap: 4px; }
   .dl-row { flex-wrap: wrap; }
   .dl-row :deep(.n-input), .dl-row :deep(.n-select) { min-width: 100px; }
   .import-body :deep(.n-input) { min-width: 100%; }
   .import-btn { width: 100%; }
+}
+</style>
+<style>
+/* 行内操作按钮 — 全局样式（绕过 scoped 限制） */
+.row-btn-pri, .row-btn-sec {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  transition: opacity 0.18s, transform 0.18s;
+}
+.row-btn-pri {
+  background: linear-gradient(135deg, #3478F6 0%, #2A6AE0 100%);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(52, 120, 246, 0.25);
+}
+.row-btn-pri:hover { opacity: 0.92; transform: translateY(-1px); }
+.row-btn-sec {
+  background: #FFFFFF;
+  color: #3478F6;
+  border: 1px solid #3478F6;
+}
+.row-btn-sec:hover { background: #EFF5FF; transform: translateY(-1px); }
+
+@media (max-width: 768px) {
+  .actions-cell .row-btn-pri,
+  .actions-cell .row-btn-sec {
+    width: 100%;
+    justify-content: center;
+    padding: 0 8px;
+    height: 26px;
+    font-size: 0.75rem;
+  }
 }
 </style>

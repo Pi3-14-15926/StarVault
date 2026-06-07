@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, h, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { NInput, NInputNumber, NModal, NForm, NFormItem, NPopconfirm, NSwitch, NCheckbox, useMessage } from 'naive-ui'
+import { NInput, NInputNumber, NModal, NForm, NFormItem, NSwitch, NCheckbox, useMessage } from 'naive-ui'
 import { useCategoryStore } from '../../store/category'
 import { useProjectStore } from '../../store/project'
 import { refreshEnabledState } from '../../composables/useEnabled'
@@ -115,21 +115,27 @@ function clearSelection() {
   selectedIds.value.clear()
 }
 
-function bulkDelete() {
-  if (selectedIds.value.size === 0) return
+const showBulkDeleteModal = ref(false)
+const showSingleDeleteModal = ref(false)
+const deletingCat = ref<Category | null>(null)
+const bulkDeleteInfo = computed(() => {
+  if (selectedIds.value.size === 0) return { ids: [], withProjects: 0, msg: '' }
   const ids = [...selectedIds.value]
   const withProjects = ids.filter((id) => {
     const cat = catStore.categories.find((c) => c.id === id)
     return cat ? projectCount(cat.slug) > 0 : false
   })
-  let msg = `确定要删除选中的 ${ids.length} 个页面吗？`
-  if (withProjects.length > 0) {
-    msg += `\n\n其中 ${withProjects.length} 个页面下有关联软件，软件不会被删除，但将无法从这些页面访问。`
-  }
-  if (!confirm(msg)) return
+  const msg = withProjects.length > 0
+    ? `其中 ${withProjects.length} 个页面下有关联软件，软件不会被删除，但将无法从这些页面访问。`
+    : ''
+  return { ids, withProjects: withProjects.length, msg }
+})
+function confirmBulkDelete() {
+  const { ids } = bulkDeleteInfo.value
   ids.forEach((id) => catStore.remove(id))
   message.success(`已删除 ${ids.length} 个页面`)
   clearSelection()
+  showBulkDeleteModal.value = false
 }
 function bulkEnable(enable: boolean) {
   selectedIds.value.forEach((id) => {
@@ -174,11 +180,12 @@ function pickEmoji(e: string) {
   form.value.icon = e
 }
 
-function doDelete(c: Category) {
-  const count = projectCount(c.slug)
-  if (count > 0 && !confirm(`此页面下有 ${count} 个关联软件，确定要删除吗？\n（软件不会被删除，但将无法从此页面访问）`)) return
-  catStore.remove(c.id)
+function confirmDelete() {
+  if (!deletingCat.value) return
+  catStore.remove(deletingCat.value.id)
   message.success('已删除')
+  showSingleDeleteModal.value = false
+  deletingCat.value = null
 }
 
 function preview(c: Category) {
@@ -233,12 +240,7 @@ onMounted(() => {
           <div class="bulk-actions">
             <button class="btn-ghost" @click="bulkEnable(true)">✓ 批量启用</button>
             <button class="btn-ghost" @click="bulkEnable(false)">⏸ 批量禁用</button>
-            <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="bulkDelete">
-              <template #trigger>
-                <button class="btn-ghost bulk-danger">🗑 批量删除</button>
-              </template>
-              确定要删除选中的 {{ selectedIds.size }} 个页面吗？
-            </NPopconfirm>
+            <button class="btn-ghost bulk-danger" @click="showBulkDeleteModal = true">🗑 批量删除</button>
             <button class="btn-ghost" @click="clearSelection">取消</button>
           </div>
         </div>
@@ -327,20 +329,12 @@ onMounted(() => {
               </svg>
               编辑
             </button>
-            <NPopconfirm positive-text="确认删除" negative-text="取消" @positive-click="doDelete(c)">
-              <template #trigger>
-                <button class="pc-btn pc-btn-danger" title="删除">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-                    <path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-                  </svg>
-                  删除
-                </button>
-              </template>
-              确定删除「{{ c.name }}」？<br />
-              <small v-if="projectCount(c.slug) > 0" style="color: var(--text-tertiary);">
-                此页面下有 {{ projectCount(c.slug) }} 个软件
-              </small>
-            </NPopconfirm>
+            <button class="pc-btn pc-btn-danger" title="删除" @click="deletingCat = c; showSingleDeleteModal = true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+              </svg>
+              删除
+            </button>
           </div>
         </article>
       </div>
@@ -354,6 +348,38 @@ onMounted(() => {
         @update:page="jumpPage"
       />
     </div>
+
+    <!-- 单删确认弹窗 -->
+    <NModal v-model:show="showSingleDeleteModal" preset="card" title="删除页面" style="max-width: 420px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="bulk-modal-body">
+        <div class="bulk-modal-icon">🗑</div>
+        <p class="bulk-modal-title">确定要删除页面 <strong>{{ deletingCat?.name }}</strong> 吗？</p>
+        <p v-if="deletingCat && projectCount(deletingCat.slug) > 0" class="bulk-modal-warn">
+          此页面下有 {{ projectCount(deletingCat.slug) }} 个关联软件，软件不会被删除，但将无法从此页面访问。
+        </p>
+      </div>
+      <template #footer>
+        <div class="bulk-modal-footer">
+          <button class="btn-secondary" @click="showSingleDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmDelete">确认删除</button>
+        </div>
+      </template>
+    </NModal>
+
+    <!-- 批量删除确认弹窗 -->
+    <NModal v-model:show="showBulkDeleteModal" preset="card" title="批量删除页面" style="max-width: 460px; border-radius: var(--admin-radius-card);" :mask-closable="false">
+      <div class="bulk-modal-body">
+        <div class="bulk-modal-icon">🗑</div>
+        <p class="bulk-modal-title">确定要删除选中的 <strong>{{ bulkDeleteInfo.ids.length }}</strong> 个页面吗？</p>
+        <p v-if="bulkDeleteInfo.msg" class="bulk-modal-warn">{{ bulkDeleteInfo.msg }}</p>
+      </div>
+      <template #footer>
+        <div class="bulk-modal-footer">
+          <button class="btn-secondary" @click="showBulkDeleteModal = false">取消</button>
+          <button class="btn-danger" @click="confirmBulkDelete">确认删除</button>
+        </div>
+      </template>
+    </NModal>
 
     <!-- 新增/编辑弹窗 -->
     <NModal v-model:show="showModal" preset="card" :title="editingCat ? '编辑页面' : '新增页面'" style="max-width: 620px; border-radius: var(--admin-radius-card);">
@@ -755,6 +781,13 @@ onMounted(() => {
   background: var(--color-primary);
   border-color: var(--color-primary);
 }
+
+/* === 批量删除确认弹窗 === */
+.bulk-modal-body { text-align: center; padding: 8px 0; }
+.bulk-modal-icon { font-size: 2.8rem; margin-bottom: 8px; }
+.bulk-modal-title { font-size: 1.05rem; color: var(--text-main); margin: 0 0 8px; line-height: 1.5; }
+.bulk-modal-warn { font-size: 0.85rem; color: #E55353; margin: 0; background: rgba(229, 83, 83, 0.08); padding: 10px 14px; border-radius: 10px; line-height: 1.5; }
+.bulk-modal-footer { display: flex; justify-content: center; gap: 12px; }
 
 /* === 分页 === 已抽到 AdminPager 组件 */
 
