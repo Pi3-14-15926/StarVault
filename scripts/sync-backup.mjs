@@ -215,72 +215,21 @@ function withTimeout(promise, ms) {
   ])
 }
 
-/** 真正可取消的 AbortController 超时（用于轻量查询操作）
- *  返回 { signal, cancel }，调用方应把 signal 透传给底层 fetch/webdav 调用 */
-function abortableTimeout(ms) {
-  const ctrl = new AbortController()
-  const timer = setTimeout(() => ctrl.abort(new Error(`操作超时 (${ms}ms)`)), ms)
-  return {
-    signal: ctrl.signal,
-    cancel: () => clearTimeout(timer),
-  }
-}
-
-/** 给 WebDAV 上传操作加超时（Promise.race 假超时——不取消底层请求）
- *  跨太平洋链路上 19.5MB 上传可能需 3-5 分钟；真取消会损坏 TLS socket 导致后续 EPIPE。
- *  假超时让底层 fetch 继续跑，最终 server 端能收到完整文件；
- *  脚本末尾 process.exit(0) 会强制释放所有 socket */
-function webdavUploadOp(thunk, label) {
-  return withTimeout(thunk(), WEBDAV_UPLOAD_TIMEOUT).catch(e => {
-    throw new Error(`${label}: ${e.message}`)
-  })
-}
-
-/** 给 WebDAV 轻量操作（exists/getDirContents/createDir/delete）加超时
- *  用真 AbortController，超时后底层请求立即取消，避免查询操作长时间挂起
- *  thunk 接收 AbortSignal 参数，透传给 webdav 库的 options.signal */
-function webdavQueryOp(thunk, label) {
-  const { signal, cancel } = abortableTimeout(WEBDAV_QUERY_TIMEOUT)
-  return thunk(signal).finally(cancel).catch(e => {
-    throw new Error(`${label}: ${e.message}`)
-  })
-}
-
-/** 指数退避重试包装：失败时按 5s, 15s, 30s 等待后重试，最多 WEBDAV_RETRIES 次
- *  只对可重试错误（网络中断、超时、5xx、423 Locked）重试；对 4xx 客户端错误（鉴权失败等）直接抛 */
-async function withRetry(fn, label) {
-  const isRetriable = (e) => {
+/** WebDAV 操作统一入口（Promise.race 假超时，不取消底层 fetch）
+ *  如果真用 AbortController abort 底层 fetch，会导致 server 端 TCP 收到 RST 从而丢弃已收数据；
+ *  假超时让底层 fetch 继续跑，最终 server 端能收到完整文件；脚本末尾 process.exit(0) 强制释放所有 socket。
+ *  409 Conflict（目录已存在）直接吞掉返回 undefined，不抛错。 */
+async function webdavOp(fn, label, timeoutMs) {
+  try {
+    return await withTimeout(fn(), timeoutMs)
+  } catch (e) {
     const m = (e?.message || '').toLowerCase()
-    /* node-fetch 的 AbortError / FetchError / connect ETIMEDOUT / ECONNRESET */
-    if (m.includes('aborted') || m.includes('abort')) return true
-    if (m.includes('timeout') || m.includes('超时')) return true
-    if (m.includes('econnreset') || m.includes('etimedout') || m.includes('enotfound')) return true
-    if (m.includes('socket hang up') || m.includes('fetch failed')) return true
-    if (m.includes('epipe')) return true
-    /* 5xx 服务端错误（坚果云会返回 507 存储超限等） */
-    if (/\b(5\d{2})\b/.test(e?.message || '')) return true
-    /* 423 Locked：被之前中断的 PUT 请求残留锁，等几秒后锁自动释放即可重试 */
-    if (m.includes('423') || m.includes('locked')) return true
-    /* 4xx 客户端错误不重试：401 鉴权、403 禁止、404 路径、412 冲突 */
-    return false
-  }
-  let lastErr
-  for (let attempt = 1; attempt <= WEBDAV_RETRIES; attempt++) {
-    try {
-      return await fn()
-    } catch (e) {
-      lastErr = e
-      if (!isRetriable(e) || attempt === WEBDAV_RETRIES) {
-        throw new Error(`${label} 失败（已重试 ${attempt - 1} 次）: ${e.message}`)
-      }
-      /* 锁残留时多等一会（15s/30s）让服务器释放锁；网络抖动用较短间隔（5s/10s） */
-      const isLocked = (e?.message || '').toLowerCase().includes('423') || (e?.message || '').toLowerCase().includes('locked')
-      const wait = isLocked ? 15000 * attempt : Math.min(5000 * attempt, 15000)
-      log(`    ⚠ ${label} 第 ${attempt} 次失败 (${e.message})${isLocked ? ' [锁残留，等待释放]' : ''}，${wait}ms 后重试...`)
-      await new Promise(r => setTimeout(r, wait))
+    if (m.includes('409') || m.includes('conflict')) {
+      log(`   ${label}: 已存在（409，跳过）`)
+      return undefined
     }
+    throw new Error(`${label}: ${e.message}`)
   }
-  throw lastErr
 }
 
 /** 安全 fetch（支持超时和认证） */
@@ -451,17 +400,16 @@ async function ensureRemoteDir(client, dirPath) {
   let acc = ''
   for (const p of parts) {
     acc += '/' + p
-    const exists = await webdavQueryOp(signal => client.exists(acc, { signal }), `检查目录 ${acc}`).catch(() => false)
-    if (!exists) {
-      await webdavQueryOp(signal => client.createDirectory(acc, { signal }), `创建目录 ${acc}`)
-    }
+    const exists = await webdavOp(() => client.exists(acc), `检查目录 ${acc}`, WEBDAV_QUERY_TIMEOUT)
+    if (exists === true) continue
+    await webdavOp(() => client.createDirectory(acc), `创建目录 ${acc}`, WEBDAV_QUERY_TIMEOUT)
   }
 }
 
 /** WebDAV 清理旧版本 */
 async function cleanupOldBackups(client, projectDir) {
   try {
-    const entries = await webdavQueryOp(signal => client.getDirectoryContents(projectDir, { signal }), `列出目录 ${projectDir}`)
+    const entries = await webdavOp(() => client.getDirectoryContents(projectDir), `列出目录 ${projectDir}`, WEBDAV_QUERY_TIMEOUT)
     const dirs = entries
       .filter(e => e.type === 'directory')
       .sort((a, b) => {
@@ -470,7 +418,7 @@ async function cleanupOldBackups(client, projectDir) {
         return bm - am
       })
     for (const entry of dirs.slice(KEEP_VERSIONS)) {
-      await webdavQueryOp(signal => client.deleteFile(entry.filename, { signal }), `删除 ${entry.basename || entry.filename}`)
+      await webdavOp(() => client.deleteFile(entry.filename), `删除 ${entry.basename || entry.filename}`, WEBDAV_QUERY_TIMEOUT)
       log(`  清理旧版本: ${entry.basename || entry.filename}`)
     }
   } catch { /* ignore */ }
@@ -497,8 +445,8 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
   const versionDir = `${WEBDAV_BASE_DIR}/${safeCategory}/${safeProject}/${dateStr}_${safeVer}`
 
   try {
-    const exists = await webdavQueryOp(signal => client.exists(versionDir, { signal }), `检查版本目录 ${versionDir}`)
-    if (exists) {
+    const exists = await webdavOp(() => client.exists(versionDir), `检查版本目录 ${versionDir}`, WEBDAV_QUERY_TIMEOUT)
+    if (exists === true) {
       return { version: version.version, status: 'skip', message: '已存在' }
     }
 
@@ -522,14 +470,16 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
           const buffer = Buffer.from(await resp.arrayBuffer())
           log(`    ↑ 上传 ${dl.filename} → WebDAV (${(buffer.length / 1024 / 1024).toFixed(2)}MB)`)
           /* 上传用假超时（不取消底层请求，避免 TLS socket 损坏导致 EPIPE）；
-           * withRetry 处理 423 Locked（锁残留）和 EPIPE（连接断开） */
-          await withRetry(
-            () => webdavUploadOp(
+           * 超时不重试——假超时意味着底层 fetch 仍在跑，重试会冲突 */
+          try {
+            await webdavOp(
               () => client.putFileContents(`${versionDir}/${dl.filename}`, buffer),
-              `上传 ${dl.filename}`
-            ),
-            `上传 ${dl.filename}`
-          )
+              `上传 ${dl.filename}`,
+              WEBDAV_UPLOAD_TIMEOUT
+            )
+          } catch (e) {
+            log(`    ⚠ ${dl.filename}: ${e.message}（跳过，底层传输将在后台完成）`)
+          }
           fileCount++
       } catch (e) {
         log(`    ✗ ${dl.filename}: ${e.message}`)
@@ -607,7 +557,7 @@ async function main() {
     // 测试连接
     log('  测试 WebDAV 连接...')
     try {
-      const baseExists = await webdavQueryOp(signal => client.exists(WEBDAV_BASE_DIR, { signal }), `检查根目录 ${WEBDAV_BASE_DIR}`)
+      const baseExists = await webdavOp(() => client.exists(WEBDAV_BASE_DIR), `检查根目录 ${WEBDAV_BASE_DIR}`, WEBDAV_QUERY_TIMEOUT)
       log(`  根目录 ${WEBDAV_BASE_DIR}: ${baseExists ? '已存在' : '不存在，将在备份时创建'}`)
     } catch (e) {
       log(`  ✗ WebDAV 连接失败: ${e.message}`)
@@ -669,16 +619,16 @@ async function main() {
       const entries = []
       const baseDir = WEBDAV_BASE_DIR
 
-      const cats = await webdavQueryOp(signal => client.getDirectoryContents(baseDir, { signal }), '列出分类目录').catch(() => [])
+      const cats = await webdavOp(() => client.getDirectoryContents(baseDir), '列出分类目录', WEBDAV_QUERY_TIMEOUT).catch(() => [])
       for (const cat of (cats.filter(c => c.type === 'directory'))) {
         const catName = sanitize(cat.basename || cat.filename.split('/').pop() || '')
-        const projs = await webdavQueryOp(signal => client.getDirectoryContents(cat.filename, { signal }), `列出 ${catName}`).catch(() => [])
+        const projs = await webdavOp(() => client.getDirectoryContents(cat.filename), `列出 ${catName}`, WEBDAV_QUERY_TIMEOUT).catch(() => [])
         for (const proj of (projs.filter(p => p.type === 'directory'))) {
           const projName = sanitize(proj.basename || proj.filename.split('/').pop() || '')
-          const vers = await webdavQueryOp(signal => client.getDirectoryContents(proj.filename, { signal }), `列出 ${projName}`).catch(() => [])
+          const vers = await webdavOp(() => client.getDirectoryContents(proj.filename), `列出 ${projName}`, WEBDAV_QUERY_TIMEOUT).catch(() => [])
           for (const ver of (vers.filter(v => v.type === 'directory'))) {
             const verName = ver.basename || ver.filename.split('/').pop() || ''
-            const files = await webdavQueryOp(signal => client.getDirectoryContents(ver.filename, { signal }), `列出 ${verName}`).catch(() => [])
+            const files = await webdavOp(() => client.getDirectoryContents(ver.filename), `列出 ${verName}`, WEBDAV_QUERY_TIMEOUT).catch(() => [])
             const fileEntries = files
               .filter(f => f.type === 'file')
               .map(f => ({
