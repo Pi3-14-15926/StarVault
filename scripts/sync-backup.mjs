@@ -17,9 +17,10 @@ import { createClient } from 'webdav'
 import { execSync } from 'child_process'
 
 const DATA_DIR = path.resolve('public/data')
-const PROJECTS_FILE = path.join(DATA_DIR, 'projects.json')
+const PAGE_DIR = path.resolve('public/page')
 const CATEGORIES_FILE = path.join(DATA_DIR, 'categories.json')
 const SETTINGS_FILE = path.join(DATA_DIR, 'settings.json')
+const INDEX_FILE = path.join(DATA_DIR, 'index.json')
 
 const GITHUB_API = 'https://api.github.com'
 
@@ -57,6 +58,145 @@ function readJSON(filePath, fallback) {
 /** 写入 JSON 文件 */
 function writeJSON(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8')
+}
+
+/* ============================================================
+ * 新数据模型读取/写回（分层：page/{slug}/{software,versions,downloads}.json）
+ * 组装成与旧脚本兼容的内存结构：
+ *   projects: [{
+ *     id, name, sourceType, categorySlug, githubRepo, githubUrl, ...,
+ *     versions: [{ id, projectId, version, publishedAt, changelog, downloads: [...] }]
+ *   }]
+ * ============================================================ */
+
+/** 读取新模型数据，组装成项目列表（含内嵌 versions+downloads） */
+function loadFromNewModel() {
+  const categories = readJSON(CATEGORIES_FILE, [])
+  if (!Array.isArray(categories) || categories.length === 0) {
+    return { categories, projects: [] }
+  }
+
+  const projects = []
+  for (const cat of categories) {
+    const slug = cat.slug
+    if (!slug) continue
+    const dir = path.join(PAGE_DIR, slug)
+    if (!fs.existsSync(dir)) continue
+
+    const swList = readJSON(path.join(dir, 'software.json'), [])
+    const verList = readJSON(path.join(dir, 'versions.json'), [])
+    const dlList = readJSON(path.join(dir, 'downloads.json'), [])
+
+    /* 按 projectId 建索引，避免每次 O(n) 查找 */
+    const verByProject = new Map()
+    for (const v of verList) {
+      if (!verByProject.has(v.projectId)) verByProject.set(v.projectId, [])
+      verByProject.get(v.projectId).push(v)
+    }
+    const dlByVer = new Map()
+    for (const d of dlList) {
+      if (!dlByVer.has(d.versionId)) dlByVer.set(d.versionId, [])
+      dlByVer.get(d.versionId).push(d)
+    }
+
+    for (const sw of swList) {
+      const vers = verByProject.get(sw.id) || []
+      const projects2 = vers.map((v) => ({
+        ...v,
+        downloads: dlByVer.get(v.id) || [],
+      }))
+      projects.push({ ...sw, categorySlug: slug, versions: projects2 })
+    }
+  }
+  return { categories, projects }
+}
+
+/** 更新 data/index.json：
+ *  - 保留 index 里有但 projects 中没有的 entry（孤儿数据）
+ *  - 合并 project 字段，更新 latestVersionId / latestUpdateTime
+ *  - 如果有实际变化返回 true，否则返回 false
+ */
+function updateIndex(projects) {
+  const oldIndex = readJSON(INDEX_FILE, [])
+  const oldById = new Map((oldIndex || []).map((e) => [e.id, e]))
+
+  /* 按 publishedAt 倒序取最新版本 */
+  function pickLatest(p) {
+    if (!p.versions || !p.versions.length) return null
+    const sorted = [...p.versions].sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    )
+    return sorted[0]
+  }
+
+  const newIndex = []
+  for (const p of projects) {
+    const old = oldById.get(p.id) || {}
+    const latest = pickLatest(p)
+    newIndex.push({
+      ...old,                              // 保留旧字段（website 等）
+      id: p.id,
+      name: p.name,
+      slug: p.slug,
+      categorySlug: p.categorySlug,
+      description: p.description ?? old.description ?? '',
+      logo: p.logo ?? old.logo ?? '',
+      featured: p.featured ?? old.featured ?? false,
+      latestVersionId: latest?.id,
+      latestUpdateTime: latest?.publishedAt || p.latestUpdateTime || new Date(0).toISOString(),
+      githubRepo: p.githubRepo,
+      githubUrl: p.githubUrl,
+      stars: p.stars,
+      forks: p.forks,
+    })
+  }
+
+  /* 保留孤儿（脚本读不到但 index 仍有的项目） */
+  const knownIds = new Set(projects.map((p) => p.id))
+  for (const e of oldIndex || []) {
+    if (!knownIds.has(e.id)) newIndex.push(e)
+  }
+
+  /* 检测是否真的有变化 */
+  if (newIndex.length !== (oldIndex || []).length) {
+    writeJSON(INDEX_FILE, newIndex)
+    return true
+  }
+  for (let i = 0; i < newIndex.length; i++) {
+    if (JSON.stringify(newIndex[i]) !== JSON.stringify(oldIndex[i])) {
+      writeJSON(INDEX_FILE, newIndex)
+      return true
+    }
+  }
+  return false
+}
+
+/** 把内存中的 projects 写回新模型（按 categorySlug 分目录写 3 个文件） */
+function writeToNewModel(projects) {
+  /* 按 categorySlug 分组 */
+  const grouped = new Map()
+  for (const p of projects) {
+    const slug = p.categorySlug
+    if (!slug) continue
+    if (!grouped.has(slug)) grouped.set(slug, { software: [], versions: [], downloads: [] })
+    const g = grouped.get(slug)
+    const { versions, categorySlug, ...sw } = p  // 去掉内嵌 versions/categorySlug
+    g.software.push(sw)
+    for (const v of versions) {
+      const { downloads, ...verRest } = v
+      g.versions.push(verRest)
+      /* 给 version 维护 downloadIds */
+      verRest.downloadIds = downloads.map((d) => d.id)
+      g.downloads.push(...downloads)
+    }
+  }
+  for (const [slug, data] of grouped) {
+    const dir = path.join(PAGE_DIR, slug)
+    fs.mkdirSync(dir, { recursive: true })
+    writeJSON(path.join(dir, 'software.json'), data.software)
+    writeJSON(path.join(dir, 'versions.json'), data.versions)
+    writeJSON(path.join(dir, 'downloads.json'), data.downloads)
+  }
 }
 
 /** 给 Promise 加超时 */
@@ -121,14 +261,31 @@ function uid() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
 }
 
+/** 清洗 repo 字符串：去掉协议、域名、前后斜杠、空白（与 src/utils/github.ts 的 normalizeRepo 保持一致） */
+function normalizeRepo(repo) {
+  if (!repo) return ''
+  return repo
+    .trim()
+    .replace(/^https?:\/\/github\.com\//i, '')
+    .replace(/^github\.com\//i, '')
+    .replace(/^\/+|\/+$/g, '')
+}
+
 /** 同步单个项目的 GitHub Release */
 async function syncProject(project) {
-  if (project.sourceType !== 'github' || !project.githubRepo) {
+  /* 入口清洗：避免 "/Rimchars/legado" 这类格式触发 GitHub API 404 */
+  const cleanRepo = normalizeRepo(project.githubRepo)
+  if (project.sourceType !== 'github' || !cleanRepo) {
     return { id: project.id, name: project.name, synced: false, reason: '非 GitHub 项目', newVersions: 0 }
+  }
+  /* 把清洗后的值写回内存，写盘时也用清洗后的（持久修复坏数据） */
+  if (project.githubRepo !== cleanRepo) {
+    log(`    🧹 清洗 githubRepo: "${project.githubRepo}" → "${cleanRepo}"`)
+    project.githubRepo = cleanRepo
   }
 
   try {
-    const releases = await fetchReleases(project.githubRepo)
+    const releases = await fetchReleases(cleanRepo)
     if (!releases.length) {
       return { id: project.id, name: project.name, synced: false, reason: '无 Release', newVersions: 0 }
     }
@@ -139,17 +296,22 @@ async function syncProject(project) {
 
     for (const r of releases) {
       if (!existingVersions.has(r.tag_name)) {
-        const version = {
+        const verId = uid()
+        const downloads = (r.assets || []).map((a) => ({
           id: uid(),
+          versionId: verId,
+          platform: guessPlatform(a.name),
+          filename: a.name,
+          size: `${(a.size / 1024 / 1024).toFixed(1)} MB`,
+          url: a.browser_download_url,
+        }))
+        const version = {
+          id: verId,
+          projectId: project.id,
           version: r.tag_name,
           publishedAt: r.published_at,
           changelog: r.body || '该版本未提供更新日志。',
-          downloads: (r.assets || []).map(a => ({
-            platform: guessPlatform(a.name),
-            filename: a.name,
-            size: `${(a.size / 1024 / 1024).toFixed(1)} MB`,
-            url: a.browser_download_url,
-          })),
+          downloads,
         }
         project.versions.push(version)
         newVersions.push(version)
@@ -183,9 +345,10 @@ async function syncProject(project) {
   }
 }
 
-/** 获取分类名称 */
-function getCategoryName(categories, categoryId) {
-  const c = categories.find(c => c.id === categoryId)
+/** 根据 slug 拿分类名称（兼容旧调用：传入 categoryId 或 categorySlug 都能处理） */
+function getCategoryName(categories, key) {
+  if (!key) return '未分类'
+  const c = categories.find((c) => c.slug === key || c.id === key)
   return c ? c.name : '未分类'
 }
 
@@ -288,9 +451,9 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
 async function main() {
   log('=== 开始同步 + 备份 ===')
 
-  // 1. 读取数据
-  const projects = readJSON(PROJECTS_FILE, [])
-  const categories = readJSON(CATEGORIES_FILE, [])
+  // 1. 读取数据（新模型：page/{slug}/{software,versions,downloads}.json）
+  const { categories, projects: loadedProjects } = loadFromNewModel()
+  const projects = loadedProjects
   let settings = readJSON(SETTINGS_FILE, null)
 
   // 从 settings.json → webdav.maxFileSize 读取，环境变量 MAX_FILE_SIZE_MB 可覆盖
@@ -315,8 +478,14 @@ async function main() {
   }
   log(`共新增 ${totalNew} 个版本`)
 
-  // 3. 写回同步后的数据
-  writeJSON(PROJECTS_FILE, projects)
+  // 3. 写回同步后的数据（新模型：page/{slug}/）
+  if (totalNew > 0) {
+    writeToNewModel(projects)
+    if (updateIndex(projects)) {
+      log('  index.json 已更新（latestVersion/latestUpdateTime）')
+    }
+    changed = true
+  }
 
   // 4. WebDAV 备份
   if (WEBDAV_URL && WEBDAV_USERNAME && WEBDAV_PASSWORD) {
@@ -354,7 +523,7 @@ async function main() {
 
     for (const project of projects) {
       if (project.sourceType !== 'github' || !project.versions.length) continue
-      const categoryName = getCategoryName(categories, project.categoryId)
+      const categoryName = getCategoryName(categories, project.categorySlug)
 
       // 只备份最近的 KEEP_VERSIONS 个版本
       const sorted = [...project.versions].sort(

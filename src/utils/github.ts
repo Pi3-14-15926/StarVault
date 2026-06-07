@@ -26,10 +26,10 @@ function ghError(message: string, status: number, retryAfter?: number): Error {
 /** 清洗 repo 字符串：去掉协议、域名、前后斜杠、空白 */
 function normalizeRepo(repo: string): string {
   return repo
+    .trim()
     .replace(/^https?:\/\/github\.com\//i, '')
     .replace(/^github\.com\//i, '')
     .replace(/^\/+|\/+$/g, '')
-    .trim()
 }
 
 /** 从 GitHub Release API 获取版本列表 */
