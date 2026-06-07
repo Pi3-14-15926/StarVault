@@ -11,8 +11,8 @@
     "latestUpdateTime": "2026-03-21T14:12:43Z",
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1676,
-    "forks": 243
+    "stars": 1690,
+    "forks": 251
   },
   {
     "id": "mpwouieuddbq2d",
@@ -26,8 +26,8 @@
     "latestUpdateTime": "2026-06-03T17:11:22Z",
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4297,
-    "forks": 415
+    "stars": 4330,
+    "forks": 422
   },
   {
     "id": "mpwowqbvn123ig",
@@ -37,12 +37,12 @@
     "description": "开源阅读修改版，添加基于cron的定时任务支持。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/__-T.webp",
     "featured": false,
-    "latestVersionId": "mpwow55qsslhd1",
-    "latestUpdateTime": "2026-05-29T20:44:25Z",
+    "latestVersionId": "mq3ip3zshqrwwr",
+    "latestUpdateTime": "2026-06-06T13:27:18Z",
     "githubRepo": "skybbk1001/legadoT",
     "githubUrl": "https://github.com/skybbk1001/legadoT",
-    "stars": 34,
-    "forks": 9
+    "stars": 36,
+    "forks": 11
   },
   {
     "id": "mpwoxcif3y72eu",
@@ -52,11 +52,11 @@
     "description": "阅读Archive继承自 Lyc 维护的 Legado 分支，增强界面、AI、EPUB、漫画、视频和主题能力。",
     "logo": "https://raw.githubusercontent.com/Rimchars/legado/main/docs/archive_icon.svg",
     "featured": false,
-    "latestVersionId": "mq1ygoieurmp4a",
-    "latestUpdateTime": "2026-06-05T19:10:35Z",
-    "githubRepo": "/Rimchars/legado",
+    "latestVersionId": "mq3ip4cunkrz2p",
+    "latestUpdateTime": "2026-06-07T03:35:12Z",
+    "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com//Rimchars/legado",
-    "stars": 217,
+    "stars": 221,
     "forks": 11
   },
   {
@@ -71,7 +71,7 @@
     "latestUpdateTime": "2026-05-28T16:44:14Z",
     "githubRepo": "LegadoTeam/Legado-Tauri-Release",
     "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
-    "stars": 180,
+    "stars": 181,
     "forks": 14
   },
   {
@@ -87,7 +87,7 @@
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
     "stars": 168,
-    "forks": 17
+    "forks": 18
   },
   {
     "id": "mq1yoxoecx1loi",
@@ -105,36 +105,6 @@
     "forks": 5717
   },
   {
-    "id": "mpzjjzg2ylm14p",
-    "name": "Animeko",
-    "slug": "dongmananimeko",
-    "categorySlug": "dongman",
-    "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
-    "logo": "https://avatars.githubusercontent.com/u/166622089?v=4",
-    "featured": true,
-    "latestVersionId": "mpzjjudy9mstsw",
-    "latestUpdateTime": "2026-05-28T19:26:21Z",
-    "githubRepo": "open-ani/animeko",
-    "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18160,
-    "forks": 483
-  },
-  {
-    "id": "mpzjkpvzeuh3zl",
-    "name": "Kazumi",
-    "slug": "dongmankazumi",
-    "categorySlug": "dongman",
-    "description": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/Kazumi.webp",
-    "featured": false,
-    "latestVersionId": "mpzjknwaomh2fi",
-    "latestUpdateTime": "2026-05-29T03:00:35Z",
-    "githubRepo": "Predidit/Kazumi",
-    "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26106,
-    "forks": 750
-  },
-  {
     "id": "mpwreu1xdmxt5v",
     "name": "LX Music 桌面版",
     "slug": "lx-music-desktop",
@@ -146,7 +116,37 @@
     "latestUpdateTime": "2026-05-01T05:35:34Z",
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51390,
-    "forks": 6848
+    "stars": 51417,
+    "forks": 6850
+  },
+  {
+    "id": "mpzjjzg2ylm14p",
+    "name": "Animeko",
+    "slug": "dongmananimeko",
+    "categorySlug": "dongman",
+    "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
+    "logo": "https://avatars.githubusercontent.com/u/166622089?v=4",
+    "featured": true,
+    "latestVersionId": "mpzjjudy9mstsw",
+    "latestUpdateTime": "2026-05-28T19:26:21Z",
+    "githubRepo": "open-ani/animeko",
+    "githubUrl": "https://github.com/open-ani/animeko",
+    "stars": 18192,
+    "forks": 484
+  },
+  {
+    "id": "mpzjkpvzeuh3zl",
+    "name": "Kazumi",
+    "slug": "dongmankazumi",
+    "categorySlug": "dongman",
+    "description": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/Kazumi.webp",
+    "featured": false,
+    "latestVersionId": "mq3ip6l24g6djl",
+    "latestUpdateTime": "2026-06-07T02:32:12Z",
+    "githubRepo": "Predidit/Kazumi",
+    "githubUrl": "https://github.com/Predidit/Kazumi",
+    "stars": 26145,
+    "forks": 753
   }
 ]
