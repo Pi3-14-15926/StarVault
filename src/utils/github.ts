@@ -43,10 +43,24 @@ export async function fetchReleases(repo: string, token?: string): Promise<GitHu
   const res = await fetchWithTimeout(`${GITHUB_API}/repos/${cleanRepo}/releases?per_page=20`, { headers })
   if (res.ok) return res.json()
   const retryAfter = Number(res.headers.get('retry-after') || 0) || undefined
-  if (res.status === 404) throw ghError(`仓库 ${cleanRepo} 不存在、为私有或无访问权限`, 404)
-  if (res.status === 401) throw ghError('Token 无效或已过期，请重新登录', 401)
-  if (res.status === 403 || res.status === 429) throw ghError(`GitHub API 限速 (HTTP ${res.status})`, res.status, retryAfter)
-  throw ghError(`GitHub API 错误: ${res.status} ${res.statusText}`, res.status)
+  const remaining = res.headers.get('x-ratelimit-remaining')
+  const reset = res.headers.get('x-ratelimit-reset')
+  const tokenNote = token ? '' : '（未登录，匿名请求 60/h，极易触发限速）'
+  if (res.status === 404) throw ghError(`仓库 ${cleanRepo} 不存在、为私有或无访问权限`, 404, undefined)
+  if (res.status === 401) throw ghError('Token 无效或已过期，请重新登录', 401, undefined)
+  if (res.status === 403) {
+    const isPrimary = remaining === '0'
+    const resetAt = reset ? new Date(Number(reset) * 1000).toISOString().slice(11, 19) : '?'
+    if (isPrimary) {
+      throw ghError(`GitHub API 主限速 (403)，reset @ ${resetAt} UTC${tokenNote}`, 403, retryAfter)
+    }
+    throw ghError(`GitHub API 次级限速/禁止 (403)：IP 滥用检测或请求过快${tokenNote ? '，建议登录使用 token' : ''}`, 403, retryAfter)
+  }
+  if (res.status === 429) {
+    const wait = retryAfter ? `${retryAfter}s` : '未知'
+    throw ghError(`GitHub API 限速 (429)，请 ${wait} 后重试${tokenNote}`, 429, retryAfter)
+  }
+  throw ghError(`GitHub API 错误: ${res.status} ${res.statusText}`, res.status, retryAfter)
 }
 
 /** 从 GitHub Release API 获取单个 release（按 owner/repo/tag）

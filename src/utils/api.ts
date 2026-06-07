@@ -406,7 +406,26 @@ export async function syncGitHubProject(software: Software, token?: string): Pro
   }
   const baseInfo = { projectId: software.id, projectName: software.name, repo: software.githubRepo }
   try {
-    const releases = await fetchReleases(software.githubRepo, token)
+    /* 限速自动重试：403/429 退避一次（区分 primary/secondary，secondary 等更久） */
+    let releases: Awaited<ReturnType<typeof fetchReleases>> = []
+    let lastErr: any = null
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        releases = await fetchReleases(software.githubRepo, token)
+        break
+      } catch (e: any) {
+        lastErr = e
+        const status = e?.status as number | undefined
+        if (status === 401 || status === 404) break
+        if (attempt === 1 && (status === 403 || status === 429 || status === undefined)) {
+          const wait = Math.min(((e?.retryAfter as number) || 5) * 1000, 10000)
+          await new Promise((r) => setTimeout(r, wait))
+          continue
+        }
+        break
+      }
+    }
+    if (!releases.length && lastErr) throw lastErr
     if (!releases.length) {
       return { ...baseInfo, success: false, error: '无 Release' }
     }
@@ -466,7 +485,8 @@ export async function syncGitHubProject(software: Software, token?: string): Pro
 
 export async function syncAllGitHub(token?: string): Promise<SyncResult[]> {
   const list = getAllSoftware().filter((s) => s.sourceType === 'github')
-  return Promise.all(list.map((s) => syncGitHubProject(s, token)))
+  /* 并发 2：避免 IP 限速（之前 Promise.all 完全并发，10 个项目同时打 GitHub API 易爆 403） */
+  return pMap(list, (s) => syncGitHubProject(s, token), 2)
 }
 
 /* ========== 远程数据加载（GitHub Pages JSON） ========== */

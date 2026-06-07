@@ -226,8 +226,25 @@ async function apiFetch(url, options = {}) {
 /** 从 GitHub 获取 Release 列表 */
 async function fetchReleases(repo) {
   const res = await apiFetch(`${GITHUB_API}/repos/${repo}/releases?per_page=20`)
-  if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText}`)
-  return res.json()
+  if (res.ok) return res.json()
+  /* 区分错误：401/404 = 配置/仓库问题；403/429 = 限速（可能是次级限速） */
+  const remaining = res.headers.get('x-ratelimit-remaining')
+  const reset = res.headers.get('x-ratelimit-reset')
+  const retryAfter = res.headers.get('retry-after')
+  const tokenNote = GH_TOKEN ? '' : '（未配置 GH_TOKEN，匿名请求 60/h，极易触发限速）'
+  if (res.status === 401) throw new Error(`Token 无效或已过期 (401)${tokenNote}`)
+  if (res.status === 404) throw new Error(`仓库 ${repo} 不存在、为私有或无访问权限 (404)`)
+  if (res.status === 403) {
+    const isPrimary = remaining === '0'
+    const resetAt = reset ? new Date(Number(reset) * 1000).toISOString().slice(11, 19) : '?'
+    if (isPrimary) throw new Error(`GitHub API 限速 (403)，主限速 reset @ ${resetAt} UTC${tokenNote}`)
+    throw new Error(`GitHub API 次级限速/禁止 (403)，通常是 IP 被滥用检测或请求过快，建议配置 GH_TOKEN`)
+  }
+  if (res.status === 429) {
+    const wait = retryAfter ? `${retryAfter}s` : '未知'
+    throw new Error(`GitHub API 限速 (429)，请 ${wait} 后重试${tokenNote}`)
+  }
+  throw new Error(`GitHub API 错误: ${res.status} ${res.statusText}`)
 }
 
 /** 解析文件大小（如 "150.2 MB" → 字节） */
