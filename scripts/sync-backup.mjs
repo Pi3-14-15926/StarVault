@@ -31,7 +31,7 @@ const WEBDAV_PASSWORD = process.env.WEBDAV_PASSWORD || ''
 const WEBDAV_BASE_DIR = (process.env.WEBDAV_BASE_DIR || '/SoftwareHub').replace(/\/+$/, '')
 const GH_PROXY = process.env.GH_PROXY || ''
 const KEEP_VERSIONS = parseInt(process.env.KEEP_VERSIONS || '2', 10)
-const WEBDAV_TIMEOUT = parseInt(process.env.WEBDAV_TIMEOUT || '600000', 10)
+const WEBDAV_TIMEOUT = parseInt(process.env.WEBDAV_TIMEOUT || '900000', 10)
 
 let changed = false  // 是否有数据变更，后续需要 commit
 
@@ -418,6 +418,55 @@ async function fetchWithTimeout(url, timeoutMs = 60000) {
   }
 }
 
+/** 带重试 + 分片的上传：大文件用 PATCH 分片拼装，避开 WebDAV 反代单次 PUT 超时/限速 */
+async function uploadFileWithRetry(client, dir, filename, buffer, { useChunking, chunkSize }) {
+  const filePath = `${dir}/${filename}`
+  const MAX_RETRIES = 2
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    const startTs = Date.now()
+    try {
+      if (!useChunking) {
+        await webdavOp((s) => client.putFileContents(filePath, buffer, { signal: s }), `上传 ${filename}`)
+      } else {
+        /* 分片上传：先建空文件（0 字节 PUT），再逐片 PATCH 追加 */
+        await webdavOp((s) => client.putFileContents(filePath, Buffer.alloc(0), { signal: s, overwrite: true }), `初始化 ${filename}`)
+        const total = buffer.length
+        let offset = 0
+        let chunkIdx = 0
+        while (offset < total) {
+          const end = Math.min(offset + chunkSize, total)
+          const slice = buffer.subarray(offset, end)
+          const isLast = end === total
+          /* partialUpdateFileContents 内部走 PATCH（webdav 协议），start/end 是字节范围 */
+          await webdavOp(
+            (s) => client.partialUpdateFileContents(filePath, offset, end - 1, slice, { signal: s }),
+            `上传 ${filename} 分片 ${chunkIdx + 1} (${(slice.length / 1024 / 1024).toFixed(1)} MB${isLast ? ' 末片' : ''})`,
+          )
+          const uploaded = end
+          const pct = ((uploaded / total) * 100).toFixed(1)
+          const elapsed = (Date.now() - startTs) / 1000
+          const speed = (uploaded / 1024 / 1024 / elapsed).toFixed(2)
+          log(`        ${pct}% (${(uploaded / 1024 / 1024).toFixed(1)}/${(total / 1024 / 1024).toFixed(1)} MB, ${speed} MB/s)`)
+          offset = end
+          chunkIdx++
+        }
+      }
+      const elapsed = ((Date.now() - startTs) / 1000).toFixed(1)
+      const speed = (buffer.length / 1024 / 1024 / Number(elapsed)).toFixed(2)
+      log(`    ✓ ${filename} 上传完成 (${elapsed}s, ${speed} MB/s${useChunking ? ', 分片' : ''})`)
+      return
+    } catch (e) {
+      if (attempt < MAX_RETRIES) {
+        const wait = attempt * 5
+        log(`    ↻ ${filename} 失败，${wait}s 后重试 (${attempt}/${MAX_RETRIES - 1})：${e.message}`)
+        await new Promise((r) => setTimeout(r, wait * 1000))
+        continue
+      }
+      throw e
+    }
+  }
+}
+
 /** 备份单个版本的资源到 WebDAV */
 async function backupVersion(client, version, categoryName, projectName, ghProxy) {
   const safeCategory = sanitize(categoryName)
@@ -448,8 +497,11 @@ async function backupVersion(client, version, categoryName, projectName, ghProxy
         const resp = await fetchWithTimeout(url, 300000)
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
         const buffer = Buffer.from(await resp.arrayBuffer())
-        log(`    ↑ 上传 ${dl.filename} → WebDAV`)
-        await webdavOp((s) => client.putFileContents(`${versionDir}/${dl.filename}`, buffer, { signal: s }), `上传 ${dl.filename}`)
+        log(`    ↑ 上传 ${dl.filename} → WebDAV（${(buffer.length / 1024 / 1024).toFixed(1)} MB）`)
+        /* 大文件分片上传：每片 PATCH，避免单次 PUT 触发反代超时/IP 限速 */
+        const USE_CHUNKING = buffer.length > 20 * 1024 * 1024
+        const CHUNK = 5 * 1024 * 1024
+        await uploadFileWithRetry(client, versionDir, dl.filename, buffer, { useChunking: USE_CHUNKING, chunkSize: CHUNK })
         fileCount++
       } catch (e) {
         log(`    ✗ ${dl.filename}: ${e.message}`)
