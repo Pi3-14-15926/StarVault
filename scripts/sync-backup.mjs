@@ -419,9 +419,24 @@ async function main() {
         }
       }
 
-      writeJSON(path.resolve('public/data/backup-manifest.json'), { entries, updatedAt: new Date().toISOString() })
-      manifestBackedUp = true
-      log(`  清单完成: ${entries.length} 个项目`)
+      /* 保护：如果生成出的 entries 为空，且已存在旧 manifest，不覆盖（避免误清空历史备份） */
+      const manifestPath = path.resolve('public/data/backup-manifest.json')
+      if (entries.length === 0) {
+        const existing = fs.existsSync(manifestPath)
+          ? JSON.parse(fs.readFileSync(manifestPath, 'utf-8'))
+          : null
+        if (existing && Array.isArray(existing.entries) && existing.entries.length > 0) {
+          log(`  ⚠️ 本次扫描到 0 个项目，但仓库中已有 ${existing.entries.length} 个旧条目 — 跳过覆盖以避免清空历史`)
+        } else {
+          writeJSON(manifestPath, { entries, updatedAt: new Date().toISOString() })
+          manifestBackedUp = true
+          log(`  清单完成: 0 个项目（首次写入空清单）`)
+        }
+      } else {
+        writeJSON(manifestPath, { entries, updatedAt: new Date().toISOString() })
+        manifestBackedUp = true
+        log(`  清单完成: ${entries.length} 个项目`)
+      }
     } catch (e) {
       log(`  生成清单失败: ${e.message}`)
     }
