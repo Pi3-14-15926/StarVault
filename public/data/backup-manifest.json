@@ -559,37 +559,37 @@
     {
       "category": "阅读",
       "project": "阅读_MD3",
-      "versionDir": "2026-06-08_3.26.13-beta.12",
+      "versionDir": "2026-06-08_3.26.13-beta.13",
       "files": [
         {
-          "name": "legado-3.26.13-beta.12-arm64-v8a.apk",
-          "size": 17283979,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12-arm64-v8a.apk"
+          "name": "legado-3.26.13-beta.13-arm64-v8a.apk",
+          "size": 17300244,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13-arm64-v8a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.12-armeabi-v7a.apk",
-          "size": 16823802,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12-armeabi-v7a.apk"
+          "name": "legado-3.26.13-beta.13-armeabi-v7a.apk",
+          "size": 16840075,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13-armeabi-v7a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.12-noR8-arm64-v8a.apk",
-          "size": 44828531,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12-noR8-arm64-v8a.apk"
+          "name": "legado-3.26.13-beta.13-noR8-arm64-v8a.apk",
+          "size": 44844680,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13-noR8-arm64-v8a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.12-noR8-armeabi-v7a.apk",
-          "size": 44368350,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12-noR8-armeabi-v7a.apk"
+          "name": "legado-3.26.13-beta.13-noR8-armeabi-v7a.apk",
+          "size": 44384505,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13-noR8-armeabi-v7a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.12-noR8.apk",
-          "size": 51401017,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12-noR8.apk"
+          "name": "legado-3.26.13-beta.13-noR8.apk",
+          "size": 51417162,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13-noR8.apk"
         },
         {
-          "name": "legado-3.26.13-beta.12.apk",
-          "size": 23856482,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.12/legado-3.26.13-beta.12.apk"
+          "name": "legado-3.26.13-beta.13.apk",
+          "size": 23872760,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-08_3.26.13-beta.13/legado-3.26.13-beta.13.apk"
         }
       ]
     },
@@ -630,5 +630,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-06-08T17:21:46.436Z"
+  "updatedAt": "2026-06-08T20:24:35.689Z"
 }
