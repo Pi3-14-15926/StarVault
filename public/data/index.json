@@ -11,8 +11,8 @@
     "latestUpdateTime": "2026-03-21T14:12:43Z",
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1704,
-    "forks": 258
+    "stars": 1707,
+    "forks": 257
   },
   {
     "id": "mpwouieuddbq2d",
@@ -22,11 +22,11 @@
     "description": "使用 Material Design 3 全新设计的阅读 3.0",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/__-MD3.webp",
     "featured": false,
-    "latestVersionId": "mq68yi2zs09afo",
+    "latestVersionId": "mq6b72931z0dbf",
     "latestUpdateTime": "2026-06-09T05:39:27Z",
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4381,
+    "stars": 4383,
     "forks": 434
   },
   {
@@ -116,8 +116,8 @@
     "latestUpdateTime": "2026-05-01T05:35:34Z",
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51456,
-    "forks": 6852
+    "stars": 51457,
+    "forks": 6853
   },
   {
     "id": "mpzjjzg2ylm14p",
@@ -131,7 +131,7 @@
     "latestUpdateTime": "2026-05-28T19:26:21Z",
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18234,
+    "stars": 18235,
     "forks": 485
   },
   {
@@ -146,7 +146,7 @@
     "latestUpdateTime": "2026-06-07T02:32:12Z",
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26250,
+    "stars": 26251,
     "forks": 754
   }
 ]
