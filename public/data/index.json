@@ -11,8 +11,8 @@
     "latestUpdateTime": "2026-03-21T14:12:43Z",
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1703,
-    "forks": 257
+    "stars": 1704,
+    "forks": 258
   },
   {
     "id": "mpwouieuddbq2d",
@@ -22,12 +22,12 @@
     "description": "使用 Material Design 3 全新设计的阅读 3.0",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/__-MD3.webp",
     "featured": false,
-    "latestVersionId": "mq5yrpo32p7jmv",
-    "latestUpdateTime": "2026-06-08T19:05:06Z",
+    "latestVersionId": "mq68yi2zs09afo",
+    "latestUpdateTime": "2026-06-09T05:39:27Z",
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4375,
-    "forks": 433
+    "stars": 4381,
+    "forks": 434
   },
   {
     "id": "mpwowqbvn123ig",
@@ -56,7 +56,7 @@
     "latestUpdateTime": "2026-06-07T03:35:12Z",
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com//Rimchars/legado",
-    "stars": 238,
+    "stars": 239,
     "forks": 11
   },
   {
@@ -86,7 +86,7 @@
     "latestUpdateTime": "2026-06-05T14:32:41Z",
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 175,
+    "stars": 176,
     "forks": 19
   },
   {
@@ -116,7 +116,7 @@
     "latestUpdateTime": "2026-05-01T05:35:34Z",
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51449,
+    "stars": 51456,
     "forks": 6852
   },
   {
@@ -131,7 +131,7 @@
     "latestUpdateTime": "2026-05-28T19:26:21Z",
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18232,
+    "stars": 18234,
     "forks": 485
   },
   {
@@ -146,7 +146,7 @@
     "latestUpdateTime": "2026-06-07T02:32:12Z",
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26238,
+    "stars": 26250,
     "forks": 754
   }
 ]
