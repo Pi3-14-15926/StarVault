@@ -488,21 +488,28 @@ async function remoteFileExists(remotePath) {
   })
 }
 
-/** 测试 rclone 连接（只需验证能访问远程存储，不要求目录已存在） */
+/** 测试 rclone 连接（验证连接和认证是否正确） */
 async function testRcloneConnection() {
   const rclone = getRclonePath()
   const remote = `${BACKUP_CHANNEL}:`
 
   return new Promise((resolve) => {
-    // 只列出根目录，验证连接和认证是否正确
-    const args = ['lsf', remote, '--max-depth', '0']
+    // lsd 只列目录，比 lsf 更快更可靠
+    const args = ['lsd', remote]
     const proc = spawn(rclone, args, { stdio: ['ignore', 'pipe', 'pipe'] })
     let stderr = ''
     proc.stderr.on('data', (d) => { stderr += d.toString() })
+    const timer = setTimeout(() => {
+      try { proc.kill('SIGTERM') } catch { /* noop */ }
+      resolve({ ok: false, message: '连接测试超时 (15s)' })
+    }, 15000)
     proc.on('close', (code) => {
-      resolve({ ok: code === 0, message: stderr || '' })
+      clearTimeout(timer)
+      // 退出码 0 = 成功，即使目录为空也算连接正常
+      resolve({ ok: code === 0, message: code === 0 ? '' : stderr })
     })
     proc.on('error', (err) => {
+      clearTimeout(timer)
       resolve({ ok: false, message: err.message })
     })
   })
