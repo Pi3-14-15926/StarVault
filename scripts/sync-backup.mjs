@@ -364,59 +364,58 @@ function getRclonePath() {
   }
 }
 
-/** 生成 rclone.conf 配置文件（CI 环境从 Secrets 动态生成） */
+/** 通过 rclone config create 动态生成远程配置（自动处理密码混淆） */
 function generateRcloneConf() {
-  const confDir = IS_CI ? path.join(os.homedir(), '.config', 'rclone') : path.join(os.homedir(), '.config', 'rclone')
-  const confPath = path.join(confDir, 'rclone.conf')
-  fs.mkdirSync(confDir, { recursive: true })
-
-  let conf = ''
+  const rclone = getRclonePath()
+  let created = false
 
   // WebDAV 渠道
   if (WEBDAV_URL && WEBDAV_USERNAME && WEBDAV_PASSWORD) {
-    conf += `[webdav]
-type = webdav
-url = ${WEBDAV_URL}
-vendor = other
-user = ${WEBDAV_USERNAME}
-pass = ${rcloneHashedPass(WEBDAV_PASSWORD)}
-
-`
+    try {
+      execSync(`${rclone} config create webdav webdav url="${WEBDAV_URL}" vendor=other user="${WEBDAV_USERNAME}" pass="${WEBDAV_PASSWORD}"`, {
+        stdio: 'pipe',
+        timeout: 15000,
+      })
+      log('  rclone 远程 [webdav] 已创建')
+      created = true
+    } catch (e) {
+      log(`  创建 webdav 远程失败: ${e.message}`)
+    }
   }
 
   // OneDrive 渠道
   if (ONEDRIVE_TOKEN) {
-    conf += `[onedrive]
-type = onedrive
-token = ${ONEDRIVE_TOKEN}
-
-`
+    try {
+      execSync(`${rclone} config create onedrive onedrive token='${ONEDRIVE_TOKEN}'`, {
+        stdio: 'pipe',
+        timeout: 15000,
+      })
+      log('  rclone 远程 [onedrive] 已创建')
+      created = true
+    } catch (e) {
+      log(`  创建 onedrive 远程失败: ${e.message}`)
+    }
   }
 
   // Google Drive 渠道
   if (GDRIVE_TOKEN) {
-    conf += `[gdrive]
-type = drive
-token = ${GDRIVE_TOKEN}
-scope = drive
-
-`
+    try {
+      execSync(`${rclone} config create gdrive drive token='${GDRIVE_TOKEN}' scope=drive`, {
+        stdio: 'pipe',
+        timeout: 15000,
+      })
+      log('  rclone 远程 [gdrive] 已创建')
+      created = true
+    } catch (e) {
+      log(`  创建 gdrive 远程失败: ${e.message}`)
+    }
   }
 
-  if (!conf) {
+  if (!created) {
     log('警告: 未配置任何云盘渠道（WEBDAV_URL / ONEDRIVE_TOKEN / GDRIVE_TOKEN）')
     return null
   }
-
-  fs.writeFileSync(confPath, conf, 'utf-8')
-  log(`rclone.conf 已生成: ${confPath}`)
-  return confPath
-}
-
-/** rclone 密码哈希（rclone config create 需要哈希后的密码，但写 conf 文件直接用明文即可） */
-function rcloneHashedPass(pass) {
-  // rclone.conf 中 pass 字段直接使用明文，rclone 会自动处理
-  return pass
+  return true
 }
 
 /** 使用 rclone copyto 同步单个文件到远程存储 */
