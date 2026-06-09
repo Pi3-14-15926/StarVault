@@ -122,6 +122,7 @@ export interface Settings {
   uploadTimeout?: number
   maxFileSizeMB?: number
   defaultChannel?: string
+  uploadProxy?: string
   schedule?: ScheduleConfig
   webdav?: WebDAVConfig
   iconCdnMode?: IconCdnMode

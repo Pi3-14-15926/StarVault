@@ -14,6 +14,7 @@ const form = ref({
   ghProxyUrl: 'https://gh-proxy.com/',
   ghProxyCustomUrl: '',
   networkProxy: '',
+  uploadProxy: '',
   iconCdnMode: 'jsdelivr' as IconCdnMode,
   iconCdnCustomBase: '',
 })
@@ -44,6 +45,7 @@ onMounted(() => {
     ghProxyUrl: matchedPreset ? proxyUrl : (proxyUrl ? 'custom' : 'https://gh-proxy.com/'),
     ghProxyCustomUrl: matchedPreset ? '' : proxyUrl,
     networkProxy: s.networkProxy || '',
+    uploadProxy: s.uploadProxy || '',
     iconCdnMode: s.iconCdnMode || 'jsdelivr',
     iconCdnCustomBase: s.iconCdnCustomBase || '',
   }
@@ -59,6 +61,7 @@ function doSave() {
     s.ghProxyUrl = selected || undefined
   }
   s.networkProxy = form.value.networkProxy || undefined
+  s.uploadProxy = form.value.uploadProxy || undefined
   s.iconCdnMode = form.value.iconCdnMode
   s.iconCdnCustomBase = form.value.iconCdnCustomBase || undefined
   store.save(s)
@@ -129,6 +132,29 @@ function doSave() {
           用于 rclone 连接 Google Drive、OneDrive 等需要翻墙的服务。
           留空则默认使用 <code>http://127.0.0.1:10808</code>（V2Ray 默认端口）。
           设置后需重启 dev server 生效。
+        </p>
+      </section>
+
+      <!-- 上传代理 -->
+      <section class="settings-card">
+        <header class="card-head">
+          <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.28);">📤</div>
+          <div>
+            <h3 class="card-title">上传代理</h3>
+            <p class="card-desc">配置上传代理，用于 Actions 同步并备份脚本上传 WebDAV 文件走代理连接国内 123 云盘服务器</p>
+          </div>
+        </header>
+
+        <div class="field">
+          <label class="field-label">代理地址</label>
+          <NInput v-model:value="form.uploadProxy" placeholder="http://your-proxy.example.com:8888" size="large" />
+        </div>
+
+        <p class="card-hint">
+          GitHub Actions runner 位于境外，直连国内 123 云盘 WebDAV 可能受限。
+          配置代理地址后，rclone 上传文件会通过该代理中转。
+          适用于自建代理服务器或第三方代理服务（如 HTTP/SOCKS5 代理）。
+          留空则直连（不使用代理）。
         </p>
       </section>
 

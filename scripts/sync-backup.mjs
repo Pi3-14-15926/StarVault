@@ -44,6 +44,19 @@ const KEEP_VERSIONS = parseInt(process.env.KEEP_VERSIONS || '2', 10)
 const MAX_FILE_SIZE = parseInt(process.env.MAX_FILE_SIZE_MB || '500', 10) * 1024 * 1024
 const UPLOAD_TIMEOUT = parseInt(process.env.UPLOAD_TIMEOUT || '600', 10) * 1000
 
+// 上传代理：从 settings.json 或环境变量读取
+function getUploadProxy() {
+  // 环境变量优先
+  const envProxy = process.env.UPLOAD_PROXY || ''
+  if (envProxy) return envProxy
+  // 读取 settings.json 中的 uploadProxy
+  try {
+    const settings = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf-8'))
+    return settings.uploadProxy || ''
+  } catch { return '' }
+}
+const UPLOAD_PROXY = getUploadProxy()
+
 let changed = false
 
 function log(msg) {
@@ -429,7 +442,23 @@ async function rcloneCopyFile(localFilePath, remotePath, timeoutMs = UPLOAD_TIME
       'copyto', localFilePath, dest,
       '--no-traverse',
       '--checksum',
+      // 超时与重试参数，应对跨境链路不稳定
+      '--http-timeout', '300s',
+      '--connect-timeout', '30s',
+      '--low-level-retries', '3',
+      '--retries', '2',
+      '--retries-sleep', '5s',
+      // 模拟浏览器请求头，避免 123 云盘风控
+      '--header', 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
+      '--header', 'Accept: */*',
+      '--header', 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8',
+      '--header', 'Accept-Encoding: gzip, deflate, br',
+      '--header', 'Connection: keep-alive',
     ]
+    // 上传代理
+    if (UPLOAD_PROXY) {
+      args.push('--http-proxy', UPLOAD_PROXY)
+    }
 
     const proc = spawn(rclone, args, {
       stdio: ['ignore', 'pipe', 'pipe'],
@@ -478,6 +507,9 @@ async function remoteFileExists(remotePath) {
 
   return new Promise((resolve) => {
     const args = ['lsf', fullPath, '--max-depth', '0']
+    if (UPLOAD_PROXY) {
+      args.push('--http-proxy', UPLOAD_PROXY)
+    }
     const proc = spawn(rclone, args, { stdio: ['ignore', 'pipe', 'pipe'] })
     let stdout = ''
     proc.stdout.on('data', (d) => { stdout += d.toString() })
@@ -496,6 +528,9 @@ async function testRcloneConnection() {
   return new Promise((resolve) => {
     // lsd 只列目录，比 lsf 更快更可靠
     const args = ['lsd', remote]
+    if (UPLOAD_PROXY) {
+      args.push('--http-proxy', UPLOAD_PROXY)
+    }
     const proc = spawn(rclone, args, { stdio: ['ignore', 'pipe', 'pipe'] })
     let stderr = ''
     proc.stderr.on('data', (d) => { stderr += d.toString() })
@@ -523,6 +558,9 @@ async function cleanupOldVersions(projectDir) {
 
   return new Promise((resolve) => {
     const args = ['lsf', fullPath, '--max-depth', '1', '--dirs-only']
+    if (UPLOAD_PROXY) {
+      args.push('--http-proxy', UPLOAD_PROXY)
+    }
     const proc = spawn(rclone, args, { stdio: ['ignore', 'pipe', 'pipe'] })
     let stdout = ''
     proc.stdout.on('data', (d) => { stdout += d.toString() })
@@ -674,18 +712,50 @@ async function main() {
 
               // 立即同步到云盘
               log(`    ↑ 同步到 ${BACKUP_CHANNEL}:${remoteFilePath}`)
-              const syncResult = await rcloneCopyFile(localFilePath, remoteFilePath)
+              let syncResult = await rcloneCopyFile(localFilePath, remoteFilePath)
 
+              // 上传后验证：确认文件确实到了远程
               if (syncResult.ok) {
-                syncedFiles++
-                log(`    ✓ 同步成功`)
+                const verified = await remoteFileExists(remoteFilePath)
+                if (verified) {
+                  syncedFiles++
+                  log(`    ✓ 同步成功（已验证）`)
+                } else {
+                  // rclone 报成功但文件不在远程，可能是响应丢失，重试一次
+                  const retryDelay = 5000 + Math.floor(Math.random() * 3000)
+                  log(`    ⚠ 验证失败，${(retryDelay / 1000).toFixed(1)}s 后重试...`)
+                  await new Promise(r => setTimeout(r, retryDelay))
+                  syncResult = await rcloneCopyFile(localFilePath, remoteFilePath)
+                  if (syncResult.ok) {
+                    syncedFiles++
+                    log(`    ✓ 重试同步成功`)
+                  } else {
+                    failedFiles++
+                    log(`    ✗ 重试同步失败: ${syncResult.message}`)
+                  }
+                }
               } else {
-                failedFiles++
-                log(`    ✗ 同步失败: ${syncResult.message}`)
+                // 上传失败，自动重试一次
+                const retryDelay = 5000 + Math.floor(Math.random() * 3000)
+                log(`    ⚠ 上传失败，${(retryDelay / 1000).toFixed(1)}s 后重试...`)
+                await new Promise(r => setTimeout(r, retryDelay))
+                const retryResult = await rcloneCopyFile(localFilePath, remoteFilePath)
+                if (retryResult.ok) {
+                  syncedFiles++
+                  log(`    ✓ 重试同步成功`)
+                } else {
+                  failedFiles++
+                  log(`    ✗ 重试同步失败: ${retryResult.message}`)
+                }
               }
 
               // 删除本地临时文件
               try { fs.unlinkSync(localFilePath) } catch { /* ignore */ }
+
+              // 随机上传间隔（3-8秒），模拟人类操作避免风控
+              const delay = 3000 + Math.floor(Math.random() * 5000)
+              log(`    ⏳ 等待 ${(delay / 1000).toFixed(1)}s...`)
+              await new Promise(r => setTimeout(r, delay))
             } catch (e) {
               failedFiles++
               log(`    ✗ 失败: ${e.message}`)
@@ -707,6 +777,55 @@ async function main() {
       log(`  已跳过: ${skippedFiles}（已存在或超限）`)
       log(`  新上传: ${syncedFiles}`)
       log(`  失败: ${failedFiles}`)
+
+      // 生成备份清单：上传 manifest.json 到云盘 + 写入本地 public/data/
+      log('\n--- 生成备份清单 ---')
+      try {
+        const manifestEntries = []
+        for (const project of projects) {
+          if (project.sourceType !== 'github' || !project.versions.length) continue
+          const categoryName = getCategoryName(categories, project.categorySlug)
+          const safeCategory = sanitize(categoryName)
+          const safeProject = sanitize(project.name)
+          const sorted = [...project.versions].sort(
+            (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+          )
+          const toBackup = sorted.slice(0, KEEP_VERSIONS)
+          for (const ver of toBackup) {
+            const dateStr = ver.publishedAt.slice(0, 10)
+            const safeVer = sanitize(ver.version)
+            const versionDir = `${safeCategory}/${safeProject}/${dateStr}_${safeVer}`
+            const files = ver.downloads.map(dl => ({
+              name: dl.filename,
+              size: parseSize(dl.size),
+              url: `${WEBDAV_BASE_DIR}/${versionDir}/${dl.filename}`,
+            }))
+            if (files.length > 0) {
+              manifestEntries.push({ category: safeCategory, project: safeProject, versionDir, files })
+            }
+          }
+        }
+
+        // 写入本地 manifest
+        const manifestPath = path.resolve('public/data/backup-manifest.json')
+        const manifest = { entries: manifestEntries, updatedAt: new Date().toISOString() }
+        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8')
+        log(`  清单已生成: ${manifestEntries.length} 个项目`)
+        changed = true
+
+        // 同时上传 manifest 到云盘（前端备份管理页可直接读取）
+        const localManifest = manifestPath
+        const remoteManifest = `${WEBDAV_BASE_DIR}/backup-manifest.json`
+        log(`  上传清单到 ${BACKUP_CHANNEL}:${remoteManifest}`)
+        const manifestResult = await rcloneCopyFile(localManifest, remoteManifest, 60000)
+        if (manifestResult.ok) {
+          log('  清单上传成功')
+        } else {
+          log(`  清单上传失败: ${manifestResult.message}（本地清单已保存）`)
+        }
+      } catch (e) {
+        log(`  生成清单失败: ${e.message}`)
+      }
     }
   }
 
