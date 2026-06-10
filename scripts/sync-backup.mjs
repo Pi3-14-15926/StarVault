@@ -29,7 +29,14 @@ const INDEX_FILE = path.join(DATA_DIR, 'index.json')
 
 const GITHUB_API = 'https://api.github.com'
 
-// ===== 环境变量 =====
+// ===== 读取 settings.json（环境变量优先，settings.json 兜底） =====
+function readSettings() {
+  try {
+    return JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf-8'))
+  } catch { return {} }
+}
+const settingsJson = readSettings()
+
 const GH_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || ''
 const BACKUP_CHANNEL = process.env.BACKUP_CHANNEL || 'webdav'
 const WEBDAV_URL = process.env.WEBDAV_URL || ''
@@ -41,19 +48,16 @@ const GDRIVE_TOKEN = process.env.GDRIVE_TOKEN || ''
 const IS_CI = process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true'
 const GH_PROXY = (process.env.GH_PROXY && !IS_CI) ? process.env.GH_PROXY : ''
 const KEEP_VERSIONS = parseInt(process.env.KEEP_VERSIONS || '2', 10)
-const MAX_FILE_SIZE = parseInt(process.env.MAX_FILE_SIZE_MB || '500', 10) * 1024 * 1024
-const UPLOAD_TIMEOUT = parseInt(process.env.UPLOAD_TIMEOUT || '600', 10) * 1000
+const MAX_FILE_SIZE = parseInt(process.env.MAX_FILE_SIZE_MB || String(settingsJson.maxFileSizeMB || '500'), 10) * 1024 * 1024
+const UPLOAD_TIMEOUT = parseInt(process.env.UPLOAD_TIMEOUT || String(settingsJson.uploadTimeout || '600'), 10) * 1000
+const SYNC_INTERVAL_HOURS = settingsJson.schedule?.syncIntervalHours ?? 6
+const BACKUP_INTERVAL_HOURS = settingsJson.schedule?.backupIntervalHours ?? 24
 
 // 上传代理：从 settings.json 或环境变量读取
 function getUploadProxy() {
-  // 环境变量优先
   const envProxy = process.env.UPLOAD_PROXY || ''
   if (envProxy) return envProxy
-  // 读取 settings.json 中的 uploadProxy
-  try {
-    const settings = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf-8'))
-    return settings.uploadProxy || ''
-  } catch { return '' }
+  return settingsJson.uploadProxy || ''
 }
 const UPLOAD_PROXY = getUploadProxy()
 
@@ -595,6 +599,18 @@ async function cleanupOldVersions(projectDir) {
 
 async function main() {
   log('=== 开始同步 + rclone 备份 ===')
+  log('')
+  log('--- 当前配置 ---')
+  log(`  备份渠道:       ${BACKUP_CHANNEL}`)
+  log(`  定时同步间隔:   ${SYNC_INTERVAL_HOURS} 小时`)
+  log(`  定时备份间隔:   ${BACKUP_INTERVAL_HOURS} 小时`)
+  log(`  文件超时:       ${UPLOAD_TIMEOUT / 1000} 秒`)
+  log(`  文件大小限制:   ${(MAX_FILE_SIZE / 1024 / 1024).toFixed(0)} MB`)
+  log(`  保留版本数:     ${KEEP_VERSIONS}`)
+  log(`  上传代理:       ${UPLOAD_PROXY || '无'}`)
+  log(`  GitHub 代理:    ${GH_PROXY || '无'}`)
+  log(`  CI 环境:        ${IS_CI ? '是' : '否'}`)
+  log('')
 
   // 检查备份渠道
   const channelOk = checkChannel()
