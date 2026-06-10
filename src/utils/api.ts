@@ -591,6 +591,31 @@ async function loadAllRemoteData(): Promise<void> {
     if (downloads) d.downloads[c.slug] = downloads
   }, 4)
 
+  // 3) 按 ID 去重：同一软件出现在多个 slug 下时，保留 categorySlug 非空的那条
+  const seenById = new Map<string, string>() // id -> slug
+  for (const [slug, swList] of Object.entries(d.software)) {
+    for (const sw of swList) {
+      const existingSlug = seenById.get(sw.id)
+      if (existingSlug === undefined) {
+        seenById.set(sw.id, slug)
+      } else {
+        // 已存在：优先保留 categorySlug 非空的
+        const existingList = d.software[existingSlug]
+        const existing = existingList?.find((s) => s.id === sw.id)
+        if (existing && !existing.categorySlug && sw.categorySlug) {
+          // 当前这条有分类，移除旧的空分类条目
+          d.software[existingSlug] = existingList.filter((s) => s.id !== sw.id)
+          if (!d.software[existingSlug].length) delete d.software[existingSlug]
+          seenById.set(sw.id, slug)
+        } else {
+          // 移除重复的当前条目
+          d.software[slug] = swList.filter((s) => s.id !== sw.id)
+          if (!d.software[slug].length) delete d.software[slug]
+        }
+      }
+    }
+  }
+
   saveAppData(d)
 }
 

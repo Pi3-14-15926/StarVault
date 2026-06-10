@@ -195,8 +195,8 @@ export async function commitAllData(): Promise<{ files: number; repo: string }> 
 
   /* 全局文件 */
   const globalFiles: { path: string; content: string }[] = [
-    { path: 'public/data/index.json', content: JSON.stringify(d.index, null, 2) },
-    { path: 'data/index.json', content: JSON.stringify(d.index, null, 2) },
+    { path: 'public/data/index.json', content: JSON.stringify(d.index.filter((e) => e.categorySlug), null, 2) },
+    { path: 'data/index.json', content: JSON.stringify(d.index.filter((e) => e.categorySlug), null, 2) },
     { path: 'public/data/categories.json', content: JSON.stringify(categories, null, 2) },
     { path: 'data/categories.json', content: JSON.stringify(categories, null, 2) },
     { path: 'public/data/settings.json', content: JSON.stringify(settings, null, 2) },
