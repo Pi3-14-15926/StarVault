@@ -1,17 +1,1 @@
-[
-  {
-    "id": "mpwoxcif3y72eu",
-    "name": "阅读 Archive",
-    "slug": "archive",
-    "categorySlug": "yuedu",
-    "description": "阅读Archive继承自 Lyc 维护的 Legado 分支，增强界面、AI、EPUB、漫画、视频和主题能力。",
-    "logo": "https://raw.githubusercontent.com/Rimchars/legado/main/docs/archive_icon.svg",
-    "featured": true,
-    "latestVersionId": "mq1ygoieurmp4a",
-    "latestUpdateTime": "2026-06-07T03:35:12Z",
-    "githubRepo": "Rimchars/legado",
-    "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 238,
-    "forks": 11
-  }
-]
+[]
