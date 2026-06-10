@@ -10,7 +10,6 @@
   "ghProxyUrl": "https://js.qiyinqin.ccwu.cc/",
   "uploadTimeout": 600,
   "maxFileSizeMB": 500,
-  "defaultChannel": "123webdav",
   "iconCdnMode": "jsdelivr",
   "schedule": {
     "syncEnabled": true,
@@ -18,6 +17,7 @@
     "backupEnabled": true,
     "backupIntervalHours": 24
   },
+  "defaultChannel": "123webdav",
   "webdav": {
     "url": "https://webdav.123pan.cn/webdav/Webdav/资源/",
     "username": "13249599730",
