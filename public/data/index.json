@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "mq7gjiso7wm6sw",
+    "name": "legado",
+    "slug": "legado",
+    "categorySlug": "",
+    "description": "阅读Sigma是gedoor/legado的一个分支版本，在原有基础上增加更多功能，为书源带来更多可能性。",
+    "logo": "https://avatars.githubusercontent.com/u/104863909?v=4",
+    "featured": false,
+    "latestVersionId": "mq7gjj4ur8i09r",
+    "latestUpdateTime": "2026-05-07T02:20:06Z",
+    "githubRepo": "Rimchars/legado",
+    "githubUrl": "https://github.com/Rimchars/legado",
+    "stars": 239,
+    "forks": 11
+  }
+]
