@@ -504,12 +504,15 @@ const REMOTE_INDEX: RemoteFile[] = [
 ]
 
 const FETCH_TIMEOUT_MS = 8000
+// 缓存版本：初始用日期，拉到 manifest 后升级为 updatedAt（精确跟踪数据变化）
+let dataVersion = new Date().toISOString().slice(0, 10)
 
 async function fetchJSON<T>(url: string, timeoutMs = FETCH_TIMEOUT_MS): Promise<T | null> {
   const ctl = new AbortController()
   const timer = setTimeout(() => ctl.abort(), timeoutMs)
   try {
-    const res = await fetch(url, { signal: ctl.signal })
+    const sep = url.includes('?') ? '&' : '?'
+    const res = await fetch(`${url}${sep}v=${dataVersion}`, { signal: ctl.signal })
     if (!res.ok) return null
     return await res.json()
   } catch {
@@ -538,6 +541,9 @@ export async function loadRemoteData(): Promise<boolean> {
   )
   const remoteTime = remoteManifest?.updatedAt
   const localTime = d.backupManifest?.updatedAt
+
+  // 拿到 manifest 后，用 updatedAt 作为缓存版本（后续所有请求精确失效）
+  if (remoteTime) dataVersion = remoteTime
 
   // 远端 manifest 拉不到（CORS / 404 / 离线）→ 不覆盖本地，避免清空用户数据
   if (!remoteTime) return false

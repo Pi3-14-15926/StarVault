@@ -32,9 +32,9 @@ const page = ref(1)
 const pageSize = 9
 
 /* 排序 */
-type SortBy = 'time' | 'name' | 'featured'
+type SortBy = 'added' | 'time' | 'name'
 type SortOrder = 'asc' | 'desc'
-const sortBy = ref<SortBy>('time')
+const sortBy = ref<SortBy>('added')
 const sortOrder = ref<SortOrder>('desc')
 function setSort(by: SortBy) {
   if (sortBy.value === by) sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc'
@@ -132,12 +132,13 @@ const sortedList = computed(() => {
   const list = [...filteredList.value]
   list.sort((a, b) => {
     let cmp = 0
-    if (sortBy.value === 'time') {
+    if (sortBy.value === 'added') {
+      // 新软件 push 到末尾，索引越大越新
+      cmp = list.indexOf(a) - list.indexOf(b)
+    } else if (sortBy.value === 'time') {
       cmp = new Date(a.latestUpdateTime || 0).getTime() - new Date(b.latestUpdateTime || 0).getTime()
     } else if (sortBy.value === 'name') {
       cmp = a.name.localeCompare(b.name, 'zh-Hans-CN')
-    } else if (sortBy.value === 'featured') {
-      cmp = (a.featured ? 1 : 0) - (b.featured ? 1 : 0)
     }
     return sortOrder.value === 'desc' ? -cmp : cmp
   })
@@ -286,6 +287,14 @@ watch(sortBy, () => { page.value = 1 })
             <button v-if="keyword" class="search-clear" @click="keyword = ''">×</button>
           </div>
           <div class="sort-group">
+            <button :class="['sort-btn', { active: sortBy === 'added' }]" @click="setSort('added')" title="按添加时间排序">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              最近添加
+              <span class="sort-arrow">{{ sortBy === 'added' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
+            </button>
             <button :class="['sort-btn', { active: sortBy === 'time' }]" @click="setSort('time')" title="按最近更新时间排序">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2"/>
@@ -302,13 +311,6 @@ watch(sortBy, () => { page.value = 1 })
               </svg>
               名称
               <span class="sort-arrow">{{ sortBy === 'name' ? (sortOrder === 'desc' ? '↓' : '↑') : '↑' }}</span>
-            </button>
-            <button :class="['sort-btn', { active: sortBy === 'featured' }]" @click="setSort('featured')" title="按推荐状态排序">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-              推荐
-              <span class="sort-arrow">{{ sortBy === 'featured' ? (sortOrder === 'desc' ? '↓' : '↑') : '↓' }}</span>
             </button>
           </div>
           <button class="btn-primary btn-add" @click="goNew">

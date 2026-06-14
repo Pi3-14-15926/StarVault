@@ -11,7 +11,8 @@ async function boot() {
   app.use(createPinia())
   app.use(router)
   app.use(naive)
+  // 先加载远程数据，再挂载 app，确保首次访问就有数据
+  await loadRemoteData().catch((e) => console.warn('loadRemoteData failed:', e))
   app.mount('#app')
-  loadRemoteData().catch((e) => console.warn('loadRemoteData failed:', e))
 }
 boot()

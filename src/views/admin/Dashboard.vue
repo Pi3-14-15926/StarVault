@@ -160,7 +160,6 @@ async function doRefreshDownloads() {
 }
 
 const stats = computed(() => [
-  { label: '软件总数', value: projects.software.length, desc: '所有已添加的软件', color: 'blue', icon: '📦' },
   {
     label: '项目总数',
     value: projects.software.length,
@@ -1159,6 +1158,11 @@ function saveUploadSettings() {
   .error-link { font-size: 0.8rem; }
   .error-msg { font-size: 0.74rem; }
   .upload-grid { grid-template-columns: 1fr; }
+  .upload-settings-card { padding: 16px; }
+  .upload-group { padding: 14px; }
+  .setting-row { flex-wrap: wrap; }
+  .input-group { width: 100%; justify-content: space-between; }
+  .setting-input { flex: 1; max-width: 120px; }
 }
 
 /* === GitHub 上传设置卡片 === */

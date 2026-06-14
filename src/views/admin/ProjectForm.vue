@@ -155,7 +155,8 @@ async function doSave() {
     }
     saving.value = false
     msg.success('保存成功')
-    router.push('/admin/projects')
+    const catId = route.query.categoryId as string
+    router.push(catId ? `/admin/categories/${catId}/projects` : '/admin/projects')
     return
   }
   const p = projects.createGitHub(form.value.slug.trim(), form.value.name.trim(), form.value.githubRepo.trim(), form.value.categorySlug)
@@ -196,7 +197,8 @@ async function doSave() {
   }
   saving.value = false
   msg.success(`项目「${p.name}」创建成功`)
-  setTimeout(() => router.push('/admin/projects'), 800)
+  const catId = route.query.categoryId as string
+  setTimeout(() => router.push(catId ? `/admin/categories/${catId}/projects` : '/admin/projects'), 800)
 }
 
 /* 缓存 GitHub release 原始数据，用于写入下载项 */
@@ -373,7 +375,7 @@ watch(() => route.params.id, refreshDownloads)
             <button class="btn-primary" :disabled="fetching" @click="doFetch">
               {{ fetching ? '获取中...' : '获取信息' }}
             </button>
-            <button class="btn-secondary" @click="router.push('/admin/projects')">取消</button>
+            <button class="btn-secondary" @click="router.push(route.query.categoryId ? `/admin/categories/${route.query.categoryId}/projects` : '/admin/projects')">取消</button>
           </div>
         </div>
       </div>
@@ -519,7 +521,7 @@ watch(() => route.params.id, refreshDownloads)
               {{ isEdit ? '保存修改' : '创建项目' }}
             </button>
             <button v-if="!isEdit" class="btn-secondary" @click="step = 'input'">返回修改仓库地址</button>
-            <button class="btn-ghost" @click="router.push('/admin/projects')">取消</button>
+            <button class="btn-ghost" @click="router.push(route.query.categoryId ? `/admin/categories/${route.query.categoryId}/projects` : '/admin/projects')">取消</button>
           </div>
         </div>
       </div>

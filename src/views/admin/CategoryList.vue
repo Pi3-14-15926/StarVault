@@ -32,18 +32,18 @@ const page = ref(1)
 const pageSize = 12
 
 /* 排序 */
-type SortBy = 'order' | 'name' | 'count'
+type SortBy = 'order' | 'added' | 'name'
 type SortOrder = 'asc' | 'desc'
 const sortBy = ref<SortBy>('order')
 const sortOrder = ref<SortOrder>('asc')
 function setSort(by: SortBy) {
   if (sortBy.value === by) sortOrder.value = sortOrder.value === 'desc' ? 'asc' : 'desc'
-  else { sortBy.value = by; sortOrder.value = 'asc' }
+  else { sortBy.value = by; sortOrder.value = by === 'name' ? 'asc' : 'desc' }
 }
 const sortOptions: SortOption[] = [
   { key: 'order', label: '顺序', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="13" y2="6"/><line x1="3" y1="12" x2="9" y2="12"/><line x1="3" y1="18" x2="11" y2="18"/><polyline points="16 8 20 4 16 4"/><line x1="20" y1="4" x2="20" y2="14"/></svg>', defaultOrder: 'asc' },
+  { key: 'added', label: '最近添加', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>', defaultOrder: 'desc' },
   { key: 'name', label: '名称', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h13M3 12h9M3 18h5M17 10v10M17 10l-3 3M17 10l3 3"/></svg>', defaultOrder: 'asc' },
-  { key: 'count', label: '项目数', icon: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>', defaultOrder: 'desc' },
 ]
 
 /* 状态开关：localStorage 持久化，键 'sh_page_disabled' */
@@ -81,8 +81,11 @@ const sortedCats = computed(() => {
   list.sort((a, b) => {
     let cmp = 0
     if (sortBy.value === 'order') cmp = (a.sortOrder ?? 0) - (b.sortOrder ?? 0)
+    else if (sortBy.value === 'added') {
+      // 新页面 push 到末尾，索引越大越新
+      cmp = list.indexOf(a) - list.indexOf(b)
+    }
     else if (sortBy.value === 'name') cmp = a.name.localeCompare(b.name, 'zh-Hans-CN')
-    else if (sortBy.value === 'count') cmp = projectCount(a.slug) - projectCount(b.slug)
     return sortOrder.value === 'desc' ? -cmp : cmp
   })
   return list

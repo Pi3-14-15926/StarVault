@@ -2,8 +2,8 @@ name: 同步 GitHub Release
 
 on:
   schedule:
-    # 每 6 小时执行一次
-    - cron: '0 */6 * * *'
+    # 每天执行一次
+    - cron: '0 0 * * *'
   workflow_dispatch: # 支持手动触发
 
 permissions:
