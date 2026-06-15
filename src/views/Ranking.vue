@@ -216,19 +216,20 @@ onMounted(() => {
       <!-- 分页 -->
       <div v-if="totalPages > 1" class="pagination">
         <span class="page-info">共 {{ totalPages }} 页</span>
-        <button class="page-btn" :disabled="currentPage === 1" @click="goPage(currentPage - 1)">‹</button>
-        <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
-          <button
-            v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
-            class="page-ellipsis"
-            disabled
-          >…</button>
-          <button
-            :class="['page-btn', { active: currentPage === n }]"
-            @click="goPage(n)"
-          >{{ n }}</button>
-        </template>
-        <button class="page-btn" :disabled="currentPage === totalPages" @click="goPage(currentPage + 1)">›</button>
+        <div class="page-btns">
+          <button class="page-btn" :disabled="currentPage === 1" @click="goPage(currentPage - 1)">‹</button>
+          <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+            <span
+              v-if="idx > 0 && visiblePages[idx - 1] !== n - 1"
+              class="page-ellipsis"
+            >…</span>
+            <button
+              :class="['page-btn', { active: currentPage === n }]"
+              @click="goPage(n)"
+            >{{ n }}</button>
+          </template>
+          <button class="page-btn" :disabled="currentPage === totalPages" @click="goPage(currentPage + 1)">›</button>
+        </div>
       </div>
     </div>
   </div>
@@ -592,7 +593,6 @@ onMounted(() => {
   justify-content: center;
   gap: 6px;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 .page-info {
   font-size: 0.82rem;
@@ -637,6 +637,9 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
+  .pagination { justify-content: flex-start; }
+  .page-btns { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .page-btn { min-width: 28px; height: 28px; font-size: 0.78rem; padding: 0 6px; }
   .podium { grid-template-columns: 1fr 1.1fr 1fr; gap: 8px; }
   .podium-item { padding: 14px 8px; }
   .podium-1 { padding: 18px 8px; }

@@ -257,19 +257,20 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
               </router-link>
               <div v-if="totalListPages > 1" class="pagination">
                 <span class="page-info">共 {{ totalListPages }} 页</span>
-                <button class="page-btn" :disabled="listPage === 1" @click="goPage(listPage - 1)">‹</button>
-                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
-                  <button
-                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
-                    class="page-ellipsis"
-                    disabled
-                  >…</button>
-                  <button
-                    :class="['page-btn', { active: listPage === n }]"
-                    @click="goPage(n)"
-                  >{{ n }}</button>
-                </template>
-                <button class="page-btn" :disabled="listPage === totalListPages" @click="goPage(listPage + 1)">›</button>
+                <div class="page-btns">
+                  <button class="page-btn" :disabled="listPage === 1" @click="goPage(listPage - 1)">‹</button>
+                  <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                    <span
+                      v-if="idx > 0 && visiblePages[idx - 1] !== n - 1"
+                      class="page-ellipsis"
+                    >…</span>
+                    <button
+                      :class="['page-btn', { active: listPage === n }]"
+                      @click="goPage(n)"
+                    >{{ n }}</button>
+                  </template>
+                  <button class="page-btn" :disabled="listPage === totalListPages" @click="goPage(listPage + 1)">›</button>
+                </div>
               </div>
             </div>
           </div>
@@ -314,19 +315,20 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
               </router-link>
               <div v-if="totalUpdatedPages > 1" class="pagination">
                 <span class="page-info">共 {{ totalUpdatedPages }} 页</span>
-                <button class="page-btn" :disabled="updatedPage === 1" @click="goPage(updatedPage - 1)">‹</button>
-                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
-                  <button
-                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
-                    class="page-ellipsis"
-                    disabled
-                  >…</button>
-                  <button
-                    :class="['page-btn', { active: updatedPage === n }]"
-                    @click="goPage(n)"
-                  >{{ n }}</button>
-                </template>
-                <button class="page-btn" :disabled="updatedPage === totalUpdatedPages" @click="goPage(updatedPage + 1)">›</button>
+                <div class="page-btns">
+                  <button class="page-btn" :disabled="updatedPage === 1" @click="goPage(updatedPage - 1)">‹</button>
+                  <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                    <span
+                      v-if="idx > 0 && visiblePages[idx - 1] !== n - 1"
+                      class="page-ellipsis"
+                    >…</span>
+                    <button
+                      :class="['page-btn', { active: updatedPage === n }]"
+                      @click="goPage(n)"
+                    >{{ n }}</button>
+                  </template>
+                  <button class="page-btn" :disabled="updatedPage === totalUpdatedPages" @click="goPage(updatedPage + 1)">›</button>
+                </div>
               </div>
             </div>
           </div>
@@ -372,19 +374,20 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
               </router-link>
               <div v-if="totalTopPages > 1" class="pagination">
                 <span class="page-info">共 {{ totalTopPages }} 页</span>
-                <button class="page-btn" :disabled="topPage === 1" @click="goPage(topPage - 1)">‹</button>
-                <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
-                  <button
-                    v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
-                    class="page-ellipsis"
-                    disabled
-                  >…</button>
-                  <button
-                    :class="['page-btn', { active: topPage === n }]"
-                    @click="goPage(n)"
-                  >{{ n }}</button>
-                </template>
-                <button class="page-btn" :disabled="topPage === totalTopPages" @click="goPage(topPage + 1)">›</button>
+                <div class="page-btns">
+                  <button class="page-btn" :disabled="topPage === 1" @click="goPage(topPage - 1)">‹</button>
+                  <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+                    <span
+                      v-if="idx > 0 && visiblePages[idx - 1] !== n - 1"
+                      class="page-ellipsis"
+                    >…</span>
+                    <button
+                      :class="['page-btn', { active: topPage === n }]"
+                      @click="goPage(n)"
+                    >{{ n }}</button>
+                  </template>
+                  <button class="page-btn" :disabled="topPage === totalTopPages" @click="goPage(topPage + 1)">›</button>
+                </div>
               </div>
             </div>
           </div>
@@ -865,7 +868,6 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   justify-content: center;
   gap: 6px;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 .page-info {
   font-size: 0.82rem;
@@ -884,7 +886,7 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .page-btn:hover:not(:disabled) {
   background: var(--color-card-soft);
@@ -1145,5 +1147,8 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   .cat-name { font-size: 1.4rem; }
   .tab-bar { width: 100%; }
   .tab-btn { flex: 1; justify-content: center; padding: 0 12px; }
+  .pagination { justify-content: flex-start; }
+  .page-btns { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .page-btn { min-width: 28px; height: 28px; font-size: 0.78rem; padding: 0 6px; }
 }
 </style>

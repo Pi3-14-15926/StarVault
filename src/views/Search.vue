@@ -126,19 +126,20 @@ function doSearch() {
       <ProjectCard v-for="p in pagedResults" :key="p.id" :software="p" />
       <div v-if="totalPages > 1" class="pagination">
         <span class="page-info">共 {{ totalPages }} 页</span>
-        <button class="page-btn" :disabled="currentPage === 1" @click="goPage(currentPage - 1)">‹</button>
-        <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
-          <button
-            v-if="idx === 0 || visiblePages[idx - 1] !== n - 1"
-            class="page-ellipsis"
-            disabled
-          >…</button>
-          <button
-            :class="['page-btn', { active: currentPage === n }]"
-            @click="goPage(n)"
-          >{{ n }}</button>
-        </template>
-        <button class="page-btn" :disabled="currentPage === totalPages" @click="goPage(currentPage + 1)">›</button>
+        <div class="page-btns">
+          <button class="page-btn" :disabled="currentPage === 1" @click="goPage(currentPage - 1)">‹</button>
+          <template v-for="(n, idx) in visiblePages" :key="n + '-' + idx">
+            <span
+              v-if="idx > 0 && visiblePages[idx - 1] !== n - 1"
+              class="page-ellipsis"
+            >…</span>
+            <button
+              :class="['page-btn', { active: currentPage === n }]"
+              @click="goPage(n)"
+            >{{ n }}</button>
+          </template>
+          <button class="page-btn" :disabled="currentPage === totalPages" @click="goPage(currentPage + 1)">›</button>
+        </div>
       </div>
     </div>
     <div v-else class="not-found">
@@ -316,8 +317,7 @@ function doSearch() {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  margin-top: 12px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
 .page-info {
   font-size: 0.82rem;
@@ -336,7 +336,7 @@ function doSearch() {
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .page-btn:hover:not(:disabled) {
   background: var(--color-card-soft);
@@ -373,6 +373,9 @@ function doSearch() {
   .filter-bar { flex-wrap: wrap; padding: 10px 12px; border-radius: var(--radius-lg); }
   .filter-right { width: 100%; }
   .result-grid { grid-template-columns: 1fr; }
+  .pagination { justify-content: flex-start; }
+  .page-btns { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .page-btn { min-width: 28px; height: 28px; font-size: 0.78rem; padding: 0 6px; }
 }
 @media (max-width: 480px) {
   .search-bar { padding: 5px 5px 5px 14px; gap: 6px; }

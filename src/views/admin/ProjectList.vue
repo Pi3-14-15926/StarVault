@@ -573,15 +573,17 @@ watch(sortBy, () => { page.value = 1 })
       </div>
 
       <!-- 分页 -->
-      <nav v-if="totalPages > 1" class="pager">
-        <button class="pg-btn" :disabled="page === 1" @click="jumpPage(page - 1)">‹</button>
-        <template v-for="(n, i) in pageNumbers" :key="i">
-          <span v-if="i > 0 && n - pageNumbers[i - 1] > 1" class="pg-ellipsis">…</span>
-          <button :class="['pg-btn', { active: n === page }]" @click="jumpPage(n)">{{ n }}</button>
-        </template>
-        <button class="pg-btn" :disabled="page === totalPages" @click="jumpPage(page + 1)">›</button>
-        <span class="pg-info">第 {{ page }} / {{ totalPages }} 页 · 共 {{ sortedList.length }} 个</span>
-      </nav>
+      <div v-if="totalPages > 1" class="pagination">
+        <span class="page-info">共 {{ totalPages }} 页</span>
+        <div class="page-btns">
+          <button class="page-btn" :disabled="page === 1" @click="jumpPage(page - 1)">‹</button>
+          <template v-for="(n, i) in pageNumbers" :key="i">
+            <span v-if="i > 0 && n - pageNumbers[i - 1] > 1" class="page-ellipsis">…</span>
+            <button :class="['page-btn', { active: n === page }]" @click="jumpPage(n)">{{ n }}</button>
+          </template>
+          <button class="page-btn" :disabled="page === totalPages" @click="jumpPage(page + 1)">›</button>
+        </div>
+      </div>
     </div>
 
     <!-- 单删确认弹窗 -->
@@ -1174,45 +1176,54 @@ watch(sortBy, () => { page.value = 1 })
 .empty-icon { font-size: 3.5rem; margin-bottom: 8px; }
 
 /* === 分页 === */
-.pager {
+.pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  flex-wrap: wrap;
-  padding: 8px 0 4px;
+  margin-top: 20px;
 }
-.pg-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 36px;
-  height: 36px;
-  padding: 0 10px;
-  background: var(--admin-card);
+.page-info {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  margin-right: 6px;
+  font-family: var(--font-mono);
+}
+.page-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-card);
   color: var(--text-sec);
-  border: 1px solid var(--admin-border);
-  border-radius: 10px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, transform 0.18s;
-  font-variant-numeric: tabular-nums;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.pg-btn:hover:not(:disabled) {
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
-  transform: scale(1.05);
+.page-btn:hover:not(:disabled) {
+  background: var(--color-card-soft);
+  color: var(--text-main);
+  border-color: var(--border-color);
 }
-.pg-btn.active {
-  background: var(--admin-gradient);
-  color: #FFFFFF;
+.page-btn.active {
+  background: var(--gradient-primary);
+  color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(79, 140, 255, 0.28);
+  box-shadow: var(--shadow-primary);
+  font-weight: 600;
 }
-.pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.pg-ellipsis { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 36px; color: var(--text-tertiary); }
-.pg-info { margin-left: 12px; font-size: 0.78rem; color: var(--text-tertiary); }
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.page-ellipsis {
+  min-width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  cursor: default;
+}
 
 /* === 删除确认弹窗 === */
 .del-modal-body { text-align: center; padding: 8px 0; }
@@ -1236,7 +1247,8 @@ watch(sortBy, () => { page.value = 1 })
   .pc-actions { justify-content: flex-end; }
   .pc-foot { flex-direction: column; align-items: flex-start; gap: 10px; }
   .pc-status { width: 100%; justify-content: space-between; }
-  .pager { gap: 4px; }
-  .pg-info { width: 100%; text-align: center; margin-left: 0; margin-top: 4px; }
+  .pagination { justify-content: flex-start; }
+  .page-btns { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .page-btn { min-width: 28px; height: 28px; font-size: 0.78rem; padding: 0 6px; }
 }
 </style>
