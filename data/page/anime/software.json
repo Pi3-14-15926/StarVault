@@ -64,19 +64,6 @@
     "categorySlug": "anime"
   },
   {
-    "id": "mqf2hvi0ero5r0",
-    "slug": "dmghg",
-    "sourceType": "custom",
-    "name": "动漫共和国",
-    "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是质量较差。",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
-    "categorySlug": "anime",
-    "featured": false,
-    "latestUpdateTime": "2026-06-15T00:00:00.000Z",
-    "website": "https://www.dmghg.com/",
-    "latestVersionId": "mqf2n9y000y2vp"
-  },
-  {
     "id": "mqf2wp9ruusxo6",
     "slug": "omofun",
     "sourceType": "custom",
@@ -88,5 +75,18 @@
     "latestUpdateTime": "2026-04-29T00:00:00.000Z",
     "website": "https://www.omoo.app/",
     "latestVersionId": "mqf31apkdolugn"
+  },
+  {
+    "id": "mqf2hvi0ero5r0",
+    "slug": "dmghg",
+    "sourceType": "custom",
+    "name": "动漫共和国",
+    "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是弹幕质量较差。",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
+    "categorySlug": "anime",
+    "featured": false,
+    "latestUpdateTime": "2026-06-15T00:00:00.000Z",
+    "website": "https://www.dmghg.com/",
+    "latestVersionId": "mqf2n9y000y2vp"
   }
 ]
