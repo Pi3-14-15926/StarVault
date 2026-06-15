@@ -1939,5 +1939,38 @@
       "mqe09a365kxv2n",
       "mqe09a3quhvsta"
     ]
+  },
+  {
+    "id": "mqei0fm8k0ov24",
+    "projectId": "mq1yoxoecx1loi",
+    "version": "beta",
+    "publishedAt": "2026-06-14T00:00:00.000Z",
+    "changelog": "## 更新日志\n- fix(ui): 修复 TitleBar 阴影渲染位置异常并移除冗余的 themeVersion 版本号.. (028000c40)",
+    "downloadIds": [
+      "mqei0fmov3kk7q",
+      "mqei0fna9acuay",
+      "mqei0fnyg0qg7w",
+      "mqei0foii82ay5",
+      "mqei0foyptswdy",
+      "mqei0fpeuclh20",
+      "mqei0fpry2zbsr",
+      "mqei0fq7pd2bbp",
+      "mqei0fqmcrcqf4",
+      "mqei0fqzcynzli"
+    ]
+  },
+  {
+    "id": "mqei13n3189p82",
+    "projectId": "mq1yoxoecx1loi",
+    "version": "3.26.052421",
+    "publishedAt": "2026-05-24T00:00:00.000Z",
+    "changelog": "## 更新日志\n\n- perf(search): 优化书架内搜索逻辑，将过滤移动到代码中并优化 ui 性能 (c5b3f605f)\n- refactor(dao): 优化数据库性能 (0f1deef31)\n- refactor(dao): 移除数据库查询中的多余排序逻辑 (8bdbdfe98)\n- feat(bookshelf): 优化书籍自动更新逻辑，改为进入分组时触发并增加更新频率限制。 (2cbdf1bdf)\n- ci: 更新发布频率并重构构建工作流 (d11908306)\n- refactor(ui): 更新对话框和列表样式，使用 bottomBackground 作为背景颜色，移除多余颜色设置并移除列表分割线 (097c7f7be)\n- refactor(explore): 优化列表展开收起动画逻辑，统一动画时长并简化滚动同步处理。 (72c597698)",
+    "downloadIds": [
+      "mqei13o41gr638",
+      "mqei13pbqptpze",
+      "mqei13q168et4x",
+      "mqei13ql68cxat",
+      "mqei13r8myy3pn"
+    ]
   }
 ]
