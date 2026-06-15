@@ -253,6 +253,8 @@ function handleMenuUpdate(key: string) {
   box-shadow: var(--admin-shadow-card);
   flex-shrink: 0;
   margin-bottom: 16px;
+  overflow: hidden;
+  min-width: 0;
 }
 .header-left { display: flex; align-items: center; gap: 12px; }
 .header-title {
@@ -357,11 +359,14 @@ function handleMenuUpdate(key: string) {
   .desktop-sider { display: none; }
   .mobile-menu-btn { display: inline-flex; }
   .inner-layout { padding: 12px 12px 12px 0; }
-  .admin-header { padding: 0 16px; border-radius: 18px; }
-  .header-title { font-size: 1rem; }
+  .admin-header { padding: 0 12px; border-radius: 18px; gap: 8px; min-width: 0; }
+  .header-left { gap: 8px; min-width: 0; }
+  .header-title { font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .header-right { gap: 8px; flex-shrink: 0; }
   .header-user-info { display: none; }
   .header-user { padding: 4px; }
-  .btn-logout { width: 36px; padding: 0; justify-content: center; }
-  .btn-logout svg { width: 16px; height: 16px; }
+  .btn-ghost { white-space: nowrap; font-size: 0.82rem; padding: 0 10px; height: 32px; }
+  .btn-logout { width: 32px; padding: 0; justify-content: center; height: 32px; }
+  .btn-logout svg { width: 14px; height: 14px; }
 }
 </style>
