@@ -22,5 +22,13 @@
     "icon": "📺",
     "description": "动漫软件",
     "sortOrder": 2
+  },
+  {
+    "id": "mqf8bfa00sl4uz",
+    "slug": "game",
+    "name": "游戏",
+    "icon": "🎮",
+    "description": "游戏类软件",
+    "sortOrder": 3
   }
 ]

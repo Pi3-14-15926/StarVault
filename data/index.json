@@ -293,5 +293,50 @@
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
     "stars": 1275,
     "forks": 59
+  },
+  {
+    "id": "mqf8l4hpnnnf0w",
+    "name": "GameNative 游戏模拟器",
+    "slug": "gamenative",
+    "categorySlug": "game",
+    "description": "在 Android 平台上使用 Steam、Epic、GOG 和 Amazon 集成的原生 PC 游戏",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameNative-游戏模拟器.webp",
+    "featured": false,
+    "latestVersionId": "mqf8l5cl867cgo",
+    "latestUpdateTime": "2025-12-20T22:39:32Z",
+    "githubRepo": "utkarshdalal/GameNative",
+    "githubUrl": "https://github.com/utkarshdalal/GameNative",
+    "stars": 8032,
+    "forks": 291
+  },
+  {
+    "id": "mqf8eoolhym84x",
+    "name": "GameCheatsManager 游戏辅助管理",
+    "slug": "game-cheats-manager",
+    "categorySlug": "game",
+    "description": "轻松下载和管理单人游戏作弊工具，方便使用",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameCheatsManager-游戏辅助管理.webp",
+    "featured": false,
+    "latestVersionId": "mqf8epidtj8829",
+    "latestUpdateTime": "2024-05-24T07:46:40Z",
+    "githubRepo": "dyang886/Game-Cheats-Manager",
+    "githubUrl": "https://github.com/dyang886/Game-Cheats-Manager",
+    "stars": 12997,
+    "forks": 445
+  },
+  {
+    "id": "mqf92p952kk8p0",
+    "name": "SteamTools",
+    "slug": "steamtools",
+    "categorySlug": "game",
+    "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
+    "logo": "https://avatars.githubusercontent.com/u/79355691?v=4",
+    "featured": false,
+    "latestVersionId": "mqf92t0yg929g4",
+    "latestUpdateTime": "2022-08-14T15:30:17Z",
+    "githubRepo": "BeyondDimension/SteamTools",
+    "githubUrl": "https://github.com/BeyondDimension/SteamTools",
+    "stars": 25844,
+    "forks": 1655
   }
 ]
