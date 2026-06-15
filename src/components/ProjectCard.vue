@@ -28,18 +28,18 @@ onMounted(() => {
     </div>
     <h3 class="title">{{ software.name }}</h3>
     <p class="desc">{{ software.description || '暂无描述' }}</p>
-    <div :class="['stats', { 'stats-solo': hideDownloads }]">
+    <div :class="['stats', { 'stats-solo': hideDownloads || realDL == null }]">
       <span v-if="software.stars !== undefined" class="stat stat-star" :title="`Star ${software.stars}`">
         <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
           <path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
         </svg>
         {{ fmtCompact(software.stars ?? 0) }}
       </span>
-      <span v-if="!hideDownloads" class="stat" :title="realDL != null ? `真实下载量 ${realDL}（GitHub）` : '暂无下载量数据（非 GitHub 来源或未同步）'">
+      <span v-if="!hideDownloads && realDL != null" class="stat" :title="`真实下载量 ${realDL}（GitHub）`">
         <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
           <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7M5 18v2h14v-2H5z"/>
         </svg>
-        {{ realDL != null ? fmtCompact(realDL) : '—' }}
+        {{ fmtCompact(realDL) }}
       </span>
     </div>
     <div v-if="platforms.length > 0" class="plat-row">
@@ -116,7 +116,7 @@ onMounted(() => {
   line-height: 1.4;
   width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 1.1em;

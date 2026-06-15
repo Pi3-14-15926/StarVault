@@ -264,7 +264,7 @@ function latestVersionText(s: Software): string {
     <section v-if="hotProjects.length > 0" class="section">
       <div class="section-head">
         <h2 class="section-title">热门软件</h2>
-        <router-link to="/search" class="section-more">查看全部 ›</router-link>
+        <router-link to="/ranking" class="section-more">查看全部 ›</router-link>
       </div>
       <div class="hot-grid">
         <ProjectCard v-for="p in hotProjects" :key="p.id" :software="p" hide-downloads />
@@ -277,38 +277,44 @@ function latestVersionText(s: Software): string {
         <div class="panel">
           <div class="panel-head">
             <h3 class="panel-title">最近更新</h3>
-            <router-link to="/search" class="section-more">查看全部 ›</router-link>
+            <router-link to="/ranking?tab=updated" class="section-more">查看全部 ›</router-link>
           </div>
           <div class="panel-list">
             <router-link
               v-for="p in recentlyUpdated"
               :key="p.id"
               :to="`/software/${p.slug}`"
-              class="row-item"
+              class="cr-home"
             >
-              <div class="row-icon">
-                <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
-                <span v-else>{{ p.name[0] }}</span>
-              </div>
-              <div class="row-info">
-                <div class="row-name">
-                  {{ p.name }}
-                  <span class="row-version">{{ latestVersionText(p) }}</span>
+              <div class="cr-h-header">
+                <div class="cr-h-icon">
+                  <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
+                  <span v-else>{{ p.name[0] }}</span>
                 </div>
-                <div v-if="platformsOf(p, 6).length" class="row-platline">
-                  <span
-                    v-for="pl in platformsOf(p, 6)"
-                    :key="pl"
-                    :class="['plat-tag', platformClass(pl)]"
-                    :title="`支持 ${pl}`"
-                  >
-                    <span>{{ platformIcon(pl) }}</span>{{ pl }}
-                  </span>
-                  <span v-if="platformsMore(p, 6) > 0" class="plat-more">+{{ platformsMore(p, 6) }}</span>
+                <div class="cr-h-title-block">
+                  <span class="cr-h-name">{{ p.name }}</span>
+                  <div class="cr-h-subtitle">
+                    <span v-if="p.stars" class="cr-h-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                    <span v-if="latestVersionText(p)" class="cr-h-version">{{ latestVersionText(p) }}</span>
+                  </div>
                 </div>
-                <div class="row-desc-line" :title="p.description">{{ p.description }}</div>
               </div>
-              <div class="row-date">{{ fmtDate(p.latestUpdateTime) }}</div>
+              <div v-if="platformsOf(p, 6).length" class="cr-h-platforms">
+                <span
+                  v-for="pl in platformsOf(p, 6)"
+                  :key="pl"
+                  :class="['cr-h-plat-tag', platformClass(pl)]"
+                  :title="`支持 ${pl}`"
+                >
+                  <span>{{ platformIcon(pl) }}</span>{{ pl }}
+                </span>
+                <span v-if="platformsMore(p, 6) > 0" class="cr-h-plat-more">+{{ platformsMore(p, 6) }}</span>
+              </div>
+              <div class="cr-h-desc" :title="p.description">{{ p.description }}</div>
+              <div class="cr-h-meta">
+                <span class="cr-h-meta-tag">release</span>
+                <span v-if="p.latestUpdateTime" class="cr-h-meta-date">{{ fmtDate(p.latestUpdateTime) }} 更新</span>
+              </div>
             </router-link>
           </div>
         </div>
@@ -316,7 +322,7 @@ function latestVersionText(s: Software): string {
         <div class="panel">
           <div class="panel-head">
             <h3 class="panel-title">本周下载榜</h3>
-            <router-link to="/search" class="section-more">查看全部 ›</router-link>
+            <router-link to="/ranking?tab=downloads" class="section-more">查看全部 ›</router-link>
           </div>
           <div class="panel-list">
             <router-link
@@ -746,6 +752,132 @@ function latestVersionText(s: Software): string {
   color: var(--text-sec);
   font-weight: 600;
   white-space: nowrap;
+}
+
+/* Homepage recent update cards - new 4-layer design */
+.cr-home {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  background: transparent;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.18s;
+  gap: 8px;
+}
+.cr-home:hover { background: var(--color-card-soft); }
+.cr-h-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cr-h-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.cr-h-icon img { width: 100%; height: 100%; object-fit: cover; }
+.cr-h-title-block {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.cr-h-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cr-h-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+.cr-h-stars {
+  color: #F5A623;
+  font-weight: 600;
+}
+.cr-h-version {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-family: var(--font-mono);
+  background: var(--color-primary-soft);
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+}
+.cr-h-platforms {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.cr-h-plat-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  background: var(--color-card-soft);
+  color: var(--text-sec);
+  border: 1px solid var(--border-soft);
+  line-height: 1.2;
+}
+.cr-h-plat-tag span:first-child { font-size: 0.6rem; }
+.cr-h-plat-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 0.6rem;
+  background: var(--color-card-soft);
+  color: var(--text-tertiary);
+  border: 1px dashed var(--border-soft);
+  border-radius: 999px;
+}
+.cr-h-desc {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+.cr-h-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+.cr-h-meta-tag {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  background: var(--color-card-soft);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-soft);
+}
+.cr-h-meta-date {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  font-family: var(--font-mono);
 }
 .rank-num {
   width: 24px;

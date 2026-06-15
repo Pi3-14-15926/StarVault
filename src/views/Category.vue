@@ -227,32 +227,34 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
                 :to="`/software/${p.slug}`"
                 class="cat-row"
               >
-                <div class="cat-row-icon">
-                  <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
-                  <span v-else>{{ p.name[0] }}</span>
-                </div>
-                <div class="cat-row-main">
-                  <div class="cat-row-head">
-                    <span class="cat-row-name">{{ p.name }}</span>
-                    <span v-if="p.featured" class="cat-row-badge">推荐</span>
-                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                <div class="cr-header">
+                  <div class="cr-icon">
+                    <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
+                    <span v-else>{{ p.name[0] }}</span>
                   </div>
-                  <div v-if="platformsOf(p).length" class="cat-row-platline">
-                    <span
-                      v-for="pl in platformsOf(p)"
-                      :key="pl"
-                      :class="['plat-tag', platformClass(pl)]"
-                      :title="`支持 ${pl}`"
-                    >
-                      <span>{{ platformIcon(pl) }}</span>{{ pl }}
-                    </span>
-                    <span v-if="platformsMore(p) > 0" class="plat-more">+{{ platformsMore(p) }}</span>
+                  <div class="cr-title-block">
+                    <span class="cr-name">{{ p.name }}<span v-if="p.featured" class="cr-badge">推荐</span></span>
+                    <div class="cr-subtitle">
+                      <span v-if="p.stars" class="cr-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                      <span v-if="latestVersionText(p)" class="cr-version">{{ latestVersionText(p) }}</span>
+                    </div>
                   </div>
-                  <div class="cat-row-desc">{{ p.description }}</div>
                 </div>
-                <div class="cat-row-side">
-                  <div v-if="latestVersionText(p)" class="cat-row-version">{{ latestVersionText(p) }}</div>
-                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                <div v-if="platformsOf(p).length" class="cr-platforms">
+                  <span
+                    v-for="pl in platformsOf(p)"
+                    :key="pl"
+                    :class="['cr-plat-tag', platformClass(pl)]"
+                    :title="`支持 ${pl}`"
+                  >
+                    <span>{{ platformIcon(pl) }}</span>{{ pl }}
+                  </span>
+                  <span v-if="platformsMore(p) > 0" class="cr-plat-more">+{{ platformsMore(p) }}</span>
+                </div>
+                <div class="cr-desc">{{ p.description }}</div>
+                <div class="cr-meta">
+                  <span class="cr-meta-tag">release</span>
+                  <span v-if="p.latestUpdateTime" class="cr-meta-date">{{ fmtDate(p.latestUpdateTime) }} 更新</span>
                 </div>
               </router-link>
               <div v-if="totalListPages > 1" class="pagination">
@@ -286,31 +288,34 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
                 :to="`/software/${p.slug}`"
                 class="cat-row"
               >
-                <div class="cat-row-icon">
-                  <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
-                  <span v-else>{{ p.name[0] }}</span>
-                </div>
-                <div class="cat-row-main">
-                  <div class="cat-row-head">
-                    <span class="cat-row-name">{{ p.name }}</span>
-                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                <div class="cr-header">
+                  <div class="cr-icon">
+                    <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
+                    <span v-else>{{ p.name[0] }}</span>
                   </div>
-                  <div v-if="platformsOf(p).length" class="cat-row-platline">
-                    <span
-                      v-for="pl in platformsOf(p)"
-                      :key="pl"
-                      :class="['plat-tag', platformClass(pl)]"
-                      :title="`支持 ${pl}`"
-                    >
-                      <span>{{ platformIcon(pl) }}</span>{{ pl }}
-                    </span>
-                    <span v-if="platformsMore(p) > 0" class="plat-more">+{{ platformsMore(p) }}</span>
+                  <div class="cr-title-block">
+                    <span class="cr-name">{{ p.name }}</span>
+                    <div class="cr-subtitle">
+                      <span v-if="p.stars" class="cr-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                      <span v-if="latestVersionText(p)" class="cr-version">{{ latestVersionText(p) }}</span>
+                    </div>
                   </div>
-                  <div class="cat-row-desc">{{ p.description }}</div>
                 </div>
-                <div class="cat-row-side">
-                  <div v-if="latestVersionText(p)" class="cat-row-version">{{ latestVersionText(p) }}</div>
-                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                <div v-if="platformsOf(p).length" class="cr-platforms">
+                  <span
+                    v-for="pl in platformsOf(p)"
+                    :key="pl"
+                    :class="['cr-plat-tag', platformClass(pl)]"
+                    :title="`支持 ${pl}`"
+                  >
+                    <span>{{ platformIcon(pl) }}</span>{{ pl }}
+                  </span>
+                  <span v-if="platformsMore(p) > 0" class="cr-plat-more">+{{ platformsMore(p) }}</span>
+                </div>
+                <div class="cr-desc">{{ p.description }}</div>
+                <div class="cr-meta">
+                  <span class="cr-meta-tag">release</span>
+                  <span v-if="p.latestUpdateTime" class="cr-meta-date">{{ fmtDate(p.latestUpdateTime) }} 更新</span>
                 </div>
               </router-link>
               <div v-if="totalUpdatedPages > 1" class="pagination">
@@ -342,34 +347,37 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
                 v-for="(p, i) in pagedTopRanked"
                 :key="p.id"
                 :to="`/software/${p.slug}`"
-                class="cat-row"
+                class="cat-row cat-row--rank"
               >
-                <span :class="['rank-num', { 'rank-top': i < 3 }]">{{ (topPage - 1) * PAGE_SIZE + i + 1 }}</span>
-                <div class="cat-row-icon">
-                  <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
-                  <span v-else>{{ p.name[0] }}</span>
-                </div>
-                <div class="cat-row-main">
-                  <div class="cat-row-head">
-                    <span class="cat-row-name">{{ p.name }}</span>
-                    <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                <div class="cr-header">
+                  <div class="cr-rank-num" :class="{ 'cr-rank-top': i < 3 }">{{ (topPage - 1) * PAGE_SIZE + i + 1 }}</div>
+                  <div class="cr-icon">
+                    <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
+                    <span v-else>{{ p.name[0] }}</span>
                   </div>
-                  <div v-if="platformsOf(p).length" class="cat-row-platline">
-                    <span
-                      v-for="pl in platformsOf(p)"
-                      :key="pl"
-                      :class="['plat-tag', platformClass(pl)]"
-                      :title="`支持 ${pl}`"
-                    >
-                      <span>{{ platformIcon(pl) }}</span>{{ pl }}
-                    </span>
-                    <span v-if="platformsMore(p) > 0" class="plat-more">+{{ platformsMore(p) }}</span>
+                  <div class="cr-title-block">
+                    <span class="cr-name">{{ p.name }}</span>
+                    <div class="cr-subtitle">
+                      <span v-if="p.stars" class="cr-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                      <span v-if="latestVersionText(p)" class="cr-version">{{ latestVersionText(p) }}</span>
+                    </div>
                   </div>
-                  <div class="cat-row-desc">{{ p.description }}</div>
                 </div>
-                <div class="cat-row-side">
-                  <div v-if="latestVersionText(p)" class="cat-row-version">{{ latestVersionText(p) }}</div>
-                  <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+                <div v-if="platformsOf(p).length" class="cr-platforms">
+                  <span
+                    v-for="pl in platformsOf(p)"
+                    :key="pl"
+                    :class="['cr-plat-tag', platformClass(pl)]"
+                    :title="`支持 ${pl}`"
+                  >
+                    <span>{{ platformIcon(pl) }}</span>{{ pl }}
+                  </span>
+                  <span v-if="platformsMore(p) > 0" class="cr-plat-more">+{{ platformsMore(p) }}</span>
+                </div>
+                <div class="cr-desc">{{ p.description }}</div>
+                <div class="cr-meta">
+                  <span class="cr-meta-tag">release</span>
+                  <span v-if="p.latestUpdateTime" class="cr-meta-date">{{ fmtDate(p.latestUpdateTime) }} 更新</span>
                 </div>
               </router-link>
               <div v-if="totalTopPages > 1" class="pagination">
@@ -677,8 +685,7 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
 }
 .cat-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
   padding: 16px;
   background: var(--color-card);
   border: 1px solid var(--border-soft);
@@ -687,15 +694,23 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   color: inherit;
   box-shadow: var(--shadow-xs);
   transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  gap: 10px;
 }
 .cat-row:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
-.cat-row-icon {
-  width: 56px;
-  height: 56px;
+
+/* Header: icon + title */
+.cr-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cr-icon {
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-md);
   background: var(--gradient-primary-soft);
   display: flex;
@@ -703,149 +718,171 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   justify-content: center;
   color: var(--color-primary);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   flex-shrink: 0;
   overflow: hidden;
 }
-.cat-row .rank-num {
-  width: 28px;
-  height: 28px;
+.cr-icon img { width: 100%; height: 100%; object-fit: cover; }
+
+.cr-rank-num {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: var(--color-card-soft);
   color: var(--text-tertiary);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   flex-shrink: 0;
 }
-.cat-row .rank-num.rank-top {
+.cr-rank-num.cr-rank-top {
   background: var(--gradient-primary);
   color: white;
 }
-.cat-row-icon img { width: 100%; height: 100%; object-fit: cover; }
-.cat-row-main {
+
+.cr-title-block {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
-.cat-row-platline {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 20px;
-}
-.cat-row-platline .plat-more {
-  height: 20px;
-  padding: 0 5px;
-  font-size: 0.65rem;
-  background: var(--color-card-soft);
-  color: var(--text-tertiary);
-  border: 1px dashed var(--border-soft);
-}
-.cat-row-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.cat-row-name {
+.cr-name {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-main);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.cat-row-badge {
+.cr-badge {
   display: inline-flex;
   align-items: center;
-  height: 18px;
-  padding: 0 8px;
+  height: 16px;
+  padding: 0 6px;
+  margin-left: 6px;
   border-radius: var(--radius-full);
   background: linear-gradient(135deg, #FFB347 0%, #FF8C42 100%);
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.cr-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+}
+.cr-stars {
+  color: #F5A623;
   font-weight: 600;
 }
-.cat-row-version {
-  font-size: 0.78rem;
+.cr-version {
   color: var(--color-primary);
   font-weight: 500;
   font-family: var(--font-mono);
   background: var(--color-primary-soft);
-  padding: 1px 8px;
+  padding: 0 6px;
   border-radius: var(--radius-full);
+  font-size: 0.75rem;
 }
-.cat-row-desc {
+
+/* Platforms */
+.cr-platforms {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.cr-plat-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  background: var(--color-card-soft);
+  color: var(--text-sec);
+  border: 1px solid var(--border-soft);
+  line-height: 1.2;
+}
+.cr-plat-tag span:first-child { font-size: 0.7rem; }
+.cr-plat-more {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 6px;
+  font-size: 0.65rem;
+  background: var(--color-card-soft);
+  color: var(--text-tertiary);
+  border: 1px dashed var(--border-soft);
+  border-radius: 999px;
+}
+
+/* Description */
+.cr-desc {
   font-size: 0.85rem;
   color: var(--text-sec);
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-break: break-word;
 }
-.cat-row-meta {
-  display: none;
-}
-.cat-row-stars {
-  color: #F5A623;
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-.cat-row-side {
+
+/* Meta */
+.cr-meta {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
-.cat-row-version {
-  font-size: 0.85rem;
-  color: var(--color-primary);
-  font-weight: 600;
-  font-family: var(--font-mono);
+.cr-meta-tag {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  background: var(--color-card-soft);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-soft);
 }
-.cat-row-date {
-  font-size: 0.78rem;
+.cr-meta-date {
+  font-size: 0.7rem;
   color: var(--text-tertiary);
   white-space: nowrap;
   font-family: var(--font-mono);
 }
+
+/* Keep old plat-tag for compatibility with tag filtering sections */
+.plat-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  background: var(--color-card-soft);
+  color: var(--text-sec);
+  border: 1px solid var(--border-soft);
+}
+.plat-tag span:first-child { font-size: 0.7rem; }
 @media (max-width: 640px) {
-  .cat-row { padding: 12px; gap: 12px; }
-  .cat-row-icon { width: 44px; height: 44px; font-size: 1.1rem; }
-  .cat-row-name { font-size: 0.92rem; }
-  .cat-row-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
-  .cat-row-side { flex-shrink: 1; min-width: 0; max-width: 120px; overflow: hidden; }
-  .cat-row-version {
-    max-width: 100%;
-    align-self: flex-start;
-    font-size: 0.78rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .cat-row-date { font-size: 0.72rem; }
+  .cat-row { padding: 12px; gap: 8px; }
+  .cr-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+  .cr-name { font-size: 0.92rem; }
+  .cr-desc { font-size: 0.82rem; -webkit-line-clamp: 3; }
+  .cr-platforms { gap: 4px; }
+  .cr-plat-tag { padding: 2px 8px; font-size: 0.68rem; }
+  .cr-meta { font-size: 0.68rem; }
+  .cr-meta-date { font-size: 0.68rem; }
 }
 @media (max-width: 480px) {
-  /* 手机模式：平台标签与 ProjectCard 热门卡片同尺寸，一行至少 3 个 */
-  .cat-row-platline { gap: 2px; min-height: 10px; }
-  .cat-row-platline .plat-tag {
-    height: 10px;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 0.33rem;
-    gap: 1px;
-  }
-  .cat-row-platline .plat-more {
-    height: 10px;
-    padding: 0 2px;
-    font-size: 0.33rem;
-  }
+  .cr-platforms { gap: 4px; }
+  .cr-plat-tag { padding: 2px 8px; font-size: 0.65rem; border-radius: 999px; }
+  .cr-plat-more { padding: 1px 6px; font-size: 0.6rem; border-radius: 999px; }
   .aside-plats { gap: 2px; min-height: 10px; }
   .aside-plats .plat-tag {
     height: 10px;

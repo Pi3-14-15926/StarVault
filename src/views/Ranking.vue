@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { useProjectStore } from '../store/project'
 import { useCategoryStore } from '../store/category'
 import AmbientOrbs from '../components/AmbientOrbs.vue'
@@ -12,12 +13,14 @@ import type { Software } from '../types'
 
 const projects = useProjectStore()
 const categories = useCategoryStore()
+const route = useRoute()
 const { resolveProject } = useIconUrl()
 const { isProjectEnabled } = useEnabled()
 
 /* 排序方式 */
 type RankKey = 'stars' | 'downloads' | 'updated'
-const rankKey = ref<RankKey>('stars')
+const validTab = (v: unknown): v is RankKey => ['stars', 'downloads', 'updated'].includes(v as string)
+const rankKey = ref<RankKey>(validTab(route.query.tab) ? (route.query.tab as RankKey) : 'stars')
 const rankOptions: { key: RankKey; label: string; icon: string }[] = [
   { key: 'stars', label: 'Star 榜', icon: '⭐' },
   { key: 'downloads', label: '下载榜', icon: '↓' },
@@ -174,41 +177,44 @@ onMounted(() => {
           v-for="(p, i) in paged"
           :key="p.id"
           :to="`/software/${p.slug}`"
-          class="cat-row"
+          class="cat-row cat-row--rank"
         >
-          <span :class="['rank-num', { 'rank-top': (currentPage - 1) * PAGE_SIZE + i < 3 }]">
-            {{ (currentPage - 1) * PAGE_SIZE + i + 1 }}
-          </span>
-          <div class="cat-row-icon">
-            <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
-            <span v-else>{{ p.name[0] }}</span>
-          </div>
-          <div class="cat-row-main">
-            <div class="cat-row-head">
-              <span class="cat-row-name">{{ p.name }}</span>
-              <span v-if="p.stars" class="cat-row-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+          <div class="cr-header">
+            <div class="cr-rank-num" :class="{ 'cr-rank-top': (currentPage - 1) * PAGE_SIZE + i < 3 }">
+              {{ (currentPage - 1) * PAGE_SIZE + i + 1 }}
             </div>
-            <div v-if="platformsOf(p).length" class="cat-row-platline">
-              <span
-                v-for="pl in platformsOf(p)"
-                :key="pl"
-                :class="['plat-tag', platformClass(pl)]"
-                :title="`支持 ${pl}`"
-              >
-                <span>{{ platformIcon(pl) }}</span>{{ pl }}
-              </span>
-              <span v-if="platformsMore(p) > 0" class="plat-more">+{{ platformsMore(p) }}</span>
+            <div class="cr-icon">
+              <img v-if="p.logo" :src="resolveProject(p)" :alt="p.name" />
+              <span v-else>{{ p.name[0] }}</span>
             </div>
-            <div class="cat-row-desc">{{ p.description }}</div>
-            <div class="cat-row-extra">
-              <span v-if="p.stars !== undefined" class="extra-pill">⭐ {{ fmtCompact(p.stars ?? 0) }} Stars</span>
-              <span class="extra-pill">↓ {{ fmtRealDownloads(p) }} 下载</span>
-              <span v-if="p.latestUpdateTime" class="extra-pill extra-pill-mono">{{ fmtDate(p.latestUpdateTime) }}</span>
+            <div class="cr-title-block">
+              <span class="cr-name">{{ p.name }}</span>
+              <div class="cr-subtitle">
+                <span v-if="p.stars" class="cr-stars">⭐ {{ p.stars.toFixed(1) }}</span>
+                <span v-if="latestVersionText(p)" class="cr-version">{{ latestVersionText(p) }}</span>
+              </div>
             </div>
           </div>
-          <div class="cat-row-side">
-            <div v-if="latestVersionText(p)" class="cat-row-version">{{ latestVersionText(p) }}</div>
-            <div v-if="p.latestUpdateTime" class="cat-row-date">{{ fmtDate(p.latestUpdateTime) }} 更新</div>
+          <div v-if="platformsOf(p).length" class="cr-platforms">
+            <span
+              v-for="pl in platformsOf(p)"
+              :key="pl"
+              :class="['cr-plat-tag', platformClass(pl)]"
+              :title="`支持 ${pl}`"
+            >
+              <span>{{ platformIcon(pl) }}</span>{{ pl }}
+            </span>
+            <span v-if="platformsMore(p) > 0" class="cr-plat-more">+{{ platformsMore(p) }}</span>
+          </div>
+          <div class="cr-desc">{{ p.description }}</div>
+          <div class="cr-extra">
+            <span v-if="p.stars !== undefined" class="extra-pill">⭐ {{ fmtCompact(p.stars ?? 0) }} Stars</span>
+            <span v-if="fmtRealDownloads(p) !== '—'" class="extra-pill">↓ {{ fmtRealDownloads(p) }} 下载</span>
+            <span v-if="p.latestUpdateTime" class="extra-pill extra-pill-mono">{{ fmtDate(p.latestUpdateTime) }}</span>
+          </div>
+          <div class="cr-meta">
+            <span class="cr-meta-tag">release</span>
+            <span v-if="p.latestUpdateTime" class="cr-meta-date">{{ fmtDate(p.latestUpdateTime) }} 更新</span>
           </div>
         </router-link>
       </div>
@@ -465,8 +471,7 @@ onMounted(() => {
 .cat-list { display: flex; flex-direction: column; gap: 12px; }
 .cat-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
   padding: 16px;
   background: var(--color-card);
   border: 1px solid var(--border-soft);
@@ -475,15 +480,40 @@ onMounted(() => {
   color: inherit;
   box-shadow: var(--shadow-xs);
   transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  gap: 10px;
 }
 .cat-row:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
-.cat-row-icon {
-  width: 56px;
-  height: 56px;
+
+/* Header: rank + icon + title */
+.cr-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cr-rank-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-card-soft);
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.cr-rank-num.cr-rank-top {
+  background: var(--gradient-primary);
+  color: white;
+}
+.cr-icon {
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-md);
   background: var(--gradient-primary-soft);
   display: flex;
@@ -491,53 +521,80 @@ onMounted(() => {
   justify-content: center;
   color: var(--color-primary);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   flex-shrink: 0;
   overflow: hidden;
 }
-.cat-row-icon img { width: 100%; height: 100%; object-fit: cover; }
-.cat-row .rank-num {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.cr-icon img { width: 100%; height: 100%; object-fit: cover; }
+.cr-title-block {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cr-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cr-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+}
+.cr-stars {
+  color: #F5A623;
+  font-weight: 600;
+}
+.cr-version {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-family: var(--font-mono);
+  background: var(--color-primary-soft);
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+}
+
+/* Platforms */
+.cr-platforms {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.cr-plat-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 3px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
   background: var(--color-card-soft);
-  color: var(--text-tertiary);
-  font-size: 0.85rem;
-  font-weight: 700;
-  flex-shrink: 0;
+  color: var(--text-sec);
+  border: 1px solid var(--border-soft);
+  line-height: 1.2;
 }
-.cat-row .rank-num.rank-top {
-  background: var(--gradient-primary);
-  color: white;
-}
-.cat-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-.cat-row-platline {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
+.cr-plat-tag span:first-child { font-size: 0.7rem; }
+.cr-plat-more {
+  display: inline-flex;
   align-items: center;
-  min-height: 20px;
-}
-.cat-row-platline .plat-more {
-  height: 20px;
-  padding: 0 5px;
+  height: 22px;
+  padding: 0 6px;
   font-size: 0.65rem;
   background: var(--color-card-soft);
   color: var(--text-tertiary);
   border: 1px dashed var(--border-soft);
+  border-radius: 999px;
 }
-.cat-row-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.cat-row-name { font-size: 1rem; font-weight: 700; color: var(--text-main); }
-.cat-row-stars { color: #F5A623; font-weight: 600; font-size: 0.85rem; }
-.cat-row-desc {
+
+/* Description */
+.cr-desc {
   font-size: 0.85rem;
   color: var(--text-sec);
   line-height: 1.5;
@@ -547,12 +604,13 @@ onMounted(() => {
   overflow: hidden;
   word-break: break-word;
 }
-.cat-row-extra {
+
+/* Extra pills */
+.cr-extra {
   display: flex;
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
-  margin-top: 2px;
 }
 .extra-pill {
   display: inline-flex;
@@ -566,25 +624,42 @@ onMounted(() => {
   font-weight: 500;
 }
 .extra-pill-mono { font-family: var(--font-mono); }
-.cat-row-side {
+
+/* Meta */
+.cr-meta {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
-.cat-row-version {
-  font-size: 0.85rem;
-  color: var(--color-primary);
-  font-weight: 600;
-  font-family: var(--font-mono);
+.cr-meta-tag {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  background: var(--color-card-soft);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-soft);
 }
-.cat-row-date {
-  font-size: 0.78rem;
+.cr-meta-date {
+  font-size: 0.7rem;
   color: var(--text-tertiary);
   white-space: nowrap;
   font-family: var(--font-mono);
 }
+
+/* Keep plat-tag for compatibility */
+.plat-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  background: var(--color-card-soft);
+  color: var(--text-sec);
+  border: 1px solid var(--border-soft);
+}
+.plat-tag span:first-child { font-size: 0.7rem; }
 
 /* === 分页 === */
 .pagination {
@@ -649,58 +724,48 @@ onMounted(() => {
   .podium-meta { font-size: 0.7rem; }
   .podium-btn { height: 24px; padding: 0 10px; font-size: 0.72rem; }
   /* 平板模式：标签与 ProjectCard 热门卡片对齐，一行至少 3 个 */
-  .cat-row-platline { gap: 2px; }
-  .cat-row-platline .plat-tag {
+  .cr-platforms { gap: 2px; }
+  .cr-plat-tag {
     height: 10px;
     padding: 0 2px;
     border-radius: 2px;
     font-size: 0.33rem;
     gap: 1px;
   }
-  .cat-row-platline .plat-more {
+  .cr-plat-more {
     height: 10px;
     padding: 0 2px;
     font-size: 0.33rem;
   }
 }
 @media (max-width: 480px) {
-  .cat-row { padding: 12px; gap: 12px; }
-  .cat-row-icon { width: 44px; height: 44px; font-size: 1.1rem; }
-  .cat-row-name { font-size: 0.92rem; }
-  .cat-row-desc { font-size: 0.8rem; }
-  .cat-row-extra { display: none; }
-  .cat-row-version { font-size: 0.78rem; }
-  .cat-row-date { font-size: 0.72rem; }
-  /* 手机模式：标签更紧凑，一行至少 3 个 */
-  .cat-row-platline { gap: 2px; min-height: 10px; }
-  .cat-row-platline .plat-tag {
+  .cr-rank-num { width: 22px; height: 22px; font-size: 0.72rem; }
+  .cr-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+  .cr-name { font-size: 0.92rem; }
+  .cr-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
+  .cr-extra { display: none; }
+  .cr-platforms { gap: 2px; min-height: 10px; }
+  .cr-plat-tag {
     height: 10px;
     padding: 0 2px;
     border-radius: 2px;
     font-size: 0.33rem;
     gap: 1px;
   }
-  .cat-row-platline .plat-more {
+  .cr-plat-more {
     height: 10px;
     padding: 0 2px;
     font-size: 0.33rem;
   }
 }
 @media (max-width: 640px) {
-  .cat-row { padding: 12px; gap: 12px; }
-  .cat-row-icon { width: 44px; height: 44px; font-size: 1.1rem; }
-  .cat-row-name { font-size: 0.92rem; }
-  .cat-row-desc { font-size: 0.8rem; }
-  .cat-row-extra { display: none; }
-  .cat-row-side { flex-shrink: 1; min-width: 0; max-width: 120px; overflow: hidden; }
-  .cat-row-version {
-    max-width: 100%;
-    align-self: flex-start;
-    font-size: 0.78rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .cat-row-date { font-size: 0.72rem; }
+  .cat-row { padding: 12px; gap: 8px; }
+  .cr-rank-num { width: 22px; height: 22px; font-size: 0.72rem; }
+  .cr-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+  .cr-name { font-size: 0.92rem; }
+  .cr-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
+  .cr-extra { display: none; }
+  .cr-platforms { gap: 4px; }
+  .cr-plat-tag { padding: 2px 8px; font-size: 0.68rem; }
 }
 </style>
