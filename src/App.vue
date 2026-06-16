@@ -19,14 +19,6 @@ onErrorCaptured((err) => {
 
 watch(() => settings.settings, (s) => {
   document.title = s.siteName || 'Software Hub'
-  // favicon
-  let link = document.querySelector<HTMLLinkElement>('link[rel="icon"]')
-  if (!link) {
-    link = document.createElement('link')
-    link.rel = 'icon'
-    document.head.appendChild(link)
-  }
-  link.href = s.logo || '/favicon.svg'
 }, { immediate: true, deep: true })
 
 /* ===== 远程数据自动更新检测 ===== */
