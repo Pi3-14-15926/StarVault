@@ -1,425 +1,5 @@
 [
   {
-    "id": "mqf8eor35dw4rj",
-    "versionId": "mqf8eoqlmqnjeq",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.6.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.6/Game.Cheats.Manager.Setup.2.4.6.exe",
-    "downloadCount": 101529,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eos83jmqdd",
-    "versionId": "mqf8eoroc5pmzb",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.5.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.5/Game.Cheats.Manager.Setup.2.4.5.exe",
-    "downloadCount": 4330,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eotdqsnpw3",
-    "versionId": "mqf8eosuzc8dpc",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.4.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.4/Game.Cheats.Manager.Setup.2.4.4.exe",
-    "downloadCount": 8373,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eougzi39kf",
-    "versionId": "mqf8eotxgldpyu",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.3.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.3/Game.Cheats.Manager.Setup.2.4.3.exe",
-    "downloadCount": 3500,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eovn05fvsu",
-    "versionId": "mqf8eov0q9nffa",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.2.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.2/Game.Cheats.Manager.Setup.2.4.2.exe",
-    "downloadCount": 817,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eowv5kfw66",
-    "versionId": "mqf8eowb6qgctk",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.1.exe",
-    "size": "42.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.1/Game.Cheats.Manager.Setup.2.4.1.exe",
-    "downloadCount": 3548,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eoy1t1jxtc",
-    "versionId": "mqf8eoxggqyduu",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.4.0.exe",
-    "size": "43.2 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.0/Game.Cheats.Manager.Setup.2.4.0.exe",
-    "downloadCount": 8686,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8eoziq2hfvg",
-    "versionId": "mqf8eoysd9eyn6",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.4.exe",
-    "size": "43.7 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.4/Game.Cheats.Manager.Setup.2.3.4.exe",
-    "downloadCount": 51653,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep11z3y395",
-    "versionId": "mqf8ep0dqderlt",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.3-v2.exe",
-    "size": "43.7 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.3/Game.Cheats.Manager.Setup.2.3.3-v2.exe",
-    "downloadCount": 36320,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep1rxivbur",
-    "versionId": "mqf8ep0dqderlt",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.3.exe",
-    "size": "43.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.3/Game.Cheats.Manager.Setup.2.3.3.exe",
-    "downloadCount": 42041,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep380tzuyb",
-    "versionId": "mqf8ep2iexk211",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.2.exe",
-    "size": "43.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.2/Game.Cheats.Manager.Setup.2.3.2.exe",
-    "downloadCount": 75795,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep4pobk13n",
-    "versionId": "mqf8ep3yttofe7",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.1.exe",
-    "size": "39.9 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.1/Game.Cheats.Manager.Setup.2.3.1.exe",
-    "downloadCount": 33635,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep63f82ezh",
-    "versionId": "mqf8ep5eu8dtxc",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.3.0.exe",
-    "size": "40.0 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.0/Game.Cheats.Manager.Setup.2.3.0.exe",
-    "downloadCount": 3722,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep7mnrrxt0",
-    "versionId": "mqf8ep6x6eyiqa",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.2.1.exe",
-    "size": "124.7 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.1/Game.Cheats.Manager.Setup.2.2.1.exe",
-    "downloadCount": 177051,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ep95z2y3vj",
-    "versionId": "mqf8ep8dl0eran",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.2.0.exe",
-    "size": "124.6 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.0/Game.Cheats.Manager.Setup.2.2.0.exe",
-    "downloadCount": 110213,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8epapn8s8xg",
-    "versionId": "mqf8ep9xiv5txd",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.1.4.exe",
-    "size": "128.5 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.4/Game.Cheats.Manager.Setup.2.1.4.exe",
-    "downloadCount": 81682,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8epcdln19fg",
-    "versionId": "mqf8epbksnm4r9",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.1.3.exe",
-    "size": "128.9 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.3/Game.Cheats.Manager.Setup.2.1.3.exe",
-    "downloadCount": 62109,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8epe0vf7b6f",
-    "versionId": "mqf8epd46nbqb9",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.1.2.exe",
-    "size": "128.7 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.2/Game.Cheats.Manager.Setup.2.1.2.exe",
-    "downloadCount": 74131,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8epfnqf3bit",
-    "versionId": "mqf8epesyrwkmy",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.1.1.exe",
-    "size": "128.1 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.1/Game.Cheats.Manager.Setup.2.1.1.exe",
-    "downloadCount": 75649,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8ephbrknw4l",
-    "versionId": "mqf8epghvxn5uk",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.1.0.exe",
-    "size": "128.1 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.0/Game.Cheats.Manager.Setup.2.1.0.exe",
-    "downloadCount": 6042,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8epj2y4ljlr",
-    "versionId": "mqf8epidtj8829",
-    "platform": "Windows",
-    "filename": "Game.Cheats.Manager.Setup.2.0.0.exe",
-    "size": "129.4 MB",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.0.0/Game.Cheats.Manager.Setup.2.0.0.exe",
-    "downloadCount": 168411,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4k30l3gxt",
-    "versionId": "mqf8l4jm6wuxhg",
-    "platform": "Android",
-    "filename": "gamenative-v1.0.0.apk",
-    "size": "535.1 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0/gamenative-v1.0.0.apk",
-    "downloadCount": 41057,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4l8w7eovs",
-    "versionId": "mqf8l4komfry7i",
-    "platform": "Android",
-    "filename": "gamenative-v1.0.0-prerelease-modern.apk",
-    "size": "535.0 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0-prerelease/gamenative-v1.0.0-prerelease-modern.apk",
-    "downloadCount": 8129,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4lr637jzu",
-    "versionId": "mqf8l4komfry7i",
-    "platform": "Android",
-    "filename": "gamenative-v1.0.0-prerelease.apk",
-    "size": "535.0 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0-prerelease/gamenative-v1.0.0-prerelease.apk",
-    "downloadCount": 17410,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4mtnun88j",
-    "versionId": "mqf8l4ma63zsuo",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.2.apk",
-    "size": "535.8 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.2/gamenative-v0.9.2.apk",
-    "downloadCount": 82057,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4o2qcqxz8",
-    "versionId": "mqf8l4nfafihcn",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.2-prerelease.apk",
-    "size": "535.8 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.2-prerelease/gamenative-v0.9.2-prerelease.apk",
-    "downloadCount": 3293,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4pb3c2ise",
-    "versionId": "mqf8l4opn8your",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.1.apk",
-    "size": "535.8 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.1/gamenative-v0.9.1.apk",
-    "downloadCount": 32245,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4qjrwao6o",
-    "versionId": "mqf8l4pw92bz75",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.1-prerelease.apk",
-    "size": "534.9 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.1-prerelease/gamenative-v0.9.1-prerelease.apk",
-    "downloadCount": 11443,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4s4j5glw3",
-    "versionId": "mqf8l4rfqo1ayf",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.0.apk",
-    "size": "526.4 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.0/gamenative-v0.9.0.apk",
-    "downloadCount": 87969,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4ts8ubhfw",
-    "versionId": "mqf8l4t2jx6grn",
-    "platform": "Android",
-    "filename": "gamenative-v0.9.0-prerelease.apk",
-    "size": "520.4 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.0-prerelease/gamenative-v0.9.0-prerelease.apk",
-    "downloadCount": 16070,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4v9vm90qp",
-    "versionId": "mqf8l4uh8jjnn3",
-    "platform": "Android",
-    "filename": "gamenative-v0.8.1.apk",
-    "size": "520.0 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.1/gamenative-v0.8.1.apk",
-    "downloadCount": 55134,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4wsweogsk",
-    "versionId": "mqf8l4w1nj5ewg",
-    "platform": "Android",
-    "filename": "gamenative-v0.8.1-prerelease.apk",
-    "size": "520.0 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.1-prerelease/gamenative-v0.8.1-prerelease.apk",
-    "downloadCount": 3448,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4yd009v5t",
-    "versionId": "mqf8l4xkueqp3t",
-    "platform": "Android",
-    "filename": "gamenative-v0.8.0-hotfix.apk",
-    "size": "518.3 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.0/gamenative-v0.8.0-hotfix.apk",
-    "downloadCount": 21459,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l4zzy4dpmf",
-    "versionId": "mqf8l4z8n4p9op",
-    "platform": "Android",
-    "filename": "gamenative-v0.8.0-prerelease.apk",
-    "size": "519.2 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.0-prerelease/gamenative-v0.8.0-prerelease.apk",
-    "downloadCount": 10054,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l51gq9g4qi",
-    "versionId": "mqf8l50qxoeros",
-    "platform": "Android",
-    "filename": "gamenative-v0.7.2.apk",
-    "size": "518.7 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.2/gamenative-v0.7.2.apk",
-    "downloadCount": 101878,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l534tw6rjt",
-    "versionId": "mqf8l52ba0ezq6",
-    "platform": "Android",
-    "filename": "gamenative-v0.7.2-prerelease.apk",
-    "size": "518.7 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.2-prerelease/gamenative-v0.7.2-prerelease.apk",
-    "downloadCount": 1432,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l54rni7kvo",
-    "versionId": "mqf8l53zqecfzg",
-    "platform": "Android",
-    "filename": "gamenative-v0.7.1.apk",
-    "size": "518.7 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.1/gamenative-v0.7.1.apk",
-    "downloadCount": 38620,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l56jkgdqr1",
-    "versionId": "mqf8l55kc70asw",
-    "platform": "Android",
-    "filename": "gamenative-v0.7.1-prerelease.apk",
-    "size": "519.3 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.1-prerelease/gamenative-v0.7.1-prerelease.apk",
-    "downloadCount": 1157,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l584akwffu",
-    "versionId": "mqf8l57dqelite",
-    "platform": "Android",
-    "filename": "gamenative-v0.7.0.apk",
-    "size": "521.7 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.0/gamenative-v0.7.0.apk",
-    "downloadCount": 25103,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l5a7gqdztp",
-    "versionId": "mqf8l5958roa60",
-    "platform": "Android",
-    "filename": "gamenative-v0.6.2.apk",
-    "size": "493.5 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.2/gamenative-v0.6.2.apk",
-    "downloadCount": 20074,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l5btaj4yrf",
-    "versionId": "mqf8l5b1ixxvvk",
-    "platform": "Android",
-    "filename": "gamenative-v0.6.2-prerelease1.apk",
-    "size": "493.4 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.2-prerelease1/gamenative-v0.6.2-prerelease1.apk",
-    "downloadCount": 654,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqf8l5dbem40bq",
-    "versionId": "mqf8l5cl867cgo",
-    "platform": "Android",
-    "filename": "gamenative-v0.6.1.apk",
-    "size": "493.3 MB",
-    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.1/gamenative-v0.6.1.apk",
-    "downloadCount": 33817,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
     "id": "mqf92pcaltxliw",
     "versionId": "mqf92pbg5hrksq",
     "platform": "Linux",
@@ -1577,6 +1157,426 @@
     "size": "82.5 MB",
     "url": "https://github.com/BeyondDimension/SteamTools/releases/download/2.8.3/Steam%2B%2B_android_v2.8.3.apk",
     "downloadCount": 8519,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eor35dw4rj",
+    "versionId": "mqf8eoqlmqnjeq",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.6.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.6/Game.Cheats.Manager.Setup.2.4.6.exe",
+    "downloadCount": 101529,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eos83jmqdd",
+    "versionId": "mqf8eoroc5pmzb",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.5.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.5/Game.Cheats.Manager.Setup.2.4.5.exe",
+    "downloadCount": 4330,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eotdqsnpw3",
+    "versionId": "mqf8eosuzc8dpc",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.4.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.4/Game.Cheats.Manager.Setup.2.4.4.exe",
+    "downloadCount": 8373,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eougzi39kf",
+    "versionId": "mqf8eotxgldpyu",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.3.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.3/Game.Cheats.Manager.Setup.2.4.3.exe",
+    "downloadCount": 3500,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eovn05fvsu",
+    "versionId": "mqf8eov0q9nffa",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.2.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.2/Game.Cheats.Manager.Setup.2.4.2.exe",
+    "downloadCount": 817,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eowv5kfw66",
+    "versionId": "mqf8eowb6qgctk",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.1.exe",
+    "size": "42.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.1/Game.Cheats.Manager.Setup.2.4.1.exe",
+    "downloadCount": 3548,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eoy1t1jxtc",
+    "versionId": "mqf8eoxggqyduu",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.4.0.exe",
+    "size": "43.2 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.4.0/Game.Cheats.Manager.Setup.2.4.0.exe",
+    "downloadCount": 8686,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8eoziq2hfvg",
+    "versionId": "mqf8eoysd9eyn6",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.4.exe",
+    "size": "43.7 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.4/Game.Cheats.Manager.Setup.2.3.4.exe",
+    "downloadCount": 51653,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep11z3y395",
+    "versionId": "mqf8ep0dqderlt",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.3-v2.exe",
+    "size": "43.7 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.3/Game.Cheats.Manager.Setup.2.3.3-v2.exe",
+    "downloadCount": 36320,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep1rxivbur",
+    "versionId": "mqf8ep0dqderlt",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.3.exe",
+    "size": "43.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.3/Game.Cheats.Manager.Setup.2.3.3.exe",
+    "downloadCount": 42041,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep380tzuyb",
+    "versionId": "mqf8ep2iexk211",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.2.exe",
+    "size": "43.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.2/Game.Cheats.Manager.Setup.2.3.2.exe",
+    "downloadCount": 75795,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep4pobk13n",
+    "versionId": "mqf8ep3yttofe7",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.1.exe",
+    "size": "39.9 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.1/Game.Cheats.Manager.Setup.2.3.1.exe",
+    "downloadCount": 33635,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep63f82ezh",
+    "versionId": "mqf8ep5eu8dtxc",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.3.0.exe",
+    "size": "40.0 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.3.0/Game.Cheats.Manager.Setup.2.3.0.exe",
+    "downloadCount": 3722,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep7mnrrxt0",
+    "versionId": "mqf8ep6x6eyiqa",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.2.1.exe",
+    "size": "124.7 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.1/Game.Cheats.Manager.Setup.2.2.1.exe",
+    "downloadCount": 177051,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ep95z2y3vj",
+    "versionId": "mqf8ep8dl0eran",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.2.0.exe",
+    "size": "124.6 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.0/Game.Cheats.Manager.Setup.2.2.0.exe",
+    "downloadCount": 110213,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8epapn8s8xg",
+    "versionId": "mqf8ep9xiv5txd",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.1.4.exe",
+    "size": "128.5 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.4/Game.Cheats.Manager.Setup.2.1.4.exe",
+    "downloadCount": 81682,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8epcdln19fg",
+    "versionId": "mqf8epbksnm4r9",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.1.3.exe",
+    "size": "128.9 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.3/Game.Cheats.Manager.Setup.2.1.3.exe",
+    "downloadCount": 62109,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8epe0vf7b6f",
+    "versionId": "mqf8epd46nbqb9",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.1.2.exe",
+    "size": "128.7 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.2/Game.Cheats.Manager.Setup.2.1.2.exe",
+    "downloadCount": 74131,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8epfnqf3bit",
+    "versionId": "mqf8epesyrwkmy",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.1.1.exe",
+    "size": "128.1 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.1/Game.Cheats.Manager.Setup.2.1.1.exe",
+    "downloadCount": 75649,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8ephbrknw4l",
+    "versionId": "mqf8epghvxn5uk",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.1.0.exe",
+    "size": "128.1 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.0/Game.Cheats.Manager.Setup.2.1.0.exe",
+    "downloadCount": 6042,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8epj2y4ljlr",
+    "versionId": "mqf8epidtj8829",
+    "platform": "Windows",
+    "filename": "Game.Cheats.Manager.Setup.2.0.0.exe",
+    "size": "129.4 MB",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.0.0/Game.Cheats.Manager.Setup.2.0.0.exe",
+    "downloadCount": 168411,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4k30l3gxt",
+    "versionId": "mqf8l4jm6wuxhg",
+    "platform": "Android",
+    "filename": "gamenative-v1.0.0.apk",
+    "size": "535.1 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0/gamenative-v1.0.0.apk",
+    "downloadCount": 41057,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4l8w7eovs",
+    "versionId": "mqf8l4komfry7i",
+    "platform": "Android",
+    "filename": "gamenative-v1.0.0-prerelease-modern.apk",
+    "size": "535.0 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0-prerelease/gamenative-v1.0.0-prerelease-modern.apk",
+    "downloadCount": 8129,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4lr637jzu",
+    "versionId": "mqf8l4komfry7i",
+    "platform": "Android",
+    "filename": "gamenative-v1.0.0-prerelease.apk",
+    "size": "535.0 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.0.0-prerelease/gamenative-v1.0.0-prerelease.apk",
+    "downloadCount": 17410,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4mtnun88j",
+    "versionId": "mqf8l4ma63zsuo",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.2.apk",
+    "size": "535.8 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.2/gamenative-v0.9.2.apk",
+    "downloadCount": 82057,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4o2qcqxz8",
+    "versionId": "mqf8l4nfafihcn",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.2-prerelease.apk",
+    "size": "535.8 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.2-prerelease/gamenative-v0.9.2-prerelease.apk",
+    "downloadCount": 3293,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4pb3c2ise",
+    "versionId": "mqf8l4opn8your",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.1.apk",
+    "size": "535.8 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.1/gamenative-v0.9.1.apk",
+    "downloadCount": 32245,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4qjrwao6o",
+    "versionId": "mqf8l4pw92bz75",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.1-prerelease.apk",
+    "size": "534.9 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.1-prerelease/gamenative-v0.9.1-prerelease.apk",
+    "downloadCount": 11443,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4s4j5glw3",
+    "versionId": "mqf8l4rfqo1ayf",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.0.apk",
+    "size": "526.4 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.0/gamenative-v0.9.0.apk",
+    "downloadCount": 87969,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4ts8ubhfw",
+    "versionId": "mqf8l4t2jx6grn",
+    "platform": "Android",
+    "filename": "gamenative-v0.9.0-prerelease.apk",
+    "size": "520.4 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.9.0-prerelease/gamenative-v0.9.0-prerelease.apk",
+    "downloadCount": 16070,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4v9vm90qp",
+    "versionId": "mqf8l4uh8jjnn3",
+    "platform": "Android",
+    "filename": "gamenative-v0.8.1.apk",
+    "size": "520.0 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.1/gamenative-v0.8.1.apk",
+    "downloadCount": 55134,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4wsweogsk",
+    "versionId": "mqf8l4w1nj5ewg",
+    "platform": "Android",
+    "filename": "gamenative-v0.8.1-prerelease.apk",
+    "size": "520.0 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.1-prerelease/gamenative-v0.8.1-prerelease.apk",
+    "downloadCount": 3448,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4yd009v5t",
+    "versionId": "mqf8l4xkueqp3t",
+    "platform": "Android",
+    "filename": "gamenative-v0.8.0-hotfix.apk",
+    "size": "518.3 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.0/gamenative-v0.8.0-hotfix.apk",
+    "downloadCount": 21459,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l4zzy4dpmf",
+    "versionId": "mqf8l4z8n4p9op",
+    "platform": "Android",
+    "filename": "gamenative-v0.8.0-prerelease.apk",
+    "size": "519.2 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.8.0-prerelease/gamenative-v0.8.0-prerelease.apk",
+    "downloadCount": 10054,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l51gq9g4qi",
+    "versionId": "mqf8l50qxoeros",
+    "platform": "Android",
+    "filename": "gamenative-v0.7.2.apk",
+    "size": "518.7 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.2/gamenative-v0.7.2.apk",
+    "downloadCount": 101878,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l534tw6rjt",
+    "versionId": "mqf8l52ba0ezq6",
+    "platform": "Android",
+    "filename": "gamenative-v0.7.2-prerelease.apk",
+    "size": "518.7 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.2-prerelease/gamenative-v0.7.2-prerelease.apk",
+    "downloadCount": 1432,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l54rni7kvo",
+    "versionId": "mqf8l53zqecfzg",
+    "platform": "Android",
+    "filename": "gamenative-v0.7.1.apk",
+    "size": "518.7 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.1/gamenative-v0.7.1.apk",
+    "downloadCount": 38620,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l56jkgdqr1",
+    "versionId": "mqf8l55kc70asw",
+    "platform": "Android",
+    "filename": "gamenative-v0.7.1-prerelease.apk",
+    "size": "519.3 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.1-prerelease/gamenative-v0.7.1-prerelease.apk",
+    "downloadCount": 1157,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l584akwffu",
+    "versionId": "mqf8l57dqelite",
+    "platform": "Android",
+    "filename": "gamenative-v0.7.0.apk",
+    "size": "521.7 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.7.0/gamenative-v0.7.0.apk",
+    "downloadCount": 25103,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l5a7gqdztp",
+    "versionId": "mqf8l5958roa60",
+    "platform": "Android",
+    "filename": "gamenative-v0.6.2.apk",
+    "size": "493.5 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.2/gamenative-v0.6.2.apk",
+    "downloadCount": 20074,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l5btaj4yrf",
+    "versionId": "mqf8l5b1ixxvvk",
+    "platform": "Android",
+    "filename": "gamenative-v0.6.2-prerelease1.apk",
+    "size": "493.4 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.2-prerelease1/gamenative-v0.6.2-prerelease1.apk",
+    "downloadCount": 654,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqf8l5dbem40bq",
+    "versionId": "mqf8l5cl867cgo",
+    "platform": "Android",
+    "filename": "gamenative-v0.6.1.apk",
+    "size": "493.3 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v0.6.1/gamenative-v0.6.1.apk",
+    "downloadCount": 33817,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   }
 ]

@@ -610,6 +610,36 @@
     ]
   },
   {
+    "id": "mqgvg794h4tvwi",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.26",
+    "publishedAt": "2026-06-15T18:11:44Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n**noR8 变体关闭了代码混淆与压缩，若有崩溃问题请使用它并收集和发送 Log，以便开发者定位问题代码。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* refactor: 拆分ReadConfig为5个职责单一的配置对象\n* fix: 修复PR #1448合并后ReadConfig.readMenuBlurAlpha编译错误\n* fix: 修复阅读菜单透明度失效\n* fix: 屏幕超时失效和横屏半屏问题\n* fix: 修复共用布局下翻页动画文案读取错误\n* fix: 首页模块共享转场\n* fix: 本地书籍导入界面问题\n* fix: 换源功能多项修复\n* fix: 字典弹窗使用Compose实现\n* fix：修复二级菜单手势滑动高度变化滞后与Tab高亮闪烁问题\n* fix：修复冷启动跳阅读页返回后状态栏不恢复的问题",
+    "downloadIds": [
+      "mqgvg794rwmlq6",
+      "mqgvg7944rqvyy",
+      "mqgvg7944znbjs",
+      "mqgvg794d4tall",
+      "mqgvg794sr5s29",
+      "mqgvg794q8busb"
+    ]
+  },
+  {
+    "id": "mqgvg794rtpar9",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.25",
+    "publishedAt": "2026-06-14T18:01:52Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n**noR8 变体关闭了代码混淆与压缩，若有崩溃问题请使用它并收集和发送 Log，以便开发者定位问题代码。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 阅读主题isDark跟随应用明暗设置而非背景亮度推导\n* fix: 阅读菜单模糊着色、调色板样式、标题胶囊布局及主题覆盖修复\n* @ feat: 顶栏液态玻璃胶囊布局与合并按钮\n* fix: 修复换源加载字数配置不生效\n* fix：潜在的布局高度测量缺陷与优化建议\n* feat：统一阅读界面二级菜单的滑动动画效果",
+    "downloadIds": [
+      "mqgvg794afaxu1",
+      "mqgvg794db0kr6",
+      "mqgvg794glp5cl",
+      "mqgvg794tr6gda",
+      "mqgvg794lqfbcc",
+      "mqgvg794udxocl"
+    ]
+  },
+  {
     "id": "mqdzxafnodaslg",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.24",
@@ -955,6 +985,39 @@
       "mqdzxbsrqg4kpl",
       "mqdzxbt220fu7e",
       "mqdzxbtba994xi"
+    ]
+  },
+  {
+    "id": "mqei0fm8k0ov24",
+    "projectId": "mq1yoxoecx1loi",
+    "version": "beta",
+    "publishedAt": "2026-06-14T00:00:00.000Z",
+    "changelog": "## 更新日志\n- fix(ui): 修复 TitleBar 阴影渲染位置异常并移除冗余的 themeVersion 版本号.. (028000c40)",
+    "downloadIds": [
+      "mqei0fmov3kk7q",
+      "mqei0fna9acuay",
+      "mqei0fnyg0qg7w",
+      "mqei0foii82ay5",
+      "mqei0foyptswdy",
+      "mqei0fpeuclh20",
+      "mqei0fpry2zbsr",
+      "mqei0fq7pd2bbp",
+      "mqei0fqmcrcqf4",
+      "mqei0fqzcynzli"
+    ]
+  },
+  {
+    "id": "mqei13n3189p82",
+    "projectId": "mq1yoxoecx1loi",
+    "version": "3.26.052421",
+    "publishedAt": "2026-05-24T00:00:00.000Z",
+    "changelog": "## 更新日志\n\n- perf(search): 优化书架内搜索逻辑，将过滤移动到代码中并优化 ui 性能 (c5b3f605f)\n- refactor(dao): 优化数据库性能 (0f1deef31)\n- refactor(dao): 移除数据库查询中的多余排序逻辑 (8bdbdfe98)\n- feat(bookshelf): 优化书籍自动更新逻辑，改为进入分组时触发并增加更新频率限制。 (2cbdf1bdf)\n- ci: 更新发布频率并重构构建工作流 (d11908306)\n- refactor(ui): 更新对话框和列表样式，使用 bottomBackground 作为背景颜色，移除多余颜色设置并移除列表分割线 (097c7f7be)\n- refactor(explore): 优化列表展开收起动画逻辑，统一动画时长并简化滚动同步处理。 (72c597698)",
+    "downloadIds": [
+      "mqei13o41gr638",
+      "mqei13pbqptpze",
+      "mqei13q168et4x",
+      "mqei13ql68cxat",
+      "mqei13r8myy3pn"
     ]
   },
   {
@@ -1938,39 +2001,6 @@
       "mqe09a2igmkij4",
       "mqe09a365kxv2n",
       "mqe09a3quhvsta"
-    ]
-  },
-  {
-    "id": "mqei0fm8k0ov24",
-    "projectId": "mq1yoxoecx1loi",
-    "version": "beta",
-    "publishedAt": "2026-06-14T00:00:00.000Z",
-    "changelog": "## 更新日志\n- fix(ui): 修复 TitleBar 阴影渲染位置异常并移除冗余的 themeVersion 版本号.. (028000c40)",
-    "downloadIds": [
-      "mqei0fmov3kk7q",
-      "mqei0fna9acuay",
-      "mqei0fnyg0qg7w",
-      "mqei0foii82ay5",
-      "mqei0foyptswdy",
-      "mqei0fpeuclh20",
-      "mqei0fpry2zbsr",
-      "mqei0fq7pd2bbp",
-      "mqei0fqmcrcqf4",
-      "mqei0fqzcynzli"
-    ]
-  },
-  {
-    "id": "mqei13n3189p82",
-    "projectId": "mq1yoxoecx1loi",
-    "version": "3.26.052421",
-    "publishedAt": "2026-05-24T00:00:00.000Z",
-    "changelog": "## 更新日志\n\n- perf(search): 优化书架内搜索逻辑，将过滤移动到代码中并优化 ui 性能 (c5b3f605f)\n- refactor(dao): 优化数据库性能 (0f1deef31)\n- refactor(dao): 移除数据库查询中的多余排序逻辑 (8bdbdfe98)\n- feat(bookshelf): 优化书籍自动更新逻辑，改为进入分组时触发并增加更新频率限制。 (2cbdf1bdf)\n- ci: 更新发布频率并重构构建工作流 (d11908306)\n- refactor(ui): 更新对话框和列表样式，使用 bottomBackground 作为背景颜色，移除多余颜色设置并移除列表分割线 (097c7f7be)\n- refactor(explore): 优化列表展开收起动画逻辑，统一动画时长并简化滚动同步处理。 (72c597698)",
-    "downloadIds": [
-      "mqei13o41gr638",
-      "mqei13pbqptpze",
-      "mqei13q168et4x",
-      "mqei13ql68cxat",
-      "mqei13r8myy3pn"
     ]
   }
 ]

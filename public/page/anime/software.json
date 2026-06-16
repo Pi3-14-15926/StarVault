@@ -10,10 +10,9 @@
     "githubRepo": "Sle2p/AniCh",
     "githubUrl": "https://github.com/Sle2p/AniCh",
     "latestUpdateTime": "2025-07-01T00:27:48Z",
-    "stars": 5082,
+    "stars": 5081,
     "forks": 111,
-    "latestVersionId": "mqdzxfsmu9z0ao",
-    "categorySlug": "anime"
+    "latestVersionId": "mqdzxfsmu9z0ao"
   },
   {
     "id": "mpzjkpvzeuh3zl",
@@ -25,8 +24,8 @@
     "featured": false,
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26584,
-    "forks": 766,
+    "stars": 26602,
+    "forks": 767,
     "platforms": [
       "Android",
       "Other",
@@ -36,8 +35,7 @@
     ],
     "latestVersionId": "mqdzxh79ry0b02",
     "latestUpdateTime": "2025-12-11T08:52:35Z",
-    "latestVersion": "2.1.5",
-    "categorySlug": "anime"
+    "latestVersion": "2.1.5"
   },
   {
     "id": "mpzjjzg2ylm14p",
@@ -49,8 +47,8 @@
     "featured": true,
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18368,
-    "forks": 493,
+    "stars": 18371,
+    "forks": 494,
     "platforms": [
       "Android",
       "Linux",
@@ -60,8 +58,7 @@
     ],
     "latestVersionId": "mqdzxp2g45cekb",
     "latestUpdateTime": "2026-02-07T16:43:26Z",
-    "latestVersion": "v5.7.0-alpha01",
-    "categorySlug": "anime"
+    "latestVersion": "v5.7.0-alpha01"
   },
   {
     "id": "mqf2wp9ruusxo6",
@@ -70,7 +67,6 @@
     "name": "omofun",
     "description": "哔哩哔哩幼年版，有自己的弹幕数据，可以看广告获得VIP。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/omofun.webp",
-    "categorySlug": "anime",
     "featured": false,
     "latestUpdateTime": "2026-04-29T00:00:00.000Z",
     "website": "https://www.omoo.app/",
@@ -83,7 +79,6 @@
     "name": "动漫共和国",
     "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是弹幕质量较差。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
-    "categorySlug": "anime",
     "featured": false,
     "latestUpdateTime": "2026-06-15T00:00:00.000Z",
     "website": "https://www.dmghg.com/",

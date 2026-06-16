@@ -9,7 +9,7 @@
     "featured": true,
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51586,
+    "stars": 51594,
     "forks": 6861,
     "platforms": [
       "Linux",
@@ -18,8 +18,7 @@
       "Windows"
     ],
     "latestVersionId": "mpwreeavwjr9sc",
-    "latestUpdateTime": "2026-05-01T05:35:34Z",
-    "categorySlug": "music"
+    "latestUpdateTime": "2026-05-01T05:35:34Z"
   },
   {
     "id": "mqdz0w9jb6a6mx",
@@ -28,13 +27,12 @@
     "name": "LX Music 移动版",
     "description": "一个基于 React native 开发的音乐软件",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/lx-music-mobile.webp",
-    "categorySlug": "music",
     "featured": false,
     "githubRepo": "lyswhut/lx-music-mobile",
     "githubUrl": "https://github.com/lyswhut/lx-music-mobile",
     "latestUpdateTime": "2023-03-26T12:18:06Z",
     "website": "LX Music 移动版",
-    "stars": 17181,
+    "stars": 17186,
     "forks": 1957,
     "latestVersionId": "mqdz0wkh0n4nc6"
   },
@@ -45,13 +43,12 @@
     "name": "MusicFree 移动版",
     "description": "插件化、定制化、无广告的免费音乐播放器",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/MusicFree-移动版.webp",
-    "categorySlug": "music",
     "featured": false,
     "githubRepo": "maotoumao/MusicFree",
     "githubUrl": "https://github.com/maotoumao/MusicFree",
     "latestUpdateTime": "2023-03-26T15:46:45Z",
-    "stars": 25214,
-    "forks": 1768,
+    "stars": 25218,
+    "forks": 1770,
     "latestVersionId": "mqdz4vvp4x6d5o"
   },
   {
@@ -61,12 +58,11 @@
     "name": "MusicFree 桌面版",
     "description": "插件化、定制化、无广告的免费音乐播放器",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/MusicFree-桌面版.webp",
-    "categorySlug": "music",
     "featured": false,
     "githubRepo": "maotoumao/MusicFreeDesktop",
     "githubUrl": "https://github.com/maotoumao/MusicFreeDesktop",
     "latestUpdateTime": "2023-07-23T14:37:10Z",
-    "stars": 8469,
+    "stars": 8470,
     "forks": 805,
     "latestVersionId": "mqdz5twauyyawp"
   },
@@ -77,12 +73,11 @@
     "name": "QingMusic 青听音乐",
     "description": "青听音乐-一款免费无广告的本地音乐播放器。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/QingMusic-青听音乐.webp",
-    "categorySlug": "music",
     "featured": false,
     "githubRepo": "kejichangqing/QingMusic",
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
     "latestUpdateTime": "2025-04-26T08:38:19Z",
-    "stars": 1276,
+    "stars": 1277,
     "forks": 59,
     "latestVersionId": "mqdzbefc3z1ebn"
   },
@@ -93,13 +88,12 @@
     "name": "SaltPlayer 椒盐音乐",
     "description": "椒盐播放器，深受数十万用户信赖和选择的本地音乐播放器",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/SaltPlayer-椒盐音乐.webp",
-    "categorySlug": "music",
     "featured": false,
     "githubRepo": "Moriafly/SaltPlayerSource",
     "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
     "latestUpdateTime": "2024-12-16T01:24:07Z",
     "stars": 6876,
-    "forks": 201,
+    "forks": 202,
     "latestVersionId": "mqdzae9ef24yz5"
   }
 ]
