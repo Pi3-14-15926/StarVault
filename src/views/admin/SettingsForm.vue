@@ -12,7 +12,6 @@ const form = ref({
   logo: '',
   footer: '',
   admins: '',
-  storageNote: '',
 })
 
 onMounted(() => {
@@ -20,7 +19,7 @@ onMounted(() => {
   const s = store.settings
   form.value = {
     siteName: s.siteName, logo: s.logo, footer: s.footer || '',
-    admins: (s.admins || []).join(', '), storageNote: s.storageNote || '',
+    admins: (s.admins || []).join(', '),
   }
 })
 
@@ -32,7 +31,6 @@ function doSave() {
     logo: form.value.logo,
     footer: form.value.footer || undefined,
     admins: form.value.admins.split(/[,，]/).map((a) => a.trim()).filter(Boolean),
-    storageNote: form.value.storageNote || undefined,
   })
   message.success('设置已保存')
 }
@@ -69,10 +67,6 @@ function doSave() {
           <div class="field field-full">
             <label class="field-label">页脚文字</label>
             <NInput v-model:value="form.footer" type="textarea" rows="2" placeholder="Powered by Software Hub" />
-          </div>
-          <div class="field field-full">
-            <label class="field-label">网站说明</label>
-            <NInput v-model:value="form.storageNote" placeholder="数据存储在 GitHub JSON 文件，零服务器成本" />
           </div>
           <div class="field field-full">
             <label class="field-label">管理员 GitHub 用户名</label>

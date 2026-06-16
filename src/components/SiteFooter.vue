@@ -7,8 +7,6 @@ const settings = useSettingStore()
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-text">{{ settings.settings.footer || 'Powered by Software Hub' }}</p>
-      <p v-if="settings.settings.storageNote" class="footer-note">{{ settings.settings.storageNote }}</p>
-      <p class="footer-copy">© 2024 Software Hub. All rights reserved.</p>
     </div>
   </footer>
 </template>
