@@ -39,22 +39,6 @@
     "latestVersionId": "mqdz0wkh0n4nc6"
   },
   {
-    "id": "mqdzae23et9isy",
-    "slug": "saltplayersource",
-    "sourceType": "github",
-    "name": "SaltPlayer 椒盐音乐",
-    "description": "盐播放器，深受数十万用户信赖和选择的本地音乐播放器",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/SaltPlayer-椒盐音乐.webp",
-    "categorySlug": "music",
-    "featured": false,
-    "githubRepo": "Moriafly/SaltPlayerSource",
-    "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
-    "latestUpdateTime": "2024-12-16T01:24:07Z",
-    "stars": 6867,
-    "forks": 201,
-    "latestVersionId": "mqdzae9ef24yz5"
-  },
-  {
     "id": "mqdz4vlw18enkx",
     "slug": "musicfree",
     "sourceType": "github",
@@ -101,5 +85,21 @@
     "stars": 1275,
     "forks": 59,
     "latestVersionId": "mqdzbefc3z1ebn"
+  },
+  {
+    "id": "mqdzae23et9isy",
+    "slug": "saltplayersource",
+    "sourceType": "github",
+    "name": "SaltPlayer 椒盐音乐",
+    "description": "椒盐播放器，深受数十万用户信赖和选择的本地音乐播放器",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/SaltPlayer-椒盐音乐.webp",
+    "categorySlug": "music",
+    "featured": false,
+    "githubRepo": "Moriafly/SaltPlayerSource",
+    "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
+    "latestUpdateTime": "2024-12-16T01:24:07Z",
+    "stars": 6867,
+    "forks": 201,
+    "latestVersionId": "mqdzae9ef24yz5"
   }
 ]

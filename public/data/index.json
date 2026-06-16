@@ -180,18 +180,6 @@
     "forks": 492
   },
   {
-    "id": "mqf2hvi0ero5r0",
-    "name": "动漫共和国",
-    "slug": "dmghg",
-    "categorySlug": "anime",
-    "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是质量较差。",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
-    "featured": false,
-    "latestVersionId": "mqf2n9y000y2vp",
-    "latestUpdateTime": "2026-06-15T00:00:00.000Z",
-    "website": "https://www.dmghg.com/"
-  },
-  {
     "id": "mqf2wp9ruusxo6",
     "name": "omofun",
     "slug": "omofun",
@@ -202,6 +190,18 @@
     "latestVersionId": "mqf31apkdolugn",
     "latestUpdateTime": "2026-04-29T00:00:00.000Z",
     "website": "https://www.omoo.app/"
+  },
+  {
+    "id": "mqf2hvi0ero5r0",
+    "name": "动漫共和国",
+    "slug": "dmghg",
+    "categorySlug": "anime",
+    "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是弹幕质量较差。",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
+    "featured": false,
+    "latestVersionId": "mqf2n9y000y2vp",
+    "latestUpdateTime": "2026-06-15T00:00:00.000Z",
+    "website": "https://www.dmghg.com/"
   },
   {
     "id": "mpwreu1xdmxt5v",
@@ -233,21 +233,6 @@
     "website": "LX Music 移动版",
     "stars": 17165,
     "forks": 1955
-  },
-  {
-    "id": "mqdzae23et9isy",
-    "name": "SaltPlayer 椒盐音乐",
-    "slug": "saltplayersource",
-    "categorySlug": "music",
-    "description": "盐播放器，深受数十万用户信赖和选择的本地音乐播放器",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/SaltPlayer-椒盐音乐.webp",
-    "featured": false,
-    "latestVersionId": "mqdzae9ef24yz5",
-    "latestUpdateTime": "2024-12-16T01:24:07Z",
-    "githubRepo": "Moriafly/SaltPlayerSource",
-    "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
-    "stars": 6867,
-    "forks": 201
   },
   {
     "id": "mqdz4vlw18enkx",
@@ -295,34 +280,19 @@
     "forks": 59
   },
   {
-    "id": "mqf8l4hpnnnf0w",
-    "name": "GameNative 游戏模拟器",
-    "slug": "gamenative",
-    "categorySlug": "game",
-    "description": "在 Android 平台上使用 Steam、Epic、GOG 和 Amazon 集成的原生 PC 游戏",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameNative-游戏模拟器.webp",
+    "id": "mqdzae23et9isy",
+    "name": "SaltPlayer 椒盐音乐",
+    "slug": "saltplayersource",
+    "categorySlug": "music",
+    "description": "椒盐播放器，深受数十万用户信赖和选择的本地音乐播放器",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/SaltPlayer-椒盐音乐.webp",
     "featured": false,
-    "latestVersionId": "mqf8l5cl867cgo",
-    "latestUpdateTime": "2025-12-20T22:39:32Z",
-    "githubRepo": "utkarshdalal/GameNative",
-    "githubUrl": "https://github.com/utkarshdalal/GameNative",
-    "stars": 8032,
-    "forks": 291
-  },
-  {
-    "id": "mqf8eoolhym84x",
-    "name": "GameCheatsManager 游戏辅助管理",
-    "slug": "game-cheats-manager",
-    "categorySlug": "game",
-    "description": "轻松下载和管理单人游戏作弊工具，方便使用",
-    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameCheatsManager-游戏辅助管理.webp",
-    "featured": false,
-    "latestVersionId": "mqf8epidtj8829",
-    "latestUpdateTime": "2024-05-24T07:46:40Z",
-    "githubRepo": "dyang886/Game-Cheats-Manager",
-    "githubUrl": "https://github.com/dyang886/Game-Cheats-Manager",
-    "stars": 12997,
-    "forks": 445
+    "latestVersionId": "mqdzae9ef24yz5",
+    "latestUpdateTime": "2024-12-16T01:24:07Z",
+    "githubRepo": "Moriafly/SaltPlayerSource",
+    "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
+    "stars": 6867,
+    "forks": 201
   },
   {
     "id": "mqf92p952kk8p0",
@@ -338,5 +308,35 @@
     "githubUrl": "https://github.com/BeyondDimension/SteamTools",
     "stars": 25844,
     "forks": 1655
+  },
+  {
+    "id": "mqf8eoolhym84x",
+    "name": "GameCheatsManager 游戏辅助管理",
+    "slug": "game-cheats-manager",
+    "categorySlug": "game",
+    "description": "轻松下载和管理单机游戏作弊工具，方便使用",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameCheatsManager-游戏辅助管理.webp",
+    "featured": false,
+    "latestVersionId": "mqf8epidtj8829",
+    "latestUpdateTime": "2024-05-24T07:46:40Z",
+    "githubRepo": "dyang886/Game-Cheats-Manager",
+    "githubUrl": "https://github.com/dyang886/Game-Cheats-Manager",
+    "stars": 12997,
+    "forks": 445
+  },
+  {
+    "id": "mqf8l4hpnnnf0w",
+    "name": "GameNative 游戏模拟器",
+    "slug": "gamenative",
+    "categorySlug": "game",
+    "description": "在 Android 平台上使用 Steam、Epic、GOG 和 Amazon 集成的原生 PC 游戏。",
+    "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameNative-游戏模拟器.webp",
+    "featured": false,
+    "latestVersionId": "mqf8l5cl867cgo",
+    "latestUpdateTime": "2025-12-20T22:39:32Z",
+    "githubRepo": "utkarshdalal/GameNative",
+    "githubUrl": "https://github.com/utkarshdalal/GameNative",
+    "stars": 8032,
+    "forks": 291
   }
 ]
