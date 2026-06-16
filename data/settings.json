@@ -15,7 +15,7 @@
     "syncEnabled": true,
     "syncIntervalHours": 24,
     "backupEnabled": true,
-    "backupIntervalHours": 48
+    "backupIntervalHours": 24
   },
   "webdav": {
     "url": "https://webdav.123pan.cn/webdav/Webdav/资源/",
