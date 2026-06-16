@@ -2,8 +2,8 @@ name: Sync & Backup
 
 on:
   schedule:
-    # 每 2 天凌晨 2 点执行（与 sync 错开，避免并行冲突）
-    - cron: '0 2 */2 * *'
+    # 每天中午 12 点执行（与 sync 错开 12 小时避免并行冲突）
+    - cron: '0 12 * * *'
   workflow_dispatch:
     # 支持手动触发
 
