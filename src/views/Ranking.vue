@@ -144,7 +144,7 @@ onMounted(() => {
         </div>
         <div class="podium-rank">2</div>
         <div class="podium-name">{{ topThree[1].name }}</div>
-        <div class="podium-meta">{{ categoryName(topThree[1].categorySlug) }} · ⭐ {{ fmtCompact(topThree[1].stars ?? 0) }}</div>
+        <div class="podium-meta">{{ categoryName(topThree[1].categorySlug) }}<span v-if="topThree[1].stars"> · ⭐ {{ fmtCompact(topThree[1].stars) }}</span></div>
         <router-link :to="`/software/${topThree[1].slug}`" class="podium-btn">查看</router-link>
       </div>
       <div class="podium-item podium-1">
@@ -154,7 +154,7 @@ onMounted(() => {
         </div>
         <div class="podium-rank podium-rank-1">👑 1</div>
         <div class="podium-name podium-name-lg">{{ topThree[0].name }}</div>
-        <div class="podium-meta">{{ categoryName(topThree[0].categorySlug) }} · ⭐ {{ fmtCompact(topThree[0].stars ?? 0) }}</div>
+        <div class="podium-meta">{{ categoryName(topThree[0].categorySlug) }}<span v-if="topThree[0].stars"> · ⭐ {{ fmtCompact(topThree[0].stars) }}</span></div>
         <router-link :to="`/software/${topThree[0].slug}`" class="podium-btn podium-btn-primary">查看</router-link>
       </div>
       <div class="podium-item podium-3">
@@ -164,7 +164,7 @@ onMounted(() => {
         </div>
         <div class="podium-rank">3</div>
         <div class="podium-name">{{ topThree[2].name }}</div>
-        <div class="podium-meta">{{ categoryName(topThree[2].categorySlug) }} · ⭐ {{ fmtCompact(topThree[2].stars ?? 0) }}</div>
+        <div class="podium-meta">{{ categoryName(topThree[2].categorySlug) }}<span v-if="topThree[2].stars"> · ⭐ {{ fmtCompact(topThree[2].stars) }}</span></div>
         <router-link :to="`/software/${topThree[2].slug}`" class="podium-btn">查看</router-link>
       </div>
     </div>
@@ -565,32 +565,34 @@ onMounted(() => {
 /* Platforms */
 .cr-platforms {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .cr-plat-tag {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  background: var(--color-card-soft);
-  color: var(--text-sec);
-  border: 1px solid var(--border-soft);
-  line-height: 1.2;
+  gap: 2px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 7px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
 }
-.cr-plat-tag span:first-child { font-size: 0.7rem; }
+.cr-plat-tag span:first-child { font-size: 0.65rem; }
 .cr-plat-more {
   display: inline-flex;
   align-items: center;
-  height: 22px;
-  padding: 0 6px;
+  height: 20px;
+  padding: 0 5px;
   font-size: 0.65rem;
   background: var(--color-card-soft);
   color: var(--text-tertiary);
   border: 1px dashed var(--border-soft);
-  border-radius: 999px;
+  border-radius: 7px;
 }
 
 /* Description */
@@ -724,19 +726,7 @@ onMounted(() => {
   .podium-meta { font-size: 0.7rem; }
   .podium-btn { height: 24px; padding: 0 10px; font-size: 0.72rem; }
   /* 平板模式：标签与 ProjectCard 热门卡片对齐，一行至少 3 个 */
-  .cr-platforms { gap: 2px; }
-  .cr-plat-tag {
-    height: 10px;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 0.33rem;
-    gap: 1px;
-  }
-  .cr-plat-more {
-    height: 10px;
-    padding: 0 2px;
-    font-size: 0.33rem;
-  }
+  .cr-platforms { gap: 4px; }
 }
 @media (max-width: 480px) {
   .cr-rank-num { width: 22px; height: 22px; font-size: 0.72rem; }
@@ -744,19 +734,7 @@ onMounted(() => {
   .cr-name { font-size: 0.92rem; }
   .cr-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
   .cr-extra { display: none; }
-  .cr-platforms { gap: 2px; min-height: 10px; }
-  .cr-plat-tag {
-    height: 10px;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 0.33rem;
-    gap: 1px;
-  }
-  .cr-plat-more {
-    height: 10px;
-    padding: 0 2px;
-    font-size: 0.33rem;
-  }
+  .cr-platforms { gap: 4px; }
 }
 @media (max-width: 640px) {
   .cat-row { padding: 12px; gap: 8px; }
@@ -766,6 +744,5 @@ onMounted(() => {
   .cr-desc { font-size: 0.8rem; -webkit-line-clamp: 2; }
   .cr-extra { display: none; }
   .cr-platforms { gap: 4px; }
-  .cr-plat-tag { padding: 2px 8px; font-size: 0.68rem; }
 }
 </style>

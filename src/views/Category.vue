@@ -794,32 +794,34 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
 /* Platforms */
 .cr-platforms {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .cr-plat-tag {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  background: var(--color-card-soft);
-  color: var(--text-sec);
-  border: 1px solid var(--border-soft);
-  line-height: 1.2;
+  gap: 2px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 7px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
 }
-.cr-plat-tag span:first-child { font-size: 0.7rem; }
+.cr-plat-tag span:first-child { font-size: 0.65rem; }
 .cr-plat-more {
   display: inline-flex;
   align-items: center;
-  height: 22px;
-  padding: 0 6px;
+  height: 20px;
+  padding: 0 5px;
   font-size: 0.65rem;
   background: var(--color-card-soft);
   color: var(--text-tertiary);
   border: 1px dashed var(--border-soft);
-  border-radius: 999px;
+  border-radius: 7px;
 }
 
 /* Description */
@@ -856,46 +858,33 @@ const tabs: { key: Tab; label: string; icon: string }[] = [
   font-family: var(--font-mono);
 }
 
-/* Keep old plat-tag for compatibility with tag filtering sections */
+/* plat-tag 全局样式统一为本周下载榜风格 */
 .plat-tag {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  background: var(--color-card-soft);
-  color: var(--text-sec);
-  border: 1px solid var(--border-soft);
+  gap: 2px;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 7px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
 }
-.plat-tag span:first-child { font-size: 0.7rem; }
+.plat-tag span:first-child { font-size: 0.65rem; }
 @media (max-width: 640px) {
   .cat-row { padding: 12px; gap: 8px; }
   .cr-icon { width: 44px; height: 44px; font-size: 1.1rem; }
   .cr-name { font-size: 0.92rem; }
   .cr-desc { font-size: 0.82rem; -webkit-line-clamp: 3; }
   .cr-platforms { gap: 4px; }
-  .cr-plat-tag { padding: 2px 8px; font-size: 0.68rem; }
   .cr-meta { font-size: 0.68rem; }
   .cr-meta-date { font-size: 0.68rem; }
 }
 @media (max-width: 480px) {
   .cr-platforms { gap: 4px; }
-  .cr-plat-tag { padding: 2px 8px; font-size: 0.65rem; border-radius: 999px; }
-  .cr-plat-more { padding: 1px 6px; font-size: 0.6rem; border-radius: 999px; }
-  .aside-plats { gap: 2px; min-height: 10px; }
-  .aside-plats .plat-tag {
-    height: 10px;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 0.33rem;
-    gap: 1px;
-  }
-  .aside-plats .plat-more {
-    height: 10px;
-    padding: 0 2px;
-    font-size: 0.33rem;
-  }
+  .aside-plats { gap: 4px; min-height: 20px; }
 }
 
 /* === 分页 === */

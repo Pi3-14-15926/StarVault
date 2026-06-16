@@ -31,8 +31,12 @@ const ghProxyUrl = computed(() => {
   const url = settings.settings.ghProxyUrl || ''
   return url.endsWith('/') ? url : url + '/'
 })
+function isGitHubUrl(url: string): boolean {
+  return url.includes('github.com') || url.includes('githubusercontent.com')
+}
 function proxyUrl(url: string): string {
   if (!useGhProxy.value || !ghProxyEnabled.value) return url
+  if (!isGitHubUrl(url)) return url
   return ghProxyUrl.value + url
 }
 

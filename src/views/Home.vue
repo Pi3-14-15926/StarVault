@@ -299,16 +299,16 @@ function latestVersionText(s: Software): string {
                   </div>
                 </div>
               </div>
-              <div v-if="platformsOf(p, 6).length" class="cr-h-platforms">
+              <div v-if="platformsOf(p, 6).length" class="row-platline">
                 <span
                   v-for="pl in platformsOf(p, 6)"
                   :key="pl"
-                  :class="['cr-h-plat-tag', platformClass(pl)]"
+                  :class="['plat-tag', platformClass(pl)]"
                   :title="`支持 ${pl}`"
                 >
                   <span>{{ platformIcon(pl) }}</span>{{ pl }}
                 </span>
-                <span v-if="platformsMore(p, 6) > 0" class="cr-h-plat-more">+{{ platformsMore(p, 6) }}</span>
+                <span v-if="platformsMore(p, 6) > 0" class="plat-more">+{{ platformsMore(p, 6) }}</span>
               </div>
               <div class="cr-h-desc" :title="p.description">{{ p.description }}</div>
               <div class="cr-h-meta">
@@ -920,19 +920,20 @@ function latestVersionText(s: Software): string {
   .cat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .section { margin-top: 32px; }
-  /* 手机模式：平台标签与 ProjectCard 热门卡片同尺寸，一行至少 3 个 */
-  .row-platline { gap: 2px; min-height: 10px; }
+  /* 手机模式：平台标签与排行榜同尺寸 */
+  .row-platline { gap: 4px; min-height: 20px; }
   .row-platline .plat-tag {
-    height: 10px;
-    padding: 0 2px;
-    border-radius: 2px;
-    font-size: 0.33rem;
-    gap: 1px;
+    height: 20px;
+    padding: 0 7px;
+    border-radius: 7px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    gap: 2px;
   }
   .row-platline .plat-more {
-    height: 10px;
-    padding: 0 2px;
-    font-size: 0.33rem;
+    height: 20px;
+    padding: 0 5px;
+    font-size: 0.65rem;
   }
   /* 手机模式：缩排行/列表行，让软件名（如"LX Music 桌面版"）显示完整 */
   .panel { padding: 14px 12px; }
