@@ -1,5 +1,26 @@
 [
   {
+    "id": "mqjmld5ndf7kvj",
+    "projectId": "mqa2ifsduzlphs",
+    "version": "1.5.18",
+    "publishedAt": "2026-06-17T17:35:07Z",
+    "changelog": "- 修复三指以上触摸屏幕后会一直处于拖动画面状态的问题\r\n- 部分操作添加二次确定窗口，防止误操作\r\n- 优化上传观看记录的逻辑\r\n- 优化收藏按钮显示的逻辑\r\n- 版本信息可查看历史版本更新日志",
+    "downloadIds": [
+      "mqjmld5n0bg3ww",
+      "mqjmld5np2sqfk",
+      "mqjmld5oqmhsgv",
+      "mqjmld5ogottjj",
+      "mqjmld5o5nk8xi",
+      "mqjmld5oq8i5zj",
+      "mqjmld5o6isac9",
+      "mqjmld5ok2yne8",
+      "mqjmld5oazbtnd",
+      "mqjmld5o1xiokt",
+      "mqjmld5oecxdfp",
+      "mqjmld5o5hqtwr"
+    ]
+  },
+  {
     "id": "mqdzxe049c2rte",
     "projectId": "mqa2ifsduzlphs",
     "version": "1.5.17",
@@ -398,6 +419,24 @@
       "mqdzxfv6o7zzx9",
       "mqdzxfvfftk5kx",
       "mqdzxfvneonlmf"
+    ]
+  },
+  {
+    "id": "mqjmldl0yugbt9",
+    "projectId": "mpzjkpvzeuh3zl",
+    "version": "2.1.6",
+    "publishedAt": "2026-06-18T08:12:10Z",
+    "changelog": "- 新增高级搜索支持 (@UzawaReisaQwQ @Predidit)\r\n- 图片预览现在支持多图浏览 (@LiggMax)\r\n- 新增播放器控制层自动隐藏时间设置 (@hl1282456555 @Predidit)\r\n- 改进桌面端触摸屏播放器交互 (#722 #2224) (@Predidit)\r\n- 新增播放调试信息中的视频码率显示 (@Predidit)\r\n- 修复特定情况下弹幕开关状态无法立即生效的问题 (@Predidit)\r\n- 新增 Linux arm64 构建支持 (#721) (@Yohane-Mashiro @Predidit)\r\n- 修复 Android 平台快进手势可能导致崩溃的问题 (#2211) (@Predidit)\r\n- 调整 Android 播放渲染路径，改善播放兼容性与超分辨率性能 (@Predidit)\r\n- 其他代码结构与构建系统改进 (@LiggMax)",
+    "downloadIds": [
+      "mqjmldl0vpx57s",
+      "mqjmldl0ov843u",
+      "mqjmldl0cqukx7",
+      "mqjmldl0msvfjs",
+      "mqjmldl0z2ovwv",
+      "mqjmldl0zbqyod",
+      "mqjmldl0xxwj2x",
+      "mqjmldl0e0q925",
+      "mqjmldl03iv4jt"
     ]
   },
   {

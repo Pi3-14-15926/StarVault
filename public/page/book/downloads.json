@@ -2326,6 +2326,30 @@
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   },
   {
+    "id": "mqjml71zw3371p",
+    "versionId": "mqjml71zv6v03s",
+    "platform": "Android",
+    "filename": "legado-3.26.13-beta.27-arm64-v8a.apk",
+    "size": "16.6 MB",
+    "url": "https://github.com/HapeLee/legado-with-MD3/releases/download/3.26.13-beta.27/legado-3.26.13-beta.27-arm64-v8a.apk"
+  },
+  {
+    "id": "mqjml71z21r7gc",
+    "versionId": "mqjml71zv6v03s",
+    "platform": "Android",
+    "filename": "legado-3.26.13-beta.27-armeabi-v7a.apk",
+    "size": "16.1 MB",
+    "url": "https://github.com/HapeLee/legado-with-MD3/releases/download/3.26.13-beta.27/legado-3.26.13-beta.27-armeabi-v7a.apk"
+  },
+  {
+    "id": "mqjml71z0nlyp4",
+    "versionId": "mqjml71zv6v03s",
+    "platform": "Android",
+    "filename": "legado-3.26.13-beta.27.apk",
+    "size": "22.8 MB",
+    "url": "https://github.com/HapeLee/legado-with-MD3/releases/download/3.26.13-beta.27/legado-3.26.13-beta.27.apk"
+  },
+  {
     "id": "mqgvg794rwmlq6",
     "versionId": "mqgvg794h4tvwi",
     "platform": "Android",
@@ -3620,6 +3644,30 @@
     "url": "https://github.com/HapeLee/legado-with-MD3/releases/download/3.26.13-beta.5/legado-3.26.13-beta.5.apk",
     "downloadCount": 100,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqjml7ghyup8tz",
+    "versionId": "mqjml7ghy7ir56",
+    "platform": "Android",
+    "filename": "legado_beta_3.26.061723_release.apk",
+    "size": "23.0 MB",
+    "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.061723/legado_beta_3.26.061723_release.apk"
+  },
+  {
+    "id": "mqjml7ghzb9688",
+    "versionId": "mqjml7ghy7ir56",
+    "platform": "Android",
+    "filename": "legado_compat_3.26.061723_legacy.apk",
+    "size": "23.0 MB",
+    "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.061723/legado_compat_3.26.061723_legacy.apk"
+  },
+  {
+    "id": "mqjml7ghetctwg",
+    "versionId": "mqjml7ghy7ir56",
+    "platform": "Android",
+    "filename": "legado_plus_3.26.061723_releaseS.apk",
+    "size": "23.0 MB",
+    "url": "https://github.com/youfengknight/Legado_Max/releases/download/beta-3.26.061723/legado_plus_3.26.061723_releaseS.apk"
   },
   {
     "id": "mqdzxbpvdqryjk",

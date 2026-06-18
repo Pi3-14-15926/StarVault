@@ -1592,6 +1592,18 @@
     ]
   },
   {
+    "id": "mqjmlcnpuuxzcs",
+    "projectId": "mqdzae23et9isy",
+    "version": "12.0.0",
+    "publishedAt": "2026-06-18T02:05:44Z",
+    "changelog": "*对比 11.1.0-release\r\n基于 Salt UI 3.0 重置，改进 UI 布局\r\n新增材质页面（设置 -> 用户界面 -> 材质）\r\n新增标题栏背景样式选项（材质页面内），可选无效果、遮罩模糊（Android 12+）、渐变模糊（Android 13+）\r\n新增【实验室】歌词交错滚动效果\r\n新增迷你播放条逐字歌词支持\r\n新增从最近任务移除时终止 App 选项\r\n优化设置界面 Pro 选项卡\r\n优化更新日志到独立页面\r\n优化动态流光效果\r\n优化软件安全稳定性\r\n优化歌词界面无歌词的组件样式\r\n优化播放界面浅色流光下的前景色取色\r\n变更移除帮助与反馈页面的技术支持入口\r\n修复音乐库界面饼图文字颜色错误的问题\r\n修复一些界面上的小错误\r\n修复调用支付宝可能崩溃的问题\r\n修复逐字歌词解析中相邻字间隙时间戳的处理\r\n其他的优化和改进",
+    "downloadIds": [
+      "mqjmlcnp4yvcrv",
+      "mqjmlcnp4jqjb3",
+      "mqjmlcnpq6akis"
+    ]
+  },
+  {
     "id": "mqdzae35w61mc9",
     "projectId": "mqdzae23et9isy",
     "version": "11.1.0",

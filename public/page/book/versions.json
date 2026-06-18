@@ -610,6 +610,18 @@
     ]
   },
   {
+    "id": "mqjml71zv6v03s",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.27",
+    "publishedAt": "2026-06-17T17:05:36Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\r\n### [发布页](https://t.me/materado)\r\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\r\n\r\n### 更新内容\r\n\r\n感谢 @fansangg \r\n\r\n* fix: 界面优化\r\n* fix: 编辑替换规则时保持排序\r\n* fix：代码优化\r\n* fix：nav高度转屏过期问题\r\n* fix: 修复阅读界面交互问题\r\n* fix: 修复字体选择主题颜色\r\n* fix: 修复换源旧记录清理\r\n* fix：nav高度获取边界问题修改\r\n* fix：一些地方的Text style没有用LegadoTheme的问题\r\n* fix: 修复颜色字符串非法时 Color.parseColor 崩溃的问题\r\n* fix：阅读界面切换深浅色，底部菜单高度抖动的问题\r\n* perf：优化layoutSync逻辑\r\n* fix：翻页动画下页眉页脚信息闪烁的问题\r\n* ci: 去掉noR8自动编译，发布mapping.txt到Release附件\r\n* fix: 修复旋转屏幕后横屏双页模式不生效的问题\r\n* fix: 词典弹窗内容过长时无法滚动\r\n* fix: 补充 Volatile 保证尺寸属性的线程可见性\r\n* fix: 修复小窗模式返回全屏时尺寸问题",
+    "downloadIds": [
+      "mqjml71zw3371p",
+      "mqjml71z21r7gc",
+      "mqjml71z0nlyp4"
+    ]
+  },
+  {
     "id": "mqgvg794h4tvwi",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.26",
@@ -937,6 +949,18 @@
       "mqdzxbeorhn80l",
       "mqdzxbeywyr1d6",
       "mqdzxbf7mthior"
+    ]
+  },
+  {
+    "id": "mqjml7ghy7ir56",
+    "projectId": "mpwp1hvpsn5ffl",
+    "version": "beta-3.26.061723",
+    "publishedAt": "2026-06-17T15:43:18Z",
+    "changelog": "### 更新内容\n* fix：普通朗读模式下按返回可以关闭朗读\n* 优化悬浮播放关闭按钮\n* 页眉和页脚上下边距最大值从100dp改为200dp\n* 封装Compose dialog\n* 优化与封装Compose的AppConfirmDialog的dialog\n* fix：调试模式改为调试工具\n* 文档：补充调试专属日志设计说明\n* 文档：修正调试专属日志设计说明中的 putNotSave 描述\n* 文档：补充调试专属日志功能实现计划\n* 调试日志：新增调试专属日志模式的 PreferKey 常量\n* 调试日志：新增 AppConfig.debugLogOnlyCategories 测试\n* 调试日志：回滚 AppConfig.debugLogOnlyCategories 测试\n* 调试日志：新增 AppConfig 的专属开关和分类配置\n* 完善调试专属日志分流与配置入口\n* feat：离线缓存界面增加文件大小，字典规则界面增加快速滚动条\n* fix：多个界面默认显示快速滚动条\n* fix：去除300ms防抖延迟造成文字上下跳动，选择恢复文件界面优化按钮颜色\n* fix：选择恢复内容界面优化\n\n",
+    "downloadIds": [
+      "mqjml7ghyup8tz",
+      "mqjml7ghzb9688",
+      "mqjml7ghetctwg"
     ]
   },
   {

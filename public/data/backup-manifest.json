@@ -123,6 +123,28 @@
     {
       "category": "阅读",
       "project": "阅读_MD3",
+      "versionDir": "阅读/阅读_MD3/2026-06-17_3.26.13-beta.27",
+      "files": [
+        {
+          "name": "legado-3.26.13-beta.27-arm64-v8a.apk",
+          "size": 17406361.6,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.27-armeabi-v7a.apk",
+          "size": 16882073.6,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.27.apk",
+          "size": 23907532.8,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27.apk"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_MD3",
       "versionDir": "阅读/阅读_MD3/2026-06-15_3.26.13-beta.26",
       "files": [
         {
@@ -159,38 +181,23 @@
     },
     {
       "category": "阅读",
-      "project": "阅读_MD3",
-      "versionDir": "阅读/阅读_MD3/2026-06-14_3.26.13-beta.25",
+      "project": "阅读_Max",
+      "versionDir": "阅读/阅读_Max/2026-06-17_beta-3.26.061723",
       "files": [
         {
-          "name": "legado-3.26.13-beta.25-arm64-v8a.apk",
-          "size": 17406361.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25-arm64-v8a.apk"
+          "name": "legado_beta_3.26.061723_release.apk",
+          "size": 24117248,
+          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-17_beta-3.26.061723/legado_beta_3.26.061723_release.apk"
         },
         {
-          "name": "legado-3.26.13-beta.25-armeabi-v7a.apk",
-          "size": 16882073.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25-armeabi-v7a.apk"
+          "name": "legado_compat_3.26.061723_legacy.apk",
+          "size": 24117248,
+          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-17_beta-3.26.061723/legado_compat_3.26.061723_legacy.apk"
         },
         {
-          "name": "legado-3.26.13-beta.25-noR8-arm64-v8a.apk",
-          "size": 44983910.4,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25-noR8-arm64-v8a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.25-noR8-armeabi-v7a.apk",
-          "size": 44564480,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25-noR8-armeabi-v7a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.25-noR8.apk",
-          "size": 51589939.2,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25-noR8.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.25.apk",
-          "size": 23907532.8,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-14_3.26.13-beta.25/legado-3.26.13-beta.25.apk"
+          "name": "legado_plus_3.26.061723_releaseS.apk",
+          "size": 24117248,
+          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-17_beta-3.26.061723/legado_plus_3.26.061723_releaseS.apk"
         }
       ]
     },
@@ -213,28 +220,6 @@
           "name": "legado_plus_3.26.061408_releaseS.apk",
           "size": 24117248,
           "url": "/SoftwareHub/阅读/阅读_Max/2026-06-14_beta-3.26.061408/legado_plus_3.26.061408_releaseS.apk"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
-      "project": "阅读_Max",
-      "versionDir": "阅读/阅读_Max/2026-06-14_beta-3.26.061407",
-      "files": [
-        {
-          "name": "legado_beta_3.26.061407_release.apk",
-          "size": 24117248,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-14_beta-3.26.061407/legado_beta_3.26.061407_release.apk"
-        },
-        {
-          "name": "legado_compat_3.26.061407_legacy.apk",
-          "size": 24117248,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-14_beta-3.26.061407/legado_compat_3.26.061407_legacy.apk"
-        },
-        {
-          "name": "legado_plus_3.26.061407_releaseS.apk",
-          "size": 24117248,
-          "url": "/SoftwareHub/阅读/阅读_Max/2026-06-14_beta-3.26.061407/legado_plus_3.26.061407_releaseS.apk"
         }
       ]
     },
@@ -1242,6 +1227,28 @@
     {
       "category": "音乐",
       "project": "SaltPlayer_椒盐音乐",
+      "versionDir": "音乐/SaltPlayer_椒盐音乐/2026-06-18_12.0.0",
+      "files": [
+        {
+          "name": "12.0.0-2026061801-moriafly-arm64-v8a.apk",
+          "size": 11639193.6,
+          "url": "/SoftwareHub/音乐/SaltPlayer_椒盐音乐/2026-06-18_12.0.0/12.0.0-2026061801-moriafly-arm64-v8a.apk"
+        },
+        {
+          "name": "12.0.0-2026061801-moriafly-armeabi-v7a.apk",
+          "size": 12268339.2,
+          "url": "/SoftwareHub/音乐/SaltPlayer_椒盐音乐/2026-06-18_12.0.0/12.0.0-2026061801-moriafly-armeabi-v7a.apk"
+        },
+        {
+          "name": "12.0.0-2026061801-official-arm64-v8a.apk",
+          "size": 11219763.2,
+          "url": "/SoftwareHub/音乐/SaltPlayer_椒盐音乐/2026-06-18_12.0.0/12.0.0-2026061801-official-arm64-v8a.apk"
+        }
+      ]
+    },
+    {
+      "category": "音乐",
+      "project": "SaltPlayer_椒盐音乐",
       "versionDir": "音乐/SaltPlayer_椒盐音乐/2026-03-17_11.1.0",
       "files": [
         {
@@ -1262,19 +1269,69 @@
       ]
     },
     {
-      "category": "音乐",
-      "project": "SaltPlayer_椒盐音乐",
-      "versionDir": "音乐/SaltPlayer_椒盐音乐/2025-12-31_11.0.4",
+      "category": "动漫",
+      "project": "AniCh",
+      "versionDir": "动漫/AniCh/2026-06-17_1.5.18",
       "files": [
         {
-          "name": "11.0.4-2025123102-moriafly-arm64-v8a.apk",
-          "size": 11534336,
-          "url": "/SoftwareHub/音乐/SaltPlayer_椒盐音乐/2025-12-31_11.0.4/11.0.4-2025123102-moriafly-arm64-v8a.apk"
+          "name": "anich-android-arm64-v8a-1.5.18.apk",
+          "size": 25165824,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-android-arm64-v8a-1.5.18.apk"
         },
         {
-          "name": "11.0.4-2025123102-moriafly-armeabi-v7a.apk",
-          "size": 12163481.6,
-          "url": "/SoftwareHub/音乐/SaltPlayer_椒盐音乐/2025-12-31_11.0.4/11.0.4-2025123102-moriafly-armeabi-v7a.apk"
+          "name": "anich-android-armeabi-v7a-1.5.18.apk",
+          "size": 23697817.6,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-android-armeabi-v7a-1.5.18.apk"
+        },
+        {
+          "name": "anich-android-universal-1.5.18.apk",
+          "size": 70149734.4,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-android-universal-1.5.18.apk"
+        },
+        {
+          "name": "anich-android-x86_64-1.5.18.apk",
+          "size": 25690112,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-android-x86_64-1.5.18.apk"
+        },
+        {
+          "name": "anich-ios-no_sign-1.5.18.ipa",
+          "size": 41104179.2,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-ios-no_sign-1.5.18.ipa"
+        },
+        {
+          "name": "anich-linux-1.5.18.deb",
+          "size": 22229811.2,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-linux-1.5.18.deb"
+        },
+        {
+          "name": "anich-linux-1.5.18.zip",
+          "size": 29779558.4,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-linux-1.5.18.zip"
+        },
+        {
+          "name": "anich-macos-1.5.18.dmg",
+          "size": 55993958.4,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-macos-1.5.18.dmg"
+        },
+        {
+          "name": "anich-macos-1.5.18.zip",
+          "size": 54630809.6,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-macos-1.5.18.zip"
+        },
+        {
+          "name": "anich-ohos-unsigned-1.5.18.hap",
+          "size": 72666316.8,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-ohos-unsigned-1.5.18.hap"
+        },
+        {
+          "name": "anich-windows-1.5.18.zip",
+          "size": 48968499.2,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-windows-1.5.18.zip"
+        },
+        {
+          "name": "anich-windows-installer-1.5.18.exe",
+          "size": 37748736,
+          "url": "/SoftwareHub/动漫/AniCh/2026-06-17_1.5.18/anich-windows-installer-1.5.18.exe"
         }
       ]
     },
@@ -1347,63 +1404,53 @@
     },
     {
       "category": "动漫",
-      "project": "AniCh",
-      "versionDir": "动漫/AniCh/2026-05-30_1.5.16",
+      "project": "Kazumi",
+      "versionDir": "动漫/Kazumi/2026-06-18_2.1.6",
       "files": [
         {
-          "name": "anich-android-arm64-v8a-1.5.16.apk",
-          "size": 25165824,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-android-arm64-v8a-1.5.16.apk"
+          "name": "Kazumi_android_2.1.6.apk",
+          "size": 30828134.4,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_android_2.1.6.apk"
         },
         {
-          "name": "anich-android-armeabi-v7a-1.5.16.apk",
-          "size": 23592960,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-android-armeabi-v7a-1.5.16.apk"
+          "name": "Kazumi_ios_2.1.6_no_sign.ipa",
+          "size": 28311552,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_ios_2.1.6_no_sign.ipa"
         },
         {
-          "name": "anich-android-universal-1.5.16.apk",
-          "size": 69940019.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-android-universal-1.5.16.apk"
+          "name": "Kazumi_linux_2.1.6_amd64.deb",
+          "size": 25060966.4,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_linux_2.1.6_amd64.deb"
         },
         {
-          "name": "anich-android-x86_64-1.5.16.apk",
-          "size": 25585254.4,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-android-x86_64-1.5.16.apk"
+          "name": "Kazumi_linux_2.1.6_amd64.tar.gz",
+          "size": 29884416,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_linux_2.1.6_amd64.tar.gz"
         },
         {
-          "name": "anich-ios-no_sign-1.5.16.ipa",
-          "size": 40999321.6,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-ios-no_sign-1.5.16.ipa"
+          "name": "Kazumi_linux_2.1.6_arm64.deb",
+          "size": 24326963.2,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_linux_2.1.6_arm64.deb"
         },
         {
-          "name": "anich-linux-1.5.16.deb",
-          "size": 22229811.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-linux-1.5.16.deb"
+          "name": "Kazumi_linux_2.1.6_arm64.tar.gz",
+          "size": 28940697.6,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_linux_2.1.6_arm64.tar.gz"
         },
         {
-          "name": "anich-linux-1.5.16.zip",
-          "size": 29674700.8,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-linux-1.5.16.zip"
+          "name": "Kazumi_macos_2.1.6.dmg",
+          "size": 53372518.4,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_macos_2.1.6.dmg"
         },
         {
-          "name": "anich-macos-1.5.16.dmg",
-          "size": 55784243.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-macos-1.5.16.dmg"
+          "name": "Kazumi_windows_2.1.6.msix",
+          "size": 46347059.2,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_windows_2.1.6.msix"
         },
         {
-          "name": "anich-macos-1.5.16.zip",
-          "size": 54525952,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-macos-1.5.16.zip"
-        },
-        {
-          "name": "anich-windows-1.5.16.zip",
-          "size": 48968499.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-windows-1.5.16.zip"
-        },
-        {
-          "name": "anich-windows-installer-1.5.16.exe",
-          "size": 37748736,
-          "url": "/SoftwareHub/动漫/AniCh/2026-05-30_1.5.16/anich-windows-installer-1.5.16.exe"
+          "name": "Kazumi_windows_2.1.6.zip",
+          "size": 41418752,
+          "url": "/SoftwareHub/动漫/Kazumi/2026-06-18_2.1.6/Kazumi_windows_2.1.6.zip"
         }
       ]
     },
@@ -1446,48 +1493,6 @@
           "name": "Kazumi_windows_2.1.5.zip",
           "size": 41209036.8,
           "url": "/SoftwareHub/动漫/Kazumi/2026-06-11_2.1.5/Kazumi_windows_2.1.5.zip"
-        }
-      ]
-    },
-    {
-      "category": "动漫",
-      "project": "Kazumi",
-      "versionDir": "动漫/Kazumi/2026-06-07_2.1.4",
-      "files": [
-        {
-          "name": "Kazumi_android_2.1.4.apk",
-          "size": 30618419.2,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_android_2.1.4.apk"
-        },
-        {
-          "name": "Kazumi_ios_2.1.4_no_sign.ipa",
-          "size": 27996979.2,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_ios_2.1.4_no_sign.ipa"
-        },
-        {
-          "name": "Kazumi_linux_2.1.4_amd64.deb",
-          "size": 24851251.2,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_linux_2.1.4_amd64.deb"
-        },
-        {
-          "name": "Kazumi_linux_2.1.4_amd64.tar.gz",
-          "size": 29569843.2,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_linux_2.1.4_amd64.tar.gz"
-        },
-        {
-          "name": "Kazumi_macos_2.1.4.dmg",
-          "size": 52848230.4,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_macos_2.1.4.dmg"
-        },
-        {
-          "name": "Kazumi_windows_2.1.4.msix",
-          "size": 46032486.4,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_windows_2.1.4.msix"
-        },
-        {
-          "name": "Kazumi_windows_2.1.4.zip",
-          "size": 41209036.8,
-          "url": "/SoftwareHub/动漫/Kazumi/2026-06-07_2.1.4/Kazumi_windows_2.1.4.zip"
         }
       ]
     },
@@ -1878,5 +1883,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-06-17T18:03:56.061Z"
+  "updatedAt": "2026-06-18T18:47:40.747Z"
 }

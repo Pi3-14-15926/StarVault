@@ -1,5 +1,101 @@
 [
   {
+    "id": "mqjmld5n0bg3ww",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Android",
+    "filename": "anich-android-arm64-v8a-1.5.18.apk",
+    "size": "24.0 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-android-arm64-v8a-1.5.18.apk"
+  },
+  {
+    "id": "mqjmld5np2sqfk",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Android",
+    "filename": "anich-android-armeabi-v7a-1.5.18.apk",
+    "size": "22.6 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-android-armeabi-v7a-1.5.18.apk"
+  },
+  {
+    "id": "mqjmld5oqmhsgv",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Android",
+    "filename": "anich-android-universal-1.5.18.apk",
+    "size": "66.9 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-android-universal-1.5.18.apk"
+  },
+  {
+    "id": "mqjmld5ogottjj",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Android",
+    "filename": "anich-android-x86_64-1.5.18.apk",
+    "size": "24.5 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-android-x86_64-1.5.18.apk"
+  },
+  {
+    "id": "mqjmld5o5nk8xi",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Other",
+    "filename": "anich-ios-no_sign-1.5.18.ipa",
+    "size": "39.2 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-ios-no_sign-1.5.18.ipa"
+  },
+  {
+    "id": "mqjmld5oq8i5zj",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Linux",
+    "filename": "anich-linux-1.5.18.deb",
+    "size": "21.2 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-linux-1.5.18.deb"
+  },
+  {
+    "id": "mqjmld5o6isac9",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Linux",
+    "filename": "anich-linux-1.5.18.zip",
+    "size": "28.4 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-linux-1.5.18.zip"
+  },
+  {
+    "id": "mqjmld5ok2yne8",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "MacOS",
+    "filename": "anich-macos-1.5.18.dmg",
+    "size": "53.4 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-macos-1.5.18.dmg"
+  },
+  {
+    "id": "mqjmld5oazbtnd",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "MacOS",
+    "filename": "anich-macos-1.5.18.zip",
+    "size": "52.1 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-macos-1.5.18.zip"
+  },
+  {
+    "id": "mqjmld5o1xiokt",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Other",
+    "filename": "anich-ohos-unsigned-1.5.18.hap",
+    "size": "69.3 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-ohos-unsigned-1.5.18.hap"
+  },
+  {
+    "id": "mqjmld5oecxdfp",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Windows",
+    "filename": "anich-windows-1.5.18.zip",
+    "size": "46.7 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-windows-1.5.18.zip"
+  },
+  {
+    "id": "mqjmld5o5hqtwr",
+    "versionId": "mqjmld5ndf7kvj",
+    "platform": "Windows",
+    "filename": "anich-windows-installer-1.5.18.exe",
+    "size": "36.0 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.18/anich-windows-installer-1.5.18.exe"
+  },
+  {
     "id": "mqdzxe0n9nekhx",
     "versionId": "mqdzxe049c2rte",
     "platform": "Android",
@@ -2208,6 +2304,78 @@
     "url": "https://github.com/Sle2p/AniCh/releases/download/1.4.1/anich-windows-installer-1.4.1.exe",
     "downloadCount": 956,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqjmldl0vpx57s",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Android",
+    "filename": "Kazumi_android_2.1.6.apk",
+    "size": "29.4 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_android_2.1.6.apk"
+  },
+  {
+    "id": "mqjmldl0ov843u",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Other",
+    "filename": "Kazumi_ios_2.1.6_no_sign.ipa",
+    "size": "27.0 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_ios_2.1.6_no_sign.ipa"
+  },
+  {
+    "id": "mqjmldl0cqukx7",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Linux",
+    "filename": "Kazumi_linux_2.1.6_amd64.deb",
+    "size": "23.9 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_linux_2.1.6_amd64.deb"
+  },
+  {
+    "id": "mqjmldl0msvfjs",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Linux",
+    "filename": "Kazumi_linux_2.1.6_amd64.tar.gz",
+    "size": "28.5 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_linux_2.1.6_amd64.tar.gz"
+  },
+  {
+    "id": "mqjmldl0z2ovwv",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Linux",
+    "filename": "Kazumi_linux_2.1.6_arm64.deb",
+    "size": "23.2 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_linux_2.1.6_arm64.deb"
+  },
+  {
+    "id": "mqjmldl0zbqyod",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Linux",
+    "filename": "Kazumi_linux_2.1.6_arm64.tar.gz",
+    "size": "27.6 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_linux_2.1.6_arm64.tar.gz"
+  },
+  {
+    "id": "mqjmldl0xxwj2x",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "MacOS",
+    "filename": "Kazumi_macos_2.1.6.dmg",
+    "size": "50.9 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_macos_2.1.6.dmg"
+  },
+  {
+    "id": "mqjmldl0e0q925",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Windows",
+    "filename": "Kazumi_windows_2.1.6.msix",
+    "size": "44.2 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_windows_2.1.6.msix"
+  },
+  {
+    "id": "mqjmldl03iv4jt",
+    "versionId": "mqjmldl0yugbt9",
+    "platform": "Windows",
+    "filename": "Kazumi_windows_2.1.6.zip",
+    "size": "39.5 MB",
+    "url": "https://github.com/Predidit/Kazumi/releases/download/2.1.6/Kazumi_windows_2.1.6.zip"
   },
   {
     "id": "mqdzxgbjmuyn70",
