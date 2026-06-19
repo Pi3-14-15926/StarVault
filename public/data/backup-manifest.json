@@ -123,6 +123,33 @@
     {
       "category": "阅读",
       "project": "阅读_MD3",
+      "versionDir": "阅读/阅读_MD3/2026-06-18_3.26.13-beta.28",
+      "files": [
+        {
+          "name": "legado-3.26.13-beta.28-arm64-v8a.apk",
+          "size": 17406361.6,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.28-armeabi-v7a.apk",
+          "size": 16882073.6,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.13-beta.28.apk",
+          "size": 23907532.8,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28.apk"
+        },
+        {
+          "name": "mapping.txt",
+          "size": 217474662.4,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/mapping.txt"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_MD3",
       "versionDir": "阅读/阅读_MD3/2026-06-17_3.26.13-beta.27",
       "files": [
         {
@@ -139,43 +166,6 @@
           "name": "legado-3.26.13-beta.27.apk",
           "size": 23907532.8,
           "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27.apk"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
-      "project": "阅读_MD3",
-      "versionDir": "阅读/阅读_MD3/2026-06-15_3.26.13-beta.26",
-      "files": [
-        {
-          "name": "legado-3.26.13-beta.26-arm64-v8a.apk",
-          "size": 17406361.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26-arm64-v8a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.26-armeabi-v7a.apk",
-          "size": 16882073.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26-armeabi-v7a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.26-noR8-arm64-v8a.apk",
-          "size": 44983910.4,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26-noR8-arm64-v8a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.26-noR8-armeabi-v7a.apk",
-          "size": 44564480,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26-noR8-armeabi-v7a.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.26-noR8.apk",
-          "size": 51589939.2,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26-noR8.apk"
-        },
-        {
-          "name": "legado-3.26.13-beta.26.apk",
-          "size": 23907532.8,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-15_3.26.13-beta.26/legado-3.26.13-beta.26.apk"
         }
       ]
     },
@@ -368,6 +358,163 @@
     {
       "category": "阅读",
       "project": "Readest",
+      "versionDir": "阅读/Readest/2026-06-19_v0.11.10",
+      "files": [
+        {
+          "name": "latest.json",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/latest.json"
+        },
+        {
+          "name": "Readest-0.11.10-1.aarch64.rpm",
+          "size": 38692454.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest-0.11.10-1.aarch64.rpm"
+        },
+        {
+          "name": "Readest-0.11.10-1.aarch64.rpm.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest-0.11.10-1.aarch64.rpm.sig"
+        },
+        {
+          "name": "Readest-0.11.10-1.koplugin.zip",
+          "size": 209715.2,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest-0.11.10-1.koplugin.zip"
+        },
+        {
+          "name": "Readest-0.11.10-1.x86_64.rpm",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest-0.11.10-1.x86_64.rpm"
+        },
+        {
+          "name": "Readest-0.11.10-1.x86_64.rpm.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest-0.11.10-1.x86_64.rpm.sig"
+        },
+        {
+          "name": "Readest_0.11.10_aarch64.AppImage",
+          "size": 143130624,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_aarch64.AppImage"
+        },
+        {
+          "name": "Readest_0.11.10_aarch64.AppImage.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_aarch64.AppImage.sig"
+        },
+        {
+          "name": "Readest_0.11.10_amd64.AppImage",
+          "size": 151938662.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_amd64.AppImage"
+        },
+        {
+          "name": "Readest_0.11.10_amd64.AppImage.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_amd64.AppImage.sig"
+        },
+        {
+          "name": "Readest_0.11.10_amd64.deb",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_amd64.deb"
+        },
+        {
+          "name": "Readest_0.11.10_amd64.deb.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_amd64.deb.sig"
+        },
+        {
+          "name": "Readest_0.11.10_arm64-portable.exe",
+          "size": 56413388.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64-portable.exe"
+        },
+        {
+          "name": "Readest_0.11.10_arm64-portable.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64-portable.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.10_arm64-setup.exe",
+          "size": 30723276.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64-setup.exe"
+        },
+        {
+          "name": "Readest_0.11.10_arm64-setup.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64-setup.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.10_arm64.apk",
+          "size": 66794291.2,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64.apk"
+        },
+        {
+          "name": "Readest_0.11.10_arm64.apk.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64.apk.sig"
+        },
+        {
+          "name": "Readest_0.11.10_arm64.deb",
+          "size": 38692454.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64.deb"
+        },
+        {
+          "name": "Readest_0.11.10_arm64.deb.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_arm64.deb.sig"
+        },
+        {
+          "name": "Readest_0.11.10_universal.apk",
+          "size": 243164774.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_universal.apk"
+        },
+        {
+          "name": "Readest_0.11.10_universal.apk.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_universal.apk.sig"
+        },
+        {
+          "name": "Readest_0.11.10_universal.dmg",
+          "size": 74029465.6,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_universal.dmg"
+        },
+        {
+          "name": "Readest_0.11.10_x64-portable.exe",
+          "size": 64172851.2,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_x64-portable.exe"
+        },
+        {
+          "name": "Readest_0.11.10_x64-portable.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_x64-portable.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.10_x64-setup.exe",
+          "size": 31981568,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_x64-setup.exe"
+        },
+        {
+          "name": "Readest_0.11.10_x64-setup.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_0.11.10_x64-setup.exe.sig"
+        },
+        {
+          "name": "Readest_universal.app.tar.gz",
+          "size": 73400320,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_universal.app.tar.gz"
+        },
+        {
+          "name": "Readest_universal.app.tar.gz.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/Readest_universal.app.tar.gz.sig"
+        },
+        {
+          "name": "release-notes.json",
+          "size": 104857.6,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/release-notes.json"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "Readest",
       "versionDir": "阅读/Readest/2026-06-02_v0.11.4",
       "files": [
         {
@@ -519,163 +666,6 @@
           "name": "release-notes.json",
           "size": 104857.6,
           "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/release-notes.json"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
-      "project": "Readest",
-      "versionDir": "阅读/Readest/2026-05-30_v0.11.2",
-      "files": [
-        {
-          "name": "latest.json",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/latest.json"
-        },
-        {
-          "name": "Readest-0.11.2-1.aarch64.rpm",
-          "size": 37224448,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest-0.11.2-1.aarch64.rpm"
-        },
-        {
-          "name": "Readest-0.11.2-1.aarch64.rpm.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest-0.11.2-1.aarch64.rpm.sig"
-        },
-        {
-          "name": "Readest-0.11.2-1.koplugin.zip",
-          "size": 209715.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest-0.11.2-1.koplugin.zip"
-        },
-        {
-          "name": "Readest-0.11.2-1.x86_64.rpm",
-          "size": 37119590.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest-0.11.2-1.x86_64.rpm"
-        },
-        {
-          "name": "Readest-0.11.2-1.x86_64.rpm.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest-0.11.2-1.x86_64.rpm.sig"
-        },
-        {
-          "name": "Readest_0.11.2_aarch64.AppImage",
-          "size": 157181542.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_aarch64.AppImage"
-        },
-        {
-          "name": "Readest_0.11.2_aarch64.AppImage.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_aarch64.AppImage.sig"
-        },
-        {
-          "name": "Readest_0.11.2_amd64.AppImage",
-          "size": 150680371.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_amd64.AppImage"
-        },
-        {
-          "name": "Readest_0.11.2_amd64.AppImage.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_amd64.AppImage.sig"
-        },
-        {
-          "name": "Readest_0.11.2_amd64.deb",
-          "size": 37119590.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_amd64.deb"
-        },
-        {
-          "name": "Readest_0.11.2_amd64.deb.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_amd64.deb.sig"
-        },
-        {
-          "name": "Readest_0.11.2_arm64-portable.exe",
-          "size": 54525952,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64-portable.exe"
-        },
-        {
-          "name": "Readest_0.11.2_arm64-portable.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64-portable.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.2_arm64-setup.exe",
-          "size": 29989273.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64-setup.exe"
-        },
-        {
-          "name": "Readest_0.11.2_arm64-setup.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64-setup.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.2_arm64.apk",
-          "size": 64697139.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64.apk"
-        },
-        {
-          "name": "Readest_0.11.2_arm64.apk.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64.apk.sig"
-        },
-        {
-          "name": "Readest_0.11.2_arm64.deb",
-          "size": 37224448,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64.deb"
-        },
-        {
-          "name": "Readest_0.11.2_arm64.deb.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_arm64.deb.sig"
-        },
-        {
-          "name": "Readest_0.11.2_universal.apk",
-          "size": 235300454.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_universal.apk"
-        },
-        {
-          "name": "Readest_0.11.2_universal.apk.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_universal.apk.sig"
-        },
-        {
-          "name": "Readest_0.11.2_universal.dmg",
-          "size": 71617740.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_universal.dmg"
-        },
-        {
-          "name": "Readest_0.11.2_x64-portable.exe",
-          "size": 62285414.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_x64-portable.exe"
-        },
-        {
-          "name": "Readest_0.11.2_x64-portable.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_x64-portable.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.2_x64-setup.exe",
-          "size": 31247564.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_x64-setup.exe"
-        },
-        {
-          "name": "Readest_0.11.2_x64-setup.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_0.11.2_x64-setup.exe.sig"
-        },
-        {
-          "name": "Readest_universal.app.tar.gz",
-          "size": 70988595.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_universal.app.tar.gz"
-        },
-        {
-          "name": "Readest_universal.app.tar.gz.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/Readest_universal.app.tar.gz.sig"
-        },
-        {
-          "name": "release-notes.json",
-          "size": 104857.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-05-30_v0.11.2/release-notes.json"
         }
       ]
     },
@@ -1883,5 +1873,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-06-18T18:47:40.747Z"
+  "updatedAt": "2026-06-19T18:44:41.081Z"
 }
