@@ -8,6 +8,7 @@ import { useSettingStore } from '../../store/settings'
 import { syncAllGitHub, getSoftwareVersions } from '../../utils/api'
 import { triggerSyncBackup, getRepoInfo } from '../../utils/githubRepo'
 import { commitAllData } from '../../utils/githubRepo'
+import { listIcons } from '../../utils/iconsApi'
 import { DEFAULT_SETTINGS } from '../../defaults'
 import { getToken } from '../../utils/auth'
 import * as api from '../../utils/api'
@@ -51,6 +52,14 @@ const customCount = computed(() => projects.software.filter((p) => p.sourceType 
 const totalVersions = computed(() =>
   projects.software.reduce((sum, p) => sum + getSoftwareVersions(p.id).length, 0),
 )
+const iconCount = ref(0)
+
+async function loadIconCount() {
+  try {
+    const r = await listIcons()
+    if (!r.error) iconCount.value = r.items.length
+  } catch {}
+}
 
 async function doSync() {
   syncing.value = true
@@ -167,8 +176,9 @@ const stats = computed(() => [
     color: 'purple',
     icon: '🔗',
   },
-  { label: '页面总数', value: categories.categories.length, desc: '用于分类聚合', color: 'green', icon: '📂' },
+  { label: '页面总数', value: categories.categories.length, desc: '所有页面累计', color: 'green', icon: '📂' },
   { label: '版本总数', value: totalVersions.value, desc: '所有项目累计', color: 'pink', icon: '🚀' },
+  { label: '图标总数', value: iconCount.value, desc: '所有图标累计', color: 'blue', icon: '🖼️' },
 ])
 
 /* ============== 导入导出 ============== */
@@ -194,6 +204,7 @@ const uploadSettingsSaving = ref(false)
 onMounted(() => {
   const r = getRepoInfo()
   currentRepo.value = `${r.owner}/${r.repo}`
+  loadIconCount()
 })
 
 function exportData() {
