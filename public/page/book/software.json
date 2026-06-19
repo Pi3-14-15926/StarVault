@@ -9,14 +9,13 @@
     "featured": false,
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 259,
+    "stars": 267,
     "forks": 12,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzx80hhogwvh",
-    "latestUpdateTime": "2026-05-07T05:24:16Z",
-    "categorySlug": "book"
+    "latestUpdateTime": "2026-05-07T05:24:16Z"
   },
   {
     "id": "mqdordihsc5rxn",
@@ -25,13 +24,12 @@
     "name": "Anx-reader",
     "description": "它拥有强大的AI功能,支持多种电子书格式,让阅读变得更智能、更专注。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/anx-reader.webp",
-    "categorySlug": "book",
     "featured": false,
     "githubRepo": "anxcye/anx-reader",
     "githubUrl": "https://github.com/anxcye/anx-reader",
     "latestUpdateTime": "2025-11-01T13:17:04Z",
-    "stars": 8329,
-    "forks": 563,
+    "stars": 8345,
+    "forks": 564,
     "latestVersionId": "mqdzx94ic2xzm0"
   },
   {
@@ -44,14 +42,13 @@
     "featured": false,
     "githubRepo": "skybbk1001/legadoT",
     "githubUrl": "https://github.com/skybbk1001/legadoT",
-    "stars": 43,
+    "stars": 47,
     "forks": 13,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzx9wjw77iny",
-    "latestUpdateTime": "2026-06-06T13:27:18Z",
-    "categorySlug": "book"
+    "latestUpdateTime": "2026-06-06T13:27:18Z"
   },
   {
     "id": "mpwouieuddbq2d",
@@ -63,15 +60,14 @@
     "featured": false,
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4498,
-    "forks": 460,
+    "stars": 4579,
+    "forks": 476,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxbdokth5o5",
-    "latestUpdateTime": "2026-05-27T16:37:37Z",
-    "latestVersion": "3.26.13-beta.22",
-    "categorySlug": "book"
+    "latestUpdateTime": "2026-06-17T17:05:36Z",
+    "latestVersion": "3.26.13-beta.27"
   },
   {
     "id": "mpwp1hvpsn5ffl",
@@ -83,14 +79,14 @@
     "featured": false,
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 185,
-    "forks": 29,
+    "stars": 214,
+    "forks": 30,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxbsj4f5axz",
-    "latestUpdateTime": "2026-06-04T15:18:17Z",
-    "categorySlug": "book"
+    "latestUpdateTime": "2026-06-17T15:43:18Z",
+    "latestVersion": "beta-3.26.061723"
   },
   {
     "id": "mq1yoxoecx1loi",
@@ -105,8 +101,7 @@
     "latestUpdateTime": "2026-05-24T00:00:00.000Z",
     "stars": 46893,
     "forks": 5717,
-    "latestVersionId": "mqei13n3189p82",
-    "categorySlug": "book"
+    "latestVersionId": "mqei13n3189p82"
   },
   {
     "id": "mpwoyw5uynpmko",
@@ -118,15 +113,14 @@
     "featured": false,
     "githubRepo": "LegadoTeam/Legado-Tauri-Release",
     "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
-    "stars": 179,
-    "forks": 15,
+    "stars": 177,
+    "forks": 14,
     "platforms": [
       "Windows",
       "Android"
     ],
     "latestVersionId": "mqdzxd02ytw8go",
-    "latestUpdateTime": "2026-05-27T15:09:57Z",
-    "categorySlug": "book"
+    "latestUpdateTime": "2026-05-27T15:09:57Z"
   },
   {
     "id": "mpwomjebv153ry",
@@ -138,14 +132,13 @@
     "featured": false,
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1766,
-    "forks": 285,
+    "stars": 1779,
+    "forks": 289,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxdaw5dxjry",
-    "latestUpdateTime": "2025-11-16T14:19:20Z",
-    "categorySlug": "book"
+    "latestUpdateTime": "2025-11-16T14:19:20Z"
   },
   {
     "id": "mqe091nl2j14ej",
@@ -154,13 +147,12 @@
     "name": "Readest",
     "description": "Readest是一款现代、功能丰富的电子书阅读器,专为狂热读者设计,提供无缝的跨平台访问、强大的工具和直观的界面,提升您的阅读体验。",
     "logo": "https://avatars.githubusercontent.com/u/190965649?v=4",
-    "categorySlug": "book",
     "featured": false,
     "githubRepo": "readest/readest",
     "githubUrl": "https://github.com/readest/readest",
     "latestUpdateTime": "2025-10-17T16:06:48Z",
-    "stars": 21496,
-    "forks": 1267,
+    "stars": 21575,
+    "forks": 1273,
     "latestVersionId": "mqe099q50edkdy"
   }
 ]

@@ -1415,6 +1415,195 @@
     ]
   },
   {
+    "id": "mqdzbe8t0tqs3z",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.6",
+    "publishedAt": "2026-05-29T04:13:14Z",
+    "changelog": "1、新增MV功能，支持搜索MV、在线播放MV、下载MV\r\n2、修复小狗音乐排行榜播放不了的问题\r\n3、新建歌单和本地音乐页面排序新增：根据歌手排序\r\n4、新增功能：桌面歌词（更多设置页面可以开启）\r\n5、完善重启APP恢复上次播放记录功能，包含上次播放时长\r\n6、优化一下APP播放遇到错误跳转下一曲逻辑\r\n7、优化部分页面底部歌曲被播放器挡住问题\r\n8、播放器页更多设置页面新增：歌词延迟校准\r\n9、优化本地音乐扫描速度，比之前快数倍\r\n10、优化音乐播放速度\r\n11、更多设置新增：下载同名文件是否覆盖，默认开启覆盖",
+    "downloadIds": [
+      "mqdzbe8wic7i7e",
+      "mqdzbe92o8w63h",
+      "mqdzbe96k1wsqn",
+      "mqdzbe9alrb5il",
+      "mqdzbe9fwmiaht"
+    ]
+  },
+  {
+    "id": "mqdzbe9j5by3xy",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.5",
+    "publishedAt": "2026-04-22T04:23:49Z",
+    "changelog": "1、解锁kw线路全景声、母带音质\r\n2、更多设置 – 支持是否启用内嵌歌词、内嵌封面功能，默认启用\r\n3、修复播放页面下载歌曲提示是本地歌曲下载不了的问题\r\n4、通知和电池优化弹窗新增 “不再提醒” 按钮\r\n5、优化播放器服务初始化稳定性\r\n6、修复 “获取播放链接失败” 无法自动下一曲问题\r\n7、修改备份歌单数据目录和文件格式为中文，方便认知\r\n8、新增【边听边缓存】功能，默认开启，可设置缓存上限和自动清理，在线播放歌曲时会缓存到本地节省流量，无网络环境下也可以播放\r\n9、本地音乐页面新增排序功能：按添加时间、按歌名首字母\r\n10、新增播放记录功能\r\n11、修复下载失败的歌曲不显示下载记录问题\r\n12、新增更新版本时打开更新弹窗自动备份歌单数据、更新弹窗重新增备份歌单按钮",
+    "downloadIds": [
+      "mqdzbe9mjwr1mt",
+      "mqdzbe9r60n2xa",
+      "mqdzbe9vws3b8e",
+      "mqdzbe9y2roqoj"
+    ]
+  },
+  {
+    "id": "mqdzbea1jmdhuu",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.4",
+    "publishedAt": "2026-03-26T03:39:13Z",
+    "changelog": "1、完善歌曲排行榜，新增：qq、kg榜单\r\n2、更改wy线路播放逻辑，修复wy线路频繁无法播放问题\r\n3、完善歌单广场，修复小云歌单、新增qq、kg歌单\r\n4、增强添加歌曲到自建歌单的去重逻辑\r\n5、新增设置通知权限和电池优化（后台运行）权限弹窗\r\n6、新增自建歌单排序方式：按歌名首字母排序\r\n7、修复本地音源只能扫描出1000首歌曲问题，修复重启需要重新扫描问题\r\n8、更换缓存库AsyncStorage为MMKV，提升安全性和应用性能\r\n9、修复歌单里面播放和下载歌曲封面模糊问题\r\n10、更新弹窗新增备份歌单数据按钮，防止更新后歌单数据丢失\r\n11、新增3秒APP启动动画初始化应用",
+    "downloadIds": [
+      "mqdzbea4k7fxow",
+      "mqdzbea81xn56u",
+      "mqdzbeabujjzpj",
+      "mqdzbeae4habmn"
+    ]
+  },
+  {
+    "id": "mqdzbeaijxbj67",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.3",
+    "publishedAt": "2026-02-10T15:11:17Z",
+    "changelog": "1、支持用户自定义启用/关闭单独音源配置功能\r\n2、优化播放链接错误处理，确保APP在后台和前台遇到错误可以自动播放下一曲\r\n3、修复自建歌单与播放列表排序不一致问题\r\n4、修复网易歌单只能获取10首问题\r\n5、修复wy和qq没有歌词问题，歌词代码本地化\r\n6、修复网易部分歌曲无法播放问题\r\n7、优化搜索歌曲逻辑，优化搜索速度\r\n8、搜索页面播放歌曲只添加当前播放的歌曲到列表\r\n9、修改搜索方式，支持下拉框单独线路搜索歌曲\r\n10、修复小黄源dj版等后缀歌名问题\r\n11、修复因歌手名太多导致下载失败问题\r\n12、搜索页支持【下一首播放】功能\r\n13、优化播放列表逻辑和样式\r\n14、优化接口刷新机制，可手动清理缓存\r\n15、修复小Q歌单dj版等后缀歌名问题\r\n16、歌曲详情代码本地化，增加稳定性",
+    "downloadIds": [
+      "mqdzbealbywxp7",
+      "mqdzbeapt4jiov",
+      "mqdzbeasmszf83",
+      "mqdzbeavhmdxwz"
+    ]
+  },
+  {
+    "id": "mqdzbeazgypb5y",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.1",
+    "publishedAt": "2026-01-23T09:40:43Z",
+    "changelog": "ps：本次更新主要因为之前各种接口都是走我的服务器，然后请求太多了，官方把我服务器ip拉黑了，导致很多问题，此版本本地化了很多代码，这样基本不走我服务器，直接请求官方，减少服务器被拉黑问题。\r\n\r\n1、修复搜索，本地化搜索歌曲代码，防止服务器拉黑问题导致无法搜索\r\n2、修复咪咕播放问题\r\n3、歌曲榜单代码本地化\r\n4、歌曲解析灵活化配置\r\n5、歌单解析代码本地化，防止服务器拉黑问题导致无法解析",
+    "downloadIds": [
+      "mqdzbeb2g9u0g5",
+      "mqdzbeb69gzn7b",
+      "mqdzbebasyg16i",
+      "mqdzbebdv8pqcb"
+    ]
+  },
+  {
+    "id": "mqdzbebg3uzqpg",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.0",
+    "publishedAt": "2026-01-17T14:48:06Z",
+    "changelog": "1、新增酷狗搜索线路\r\n2、采用原生QQ和kg解析音源\r\n3、解锁kg音质：蝰蛇全景声FLAC、蝰蛇超清FLAC\r\n4、优化搜索历史删除操作，模仿QQ音乐的操作\r\n5、自建歌单新增按添加时间排序功能，默认显示最新添加的歌曲\r\n6、修复纯音乐打开播放器页APP闪退问题\r\n7、修复下载歌曲APP闪退问题\r\n8、修复公告失效问题\r\n9、修复播放器页面切换歌单歌曲爱心图标不填充问题\r\n10、添加查看歌曲评论功能",
+    "downloadIds": [
+      "mqdzbebkkhrp4u",
+      "mqdzbebon447x2",
+      "mqdzbebrdfh3rn",
+      "mqdzbebvhtzb1s"
+    ]
+  },
+  {
+    "id": "mqdzbebzo0xwf3",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.2.2",
+    "publishedAt": "2025-11-11T04:09:46Z",
+    "changelog": "1、修复播放器页面下载歌曲错误问题\r\n2、修复APP恢复播放状态本地歌曲 “无法获取播放链接” 问题\r\n3、修复播放列表切换第一首歌曲播放不正常问题\r\n4、支持下载歌曲保存歌曲封面图片功能\r\n5、添加搜索框聚焦功能，优化搜索历史显示逻辑\r\n6、添加自动主题选项，支持根据系统主题变化自动切换\r\n7、优化一下深色模式下的样式\r\n8、支持外部平台歌单添加歌曲到自建歌单中\r\n9、搜索历史支持单独删除单个记录\r\n10、支持检测是否收藏歌曲，已收藏在自建歌单歌曲播放器爱心图标会变成粉红色\r\n11、解锁小红源（wy）母带音质\r\n12、优化自建歌单歌曲列表显示，拓展右侧按钮操作\r\n13、修复歌单无法下载问题",
+    "downloadIds": [
+      "mqdzbec28occ3k",
+      "mqdzbec7uzq34n",
+      "mqdzbecan5vj37",
+      "mqdzbecesi2i8f"
+    ]
+  },
+  {
+    "id": "mqdzbecixqppbk",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.1.2",
+    "publishedAt": "2025-09-22T10:54:52Z",
+    "changelog": "修复v1.1.0遗留的问题",
+    "downloadIds": [
+      "mqdzbecldvxs85",
+      "mqdzbecpv7s95c",
+      "mqdzbecshfcttb",
+      "mqdzbecvvdl5p6"
+    ]
+  },
+  {
+    "id": "mqdzbecymvsc3q",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.1.1",
+    "publishedAt": "2025-09-22T05:03:21Z",
+    "changelog": "紧急修复一下上一曲下一曲按钮失效问题",
+    "downloadIds": [
+      "mqdzbed1yf2pg1",
+      "mqdzbed5ks23eq",
+      "mqdzbed8yz5r80",
+      "mqdzbedb4qj3px"
+    ]
+  },
+  {
+    "id": "mqdzbedfrgz5qx",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.1.0",
+    "publishedAt": "2025-09-21T05:01:13Z",
+    "changelog": "1、替换第三方文件浏览器，改成自定义文件浏览器，修复选择文件夹出现的自动选择等问题\r\n2、适配横屏：播放页、播放列表页、底部播放器、我的页面、更多设置页面\r\n3、支持保存播放状态，退出APP重新打开恢复上次的播放记录\r\n4、支持自建歌单长按选择下载歌曲\r\n5、修复小云线路搜索经常出错问题\r\n6、修复app部分页面顶部重叠问题\r\n7、优化后台播放逻辑，优化后台播放卡主不会自动下一曲的问题",
+    "downloadIds": [
+      "mqdzbedikig20q",
+      "mqdzbednkjffag",
+      "mqdzbedq5qnm7u",
+      "mqdzbedu18cewm"
+    ]
+  },
+  {
+    "id": "mqdzbedysf3sa5",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.0.9",
+    "publishedAt": "2025-07-13T09:07:29Z",
+    "changelog": "1、实验室 - 下架歌曲搜索功能上线\r\n2、歌单广场功能上线\r\n3、更换域名，解决部分地区网络拦截问题\r\n4、去除每次打开APP刷新音源功能\r\n5、修复小Q歌单歌曲图片显示不正确问题\r\n6、优化一下首页按钮组件样式\r\n7、优化一下小云线路的稳定性",
+    "downloadIds": [
+      "mqdzbee1r589fz",
+      "mqdzbee6n60fgs",
+      "mqdzbeeboo68uo",
+      "mqdzbeegv3yk1b"
+    ]
+  },
+  {
+    "id": "mqdzbeekrh94yf",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.0.8",
+    "publishedAt": "2025-06-13T06:13:21Z",
+    "changelog": "**重要：因不可抗力原因不再内置音乐源，可自行导入音频源**\r\n1、【修复】新建歌单因重名导致的一些问题\r\n2、【新增】小云（网易）线路支持显示/内嵌翻译歌词\r\n3、【优化】针对带翻译歌词优化播放器歌词展示\r\n4、【新增】本地音乐页面搜索歌曲功能\r\n5、【新增】本地音乐页面支持长按多选歌曲操作\r\n6、【新增】导入外部平台歌单支持搜索歌曲功能\r\n7、【优化】外部平台歌单详情样式\r\n8、【新增】自建歌单支持搜索歌曲功能\r\n9、【修复】外部歌单下载歌曲写入专辑信息问题\r\n10、【修复】参考trackplay文档增加后台服务相关代码（应该可以解决部分人后台播放卡住？）\r\n11、【修复】播放器页面下载歌曲没有写入专辑信息问题\r\n12、【优化】备份歌单数据改成 “backup+当前年月日时分秒” 格式，不会覆盖过往备份文件\r\n13、【新增】搜索歌曲页面支持长按多选歌曲操作",
+    "downloadIds": [
+      "mqdzbeeomt35yc",
+      "mqdzbeesydfhps",
+      "mqdzbeewalra8s",
+      "mqdzbef03kmj2g"
+    ]
+  },
+  {
+    "id": "mqdzbef4wj9vi6",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.0.7",
+    "publishedAt": "2025-05-23T12:44:04Z",
+    "changelog": "青听音乐V1.0.7更新：\r\n\r\n1、修改弹窗公告机制，减少打扰\r\n\r\n2、完善排行榜功能，内置kw、wy平台排行榜\r\n\r\n3、适配首页横屏，可以滑动组件等\r\n\r\n4、首页新增热门榜单组件\r\n\r\n5、修改本地音乐扫描机制，没有设置自定义目录会扫描默认位置所有音频文件，如果设置了自定义目录就只扫描自定义目录\r\n\r\n6、下载歌曲嵌入图片改成常规高清大尺寸\r\n\r\n7、修复从播放页添加本地歌曲到自建歌单无法切换下一曲问题\r\n\r\n8、支持修改歌曲下载路径\r\n\r\n9、支持播放器页面滑动歌词位置播放\r\n\r\n10、支持播放器页面下载歌曲功能\r\n\r\n11、新增搜索历史和热门搜索功能\r\n\r\n12、拓展实验室功能-下架歌曲搜索功能待上线\r\n\r\n13、新建歌单增加删除歌曲点击区域防止误触播放\r\n\r\n14、优化歌词滚动逻辑，添加防抖逻辑",
+    "downloadIds": [
+      "mqdzbef8szf5eb"
+    ]
+  },
+  {
+    "id": "mqdzbefc3z1ebn",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.0.6",
+    "publishedAt": "2025-04-26T08:38:19Z",
+    "changelog": "1、优化APP首页UI界面样式\r\n2、优化播放器页面（可切换大专辑图和歌词）\r\n3、修复批量下载歌曲封面不正确问题\r\n4、添加深色模式，可切换浅色/深色\r\n5、修复本地歌曲无法切换下一曲上一曲问题\r\n6、增加搜索页面右侧图标触摸范围，防止误触播放歌曲\r\n7、新增超时检测，歌曲播放卡住超6秒自动播放下一曲\r\n8、新增搜索歌曲可以加载下一页更多歌曲\r\n9、搜索歌曲不同线路单独统计滚动位置",
+    "downloadIds": [
+      "mqdzbeffgvhcvm"
+    ]
+  },
+  {
+    "id": "mqjmlcnpuuxzcs",
+    "projectId": "mqdzae23et9isy",
+    "version": "12.0.0",
+    "publishedAt": "2026-06-18T02:05:44Z",
+    "changelog": "*对比 11.1.0-release\r\n基于 Salt UI 3.0 重置，改进 UI 布局\r\n新增材质页面（设置 -> 用户界面 -> 材质）\r\n新增标题栏背景样式选项（材质页面内），可选无效果、遮罩模糊（Android 12+）、渐变模糊（Android 13+）\r\n新增【实验室】歌词交错滚动效果\r\n新增迷你播放条逐字歌词支持\r\n新增从最近任务移除时终止 App 选项\r\n优化设置界面 Pro 选项卡\r\n优化更新日志到独立页面\r\n优化动态流光效果\r\n优化软件安全稳定性\r\n优化歌词界面无歌词的组件样式\r\n优化播放界面浅色流光下的前景色取色\r\n变更移除帮助与反馈页面的技术支持入口\r\n修复音乐库界面饼图文字颜色错误的问题\r\n修复一些界面上的小错误\r\n修复调用支付宝可能崩溃的问题\r\n修复逐字歌词解析中相邻字间隙时间戳的处理\r\n其他的优化和改进",
+    "downloadIds": [
+      "mqjmlcnp4yvcrv",
+      "mqjmlcnp4jqjb3",
+      "mqjmlcnpq6akis"
+    ]
+  },
+  {
     "id": "mqdzae35w61mc9",
     "projectId": "mqdzae23et9isy",
     "version": "11.1.0",
@@ -1633,183 +1822,6 @@
     "downloadIds": [
       "mqdzae9h2r5ts7",
       "mqdzae9ldcihwg"
-    ]
-  },
-  {
-    "id": "mqdzbe8t0tqs3z",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.6",
-    "publishedAt": "2026-05-29T04:13:14Z",
-    "changelog": "1、新增MV功能，支持搜索MV、在线播放MV、下载MV\r\n2、修复小狗音乐排行榜播放不了的问题\r\n3、新建歌单和本地音乐页面排序新增：根据歌手排序\r\n4、新增功能：桌面歌词（更多设置页面可以开启）\r\n5、完善重启APP恢复上次播放记录功能，包含上次播放时长\r\n6、优化一下APP播放遇到错误跳转下一曲逻辑\r\n7、优化部分页面底部歌曲被播放器挡住问题\r\n8、播放器页更多设置页面新增：歌词延迟校准\r\n9、优化本地音乐扫描速度，比之前快数倍\r\n10、优化音乐播放速度\r\n11、更多设置新增：下载同名文件是否覆盖，默认开启覆盖",
-    "downloadIds": [
-      "mqdzbe8wic7i7e",
-      "mqdzbe92o8w63h",
-      "mqdzbe96k1wsqn",
-      "mqdzbe9alrb5il",
-      "mqdzbe9fwmiaht"
-    ]
-  },
-  {
-    "id": "mqdzbe9j5by3xy",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.5",
-    "publishedAt": "2026-04-22T04:23:49Z",
-    "changelog": "1、解锁kw线路全景声、母带音质\r\n2、更多设置 – 支持是否启用内嵌歌词、内嵌封面功能，默认启用\r\n3、修复播放页面下载歌曲提示是本地歌曲下载不了的问题\r\n4、通知和电池优化弹窗新增 “不再提醒” 按钮\r\n5、优化播放器服务初始化稳定性\r\n6、修复 “获取播放链接失败” 无法自动下一曲问题\r\n7、修改备份歌单数据目录和文件格式为中文，方便认知\r\n8、新增【边听边缓存】功能，默认开启，可设置缓存上限和自动清理，在线播放歌曲时会缓存到本地节省流量，无网络环境下也可以播放\r\n9、本地音乐页面新增排序功能：按添加时间、按歌名首字母\r\n10、新增播放记录功能\r\n11、修复下载失败的歌曲不显示下载记录问题\r\n12、新增更新版本时打开更新弹窗自动备份歌单数据、更新弹窗重新增备份歌单按钮",
-    "downloadIds": [
-      "mqdzbe9mjwr1mt",
-      "mqdzbe9r60n2xa",
-      "mqdzbe9vws3b8e",
-      "mqdzbe9y2roqoj"
-    ]
-  },
-  {
-    "id": "mqdzbea1jmdhuu",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.4",
-    "publishedAt": "2026-03-26T03:39:13Z",
-    "changelog": "1、完善歌曲排行榜，新增：qq、kg榜单\r\n2、更改wy线路播放逻辑，修复wy线路频繁无法播放问题\r\n3、完善歌单广场，修复小云歌单、新增qq、kg歌单\r\n4、增强添加歌曲到自建歌单的去重逻辑\r\n5、新增设置通知权限和电池优化（后台运行）权限弹窗\r\n6、新增自建歌单排序方式：按歌名首字母排序\r\n7、修复本地音源只能扫描出1000首歌曲问题，修复重启需要重新扫描问题\r\n8、更换缓存库AsyncStorage为MMKV，提升安全性和应用性能\r\n9、修复歌单里面播放和下载歌曲封面模糊问题\r\n10、更新弹窗新增备份歌单数据按钮，防止更新后歌单数据丢失\r\n11、新增3秒APP启动动画初始化应用",
-    "downloadIds": [
-      "mqdzbea4k7fxow",
-      "mqdzbea81xn56u",
-      "mqdzbeabujjzpj",
-      "mqdzbeae4habmn"
-    ]
-  },
-  {
-    "id": "mqdzbeaijxbj67",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.3",
-    "publishedAt": "2026-02-10T15:11:17Z",
-    "changelog": "1、支持用户自定义启用/关闭单独音源配置功能\r\n2、优化播放链接错误处理，确保APP在后台和前台遇到错误可以自动播放下一曲\r\n3、修复自建歌单与播放列表排序不一致问题\r\n4、修复网易歌单只能获取10首问题\r\n5、修复wy和qq没有歌词问题，歌词代码本地化\r\n6、修复网易部分歌曲无法播放问题\r\n7、优化搜索歌曲逻辑，优化搜索速度\r\n8、搜索页面播放歌曲只添加当前播放的歌曲到列表\r\n9、修改搜索方式，支持下拉框单独线路搜索歌曲\r\n10、修复小黄源dj版等后缀歌名问题\r\n11、修复因歌手名太多导致下载失败问题\r\n12、搜索页支持【下一首播放】功能\r\n13、优化播放列表逻辑和样式\r\n14、优化接口刷新机制，可手动清理缓存\r\n15、修复小Q歌单dj版等后缀歌名问题\r\n16、歌曲详情代码本地化，增加稳定性",
-    "downloadIds": [
-      "mqdzbealbywxp7",
-      "mqdzbeapt4jiov",
-      "mqdzbeasmszf83",
-      "mqdzbeavhmdxwz"
-    ]
-  },
-  {
-    "id": "mqdzbeazgypb5y",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.1",
-    "publishedAt": "2026-01-23T09:40:43Z",
-    "changelog": "ps：本次更新主要因为之前各种接口都是走我的服务器，然后请求太多了，官方把我服务器ip拉黑了，导致很多问题，此版本本地化了很多代码，这样基本不走我服务器，直接请求官方，减少服务器被拉黑问题。\r\n\r\n1、修复搜索，本地化搜索歌曲代码，防止服务器拉黑问题导致无法搜索\r\n2、修复咪咕播放问题\r\n3、歌曲榜单代码本地化\r\n4、歌曲解析灵活化配置\r\n5、歌单解析代码本地化，防止服务器拉黑问题导致无法解析",
-    "downloadIds": [
-      "mqdzbeb2g9u0g5",
-      "mqdzbeb69gzn7b",
-      "mqdzbebasyg16i",
-      "mqdzbebdv8pqcb"
-    ]
-  },
-  {
-    "id": "mqdzbebg3uzqpg",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.3.0",
-    "publishedAt": "2026-01-17T14:48:06Z",
-    "changelog": "1、新增酷狗搜索线路\r\n2、采用原生QQ和kg解析音源\r\n3、解锁kg音质：蝰蛇全景声FLAC、蝰蛇超清FLAC\r\n4、优化搜索历史删除操作，模仿QQ音乐的操作\r\n5、自建歌单新增按添加时间排序功能，默认显示最新添加的歌曲\r\n6、修复纯音乐打开播放器页APP闪退问题\r\n7、修复下载歌曲APP闪退问题\r\n8、修复公告失效问题\r\n9、修复播放器页面切换歌单歌曲爱心图标不填充问题\r\n10、添加查看歌曲评论功能",
-    "downloadIds": [
-      "mqdzbebkkhrp4u",
-      "mqdzbebon447x2",
-      "mqdzbebrdfh3rn",
-      "mqdzbebvhtzb1s"
-    ]
-  },
-  {
-    "id": "mqdzbebzo0xwf3",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.2.2",
-    "publishedAt": "2025-11-11T04:09:46Z",
-    "changelog": "1、修复播放器页面下载歌曲错误问题\r\n2、修复APP恢复播放状态本地歌曲 “无法获取播放链接” 问题\r\n3、修复播放列表切换第一首歌曲播放不正常问题\r\n4、支持下载歌曲保存歌曲封面图片功能\r\n5、添加搜索框聚焦功能，优化搜索历史显示逻辑\r\n6、添加自动主题选项，支持根据系统主题变化自动切换\r\n7、优化一下深色模式下的样式\r\n8、支持外部平台歌单添加歌曲到自建歌单中\r\n9、搜索历史支持单独删除单个记录\r\n10、支持检测是否收藏歌曲，已收藏在自建歌单歌曲播放器爱心图标会变成粉红色\r\n11、解锁小红源（wy）母带音质\r\n12、优化自建歌单歌曲列表显示，拓展右侧按钮操作\r\n13、修复歌单无法下载问题",
-    "downloadIds": [
-      "mqdzbec28occ3k",
-      "mqdzbec7uzq34n",
-      "mqdzbecan5vj37",
-      "mqdzbecesi2i8f"
-    ]
-  },
-  {
-    "id": "mqdzbecixqppbk",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.1.2",
-    "publishedAt": "2025-09-22T10:54:52Z",
-    "changelog": "修复v1.1.0遗留的问题",
-    "downloadIds": [
-      "mqdzbecldvxs85",
-      "mqdzbecpv7s95c",
-      "mqdzbecshfcttb",
-      "mqdzbecvvdl5p6"
-    ]
-  },
-  {
-    "id": "mqdzbecymvsc3q",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.1.1",
-    "publishedAt": "2025-09-22T05:03:21Z",
-    "changelog": "紧急修复一下上一曲下一曲按钮失效问题",
-    "downloadIds": [
-      "mqdzbed1yf2pg1",
-      "mqdzbed5ks23eq",
-      "mqdzbed8yz5r80",
-      "mqdzbedb4qj3px"
-    ]
-  },
-  {
-    "id": "mqdzbedfrgz5qx",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.1.0",
-    "publishedAt": "2025-09-21T05:01:13Z",
-    "changelog": "1、替换第三方文件浏览器，改成自定义文件浏览器，修复选择文件夹出现的自动选择等问题\r\n2、适配横屏：播放页、播放列表页、底部播放器、我的页面、更多设置页面\r\n3、支持保存播放状态，退出APP重新打开恢复上次的播放记录\r\n4、支持自建歌单长按选择下载歌曲\r\n5、修复小云线路搜索经常出错问题\r\n6、修复app部分页面顶部重叠问题\r\n7、优化后台播放逻辑，优化后台播放卡主不会自动下一曲的问题",
-    "downloadIds": [
-      "mqdzbedikig20q",
-      "mqdzbednkjffag",
-      "mqdzbedq5qnm7u",
-      "mqdzbedu18cewm"
-    ]
-  },
-  {
-    "id": "mqdzbedysf3sa5",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.0.9",
-    "publishedAt": "2025-07-13T09:07:29Z",
-    "changelog": "1、实验室 - 下架歌曲搜索功能上线\r\n2、歌单广场功能上线\r\n3、更换域名，解决部分地区网络拦截问题\r\n4、去除每次打开APP刷新音源功能\r\n5、修复小Q歌单歌曲图片显示不正确问题\r\n6、优化一下首页按钮组件样式\r\n7、优化一下小云线路的稳定性",
-    "downloadIds": [
-      "mqdzbee1r589fz",
-      "mqdzbee6n60fgs",
-      "mqdzbeeboo68uo",
-      "mqdzbeegv3yk1b"
-    ]
-  },
-  {
-    "id": "mqdzbeekrh94yf",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.0.8",
-    "publishedAt": "2025-06-13T06:13:21Z",
-    "changelog": "**重要：因不可抗力原因不再内置音乐源，可自行导入音频源**\r\n1、【修复】新建歌单因重名导致的一些问题\r\n2、【新增】小云（网易）线路支持显示/内嵌翻译歌词\r\n3、【优化】针对带翻译歌词优化播放器歌词展示\r\n4、【新增】本地音乐页面搜索歌曲功能\r\n5、【新增】本地音乐页面支持长按多选歌曲操作\r\n6、【新增】导入外部平台歌单支持搜索歌曲功能\r\n7、【优化】外部平台歌单详情样式\r\n8、【新增】自建歌单支持搜索歌曲功能\r\n9、【修复】外部歌单下载歌曲写入专辑信息问题\r\n10、【修复】参考trackplay文档增加后台服务相关代码（应该可以解决部分人后台播放卡住？）\r\n11、【修复】播放器页面下载歌曲没有写入专辑信息问题\r\n12、【优化】备份歌单数据改成 “backup+当前年月日时分秒” 格式，不会覆盖过往备份文件\r\n13、【新增】搜索歌曲页面支持长按多选歌曲操作",
-    "downloadIds": [
-      "mqdzbeeomt35yc",
-      "mqdzbeesydfhps",
-      "mqdzbeewalra8s",
-      "mqdzbef03kmj2g"
-    ]
-  },
-  {
-    "id": "mqdzbef4wj9vi6",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.0.7",
-    "publishedAt": "2025-05-23T12:44:04Z",
-    "changelog": "青听音乐V1.0.7更新：\r\n\r\n1、修改弹窗公告机制，减少打扰\r\n\r\n2、完善排行榜功能，内置kw、wy平台排行榜\r\n\r\n3、适配首页横屏，可以滑动组件等\r\n\r\n4、首页新增热门榜单组件\r\n\r\n5、修改本地音乐扫描机制，没有设置自定义目录会扫描默认位置所有音频文件，如果设置了自定义目录就只扫描自定义目录\r\n\r\n6、下载歌曲嵌入图片改成常规高清大尺寸\r\n\r\n7、修复从播放页添加本地歌曲到自建歌单无法切换下一曲问题\r\n\r\n8、支持修改歌曲下载路径\r\n\r\n9、支持播放器页面滑动歌词位置播放\r\n\r\n10、支持播放器页面下载歌曲功能\r\n\r\n11、新增搜索历史和热门搜索功能\r\n\r\n12、拓展实验室功能-下架歌曲搜索功能待上线\r\n\r\n13、新建歌单增加删除歌曲点击区域防止误触播放\r\n\r\n14、优化歌词滚动逻辑，添加防抖逻辑",
-    "downloadIds": [
-      "mqdzbef8szf5eb"
-    ]
-  },
-  {
-    "id": "mqdzbefc3z1ebn",
-    "projectId": "mqdzbe8bbd2xu8",
-    "version": "v1.0.6",
-    "publishedAt": "2025-04-26T08:38:19Z",
-    "changelog": "1、优化APP首页UI界面样式\r\n2、优化播放器页面（可切换大专辑图和歌词）\r\n3、修复批量下载歌曲封面不正确问题\r\n4、添加深色模式，可切换浅色/深色\r\n5、修复本地歌曲无法切换下一曲上一曲问题\r\n6、增加搜索页面右侧图标触摸范围，防止误触播放歌曲\r\n7、新增超时检测，歌曲播放卡住超6秒自动播放下一曲\r\n8、新增搜索歌曲可以加载下一页更多歌曲\r\n9、搜索歌曲不同线路单独统计滚动位置",
-    "downloadIds": [
-      "mqdzbeffgvhcvm"
     ]
   }
 ]
