@@ -104,7 +104,13 @@ function invalidateDerivedCaches() {
 export function getAllSoftware(): Software[] {
   const d = loadAppData()
   if (_allSoftwareCache && _allSoftwareCache.data === d) return _allSoftwareCache.list
-  const list = Object.values(d.software).flat()
+  const list: Software[] = []
+  for (const [slug, swList] of Object.entries(d.software)) {
+    for (const sw of swList) {
+      if (!sw.categorySlug) sw.categorySlug = slug
+      list.push(sw)
+    }
+  }
   _allSoftwareCache = { data: d, list }
   return list
 }
@@ -593,7 +599,10 @@ async function loadAllRemoteData(): Promise<void> {
       fetchJSON<Version[]>(`${BASE}page/${c.slug}/versions.json`),
       fetchJSON<Download[]>(`${BASE}page/${c.slug}/downloads.json`),
     ])
-    if (software) d.software[c.slug] = software
+    if (software) {
+      software.forEach((s) => { if (!s.categorySlug) s.categorySlug = c.slug })
+      d.software[c.slug] = software
+    }
     if (versions) d.versions[c.slug] = versions
     if (downloads) d.downloads[c.slug] = downloads
   }, 4)
