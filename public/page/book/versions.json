@@ -621,6 +621,32 @@
     ]
   },
   {
+    "id": "mqnutyf7bgz903",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.31",
+    "publishedAt": "2026-06-20T17:37:42Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 修正嵌套分页惯性滑动",
+    "downloadIds": [
+      "mqnutyf804fdb3",
+      "mqnutyf806ipsj",
+      "mqnutyf8cqsqb5",
+      "mqnutyf8p2liqh"
+    ]
+  },
+  {
+    "id": "mqnutyf87m7czi",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.30",
+    "publishedAt": "2026-06-20T16:58:22Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* Use Legado theme colors for Miuix dropdown items\n* Avoid initial loading indicator on book info\n* fix: 修复分页嵌套滑动冲突\n* fix: 修复书架封面与更新标志显示\n* fix: 修复阅读界面导航与朗读配置问题\n* refactor: TextSelectMenuFilterSheet 遵循项目规范\n* fix：菜单切换深浅色一些按钮变化延迟的问题\n* feat: 新增文字选择菜单第三方应用过滤功能并优化加载性能",
+    "downloadIds": [
+      "mqnutyf8os96vj",
+      "mqnutyf8b1jvvb",
+      "mqnutyf8xw8n9s",
+      "mqnutyf845jzqh"
+    ]
+  },
+  {
     "id": "mqmf4nwe2z2duw",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.29",
