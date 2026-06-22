@@ -1,5 +1,53 @@
 [
   {
+    "id": "mqpg9v4x8t62el",
+    "versionId": "mqpg9v4xqp26vn",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06221859_29702099.apk",
+    "size": "36.8 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221859/legado-arm64-v8a_app_3.26.06221859_29702099.apk"
+  },
+  {
+    "id": "mqpg9v4x9q3twy",
+    "versionId": "mqpg9v4xqp26vn",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06221859_29702099.apk",
+    "size": "36.7 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221859/legado-armeabi-v7a_app_3.26.06221859_29702099.apk"
+  },
+  {
+    "id": "mqpg9v4xc4nnir",
+    "versionId": "mqpg9v4xmgpmqa",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06221730_29702010.apk",
+    "size": "36.8 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221730/legado-arm64-v8a_app_3.26.06221730_29702010.apk"
+  },
+  {
+    "id": "mqpg9v4xzzpx16",
+    "versionId": "mqpg9v4xmgpmqa",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06221730_29702010.apk",
+    "size": "36.7 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221730/legado-armeabi-v7a_app_3.26.06221730_29702010.apk"
+  },
+  {
+    "id": "mqpg9v4xhaa38s",
+    "versionId": "mqpg9v4x1y7gil",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06221650_29701970.apk",
+    "size": "36.8 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221650/legado-arm64-v8a_app_3.26.06221650_29701970.apk"
+  },
+  {
+    "id": "mqpg9v4xyjv7hw",
+    "versionId": "mqpg9v4x1y7gil",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06221650_29701970.apk",
+    "size": "36.7 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06221650/legado-armeabi-v7a_app_3.26.06221650_29701970.apk"
+  },
+  {
     "id": "mqmf4m7vumgug7",
     "versionId": "mqmf4m7vv5e5ys",
     "platform": "Android",
@@ -414,6 +462,22 @@
     "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.050710/legado-armeabi-v7a_app_3.26.050710_29635354.apk",
     "downloadCount": 2,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqpg9v4xkmslit",
+    "versionId": "mqpg9v4xwm428j",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06221859_29702099.apk",
+    "size": "36.8 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/latest-arm64-release/legado-arm64-v8a_app_3.26.06221859_29702099.apk"
+  },
+  {
+    "id": "mqpg9v4xgnbz9i",
+    "versionId": "mqpg9v4xwm428j",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06221859_29702099.apk",
+    "size": "36.7 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/latest-arm64-release/legado-armeabi-v7a_app_3.26.06221859_29702099.apk"
   },
   {
     "id": "mqdzx84kj18ccu",
