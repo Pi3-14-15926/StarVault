@@ -6,6 +6,12 @@ export type Platform = 'Android' | 'Windows' | 'MacOS' | 'Linux' | 'iOS' | 'Web'
 /** 项目类型 */
 export type SourceType = 'github' | 'custom'
 
+/** 关联文章 */
+export interface RelatedArticle {
+  name: string
+  url: string
+}
+
 /** 软件（项目主实体） */
 export interface Software {
   id: string
@@ -23,6 +29,7 @@ export interface Software {
   forks?: number
   latestVersionId?: string
   latestUpdateTime: string
+  relatedArticles?: RelatedArticle[]
 }
 
 /** 版本（属于某个 Software） */

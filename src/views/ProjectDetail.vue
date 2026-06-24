@@ -162,6 +162,36 @@ function toggleHistoryDownloads(v: Version) {
         </div>
       </div>
 
+      <!-- 关联文章 -->
+      <div v-if="project.relatedArticles && project.relatedArticles.length > 0" class="related-articles-card">
+        <div class="related-articles-head">
+          <svg class="related-articles-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+          <span class="related-articles-title">关联文章</span>
+        </div>
+        <div class="related-articles-list">
+          <a
+            v-for="(article, index) in project.relatedArticles"
+            :key="index"
+            :href="article.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="related-article-item"
+          >
+            <span class="related-article-name">{{ article.name }}</span>
+            <svg class="related-article-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
       <!-- 下载加速开关 -->
       <div v-if="ghProxyEnabled" class="proxy-bar" @click="toggleGhProxy">
         <div class="proxy-info">
@@ -753,6 +783,7 @@ function toggleHistoryDownloads(v: Version) {
   .hero-info { flex-direction: column; align-items: flex-start; gap: 14px; }
   .project-avatar { width: 64px; height: 64px; font-size: 2rem; }
   .project-name { font-size: 1.4rem; }
+  .related-articles-card { padding: 16px; }
 }
 @media (max-width: 480px) {
   .download-btn { padding: 8px 10px; flex-wrap: wrap; font-size: 0.82rem; gap: 6px; }
@@ -761,5 +792,73 @@ function toggleHistoryDownloads(v: Version) {
   .apk-size, .apk-dl { font-size: 0.7rem; padding: 1px 6px; flex-shrink: 0; }
   .download-btn-sm { padding: 6px 8px; flex-wrap: wrap; font-size: 0.78rem; gap: 5px; }
   .download-btn-sm .plat-tag-sm { width: 100%; font-size: 0.65rem; height: 18px; padding: 0 5px; }
+}
+
+/* === 关联文章卡片 === */
+.related-articles-card {
+  background: var(--color-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+  padding: 20px;
+  animation: riseFade 0.4s ease both;
+  animation-delay: 0.1s;
+}
+.related-articles-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.related-articles-icon {
+  color: var(--color-primary);
+}
+.related-articles-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+.related-articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.related-article-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--gradient-primary-soft);
+  border: 1px solid rgba(52, 120, 246, 0.1);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.related-article-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(52, 120, 246, 0.15);
+  transform: translateY(-1px);
+}
+.related-article-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.related-article-arrow {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.related-article-item:hover .related-article-arrow {
+  opacity: 1;
+  transform: translateX(3px);
 }
 </style>

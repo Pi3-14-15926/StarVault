@@ -12,7 +12,7 @@ import { resolveIconUrl, buildIconUrls } from '../../utils/iconUrl'
 import * as api from '../../utils/api'
 import { platformClass, platformIcon } from '../../utils/platformTag'
 import { uid } from '../../utils'
-import type { Version, Download, Platform } from '../../types'
+import type { Version, Download, Platform, RelatedArticle } from '../../types'
 import AdminLayout from '../../components/admin/AdminLayout.vue'
 
 const router = useRouter()
@@ -40,7 +40,11 @@ const form = ref({
   githubRepo: '',
   website: '',
   featured: false,
+  relatedArticles: [] as RelatedArticle[],
 })
+
+const newArticleName = ref('')
+const newArticleUrl = ref('')
 
 const saving = ref(false)
 const error = ref('')
@@ -60,6 +64,7 @@ function skipToManual() {
     githubRepo: '',
     website: '',
     featured: false,
+    relatedArticles: [],
   }
   fetchedVersions.value = []
   fetchedStars.value = 0
@@ -107,6 +112,7 @@ async function doFetch() {
       githubRepo: repo,
       website: '',
       featured: false,
+      relatedArticles: [],
     }
     fetchedVersions.value = versions
     fetchedStars.value = detail.stargazers_count
@@ -133,6 +139,7 @@ onMounted(() => {
       slug: p.slug, name: p.name, description: p.description, logo: p.logo,
       sourceType: p.sourceType, categorySlug: p.categorySlug,
       githubRepo: p.githubRepo || '', website: p.website || '', featured: p.featured,
+      relatedArticles: p.relatedArticles ? [...p.relatedArticles] : [],
     }
     step.value = 'review'
   }
@@ -169,6 +176,7 @@ async function doSave() {
       p.githubUrl = form.value.githubRepo.trim() ? `https://github.com/${form.value.githubRepo.trim()}` : undefined
       p.website = form.value.website.trim() || undefined
       p.featured = form.value.featured
+      p.relatedArticles = form.value.relatedArticles.length > 0 ? form.value.relatedArticles : undefined
       projects.save(p)
     }
     saving.value = false
@@ -191,6 +199,7 @@ async function doSave() {
   p.featured = form.value.featured
   p.stars = fetchedStars.value || undefined
   p.forks = fetchedForks.value || undefined
+  p.relatedArticles = form.value.relatedArticles.length > 0 ? form.value.relatedArticles : undefined
   projects.save(p)
   /* 把从 GitHub 获取的版本和下载逐个写入分层存储 */
   for (const fetched of fetchedVersions.value) {
@@ -368,6 +377,29 @@ function reGuessPlatforms() {
 
 watch(existingProject, refreshDownloads, { immediate: true })
 watch(() => route.params.id, refreshDownloads)
+
+/* === 关联文章管理 === */
+function addArticle() {
+  const name = newArticleName.value.trim()
+  const url = newArticleUrl.value.trim()
+  if (!name || !url) {
+    msg.warning('请填写文章名称和链接')
+    return
+  }
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    msg.warning('请输入有效的文章链接')
+    return
+  }
+  form.value.relatedArticles.push({ name, url })
+  newArticleName.value = ''
+  newArticleUrl.value = ''
+  msg.success('已添加关联文章')
+}
+
+function removeArticle(index: number) {
+  form.value.relatedArticles.splice(index, 1)
+  msg.success('已移除关联文章')
+}
 </script>
 
 <template>
@@ -496,6 +528,37 @@ watch(() => route.params.id, refreshDownloads)
                 <NSwitch v-model:value="form.featured" />
                 <span>设为推荐（首页 Hero 轮播）</span>
               </label>
+            </div>
+
+            <div class="field field-full">
+              <label>关联文章</label>
+              <div class="articles-section">
+                <div v-if="form.relatedArticles.length > 0" class="articles-list">
+                  <div v-for="(article, index) in form.relatedArticles" :key="index" class="article-item">
+                    <div class="article-info">
+                      <span class="article-name">{{ article.name }}</span>
+                      <span class="article-url">{{ article.url }}</span>
+                    </div>
+                    <button type="button" class="btn-remove" @click="removeArticle(index)">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div v-else class="articles-empty">暂无关联文章</div>
+                <div class="article-add-form">
+                  <NInput v-model:value="newArticleName" placeholder="文章名称" size="small" />
+                  <NInput v-model:value="newArticleUrl" placeholder="文章链接 https://..." size="small" />
+                  <button type="button" class="btn-add" @click="addArticle">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    添加
+                  </button>
+                </div>
+                <p class="field-hint">添加与该软件相关的文章链接，将在软件详情页显示</p>
+              </div>
             </div>
           </div>
 
@@ -826,5 +889,103 @@ watch(() => route.params.id, refreshDownloads)
   .picker-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
   .form-actions { flex-wrap: nowrap; }
   .form-actions .btn-primary, .form-actions .btn-secondary, .form-actions .btn-ghost { font-size: 0.85rem; padding: 10px 12px; white-space: nowrap; }
+  .article-add-form { flex-direction: column; }
+}
+
+/* === 关联文章 === */
+.articles-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.article-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--color-card-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  transition: border-color 0.18s;
+}
+.article-item:hover {
+  border-color: var(--color-primary);
+}
+.article-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.article-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+.article-url {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-remove {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.18s, color 0.18s;
+}
+.btn-remove:hover {
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--color-error);
+}
+.articles-empty {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 12px;
+  background: var(--color-card-soft);
+  border-radius: var(--radius-md);
+  font-style: italic;
+}
+.article-add-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.btn-add {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--gradient-primary);
+  color: var(--text-on-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  transition: transform 0.15s, box-shadow 0.18s;
+}
+.btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-primary);
 }
 </style>
