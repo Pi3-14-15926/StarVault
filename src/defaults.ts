@@ -1,12 +1,12 @@
 import type { Settings } from './types'
 
 export const DEFAULT_SETTINGS: Settings = {
-  "siteName": "Software Hub",
+  "siteName": "StarVault",
   "logo": "https://i.postimg.cc/j5yhCmXp/dog.png",
   "admins": [
     "Pi3-14-15926"
   ],
-  "footer": "© 2026 软件中心 • Powered by Software Hub",
+  "footer": "© 2026 StarVault • Built by 齐尹秦",
   "storageNote": "收藏精品软件",
   "ghProxyEnabled": true,
   "ghProxyUrl": "https://gh-proxy.com/",
@@ -17,7 +17,7 @@ export const DEFAULT_SETTINGS: Settings = {
     "syncEnabled": true,
     "syncIntervalHours": 24,
     "backupEnabled": true,
-    "backupIntervalHours": 48
+    "backupIntervalHours": 24
   },
   "webdav": {
     "url": "https://webdav.123pan.cn/webdav/Webdav/资源/",
