@@ -13,7 +13,8 @@
     "stars": 5105,
     "forks": 111,
     "latestVersionId": "mqdzxfsmu9z0ao",
-    "latestVersion": "1.5.18"
+    "latestVersion": "1.5.18",
+    "categorySlug": "anime"
   },
   {
     "id": "mpzjkpvzeuh3zl",
@@ -36,7 +37,8 @@
     ],
     "latestVersionId": "mqdzxh79ry0b02",
     "latestUpdateTime": "2026-06-18T08:12:10Z",
-    "latestVersion": "2.1.6"
+    "latestVersion": "2.1.6",
+    "categorySlug": "anime"
   },
   {
     "id": "mpzjjzg2ylm14p",
@@ -59,7 +61,8 @@
     ],
     "latestVersionId": "mqdzxp2g45cekb",
     "latestUpdateTime": "2026-06-17T04:28:55Z",
-    "latestVersion": "v5.7.0-beta01"
+    "latestVersion": "v5.7.0-beta01",
+    "categorySlug": "anime"
   },
   {
     "id": "mqf2wp9ruusxo6",
@@ -71,7 +74,8 @@
     "featured": false,
     "latestUpdateTime": "2026-04-29T00:00:00.000Z",
     "website": "https://www.omoo.app/",
-    "latestVersionId": "mqf31apkdolugn"
+    "latestVersionId": "mqf31apkdolugn",
+    "categorySlug": "anime"
   },
   {
     "id": "mqf2hvi0ero5r0",
@@ -83,6 +87,7 @@
     "featured": false,
     "latestUpdateTime": "2026-06-15T00:00:00.000Z",
     "website": "https://www.dmghg.com/",
-    "latestVersionId": "mqf2n9y000y2vp"
+    "latestVersionId": "mqf2n9y000y2vp",
+    "categorySlug": "anime"
   }
 ]

@@ -18,7 +18,8 @@
       "Windows"
     ],
     "latestVersionId": "mpwreeavwjr9sc",
-    "latestUpdateTime": "2026-05-01T05:35:34Z"
+    "latestUpdateTime": "2026-05-01T05:35:34Z",
+    "categorySlug": "music"
   },
   {
     "id": "mqdz0w9jb6a6mx",
@@ -34,7 +35,8 @@
     "website": "LX Music 移动版",
     "stars": 17217,
     "forks": 1969,
-    "latestVersionId": "mqdz0wkh0n4nc6"
+    "latestVersionId": "mqdz0wkh0n4nc6",
+    "categorySlug": "music"
   },
   {
     "id": "mqdz4vlw18enkx",
@@ -49,7 +51,8 @@
     "latestUpdateTime": "2023-03-26T15:46:45Z",
     "stars": 25276,
     "forks": 1774,
-    "latestVersionId": "mqdz4vvp4x6d5o"
+    "latestVersionId": "mqdz4vvp4x6d5o",
+    "categorySlug": "music"
   },
   {
     "id": "mqdz5tn7va86j4",
@@ -64,7 +67,8 @@
     "latestUpdateTime": "2023-07-23T14:37:10Z",
     "stars": 8488,
     "forks": 809,
-    "latestVersionId": "mqdz5twauyyawp"
+    "latestVersionId": "mqdz5twauyyawp",
+    "categorySlug": "music"
   },
   {
     "id": "mqdzbe8bbd2xu8",
@@ -79,7 +83,8 @@
     "latestUpdateTime": "2025-04-26T08:38:19Z",
     "stars": 1289,
     "forks": 62,
-    "latestVersionId": "mqdzbefc3z1ebn"
+    "latestVersionId": "mqdzbefc3z1ebn",
+    "categorySlug": "music"
   },
   {
     "id": "mqdzae23et9isy",
@@ -95,6 +100,7 @@
     "stars": 6897,
     "forks": 202,
     "latestVersionId": "mqdzae9ef24yz5",
-    "latestVersion": "12.0.0"
+    "latestVersion": "12.0.0",
+    "categorySlug": "music"
   }
 ]

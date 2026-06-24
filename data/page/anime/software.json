@@ -9,10 +9,11 @@
     "featured": false,
     "githubRepo": "Sle2p/AniCh",
     "githubUrl": "https://github.com/Sle2p/AniCh",
-    "latestUpdateTime": "2025-07-01T00:27:48Z",
-    "stars": 5082,
+    "latestUpdateTime": "2026-06-17T17:35:07Z",
+    "stars": 5105,
     "forks": 111,
     "latestVersionId": "mqdzxfsmu9z0ao",
+    "latestVersion": "1.5.18",
     "categorySlug": "anime"
   },
   {
@@ -25,8 +26,8 @@
     "featured": false,
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 26584,
-    "forks": 766,
+    "stars": 26723,
+    "forks": 769,
     "platforms": [
       "Android",
       "Other",
@@ -35,8 +36,8 @@
       "Windows"
     ],
     "latestVersionId": "mqdzxh79ry0b02",
-    "latestUpdateTime": "2025-12-11T08:52:35Z",
-    "latestVersion": "2.1.5",
+    "latestUpdateTime": "2026-06-18T08:12:10Z",
+    "latestVersion": "2.1.6",
     "categorySlug": "anime"
   },
   {
@@ -49,8 +50,8 @@
     "featured": true,
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 18368,
-    "forks": 493,
+    "stars": 18413,
+    "forks": 498,
     "platforms": [
       "Android",
       "Linux",
@@ -59,8 +60,8 @@
       "Other"
     ],
     "latestVersionId": "mqdzxp2g45cekb",
-    "latestUpdateTime": "2026-02-07T16:43:26Z",
-    "latestVersion": "v5.7.0-alpha01",
+    "latestUpdateTime": "2026-06-17T04:28:55Z",
+    "latestVersion": "v5.7.0-beta01",
     "categorySlug": "anime"
   },
   {
@@ -70,11 +71,11 @@
     "name": "omofun",
     "description": "哔哩哔哩幼年版，有自己的弹幕数据，可以看广告获得VIP。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/omofun.webp",
-    "categorySlug": "anime",
     "featured": false,
     "latestUpdateTime": "2026-04-29T00:00:00.000Z",
     "website": "https://www.omoo.app/",
-    "latestVersionId": "mqf31apkdolugn"
+    "latestVersionId": "mqf31apkdolugn",
+    "categorySlug": "anime"
   },
   {
     "id": "mqf2hvi0ero5r0",
@@ -83,10 +84,10 @@
     "name": "动漫共和国",
     "description": "可以看广告获得VIP，资源比较多，弹幕资源丰富但是弹幕质量较差。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/动漫共和国.webp",
-    "categorySlug": "anime",
     "featured": false,
     "latestUpdateTime": "2026-06-15T00:00:00.000Z",
     "website": "https://www.dmghg.com/",
-    "latestVersionId": "mqf2n9y000y2vp"
+    "latestVersionId": "mqf2n9y000y2vp",
+    "categorySlug": "anime"
   }
 ]

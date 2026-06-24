@@ -15,7 +15,8 @@
       "Android"
     ],
     "latestVersionId": "mqdzx80hhogwvh",
-    "latestUpdateTime": "2026-05-07T05:24:16Z"
+    "latestUpdateTime": "2026-05-07T05:24:16Z",
+    "categorySlug": "book"
   },
   {
     "id": "mqdordihsc5rxn",
@@ -30,7 +31,8 @@
     "latestUpdateTime": "2025-11-01T13:17:04Z",
     "stars": 8353,
     "forks": 564,
-    "latestVersionId": "mqdzx94ic2xzm0"
+    "latestVersionId": "mqdzx94ic2xzm0",
+    "categorySlug": "book"
   },
   {
     "id": "mpwowqbvn123ig",
@@ -48,7 +50,8 @@
       "Android"
     ],
     "latestVersionId": "mqdzx9wjw77iny",
-    "latestUpdateTime": "2026-06-06T13:27:18Z"
+    "latestUpdateTime": "2026-06-06T13:27:18Z",
+    "categorySlug": "book"
   },
   {
     "id": "mpwouieuddbq2d",
@@ -67,7 +70,8 @@
     ],
     "latestVersionId": "mqdzxbdokth5o5",
     "latestUpdateTime": "2026-06-18T16:38:25Z",
-    "latestVersion": "3.26.13-beta.28"
+    "latestVersion": "3.26.13-beta.28",
+    "categorySlug": "book"
   },
   {
     "id": "mpwp1hvpsn5ffl",
@@ -86,7 +90,8 @@
     ],
     "latestVersionId": "mqdzxbsj4f5axz",
     "latestUpdateTime": "2026-06-17T15:43:18Z",
-    "latestVersion": "beta-3.26.061723"
+    "latestVersion": "beta-3.26.061723",
+    "categorySlug": "book"
   },
   {
     "id": "mq1yoxoecx1loi",
@@ -101,7 +106,8 @@
     "latestUpdateTime": "2026-05-24T00:00:00.000Z",
     "stars": 46893,
     "forks": 5717,
-    "latestVersionId": "mqei13n3189p82"
+    "latestVersionId": "mqei13n3189p82",
+    "categorySlug": "book"
   },
   {
     "id": "mpwoyw5uynpmko",
@@ -120,7 +126,8 @@
       "Android"
     ],
     "latestVersionId": "mqdzxd02ytw8go",
-    "latestUpdateTime": "2026-05-27T15:09:57Z"
+    "latestUpdateTime": "2026-05-27T15:09:57Z",
+    "categorySlug": "book"
   },
   {
     "id": "mpwomjebv153ry",
@@ -138,7 +145,8 @@
       "Android"
     ],
     "latestVersionId": "mqdzxdaw5dxjry",
-    "latestUpdateTime": "2025-11-16T14:19:20Z"
+    "latestUpdateTime": "2025-11-16T14:19:20Z",
+    "categorySlug": "book"
   },
   {
     "id": "mqe091nl2j14ej",
@@ -154,6 +162,7 @@
     "stars": 21599,
     "forks": 1273,
     "latestVersionId": "mqe099q50edkdy",
-    "latestVersion": "v0.11.10"
+    "latestVersion": "v0.11.10",
+    "categorySlug": "book"
   }
 ]

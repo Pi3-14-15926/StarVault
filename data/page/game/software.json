@@ -6,14 +6,14 @@
     "name": "SteamTools",
     "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
     "logo": "https://avatars.githubusercontent.com/u/79355691?v=4",
-    "categorySlug": "game",
     "featured": false,
     "githubRepo": "BeyondDimension/SteamTools",
     "githubUrl": "https://github.com/BeyondDimension/SteamTools",
     "latestUpdateTime": "2022-08-14T15:30:17Z",
-    "stars": 25859,
-    "forks": 1655,
-    "latestVersionId": "mqf92t0yg929g4"
+    "stars": 25900,
+    "forks": 1656,
+    "latestVersionId": "mqf92t0yg929g4",
+    "categorySlug": "game"
   },
   {
     "id": "mqf8eoolhym84x",
@@ -22,14 +22,14 @@
     "name": "GameCheatsManager 游戏辅助管理",
     "description": "轻松下载和管理单机游戏作弊工具，方便使用",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameCheatsManager-游戏辅助管理.webp",
-    "categorySlug": "game",
     "featured": false,
     "githubRepo": "dyang886/Game-Cheats-Manager",
     "githubUrl": "https://github.com/dyang886/Game-Cheats-Manager",
     "latestUpdateTime": "2024-05-24T07:46:40Z",
-    "stars": 13008,
+    "stars": 13042,
     "forks": 445,
-    "latestVersionId": "mqf8epidtj8829"
+    "latestVersionId": "mqf8epidtj8829",
+    "categorySlug": "game"
   },
   {
     "id": "mqf8l4hpnnnf0w",
@@ -38,13 +38,13 @@
     "name": "GameNative 游戏模拟器",
     "description": "在 Android 平台上使用 Steam、Epic、GOG 和 Amazon 集成的原生 PC 游戏。",
     "logo": "https://raw.githubusercontent.com/Pi3-14-15926/SoftwareHub/image/public/icons/GameNative-游戏模拟器.webp",
-    "categorySlug": "game",
     "featured": false,
     "githubRepo": "utkarshdalal/GameNative",
     "githubUrl": "https://github.com/utkarshdalal/GameNative",
     "latestUpdateTime": "2025-12-20T22:39:32Z",
-    "stars": 8054,
-    "forks": 292,
-    "latestVersionId": "mqf8l5cl867cgo"
+    "stars": 8112,
+    "forks": 294,
+    "latestVersionId": "mqf8l5cl867cgo",
+    "categorySlug": "game"
   }
 ]

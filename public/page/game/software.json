@@ -12,7 +12,8 @@
     "latestUpdateTime": "2022-08-14T15:30:17Z",
     "stars": 25900,
     "forks": 1656,
-    "latestVersionId": "mqf92t0yg929g4"
+    "latestVersionId": "mqf92t0yg929g4",
+    "categorySlug": "game"
   },
   {
     "id": "mqf8eoolhym84x",
@@ -27,7 +28,8 @@
     "latestUpdateTime": "2024-05-24T07:46:40Z",
     "stars": 13042,
     "forks": 445,
-    "latestVersionId": "mqf8epidtj8829"
+    "latestVersionId": "mqf8epidtj8829",
+    "categorySlug": "game"
   },
   {
     "id": "mqf8l4hpnnnf0w",
@@ -42,6 +44,7 @@
     "latestUpdateTime": "2025-12-20T22:39:32Z",
     "stars": 8112,
     "forks": 294,
-    "latestVersionId": "mqf8l5cl867cgo"
+    "latestVersionId": "mqf8l5cl867cgo",
+    "categorySlug": "game"
   }
 ]
