@@ -7670,416 +7670,6 @@
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   },
   {
-    "id": "mqdzae3c2n8jqr",
-    "versionId": "mqdzae35w61mc9",
-    "platform": "Android",
-    "filename": "11.1.0-2026031101-moriafly-arm64-v8a.apk",
-    "size": "11.3 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-moriafly-arm64-v8a.apk",
-    "downloadCount": 9113,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae3k9rkpqm",
-    "versionId": "mqdzae35w61mc9",
-    "platform": "Android",
-    "filename": "11.1.0-2026031101-moriafly-armeabi-v7a.apk",
-    "size": "11.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-moriafly-armeabi-v7a.apk",
-    "downloadCount": 2017,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae3ujg3aes",
-    "versionId": "mqdzae35w61mc9",
-    "platform": "Android",
-    "filename": "11.1.0-2026031101-official-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-official-arm64-v8a.apk",
-    "downloadCount": 4283,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae45qrf2iw",
-    "versionId": "mqdzae3zmkt9af",
-    "platform": "Android",
-    "filename": "11.0.4-2025123102-moriafly-arm64-v8a.apk",
-    "size": "11.0 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.4/11.0.4-2025123102-moriafly-arm64-v8a.apk",
-    "downloadCount": 6360,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae4a90z5ek",
-    "versionId": "mqdzae3zmkt9af",
-    "platform": "Android",
-    "filename": "11.0.4-2025123102-moriafly-armeabi-v7a.apk",
-    "size": "11.6 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.4/11.0.4-2025123102-moriafly-armeabi-v7a.apk",
-    "downloadCount": 1414,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae4kpx8gsb",
-    "versionId": "mqdzae4g7zxebu",
-    "platform": "Android",
-    "filename": "11.0.3-2025123101-moriafly-arm64-v8a.apk",
-    "size": "11.3 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.3/11.0.3-2025123101-moriafly-arm64-v8a.apk",
-    "downloadCount": 334,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae4qgzgx3j",
-    "versionId": "mqdzae4g7zxebu",
-    "platform": "Android",
-    "filename": "11.0.3-2025123101-moriafly-armeabi-v7a.apk",
-    "size": "11.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.3/11.0.3-2025123101-moriafly-armeabi-v7a.apk",
-    "downloadCount": 73,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae4zpk3xc3",
-    "versionId": "mqdzae4u1g1qxs",
-    "platform": "Android",
-    "filename": "11.0.0-2025121501-moriafly-arm64-v8a.apk",
-    "size": "11.1 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.0/11.0.0-2025121501-moriafly-arm64-v8a.apk",
-    "downloadCount": 1937,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae541dvhkq",
-    "versionId": "mqdzae4u1g1qxs",
-    "platform": "Android",
-    "filename": "11.0.0-2025121501-moriafly-armeabi-v7a.apk",
-    "size": "11.7 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.0/11.0.0-2025121501-moriafly-armeabi-v7a.apk",
-    "downloadCount": 305,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae5ebwy41f",
-    "versionId": "mqdzae597aj7ks",
-    "platform": "Android",
-    "filename": "10.10.2-2025102001-moriafly-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.2/10.10.2-2025102001-moriafly-arm64-v8a.apk",
-    "downloadCount": 5813,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae5j0fu9j3",
-    "versionId": "mqdzae597aj7ks",
-    "platform": "Android",
-    "filename": "10.10.2-2025102001-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.2/10.10.2-2025102001-moriafly-armeabi-v7a.apk",
-    "downloadCount": 1385,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae5r6xqsxz",
-    "versionId": "mqdzae5osm0its",
-    "platform": "Android",
-    "filename": "10.10.0-2025092601-moriafly-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.0/10.10.0-2025092601-moriafly-arm64-v8a.apk",
-    "downloadCount": 3153,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae5upj34kf",
-    "versionId": "mqdzae5osm0its",
-    "platform": "Android",
-    "filename": "10.10.0-2025092601-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.0/10.10.0-2025092601-moriafly-armeabi-v7a.apk",
-    "downloadCount": 727,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae61bnlbx4",
-    "versionId": "mqdzae5x3t7jxl",
-    "platform": "Android",
-    "filename": "10.9.0-2025072301-moriafly-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0/10.9.0-2025072301-moriafly-arm64-v8a.apk",
-    "downloadCount": 4424,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae640fw8ok",
-    "versionId": "mqdzae5x3t7jxl",
-    "platform": "Android",
-    "filename": "10.9.0-2025072301-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0/10.9.0-2025072301-moriafly-armeabi-v7a.apk",
-    "downloadCount": 1105,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6ai211sn",
-    "versionId": "mqdzae67d8eu97",
-    "platform": "Android",
-    "filename": "10.9.0-alpha03-2025070901-moriafly-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0-alpha03/10.9.0-alpha03-2025070901-moriafly-arm64-v8a.apk",
-    "downloadCount": 2522,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6dp5zke7",
-    "versionId": "mqdzae67d8eu97",
-    "platform": "Android",
-    "filename": "10.9.0-alpha03-2025070901-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0-alpha03/10.9.0-alpha03-2025070901-moriafly-armeabi-v7a.apk",
-    "downloadCount": 702,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6kddx53b",
-    "versionId": "mqdzae6hcsubi9",
-    "platform": "Android",
-    "filename": "10.8.3-2025062701-moriafly-arm64-v8a.apk",
-    "size": "10.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.3/10.8.3-2025062701-moriafly-arm64-v8a.apk",
-    "downloadCount": 4091,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6njyl12e",
-    "versionId": "mqdzae6hcsubi9",
-    "platform": "Android",
-    "filename": "10.8.3-2025062701-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.3/10.8.3-2025062701-moriafly-armeabi-v7a.apk",
-    "downloadCount": 858,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6uyrypgt",
-    "versionId": "mqdzae6rkhzcuw",
-    "platform": "Android",
-    "filename": "10.8.2-2025041901-moriafly-arm64-v8a.apk",
-    "size": "10.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.2/10.8.2-2025041901-moriafly-arm64-v8a.apk",
-    "downloadCount": 6087,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae6xt5zcyv",
-    "versionId": "mqdzae6rkhzcuw",
-    "platform": "Android",
-    "filename": "10.8.2-2025041901-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.2/10.8.2-2025041901-moriafly-armeabi-v7a.apk",
-    "downloadCount": 1566,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae73e2fadn",
-    "versionId": "mqdzae702yj1yu",
-    "platform": "Android",
-    "filename": "10.8.1-2025041702-moriafly-arm64-v8a.apk",
-    "size": "10.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.1/10.8.1-2025041702-moriafly-arm64-v8a.apk",
-    "downloadCount": 698,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7545dels",
-    "versionId": "mqdzae702yj1yu",
-    "platform": "Android",
-    "filename": "10.8.1-2025041702-moriafly-armeabi-v7a.apk",
-    "size": "11.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.1/10.8.1-2025041702-moriafly-armeabi-v7a.apk",
-    "downloadCount": 178,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7c1nwer5",
-    "versionId": "mqdzae787fqu2p",
-    "platform": "Android",
-    "filename": "10.8.0-2025022601-moriafly-arm64-v8a.apk",
-    "size": "10.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0/10.8.0-2025022601-moriafly-arm64-v8a.apk",
-    "downloadCount": 4222,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7f2v7vtu",
-    "versionId": "mqdzae787fqu2p",
-    "platform": "Android",
-    "filename": "10.8.0-2025022601-moriafly-armeabi-v7a.apk",
-    "size": "11.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0/10.8.0-2025022601-moriafly-armeabi-v7a.apk",
-    "downloadCount": 1047,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7lrav8bk",
-    "versionId": "mqdzae7iw6f4v9",
-    "platform": "Android",
-    "filename": "10.8.0-beta03-2025011401-moriafly-arm64-v8a.apk",
-    "size": "11.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta03/10.8.0-beta03-2025011401-moriafly-arm64-v8a.apk",
-    "downloadCount": 1847,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7oskk2a6",
-    "versionId": "mqdzae7iw6f4v9",
-    "platform": "Android",
-    "filename": "10.8.0-beta03-2025011401-moriafly-armeabi-v7a.apk",
-    "size": "12.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta03/10.8.0-beta03-2025011401-moriafly-armeabi-v7a.apk",
-    "downloadCount": 643,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7vi3q3yw",
-    "versionId": "mqdzae7rndvpdg",
-    "platform": "Android",
-    "filename": "10.8.0-beta02-2025010703-moriafly-arm64-v8a.apk",
-    "size": "11.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta02/10.8.0-beta02-2025010703-moriafly-arm64-v8a.apk",
-    "downloadCount": 629,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae7yf35tn3",
-    "versionId": "mqdzae7rndvpdg",
-    "platform": "Android",
-    "filename": "10.8.0-beta02-2025010703-moriafly-armeabi-v7a.apk",
-    "size": "12.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta02/10.8.0-beta02-2025010703-moriafly-armeabi-v7a.apk",
-    "downloadCount": 187,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae83i2lml5",
-    "versionId": "mqdzae811olgjt",
-    "platform": "Android",
-    "filename": "10.8.0-beta01-2025010502-moriafly-arm64-v8a.apk",
-    "size": "11.9 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta01/10.8.0-beta01-2025010502-moriafly-arm64-v8a.apk",
-    "downloadCount": 251,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae864ol9ad",
-    "versionId": "mqdzae811olgjt",
-    "platform": "Android",
-    "filename": "10.8.0-beta01-2025010502-moriafly-armeabi-v7a.apk",
-    "size": "12.5 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta01/10.8.0-beta01-2025010502-moriafly-armeabi-v7a.apk",
-    "downloadCount": 70,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8dqstyhz",
-    "versionId": "mqdzae8aqnzskr",
-    "platform": "Android",
-    "filename": "10.7.0-2024122401-moriafly-arm64-v8a.apk",
-    "size": "11.7 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0/10.7.0-2024122401-moriafly-arm64-v8a.apk",
-    "downloadCount": 3322,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8gg5lp20",
-    "versionId": "mqdzae8aqnzskr",
-    "platform": "Android",
-    "filename": "10.7.0-2024122401-moriafly-armeabi-v7a.apk",
-    "size": "12.3 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0/10.7.0-2024122401-moriafly-armeabi-v7a.apk",
-    "downloadCount": 861,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8m7q4u8d",
-    "versionId": "mqdzae8j6v6m0c",
-    "platform": "Android",
-    "filename": "10.7.0-beta01-2024121901-moriafly-arm64-v8a.apk",
-    "size": "11.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-beta01/10.7.0-beta01-2024121901-moriafly-arm64-v8a.apk",
-    "downloadCount": 386,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8qg71ycc",
-    "versionId": "mqdzae8j6v6m0c",
-    "platform": "Android",
-    "filename": "10.7.0-beta01-2024121901-moriafly-armeabi-v7a.apk",
-    "size": "12.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-beta01/10.7.0-beta01-2024121901-moriafly-armeabi-v7a.apk",
-    "downloadCount": 157,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8vfkb851",
-    "versionId": "mqdzae8taut6f2",
-    "platform": "Android",
-    "filename": "10.7.0-alpha04-2024121603-moriafly-arm64-v8a.apk",
-    "size": "11.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha04/10.7.0-alpha04-2024121603-moriafly-arm64-v8a.apk",
-    "downloadCount": 277,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae8ycxhr6f",
-    "versionId": "mqdzae8taut6f2",
-    "platform": "Android",
-    "filename": "10.7.0-alpha04-2024121603-moriafly-armeabi-v7a.apk",
-    "size": "12.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha04/10.7.0-alpha04-2024121603-moriafly-armeabi-v7a.apk",
-    "downloadCount": 93,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae97wz10og",
-    "versionId": "mqdzae93ktwc7t",
-    "platform": "Android",
-    "filename": "10.7.0-alpha03-2024121602-moriafly-arm64-v8a.apk",
-    "size": "11.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha03/10.7.0-alpha03-2024121602-moriafly-arm64-v8a.apk",
-    "downloadCount": 105,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae9b0ja9h3",
-    "versionId": "mqdzae93ktwc7t",
-    "platform": "Android",
-    "filename": "10.7.0-alpha03-2024121602-moriafly-armeabi-v7a.apk",
-    "size": "12.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha03/10.7.0-alpha03-2024121602-moriafly-armeabi-v7a.apk",
-    "downloadCount": 39,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae9h2r5ts7",
-    "versionId": "mqdzae9ef24yz5",
-    "platform": "Android",
-    "filename": "10.7.0-alpha02-2024121601-moriafly-arm64-v8a.apk",
-    "size": "11.8 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha02/10.7.0-alpha02-2024121601-moriafly-arm64-v8a.apk",
-    "downloadCount": 60,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
-    "id": "mqdzae9ldcihwg",
-    "versionId": "mqdzae9ef24yz5",
-    "platform": "Android",
-    "filename": "10.7.0-alpha02-2024121601-moriafly-armeabi-v7a.apk",
-    "size": "12.4 MB",
-    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha02/10.7.0-alpha02-2024121601-moriafly-armeabi-v7a.apk",
-    "downloadCount": 27,
-    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
-  },
-  {
     "id": "mqdzbe8wic7i7e",
     "versionId": "mqdzbe8t0tqs3z",
     "platform": "Android",
@@ -8587,6 +8177,440 @@
     "size": "25.4 MB",
     "url": "https://github.com/kejichangqing/QingMusic/releases/download/v1.0.6/qingmusic_v1.0.6.apk",
     "downloadCount": 294,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqjmlcnp4yvcrv",
+    "versionId": "mqjmlcnpuuxzcs",
+    "platform": "Android",
+    "filename": "12.0.0-2026061801-moriafly-arm64-v8a.apk",
+    "size": "11.1 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/12.0.0/12.0.0-2026061801-moriafly-arm64-v8a.apk"
+  },
+  {
+    "id": "mqjmlcnp4jqjb3",
+    "versionId": "mqjmlcnpuuxzcs",
+    "platform": "Android",
+    "filename": "12.0.0-2026061801-moriafly-armeabi-v7a.apk",
+    "size": "11.7 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/12.0.0/12.0.0-2026061801-moriafly-armeabi-v7a.apk"
+  },
+  {
+    "id": "mqjmlcnpq6akis",
+    "versionId": "mqjmlcnpuuxzcs",
+    "platform": "Android",
+    "filename": "12.0.0-2026061801-official-arm64-v8a.apk",
+    "size": "10.7 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/12.0.0/12.0.0-2026061801-official-arm64-v8a.apk"
+  },
+  {
+    "id": "mqdzae3c2n8jqr",
+    "versionId": "mqdzae35w61mc9",
+    "platform": "Android",
+    "filename": "11.1.0-2026031101-moriafly-arm64-v8a.apk",
+    "size": "11.3 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-moriafly-arm64-v8a.apk",
+    "downloadCount": 9113,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae3k9rkpqm",
+    "versionId": "mqdzae35w61mc9",
+    "platform": "Android",
+    "filename": "11.1.0-2026031101-moriafly-armeabi-v7a.apk",
+    "size": "11.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-moriafly-armeabi-v7a.apk",
+    "downloadCount": 2017,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae3ujg3aes",
+    "versionId": "mqdzae35w61mc9",
+    "platform": "Android",
+    "filename": "11.1.0-2026031101-official-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.1.0/11.1.0-2026031101-official-arm64-v8a.apk",
+    "downloadCount": 4283,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae45qrf2iw",
+    "versionId": "mqdzae3zmkt9af",
+    "platform": "Android",
+    "filename": "11.0.4-2025123102-moriafly-arm64-v8a.apk",
+    "size": "11.0 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.4/11.0.4-2025123102-moriafly-arm64-v8a.apk",
+    "downloadCount": 6360,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae4a90z5ek",
+    "versionId": "mqdzae3zmkt9af",
+    "platform": "Android",
+    "filename": "11.0.4-2025123102-moriafly-armeabi-v7a.apk",
+    "size": "11.6 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.4/11.0.4-2025123102-moriafly-armeabi-v7a.apk",
+    "downloadCount": 1414,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae4kpx8gsb",
+    "versionId": "mqdzae4g7zxebu",
+    "platform": "Android",
+    "filename": "11.0.3-2025123101-moriafly-arm64-v8a.apk",
+    "size": "11.3 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.3/11.0.3-2025123101-moriafly-arm64-v8a.apk",
+    "downloadCount": 334,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae4qgzgx3j",
+    "versionId": "mqdzae4g7zxebu",
+    "platform": "Android",
+    "filename": "11.0.3-2025123101-moriafly-armeabi-v7a.apk",
+    "size": "11.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.3/11.0.3-2025123101-moriafly-armeabi-v7a.apk",
+    "downloadCount": 73,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae4zpk3xc3",
+    "versionId": "mqdzae4u1g1qxs",
+    "platform": "Android",
+    "filename": "11.0.0-2025121501-moriafly-arm64-v8a.apk",
+    "size": "11.1 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.0/11.0.0-2025121501-moriafly-arm64-v8a.apk",
+    "downloadCount": 1937,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae541dvhkq",
+    "versionId": "mqdzae4u1g1qxs",
+    "platform": "Android",
+    "filename": "11.0.0-2025121501-moriafly-armeabi-v7a.apk",
+    "size": "11.7 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/11.0.0/11.0.0-2025121501-moriafly-armeabi-v7a.apk",
+    "downloadCount": 305,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae5ebwy41f",
+    "versionId": "mqdzae597aj7ks",
+    "platform": "Android",
+    "filename": "10.10.2-2025102001-moriafly-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.2/10.10.2-2025102001-moriafly-arm64-v8a.apk",
+    "downloadCount": 5813,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae5j0fu9j3",
+    "versionId": "mqdzae597aj7ks",
+    "platform": "Android",
+    "filename": "10.10.2-2025102001-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.2/10.10.2-2025102001-moriafly-armeabi-v7a.apk",
+    "downloadCount": 1385,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae5r6xqsxz",
+    "versionId": "mqdzae5osm0its",
+    "platform": "Android",
+    "filename": "10.10.0-2025092601-moriafly-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.0/10.10.0-2025092601-moriafly-arm64-v8a.apk",
+    "downloadCount": 3153,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae5upj34kf",
+    "versionId": "mqdzae5osm0its",
+    "platform": "Android",
+    "filename": "10.10.0-2025092601-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.10.0/10.10.0-2025092601-moriafly-armeabi-v7a.apk",
+    "downloadCount": 727,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae61bnlbx4",
+    "versionId": "mqdzae5x3t7jxl",
+    "platform": "Android",
+    "filename": "10.9.0-2025072301-moriafly-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0/10.9.0-2025072301-moriafly-arm64-v8a.apk",
+    "downloadCount": 4424,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae640fw8ok",
+    "versionId": "mqdzae5x3t7jxl",
+    "platform": "Android",
+    "filename": "10.9.0-2025072301-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0/10.9.0-2025072301-moriafly-armeabi-v7a.apk",
+    "downloadCount": 1105,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6ai211sn",
+    "versionId": "mqdzae67d8eu97",
+    "platform": "Android",
+    "filename": "10.9.0-alpha03-2025070901-moriafly-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0-alpha03/10.9.0-alpha03-2025070901-moriafly-arm64-v8a.apk",
+    "downloadCount": 2522,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6dp5zke7",
+    "versionId": "mqdzae67d8eu97",
+    "platform": "Android",
+    "filename": "10.9.0-alpha03-2025070901-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.9.0-alpha03/10.9.0-alpha03-2025070901-moriafly-armeabi-v7a.apk",
+    "downloadCount": 702,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6kddx53b",
+    "versionId": "mqdzae6hcsubi9",
+    "platform": "Android",
+    "filename": "10.8.3-2025062701-moriafly-arm64-v8a.apk",
+    "size": "10.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.3/10.8.3-2025062701-moriafly-arm64-v8a.apk",
+    "downloadCount": 4091,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6njyl12e",
+    "versionId": "mqdzae6hcsubi9",
+    "platform": "Android",
+    "filename": "10.8.3-2025062701-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.3/10.8.3-2025062701-moriafly-armeabi-v7a.apk",
+    "downloadCount": 858,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6uyrypgt",
+    "versionId": "mqdzae6rkhzcuw",
+    "platform": "Android",
+    "filename": "10.8.2-2025041901-moriafly-arm64-v8a.apk",
+    "size": "10.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.2/10.8.2-2025041901-moriafly-arm64-v8a.apk",
+    "downloadCount": 6087,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae6xt5zcyv",
+    "versionId": "mqdzae6rkhzcuw",
+    "platform": "Android",
+    "filename": "10.8.2-2025041901-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.2/10.8.2-2025041901-moriafly-armeabi-v7a.apk",
+    "downloadCount": 1566,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae73e2fadn",
+    "versionId": "mqdzae702yj1yu",
+    "platform": "Android",
+    "filename": "10.8.1-2025041702-moriafly-arm64-v8a.apk",
+    "size": "10.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.1/10.8.1-2025041702-moriafly-arm64-v8a.apk",
+    "downloadCount": 698,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7545dels",
+    "versionId": "mqdzae702yj1yu",
+    "platform": "Android",
+    "filename": "10.8.1-2025041702-moriafly-armeabi-v7a.apk",
+    "size": "11.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.1/10.8.1-2025041702-moriafly-armeabi-v7a.apk",
+    "downloadCount": 178,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7c1nwer5",
+    "versionId": "mqdzae787fqu2p",
+    "platform": "Android",
+    "filename": "10.8.0-2025022601-moriafly-arm64-v8a.apk",
+    "size": "10.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0/10.8.0-2025022601-moriafly-arm64-v8a.apk",
+    "downloadCount": 4222,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7f2v7vtu",
+    "versionId": "mqdzae787fqu2p",
+    "platform": "Android",
+    "filename": "10.8.0-2025022601-moriafly-armeabi-v7a.apk",
+    "size": "11.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0/10.8.0-2025022601-moriafly-armeabi-v7a.apk",
+    "downloadCount": 1047,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7lrav8bk",
+    "versionId": "mqdzae7iw6f4v9",
+    "platform": "Android",
+    "filename": "10.8.0-beta03-2025011401-moriafly-arm64-v8a.apk",
+    "size": "11.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta03/10.8.0-beta03-2025011401-moriafly-arm64-v8a.apk",
+    "downloadCount": 1847,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7oskk2a6",
+    "versionId": "mqdzae7iw6f4v9",
+    "platform": "Android",
+    "filename": "10.8.0-beta03-2025011401-moriafly-armeabi-v7a.apk",
+    "size": "12.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta03/10.8.0-beta03-2025011401-moriafly-armeabi-v7a.apk",
+    "downloadCount": 643,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7vi3q3yw",
+    "versionId": "mqdzae7rndvpdg",
+    "platform": "Android",
+    "filename": "10.8.0-beta02-2025010703-moriafly-arm64-v8a.apk",
+    "size": "11.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta02/10.8.0-beta02-2025010703-moriafly-arm64-v8a.apk",
+    "downloadCount": 629,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae7yf35tn3",
+    "versionId": "mqdzae7rndvpdg",
+    "platform": "Android",
+    "filename": "10.8.0-beta02-2025010703-moriafly-armeabi-v7a.apk",
+    "size": "12.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta02/10.8.0-beta02-2025010703-moriafly-armeabi-v7a.apk",
+    "downloadCount": 187,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae83i2lml5",
+    "versionId": "mqdzae811olgjt",
+    "platform": "Android",
+    "filename": "10.8.0-beta01-2025010502-moriafly-arm64-v8a.apk",
+    "size": "11.9 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta01/10.8.0-beta01-2025010502-moriafly-arm64-v8a.apk",
+    "downloadCount": 251,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae864ol9ad",
+    "versionId": "mqdzae811olgjt",
+    "platform": "Android",
+    "filename": "10.8.0-beta01-2025010502-moriafly-armeabi-v7a.apk",
+    "size": "12.5 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.8.0-beta01/10.8.0-beta01-2025010502-moriafly-armeabi-v7a.apk",
+    "downloadCount": 70,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8dqstyhz",
+    "versionId": "mqdzae8aqnzskr",
+    "platform": "Android",
+    "filename": "10.7.0-2024122401-moriafly-arm64-v8a.apk",
+    "size": "11.7 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0/10.7.0-2024122401-moriafly-arm64-v8a.apk",
+    "downloadCount": 3322,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8gg5lp20",
+    "versionId": "mqdzae8aqnzskr",
+    "platform": "Android",
+    "filename": "10.7.0-2024122401-moriafly-armeabi-v7a.apk",
+    "size": "12.3 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0/10.7.0-2024122401-moriafly-armeabi-v7a.apk",
+    "downloadCount": 861,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8m7q4u8d",
+    "versionId": "mqdzae8j6v6m0c",
+    "platform": "Android",
+    "filename": "10.7.0-beta01-2024121901-moriafly-arm64-v8a.apk",
+    "size": "11.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-beta01/10.7.0-beta01-2024121901-moriafly-arm64-v8a.apk",
+    "downloadCount": 386,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8qg71ycc",
+    "versionId": "mqdzae8j6v6m0c",
+    "platform": "Android",
+    "filename": "10.7.0-beta01-2024121901-moriafly-armeabi-v7a.apk",
+    "size": "12.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-beta01/10.7.0-beta01-2024121901-moriafly-armeabi-v7a.apk",
+    "downloadCount": 157,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8vfkb851",
+    "versionId": "mqdzae8taut6f2",
+    "platform": "Android",
+    "filename": "10.7.0-alpha04-2024121603-moriafly-arm64-v8a.apk",
+    "size": "11.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha04/10.7.0-alpha04-2024121603-moriafly-arm64-v8a.apk",
+    "downloadCount": 277,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae8ycxhr6f",
+    "versionId": "mqdzae8taut6f2",
+    "platform": "Android",
+    "filename": "10.7.0-alpha04-2024121603-moriafly-armeabi-v7a.apk",
+    "size": "12.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha04/10.7.0-alpha04-2024121603-moriafly-armeabi-v7a.apk",
+    "downloadCount": 93,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae97wz10og",
+    "versionId": "mqdzae93ktwc7t",
+    "platform": "Android",
+    "filename": "10.7.0-alpha03-2024121602-moriafly-arm64-v8a.apk",
+    "size": "11.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha03/10.7.0-alpha03-2024121602-moriafly-arm64-v8a.apk",
+    "downloadCount": 105,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae9b0ja9h3",
+    "versionId": "mqdzae93ktwc7t",
+    "platform": "Android",
+    "filename": "10.7.0-alpha03-2024121602-moriafly-armeabi-v7a.apk",
+    "size": "12.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha03/10.7.0-alpha03-2024121602-moriafly-armeabi-v7a.apk",
+    "downloadCount": 39,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae9h2r5ts7",
+    "versionId": "mqdzae9ef24yz5",
+    "platform": "Android",
+    "filename": "10.7.0-alpha02-2024121601-moriafly-arm64-v8a.apk",
+    "size": "11.8 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha02/10.7.0-alpha02-2024121601-moriafly-arm64-v8a.apk",
+    "downloadCount": 60,
+    "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mqdzae9ldcihwg",
+    "versionId": "mqdzae9ef24yz5",
+    "platform": "Android",
+    "filename": "10.7.0-alpha02-2024121601-moriafly-armeabi-v7a.apk",
+    "size": "12.4 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/10.7.0-alpha02/10.7.0-alpha02-2024121601-moriafly-armeabi-v7a.apk",
+    "downloadCount": 27,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   }
 ]

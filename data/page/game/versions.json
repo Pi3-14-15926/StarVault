@@ -1,5 +1,301 @@
 [
   {
+    "id": "mqf92pbg5hrksq",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.1.0",
+    "publishedAt": "2026-03-11T18:03:11Z",
+    "changelog": "### 更新说明\r\n\r\n1. 修复 Epic 账号切换失效\r\n2. 升级 .NET 10\r\n3. 升级 Avalonia 11.3.12\r\n4. 修复一些动图渲染问题\r\n5. 修复开启加速关机时可能导致的错误弹窗\r\n6. 修复加速启用脚本时 Github 页面会导致无法打开的错误\r\n7. 修复成就管理对 Steam 新的成就数据格式会卡无限加载的问题\r\n8. Steam 库存编辑功能加入导入导出备份功能\r\n9. 修复了一些失效加速项\r\n10. Steam 挂卡增加黑名单功能\r\n11. 其它一些小问题修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.1.0_win_x64.7z</sub> | <sub>74D0EB1FD67E8EB0914A9962244FC4251993061DF77E6E6C0DFE8A4A899D5AE4</sub> |\r\n| <sub>Steam++_v3.1.0_win_x64.exe</sub> | <sub>EDAC49338697EA4F3EBC0B5BADC7DDAA91EB1BF0C97ED16F4CBA37F8D543B911</sub> |\r\n|||\r\n| <sub>Steam++_v3.1.0_linux_x64.tgz</sub> | <sub>FB99BCD4FA6AC649228700F908819FE19A16CC29A866AD43D2873E504A41783F</sub> |\r\n|||\r\n| <sub>Steam++_v3.1.0_macos.dmg</sub> | <sub>4016ED6BBA5F4EEF14EE7DA550DFF2D29A8D85483AF2FCAD77EBDA02EBC0BE7D</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.1.0](https://img.shields.io/badge/Steam++-v3.1.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92pcaltxliw",
+      "mqf92pden5wdrs",
+      "mqf92peeulq4m0",
+      "mqf92pfcm982nk"
+    ]
+  },
+  {
+    "id": "mqf92pgck7vnpb",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.16",
+    "publishedAt": "2025-03-27T03:10:57Z",
+    "changelog": "### 更新说明\r\n\r\n1. 修复图标错位问题\r\n2. 升级 Avalonia 至11.2.5\r\n3. 修复 docker hub 加速\r\n4. 新增反代 http3 支持\r\n5. 修复加速项存在部分选中时，加速后依然错误的全选生效问题\r\n6. 修复网络测试出现错误会导致程序崩溃问题\r\n7. 修复游戏加速插件下载时程序卡死问题\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于快速帮定位问题解决。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.16_win_x64.7z</sub> | <sub>36EB952EEC538AF7E2C4D5B8D7BED8E9232E7349F054F094221E4486F0DBE893</sub> |\r\n| <sub>Steam++_v3.0.0-rc.16_win_x64.exe</sub> | <sub>C3754C0913F69AD89C04292E3388A72C40967D4F7123AC3A58512FF65FFD26C0</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.16_linux_x64.tgz</sub> | <sub>99493F821F063D8C21B39399CCAA2B90D20C30A97E6A616BC1B4ED1F40271D32</sub> |\r\n| <sub>Steam++_v3.0.0-rc.16_linux_arm64.tgz</sub> | <sub>C5FCF1C7130AB28330C3D3F307F9EF45CC6A3AACA7EB97AC72FC64CCAF5CB02A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.16_macos.dmg</sub> | <sub>FB25C8923C2F60B55EF680A7909DE75841FDD2C525B0CD19F49D64121997DF61</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc16](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92ph86abhkk",
+      "mqf92pi744ckjo",
+      "mqf92pj5etxv65",
+      "mqf92pk3a3an8a",
+      "mqf92pl1y4vlas"
+    ]
+  },
+  {
+    "id": "mqf92pm61hv5un",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.15",
+    "publishedAt": "2025-02-12T18:29:32Z",
+    "changelog": "### 更新说明\r\n因最近默认 DOH、DNS 地址失效导致许多人加速不可用所以发布此版做自动选择可用 DNS 来解决，\r\n不想更新的自行在加速设置-代理设置中切换可用DOH或者DNS重开加速也可解决，验证 DOH、DNS 是否可用可在网络加速中的 网络测试-DNS测试中验证。\r\n\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于我快速帮你定位问题告知你如何解决。\r\n\r\n1. 修复因 steam 更新导致的【steam 挂卡】、【本地令牌】登录失效\r\n2. 新增 greasyfork 加速\r\n3. 修复 docker hub 加速\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n因升级 Avalonia 11.2.3 和 SkiaSharp 3.x 导致目前有一些图标错位问题，和图片质量较低等已知问题，需继续等待上游修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.15_win_x64.7z</sub> | <sub>B99D65E9A9A8E23C7858617897E8A6F324A36C06153A8F77EE8375B18FC8A0CB</sub> |\r\n| <sub>Steam++_v3.0.0-rc.15_win_x64.exe</sub> | <sub>E395DC14F2605DB7EDC5623DF570C016A9BC064024CD2CF6691BFC59B3FB3289</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.15_linux_x64.tgz</sub> | <sub>81EACD85100EFF2E8F294CE0BEEF0A8B9CE25A724E42AA680495318E4DD02782</sub> |\r\n| <sub>Steam++_v3.0.0-rc.15_linux_arm64.tgz</sub> | <sub>80E3E233DC8E9D64FA5B4E70739E509F03235483EF516FE22AF9362544D8F6E8</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.15_macos.dmg</sub> | <sub>3266CE7761235F3CA5537068A376CFEF8C0770D5D617A62C7E78B8DB9C122B63</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc15](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92pn581qkw8",
+      "mqf92poewaltk0",
+      "mqf92ppfr4tq29",
+      "mqf92pqg2e92qg",
+      "mqf92prjb3aov6"
+    ]
+  },
+  {
+    "id": "mqf92psklwhyfb",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.14",
+    "publishedAt": "2025-01-23T12:35:59Z",
+    "changelog": "### 更新说明\r\n因最近默认 DOH、DNS 地址失效导致许多人加速不可用所以发布此版做自动选择可用 DNS 来解决，\r\n不想更新的自行在加速设置-代理设置中切换可用DOH或者DNS重开加速也可解决，验证 DOH、DNS 是否可用可在网络加速中的 网络测试-DNS测试中验证。\r\n\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于我快速帮你定位问题告知你如何解决。\r\n\r\n1. 升级 Avalonia 到11.2.3\r\n2. 新增 启动加速时检查 DNS 可用性并自动切换可用 DNS 功能，以解决最近因默认 DNS、DOH不稳定导致的加速后无法访问网络情况\r\n3. 修复 macOS 中挂时长列表项 UI 显示问题\r\n4. 调整 账号切换 中 Steam 家庭共享库管理说明文本，因 Steam 已抛弃旧版本家庭共享故此功能将在后续更新中移除\r\n5. 感谢 @NeKoOuO 提交的繁体翻译文本\r\n6. 感谢 @4Darmygeometry 提交的龙架构(LoongArch)编译版本\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n因升级 Avalonia 11.2.3 和 SkiaSharp 3.x 导致目前有一些图标错位问题，和图片质量较低等已知问题，需继续等待上游修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.14_win_x64.7z</sub> | <sub>C37E209A960ACB5CF90D315A61B99363056D9F5DEF777D34317B2F4EC2D5F16A</sub> |\r\n| <sub>Steam++_v3.0.0-rc.14_win_x64.exe</sub> | <sub>DFA3CB72966AAA5C79A1A79A58FC86EAF9F1A479A649031A9CFBF8A3A90BB6BF</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.14_linux_x64.tgz</sub> | <sub>2E2A4DF79A01A5F9232B26367537F125EFB50BDF4B6D1D441A8D93593D8C6F09</sub> |\r\n| <sub>Steam++_v3.0.0-rc.14_linux_arm64.tgz</sub> | <sub>37CB0FE2108CD24632BC8EDF59B78B8123F9358EB29F43787624FCC8CB5E6F6E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.14_macos.dmg</sub> | <sub>C412DB0A8A49BA9179C3398AED5D32D653D5F2D7FEEB88150D7D15DF6A18E2DF</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc14](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92ptistq0kh",
+      "mqf92pui4cmu9n",
+      "mqf92pvhox1v4b",
+      "mqf92pwimm8o7j",
+      "mqf92pxjmlm2fy"
+    ]
+  },
+  {
+    "id": "mqf92pylctu9d4",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.13",
+    "publishedAt": "2024-12-02T07:22:16Z",
+    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB\r\n\r\n1. 调整 网络检测 DNS 检测 域名合法的正则验证\r\n2. 调整 网络测试 延迟值指示的提示改进\r\n3. 调整 ASF 插件 文档链接可直接访问\r\n4. 修复 ASF 插件 一键下载在低版本 Windows 系统上报错问题\r\n5. 修复 网络加速 因证书过期而导致的加速失效问题\r\n6. 修复 ASF 插件 Release 版进程残留问题，启动优化，打开文件夹提示优化\r\n7. 修复 网络加速 加速过程中证书过期没有正确处理的问题\r\n8. 修复 挂卡和令牌确认交易中可能出现系统代理更改时网络请求出错的问题\r\n9. 修复 ASF 下载通知问题\r\n10. 修复 Windows 关机时没有正常退出程序导致报错\r\n11. 修复 库存游戏 新版 Steam 客户端编辑游戏功能保存不生效问题\r\n12. 调整 账号切换 其它平台现在不在默认以管理员方式启动\r\n13. 修复 账号切换 战网无法正确切换国服和国际服账号，并且国服国际服账号名称相同时无法正常保存问题\r\n14. 调整 现在需要登录才能使用的功能提示更友好\r\n15. 升级 .NET 到 9.0\r\n16. 升级 Avalonia 到 11.1.5\r\n17. 修复 在较旧版本的 Windows 10 上因 CET 导致网络加速页卡死\r\n18. 修复 战网账号切换对旧版本数据支持问题\r\n19. 修复 战网安装有多个存在时保存账号闪退问题\r\n20. 调整 macOS 托盘标题显示\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.13_win_x64.7z</sub> | <sub>F3609623F44E191488B1EB84045646C8F72352E345562810AE082511B0077D34</sub> |\r\n| <sub>Steam++_v3.0.0-rc.13_win_x64.exe</sub> | <sub>BD7E3DE13B058C8FBF0FD9B384E906FA0A1805638725008FEF4AA10B3FD868E9</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.13_linux_x64.tgz</sub> | <sub>FDB1F1FC1D7AA8E22365D9B26FC9B6D0E7B5396E17366CD4253003207DDB2E8E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.13_macos.dmg</sub> | <sub>761BA21CF31E00DD24A28BF67076D12A14A5BE48E72BB478DD21AA674DC47902</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc13](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92pzk1fncn4",
+      "mqf92q0jsyi00z",
+      "mqf92q1jsykj5t",
+      "mqf92q2jzon681"
+    ]
+  },
+  {
+    "id": "mqf92q3ktuv3u8",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.12",
+    "publishedAt": "2024-11-28T10:27:09Z",
+    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB\r\n\r\n1. 调整 网络检测 DNS 检测 域名合法的正则验证\r\n2. 调整 网络测试 延迟值指示的提示改进\r\n3. 调整 ASF 插件 文档链接可直接访问\r\n4. 修复 ASF 插件 一键下载在低版本 Windows 系统上报错问题\r\n5. 修复 网络加速 因证书过期而导致的加速失效问题\r\n6. 修复 ASF 插件 Release 版进程残留问题，启动优化，打开文件夹提示优化\r\n7. 修复 网络加速 加速过程中证书过期没有正确处理的问题\r\n8. 修复 挂卡和令牌确认交易中可能出现系统代理更改时网络请求出错的问题\r\n9. 修复 ASF 下载通知问题\r\n10. 修复 Windows 关机时没有正常退出程序导致报错\r\n11. 修复 库存游戏 新版 Steam 客户端编辑游戏功能保存不生效问题\r\n12. 调整 账号切换 其它平台现在不在默认以管理员方式启动\r\n13. 修复 账号切换 战网无法正确切换国服和国际服账号，并且国服国际服账号名称相同时无法正常保存问题\r\n14. 调整 现在需要登录才能使用的功能提示更友好\r\n15. 升级 .NET 到 9.0\r\n16. 升级 Avalonia 到 11.1.5\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.12_win_x64.7z</sub> | <sub>37A4237EAD9977C5DA46BAECAC625F05E7EC4356D7645F28EBD8CB8ABC8FEA21</sub> |\r\n| <sub>Steam++_v3.0.0-rc.12_win_x64.exe</sub> | <sub>B72D622B9D4E78A8F3188A1B206608619DE64339F6C95DE5F9EF15C562BBD718</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.12_linux_x64.tgz</sub> | <sub>E9CAC12799F2D6AA1E038AB20F291B9F0F604A624A6168A9341D4861CF37350B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.12_macos.dmg</sub> | <sub>AFB7ACA80818BAD5947503220FFCB0577F7889EB60941CBD35F57FF2D7E2B5AB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc12](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92q4ikt14ps",
+      "mqf92q5gll0yk1",
+      "mqf92q6edgvq14",
+      "mqf92q7euej8un"
+    ]
+  },
+  {
+    "id": "mqf92q8g3gbgjl",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.11",
+    "publishedAt": "2024-09-26T06:20:58Z",
+    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\nmacOS 15 2024-10-10 发布.NET 8.0.10版本修复证书问题\r\n\r\n1. 修复 网络加速 因默认doh地址失效导致的加速无法正常生效问题\r\n2. 修复 启动时最小化 打开时，可能在某些情况下造成程序 Toast 无法正常显示问题\r\n3. 调整 网络加速 中的 IPV6 测试 UI\r\n4. 修复 公告通知弹出过于频繁的问题\r\n5. 修复 程序启动时自动启动加速后 加速服务没有正常显示的问题\r\n6. 在 网络加速-代理设置 中新增了一个重置按钮\r\n7. 新增 ASF控制台 插件功能\r\n8. 修复公告信息没有正确根据平台展示问题\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.11_win_x64.7z</sub> | <sub>DED75062BF20A549722E2DA43CC04C13D24C6ACEF3B9536BB32EB7C4D80163FC</sub> |\r\n| <sub>Steam++_v3.0.0-rc.11_win_x64.exe</sub> | <sub>BC5AD7BE6D07CF0D489263FDF8F2456C48428A1404D026BD360B1319493ED5EB</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.11_linux_x64.tgz</sub> | <sub>1E3C4A82EAC5DD9A3B5C6F5D0150787863AC4025959425754295FEC6ECCD77F5</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.11_macos.dmg</sub> | <sub>1250134FB7BA8E8E395F53532E0C97BCA645A013D7007BA18FDBAC793A754D56</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc11](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92q9bxhm66y",
+      "mqf92qabl2eru8",
+      "mqf92qb9hfrtga",
+      "mqf92qcb128l9n"
+    ]
+  },
+  {
+    "id": "mqf92qdejxrodq",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.10",
+    "publishedAt": "2024-09-01T13:31:27Z",
+    "changelog": "### 更新说明\r\n\r\n1. 新增 网络加速 NAT网络类型检测功能\r\n2. 新增 网络加速 加速日志选项卡，实时查看加速日志\r\n3. 新增 网络加速 DNS检测功能\r\n4. 新增 网络加速 加速后加速服务连通性测试功能\r\n5. 新增 账号切换 GOG 平台账号切换支持\r\n6. 修复 账号切换 Riot Games 无法保存账号的问题\r\n7. 修复 账号切换 在 Steam 默认未登录过任何账号情况下 登录新账号无效问题\r\n8. 新增 游戏工具 CS2 VAC修复功能\r\n9. 调整 游戏工具 游戏无边框窗口化 UI 改进\r\n10. 升级 Avalonia 至 11.1.3\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.10_win_x64.7z</sub> | <sub>652ECA2568A914FCEF9A43AAED69F4583324BC97974983D816FB0B508CF90A04</sub> |\r\n| <sub>Steam++_v3.0.0-rc.10_win_x64.exe</sub> | <sub>84A43EDD37270A3631DA79A5B60D7AEA65AF61FC294E28EC1F8A77766360F428</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.10_linux_x64.tgz</sub> | <sub>9C2C0A465AD9BDC7053AEAD5278CF5C416F6FA5C8441FC5BFBBB50DA22733C9A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.10_macos.dmg</sub> | <sub>12BEB2BB8B221C2CC8B860AB1A974900A06083B94336A7FE798B19E524185C99</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc10](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
+    "downloadIds": [
+      "mqf92qeb5r5zy7",
+      "mqf92qf9658jcn",
+      "mqf92qgayrfmg2",
+      "mqf92qh9s2aze7"
+    ]
+  },
+  {
+    "id": "mqf92qicf0w9tl",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.9",
+    "publishedAt": "2024-07-02T09:51:55Z",
+    "changelog": "### 更新说明\r\n\r\n1. 新增 网络加速 二级代理功能和相关设置项\r\n2. 新增 本地令牌 Steam App共存令牌导入方式，此方式导入令牌可与 Steam App 保持同步\r\n3. 修复 库存游戏 新版本 Steam Beta Client 游戏数据解析出错问题\r\n4. 修复 Steam 挂卡 仅剩一个游戏时发生闪退的问题\r\n5. 修复 Steam 挂时长 启动和暂停按钮重叠显示问题\r\n6. 修复 Steam 账号切换 对蒸汽平台的切换没有正确生效问题\r\n7. 新增 账号切换 显示账号用户名的选项\r\n8. 修复 网络加速 在某些计算机名称为特殊字符开头的电脑上加速出现错误的问题\r\n9. 修复 网络加速 Linux 非 Host 模式不检测 443 占用\r\n10. 修复 程序每次启动 窗口大小发生变化的问题\r\n11. 修复 挂卡与确认交易功能 记住的登录状态失效过于频繁的问题\r\n12. 更新 Avalonia 版本到 11.1.0-rc1\r\n13. 改进 网络加速 现在不默认启用 DoH\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.9_win_x64.7z</sub> | <sub>FC568B2B8E8490CB73719DC1AA77B33E9A3CE8B5D3E1EB03884A0F49D9FB3F2E</sub> |\r\n| <sub>Steam++_v3.0.0-rc.9_win_x64.exe</sub> | <sub>D7713BE239D16E19F0BAC6A7D31AF59109C6E0B318DC337AFC471D1A36DDD39E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.9_linux_x64.tgz</sub> | <sub>B733C83AABA7BB6713C97B6C3FB1EC4651A0BEFEA9341FB4CE6E6CDA53945CE7</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.9_macos.dmg</sub> | <sub>D0D61583530C0E4F09B888D12B582704F972786AC4B0CDC5C5575F71741A1371</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc9](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92qjaqwubld",
+      "mqf92qk7ietoj4",
+      "mqf92ql6opxr20",
+      "mqf92qmf58bxgx"
+    ]
+  },
+  {
+    "id": "mqf92qnfslph7x",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.8",
+    "publishedAt": "2024-04-30T13:40:15Z",
+    "changelog": "### 公告\r\n此版本针对这段时间以来各位的差评进行改动，有错就要认挨打要立正，能快速改进的就马上改了，不方便快速改动的也在计划之中改动了。\r\n\r\n我们是一个商业产品的同时也是个开源项目，也欢迎各位加入开发提交代码，这段时间以来遇到的许多bug，加上代码混乱有挺多原因造成的，允许我简单的辩解一下，一部分原因是因为我们也在招人，有人员流动和开发水平不一的情况，再加上开发人员紧张测试环节有所纰漏，造成上线版本质量不合格，给大家造成困扰和问题还是说声抱歉。\r\n\r\n我们也是一个爱研究爱钻研技术的团队，我们有很多时间花在了琢磨一些新技术新功能上，有些功能可能只是一个尝试，也会花费大量的时间心血，最终也不一定能落地上线，同时因为我们总爱追新框架，新版本底层有一些破坏性更改或者其它问题也导致了程序的质量不一，(Watt Toolkit) Steam++ 也发布有四年了，这一路大家可以从我们的更新日志和 Release 看出来，我们的底层从最初1.x版本的 .Net Framework 4.7.2 + WPF 到 2.x 的 .NET 5 + Avalonia 0.10.x 到现在最新的 .NET 8 + Avalonia 11.1.0-beta2，我们一直在更新底层的同时，重构软件架构，维护现有功能的同时研究新功能开发。\r\n\r\n我们做了很多东西，也有许多东西有一些问题或者其它考虑没有开源，有很多人其实只是想要一个单一的免费加速器，很抱歉这不是 Steam++ 一直以来的目标，Steam++ 的目标一直都是一个综合的游戏性瑞士军刀类工具平台，我们的开发方向也是如此。\r\n\r\n### 更新说明\r\n1. 修复挂卡首次登录后数据加载失败\r\n2. 新增查看证书信息\r\n3. 修复启动时弹出 iotest.tmp 错误\r\n4. 新增账号切换功能可支持对账号创建桌面快捷方式，无需启动软件的情况下也可以通过快捷方式快速切号\r\n5. hosts 文件加速时监听修改自动重置\r\n6. 优化 Steam 账号加载方式\r\n7. 优化挂卡功能快速挂卡模式，改进挂卡完成提示，启动失败提示\r\n8. 游戏加速新增启动游戏\r\n9. 修复隔行扫描 GIF 图像显示不正确\r\n10. 改进点击链接跳转官网与商城自动登录\r\n11. 新增游戏加速会员时长显示与联系客服\r\n12. 修复平台加速无限修改 hosts 出现的死循环\r\n13. 修复替换令牌时恢复代码不显示\r\n14. 修复 Steam 账号登录添加令牌与短信验证的显示\r\n15. 现在可支持未绑定手机号的 Steam账号 直接生成导入令牌\r\n16. 默认启动页现在改为插件商店，并且所有用户都可以在界面设置中修改默认起始页\r\n17. 调整标题栏高度\r\n18. 修复挂卡价格显示\r\n19. 新增服务端加速，代理支持 HTTP3\r\n20. 修复 Twitch 登录、直播聊天、面板内图片加载失效\r\n21. 修复 GitHub Docs、Education 代理无效且异常重定向\r\n22. 修复 Gravatar 加速失效\r\n23. 新增 Open Spotify、GitHub Dev 加速\r\n24. 修复 MEGA 网盘首页无限加载问题\r\n25. 新增 Spotify 加速\r\n26. 新增 Mod.io 加速\r\n27. 新增 Roblox 加速\r\n28. 新增 huggingface 加速\r\n29. 新增 Docker Hub 加速\r\n30. 加速按钮逻辑改为异步，解决某些情况下可能循环启动加速失败造成提示轰炸等问题\r\n31. 升级 Avalonia 版本至 11.1.0-beta2\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.8_win_x64.7z</sub> | <sub>1778004F43BA8669DD38722B1F2E47C4E9E816E22512C70C0C7F840D91113E21</sub> |\r\n| <sub>Steam++_v3.0.0-rc.8_win_x64.exe</sub> | <sub>CACD614C26D879B7797E4ED1556521B3D8B3CF36749919AD98FDD6B7E7593F04</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.8_linux_x64.tgz</sub> | <sub>5C6464F526C1204B7C26ECE519B69AC44943963D97BC69392D0B8D3DF877B600</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.8_macos.dmg</sub> | <sub>371EAEBF1EBB10E13F52AC11BAE032DE7A3FDB65C4379F26FF296922BD4A7969</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc7](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92qospormyy",
+      "mqf92qpqeunltq",
+      "mqf92qqp32dc0m",
+      "mqf92qrr5uiy8a"
+    ]
+  },
+  {
+    "id": "mqf92qsrejjsr0",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.7",
+    "publishedAt": "2024-03-19T11:02:40Z",
+    "changelog": "### 更新说明\r\n1. 修复 Steam 账号切换删除时缓存没有正常清理问题\r\n2. 修复加速项目勾选三级菜单启动加速没生效问题\r\n3. 支持设置启动时默认页\r\n4. 修复应用商店版本 Epic 无法保存账号\r\n5. 修复挂时长在游戏列表未加载完成时进入错误的标注了游戏所属\r\n6. 修复显示加速模式与脚本状态\r\n7. 平台加速与游戏加速顺序调整，启动时显示上次使用的页面\r\n8. 修复账号切换第一次进入加载时间过长问题\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.7_win_x64.7z</sub> | <sub>5D3B84FF90624B4486C6454E2A9653A9E745506763AEC54709FD0EF71BE08424</sub> |\r\n| <sub>Steam++_v3.0.0-rc.7_win_x64.exe</sub> | <sub>37BBB7DE041FE934FC121D1AA7A2D237D2A128FBC86C6F75876898C45D1365F3</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.7_linux_x64.tgz</sub> | <sub>764108DCE14807257ED5686A9C07B6C477C2394BA28FB791F6EE7488AC8F7A7E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.7_macos.dmg</sub> | <sub>0010AA2F5323DF74FAFBE8E158E01243018EDAC3DCB26D2AAEA2CBF8819CFA84</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc7](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92qtqz1fj46",
+      "mqf92qupn96tnl",
+      "mqf92qvqr3yz71",
+      "mqf92qwp3co56v"
+    ]
+  },
+  {
+    "id": "mqf92qxndrxn4k",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.5",
+    "publishedAt": "2024-03-08T11:25:18Z",
+    "changelog": "### 更新说明\r\n1. 修复账号切换 [Riot Games](https://www.riotgames.com/en)、[Rockstar Games](https://www.rockstargames.com/)\r\n2. 修复微软商店版本 DNS 加速模式\r\n3. 修复脚本文件强制替换删除后未移动文件导致的丢失\r\n4. 修复最小化启动失效\r\n5. 修复微软商店版本开机自启失效\r\n6. 修复挂卡登录的异常处理\r\n7. 修复图片加载缓存失效\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.5_win_x64.7z</sub> | <sub>D3E632C83DB5ED277AAAF2185F0FBF274C98CF4B7664AFC35E810DA49E9E0087</sub> |\r\n| <sub>Steam++_v3.0.0-rc.5_win_x64.exe</sub> | <sub>6BC0F45D8034B5C107AAC5A342A6CF08DCF73B7AA7C5BF0110DEE464AB4A3C71</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.5_linux_x64.tgz</sub> | <sub>869ED9E1FC20EE54D4B667B4B990FF001C2ABD66EF0C2340CAEA3C32D701A34B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.5_macos.dmg</sub> | <sub>6E5160938CD87B4EC4E47F93C50554D88EF849CA3B9BC5AF1B2DE38FB71779AB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc5](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92qyme8dedj",
+      "mqf92qzsd5uy4x",
+      "mqf92r0rst6xu1",
+      "mqf92r1p2m23rj"
+    ]
+  },
+  {
+    "id": "mqf92r2pnwvbvw",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.4",
+    "publishedAt": "2024-03-06T06:01:07Z",
+    "changelog": "### 更新说明\r\n1. 新增与迅游合作推出的游戏加速功能\r\n2. 修复令牌确认交易时某些状况下导致程序闪退和错误\r\n3. 新增令牌搜索\r\n4. 修复挂卡某些用户无法正常获取卡片数据导致无法启动挂卡\r\n5. 修复脚本在某些情况下失效问题\r\n6. 账号切换数据加载性能优化\r\n7. 修复账号切换 [Riot Games](https://www.riotgames.com/en)、[Rockstar Games](https://www.rockstargames.com/) 等平台出现问题\r\n8. 修复开机启动任务计划请求的操作需要提升\r\n9. 此版本开始将恢复微软商店版本更新\r\n10. 修复开启最小化启动情况下解锁成就、云存档管理也被错误的最小化导致无法使用问题\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.4_win_x64.7z</sub> | <sub>7D0F44DC472CB40899FAE6805374AEDFF3FB15EFA7B72E581A9D712890D4CAD8</sub> |\r\n| <sub>Steam++_v3.0.0-rc.4_win_x64.exe</sub> | <sub>8C09B94D3B673A5202DF4F374E6B8A5159454206C13D118DF6141FA29C0A0260</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.4_linux_x64.tgz</sub> | <sub>53C76CF3FFF3F793487233125F41C9AF478C8987FDD9FDE029AA6C30C1914101</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.4_macos.dmg</sub> | <sub>7440091C2BA1E8AF52BB0E3FB695E8F8946EA8E64E21211244CE9208CA2FF4DB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc3](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92r3qv2wxvo",
+      "mqf92r4pe6e225",
+      "mqf92r5p0dlfre",
+      "mqf92r6rui5mr5"
+    ]
+  },
+  {
+    "id": "mqf92r7ri75xeg",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.3",
+    "publishedAt": "2023-11-30T10:00:07Z",
+    "changelog": "### 公告\r\nrc 版本为测试版本，微软商店等待正式版本更新  \r\n因特殊原因停止部分网站加速支持，敬请谅解，待后续适配完成会新增其它一些可支持的加速网站。\r\n\r\n### 更新说明\r\n1. Steam 账号切换增加离线启动选项\r\n2. 修复加速时会出现 421 Misdirected Request 错误\r\n3. 优化程序内打开个人中心网页可自动登录\r\n4. 优化 Linux 证书工具兼容，修复 Linux 证书安装错误\r\n5. 修复 Linux 卸载脚本错误\r\n6. 修复版本迁移导致脚本失效\r\n7. 优化支持 macOS UrlSchemes 协议快速登录\r\n8. 修复 vdf 写入错误导致修改家庭共享数据被清理\r\n9. 修复 Steam 账号切换后在某些情况下仍需要登录问题\r\n10. 修复账号切换中没有正确使用管理员权限执行操作导致的失败\r\n11. 优化 macOS 信任证书可能等待过久导致程序闪退\r\n12. 更新到 Avalonia 11.0.5\r\n13. 修复加速列表缓存数据丢失选中状态问题\r\n14. 新增 Steam 挂卡功能，支持多种挂卡算法逻辑快速掉卡挂卡模式（不同于2.8.6版本的 ASF 挂卡，ASF 挂卡功能仍在适配开发中）\r\n15. 修复 Steam 令牌在某些情况下查看详情确认交易会导致程序闪退问题\r\n16. 令牌功能添加搜索框\r\n17. 提高 Steam 账号切换首次启动时加载速度，无需再等待\r\n18. 托盘账号切换无需再点开账号切换功能加载后才可展示\r\n19. 调整主页数据加载和UI展示逻辑\r\n20. .NET 框架升级至.NET 8\r\n21. 修复 macOS\\Liunx 无法获取当前 Steam 客户端登录用户问题\r\n22. 修复本地令牌锁定后仍可通过菜单托盘栏获取 5 位数验证码\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.3_win_x64.7z</sub> | <sub>DDF50E364215466CD038A572C7DA736ECBF5205E72F6B2B871F514A793A4C921</sub> |\r\n| <sub>Steam++_v3.0.0-rc.3_win_x64.exe</sub> | <sub>65BF6230D033AC680C69A69F69B603BC54D4B227892E5C0B0E524B2DD335002B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.3_linux_x64.tgz</sub> | <sub>A869507634904450B04D156A095DD1A550D28CE70961DD52DC1F1BF4644E8E0A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.3_macos.dmg</sub> | <sub>49E5A29AE0651D5E347FE6001C459BC73C857C424EFBD683703D572D1694EB6A</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc3](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92r8rw1i0uv",
+      "mqf92r9srdpm48",
+      "mqf92ray0sd2fd",
+      "mqf92rbyqho8we"
+    ]
+  },
+  {
+    "id": "mqf92rcwksyt7q",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.2",
+    "publishedAt": "2023-09-23T09:37:55Z",
+    "changelog": "### 公告\r\nrc 版本为测试版本，微软商店等待正式版本更新\r\n\r\n### 更新说明\r\n1. 修复启动时最小化设置无效\r\n2. 修复 mafile 文件导入的令牌在某些情况下导致程序闪退问题\r\n3. 调整启动软件时开启加速的 UI\r\n4. 修复因 HTTP/2 代理导致的 某些加速项失效问题\r\n5. 托盘现在可支持开关加速、账号切换、复制令牌\r\n6. 修复 macOS 等待验证密码输入过久闪退的问题\r\n7. 修复检查更新在有活动窗口时会导致闪退\r\n8. 修复功能菜单排序中主页不生效\r\n9. 修复 macOS Arm64 代码签名\r\n10. 修复脚本配置中缓存脚本文件路径错误\r\n11. 修复账号切换中没有正确使用管理员权限执行操作导致的失败\r\n12. 新增网络加速代理设置中的 DoH 配置\r\n13. 修复 macOS 输入密码时等待过长导致的闪退\r\n14. 升级 .NET 运行时至 7.0.11\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.2_win_x64.7z</sub> | <sub>E665F6C080311DBF02E5A3F630D54FFEDA978A64E6FFBA887943115CEC817276</sub> |\r\n| <sub>Steam++_v3.0.0-rc.2_win_x64.exe</sub> | <sub>FCEE297F6A25CF1FC279515F5F19E9EE185FFED277CF026FA20F75BDDBEE6388</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.2_linux_x64.tgz</sub> | <sub>F71E08DE51423905C1B18C6B62562687A8DA5F99E97C5D9D757558F856D5FDC6</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.2_macos.dmg</sub> | <sub>161347FA7468BEE29FA7F1BA4830B895058BA39F62820E979951F5EA220B0F17</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc2](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92rdvxhwbpa",
+      "mqf92ret40ix41",
+      "mqf92rfsd2euz9",
+      "mqf92rgtks079u"
+    ]
+  },
+  {
+    "id": "mqf92rhs8u9ug4",
+    "projectId": "mqf92p952kk8p0",
+    "version": "3.0.0-rc.1",
+    "publishedAt": "2023-09-07T14:38:21Z",
+    "changelog": "### 公告\r\n3.0 全新版本发布 🎉🎉🎉  \r\n全新 UI，底层重构  \r\n新版本中重构了所有功能，所有功能都为独立的插件，现在大家可以按需删除和禁用你不想用的功能。  \r\n我们之后也会开源一个插件的模板仓库，欢迎各位自己制作插件在我们的插件商店中上传分发。\r\n\r\n同时 Steam 版本也正在审核中、Steam 版本可多拥有 Steam 云存档功能同步配置文件和令牌、且能使用 Steam 创意工坊去分发和制作更多的插件✨\r\n\r\n### 版本亮点\r\n1. 全新的加速功能现在是作为独立进程运行，更低占用，更快速度。\r\n2. 账号切换支持 Steam 切换登录时显示状态，除此之外还增加了更多的平台账号切换支持 Ubisoft、Epic Games、EA Desktop、Origin、Riot Games、Rockstar、BattleNet 等更多平台或软件。\r\n3. 全新的库存游戏页面、更好用的操作逻辑、新支持了对应游戏的 Steam 截图管理功能。\r\n4. 本地令牌支持了非 Steam 令牌导入、Steam 账号登录导入方式现在可以直接替换式导入、冷却时间仅 2 天，Steam 令牌交易确认功能基于新接口实现，更快速便捷的一键确认。\r\n5. 更多的新功能都正在以插件形式开发中，都可以按需安装使用。\r\n6. 若干旧版本 Bug 修复。\r\n\r\n### 注意事项\r\n为避免意外丢失数据，覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.1_win_x64.7z</sub> | <sub>AB9E678E1290B71C14EC8678FA1F5937E6CB2F8FA54038EFC9705031C8C6D1D5</sub> |\r\n| <sub>Steam++_v3.0.0-rc.1_win_x64.exe</sub> | <sub>EBF635B976B553DFF4B3B8B5361AFC8BCCCC272D5AA5794F35C1E807D4020314</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.1_linux_x64.tgz</sub> | <sub>848CC725D8B97D23D56B8B3FDC38B70B5BB6E0E345D48CC06AAD2684452ED376</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.1_macos.dmg</sub> | <sub>8D8544FA06EE9F64DD7648CBBF15B9C9C5AE416994F4C8C7E68EB94DF299CCC8</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc1](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92ripqh0y93",
+      "mqf92rjtenrps2",
+      "mqf92rksra90ei",
+      "mqf92rlzpkmcbh"
+    ]
+  },
+  {
+    "id": "mqf92rn0e1k0lj",
+    "projectId": "mqf92p952kk8p0",
+    "version": "2.8.6",
+    "publishedAt": "2022-12-19T14:42:09Z",
+    "changelog": "### 公告\r\n这是一个修复目前累积问题的版本，也是最后一个.NET 6 的版本，\r\n之后桌面端程序将使用.NET 7 + Avalonia 11.0 重构发布新版本。\r\n届时也会放弃继续对 Win7/8.1 系统的支持，所以这也意味着这是最后一个支持 Win7/8.1 的版本。\r\n也请各位敬请期待之后的 3.0 版本吧~\r\n\r\n### 修复问题\r\n1. 改进 Mac 安装证书的提示，显示执行命令\r\n2. 修复 Steam 启动参数在一些场景下无效\r\n3. 修复 网络加速 关闭 http 重定向到 https 依然监听 80 端口错误\r\n4. 修复 网络加速 仅启用脚本功能 导致代理网站无法访问的错误\r\n5. 修复 网络加速 开启系统代理和 PAC 代理后，非代理网站无法正常访问的错误\r\n6. 修改 证书安装路径 为本地计算机 而不在是 当前用户 以支持跨用户访问，这项改动可能导致大家需要重新安装一次证书\r\n7. 修复 库存游戏 因 Steam 客户端更新导致的加载游戏数据失败问题\r\n8. 修复 捐助列表金额显示错位问题\r\n9. 修复 Twitch 聊天连接失败问题\r\n10. 修复 discord.gg 无法访问导致无法加入频道分享链接问题\r\n11. 修复 Steam 没有正确识别 Steam 国服提示问题\r\n12. ASF 升级至 V5.3.2.4\r\n13. .NET 运行时升级至 6.0.12，使用 fde 版本需要升级运行时\r\n14. 新增 Steam 设置可设置 模拟蒸汽平台启动参数\r\n15. 修复 Steam 启动时没有正确识别 -steamchina 国服的问题\r\n16. 修复 Steam Beta 版库存游戏加载不出游戏详情和名称 \r\n17. 修复 成就管理、云存档管理 无法打开\r\n18. 修复 库存游戏 首次加载后，游戏加载失败提示文本依然存在\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.6.7z</sub> | <sub>9C31E5241EBDD9747EC185F7C34C104A6382C8303D739CECB5904E7A2D01ED2A</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.6.7z</sub> | <sub>489FF3C61FB5D55F13D70E8404D68EE52367C46BFA8C999FB96FDE562C47952B</sub> |\r\n| <sub>Steam++_win_x64_v2.8.6.exe</sub> | <sub>0DD385D0B84DE22AC4C682E170A28811E4456BB0BA3B7730FD23EFA0919E4B08</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.6.exe</sub> | <sub>7C98402680899F68B6584FBFD2F1C49E092E2C77BE6A2064E838BB55B91D2ABB</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.6.7z</sub> | <sub>80DF3E7CBCCC7B7A606AB71BA63333CED8E162DD80094B06B87F21398BD2E905</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.6.7z</sub> | <sub>262B36F857714C25C6E96DAAC16A19368DB54C7A44181BFAD9813B33B4732AFE</sub> |\r\n| <sub>Steam++_win_x86_v2.8.6.exe</sub> | <sub>86DBBCE27797890745A76FDB22D1134939D3B74E891A5D82EE9D3A81E722C340</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.6.exe</sub> | <sub>6D7D17F85BC7226E021C24BC5FBD30FE44ABBDB9B088163E13F89E85F05EA85E</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.6.tar.zst</sub> | <sub>B96E029631F66FD5194D9F31565027053DC80C20A9E6F3BCBFE1A5224DB18B40</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.tar.zst</sub> | <sub>8232F9A3025C28A69453819FA729C7B63FF04FEF9AD16D0D45AB3CB858BAB30A</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.6.deb</sub> | <sub>2D51A0A75A8CEE5B7F022C0C64627BDB8F10951A96430FA3A131E884E84863A0</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.deb</sub> | <sub>EE7D520073A3CD5421F99951A97193AA08B948D7657DBDD88936CF6AF24C72CC</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.6.rpm</sub> | <sub>299A535D4F1D95C3BB571A1EE7E066889FBC9EFC67BE78A7190EC5148895651B</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.rpm</sub> | <sub>F68803475D596B12F89B02DA7F21094722267AE7E74273AA6C9279B5D83F8DB8</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.6.dmg</sub> | <sub>6C03B9358532254C2AE3329FCDBDAD58C165F08343F759064F3A5C20BC59212E</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.6.dmg</sub> | <sub>772CFB10035F5DC290AA6A1E6F373826DB4F45E8BD65E4D06083E4973B576DAD</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.6](https://img.shields.io/badge/Steam++-v2.8.6-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92rnzuh0eyu",
+      "mqf92roytsswf4",
+      "mqf92rq305tgio",
+      "mqf92rr5rbalsm",
+      "mqf92rslrnwvya",
+      "mqf92rtnt169p0",
+      "mqf92rupzylvjt",
+      "mqf92rvrmj8x4x",
+      "mqf92rwrkraa36",
+      "mqf92rxszorj4v",
+      "mqf92rytgr4gl6",
+      "mqf92rztqyt7m7",
+      "mqf92s0tgh4z2l",
+      "mqf92s1wfm8027",
+      "mqf92s2w10d8bl",
+      "mqf92s43pijtwa"
+    ]
+  },
+  {
+    "id": "mqf92s547k6vne",
+    "projectId": "mqf92p952kk8p0",
+    "version": "2.8.5",
+    "publishedAt": "2022-12-15T11:06:44Z",
+    "changelog": "### 公告\r\n这是一个修复目前累积问题的版本，也是最后一个.NET 6 的版本，\r\n之后桌面端程序将使用 .NET 7 + Avalonia 11 重构发布新版本。\r\n届时也会放弃继续对 Win7/8.1 系统的支持，所以这也意味着这是最后一个支持 Win7/8.1 的版本。\r\n也请各位敬请期待之后的 3.0 版本吧~\r\n\r\n### 修复问题\r\n1. 改进 Mac 安装证书的提示，显示执行命令\r\n2. 修复 Steam 启动参数在一些场景下无效\r\n3. 修复 网络加速 关闭 http 重定向到 https 依然监听 80 端口错误\r\n4. 修复 网络加速 仅启用脚本功能 导致代理网站无法访问的错误\r\n5. 修复 网络加速 开启系统代理和 PAC 代理后，非代理网站无法正常访问的错误\r\n6. 修改 证书安装路径 为本地计算机 而不在是 当前用户 以支持跨用户访问，这项改动可能导致大家需要重新安装一次证书\r\n7. 修复 库存游戏 因 Steam 客户端更新导致的加载游戏数据失败问题\r\n8. 修复 捐助列表金额显示错位问题\r\n9. 修复 Twitch 聊天连接失败问题\r\n10. 修复 discord.gg 无法访问导致无法加入频道分享链接问题\r\n11. 修复 Steam 没有正确识别 Steam 国服提示问题\r\n12. ASF 升级至 V5.3.2.4\r\n13. .NET 运行时升级至 6.0.12，使用 fde 版本需要升级运行时\r\n14. 新增 Steam 设置可设置 模拟蒸汽平台启动参数\r\n15. 修复 Steam 启动时没有正确识别 -steamchina 国服的问题\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.5.7z</sub> | <sub>839923D91D354B786880BFE6D7C4A0216843A1ABAF472191E58954012BEFAAD4</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.5.7z</sub> | <sub>FE1657749CFA319C534E9495E19EA766F2BD194478F016EDCC4127D0AAFAD53A</sub> |\r\n| <sub>Steam++_win_x64_v2.8.5.exe</sub> | <sub>3A8C396709D693D9A6056B74722088CEB5881B93765DF71F7124B1756BB7E72F</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.5.exe</sub> | <sub>D7ADB17672AF478571C6E555630E38087BC9517F735C9B7539C3BCFF42A9CFE7</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.5.7z</sub> | <sub>4AAEC829FEA3449C9A9A84EBDDF6158804EB8A21DB631E42174738607391EB8A</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.5.7z</sub> | <sub>ED287428B8594138480C307303987B8448AE27AA44C4830ABCA5AFC3BF4E4A60</sub> |\r\n| <sub>Steam++_win_x86_v2.8.5.exe</sub> | <sub>8293E850BD294A0C0E6A7F645001014333A60CBE0F7475AF76A2341C12DFA8BC</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.5.exe</sub> | <sub>3CE5315319C599B213F096503366FAD21EA44CB2E297302500757FFEC9535306</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.5.tar.zst</sub> | <sub>09024917D7FBE706354CBB07332701DC50459D45E758FA046F691757491F29F6</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.tar.zst</sub> | <sub>03D16F3D0CEBE9FDF700E2282D4651340821BE0D2B76FA8C0713CA82944BE5F5</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.5.deb</sub> | <sub>E02462C4F7262227DE0D60CADAFC112E2FC3DBC8DF44A11B6ECAF305DC377928</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.deb</sub> | <sub>B3EE814714D94C66F5F25085E7E6392E9F50C54FE8BCABE1B4A4672EC2B75A19</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.5.rpm</sub> | <sub>2607632514BE92850F426BCACFDC3EE80662C66EB69E8B4068105FCD89FB58F6</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.rpm</sub> | <sub>655BA09F65C54F297D6933E3D29435BD8F787E58D14AE48822CD43DC1D3AE21E</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.5.dmg</sub> | <sub>BB506447EAF8649FF55D559F9FDBC950C6F5C66D7C0095863EC8E9B1220F0F92</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.5.dmg</sub> | <sub>1989DE947FD6608314A0C53DCC6C0D58D98167A5BDA0806745D3C12760FC8F5C</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.5](https://img.shields.io/badge/Steam++-v2.8.5-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92s61kmkxx7",
+      "mqf92s72v2qme5",
+      "mqf92s840671wy",
+      "mqf92s95vzpocd",
+      "mqf92sa5bpv4d4",
+      "mqf92sb8j8uu77",
+      "mqf92sc8xt1h85",
+      "mqf92sd9pzxe6o",
+      "mqf92se9qrr3qn",
+      "mqf92sff4fnu2c",
+      "mqf92sgi0xwtw5",
+      "mqf92shkddyy05",
+      "mqf92siqsmd47z",
+      "mqf92sjuat222k",
+      "mqf92sl8crtaoy",
+      "mqf92sm96le20t"
+    ]
+  },
+  {
+    "id": "mqf92snctjjdls",
+    "projectId": "mqf92p952kk8p0",
+    "version": "2.8.4",
+    "publishedAt": "2022-08-16T11:13:37Z",
+    "changelog": "### 版本亮点\r\n1. .NET 运行时升级至 6.0.8，使用 fde 版本需要升级运行时\r\n2. ASF 升级至 V5.2.8.4\r\n3. Avalonia 升级至 0.10.18\r\n\r\n### 修复问题\r\n1. 修复 2.8.0 ~ 2.8.2 中 AppData/Config.mpo 文件大小为 0 时导致的程序无法正常启动\r\n2. 修复 Windows 上版本更新在 2.8.0 ~ 2.8.2 中非 FDE 版本识别为 FDE 版\r\n3. 改进 调整代理模式顺序，Hosts 模式置顶\r\n4. 修复 划词翻译等一些 JS 脚本\r\n5. 改进 macOS 上的证书安装\r\n6. 尝试修复 网络加速中能导致内存泄露的问题\r\n7. 改进 非简中默认隐藏加速与脚本仅在 Windows 上生效\r\n8. 改进 减少 Android 上的启动时间\r\n9. 修复 退出程序时可能引发的闪退\r\n10. 修复 macOS/Linux 上设置页面打不开的问题\r\n11. 修复 网络加速中网页上出现 Because https://... actually points to WattToolkit itself...\r\n12. 尝试修复 ASF 控制台中输入时卡死\r\n13. 修复 首次使用 Windows 安装版(非应用商店版) 可能导致程序无法正常启动\r\n14. 修复 2.8.3 中 win-x64 覆盖导致丢失配置文件等用户数据的问题\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.4.7z</sub> | <sub>E797CB455740DE75EEF5EEA0433D7F37551E75A2061C62C3E7670333598C7281</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.4.7z</sub> | <sub>A57FF8C2A4E19D9C324988E5D361E230FF63902FE71589370B6DF1BAC330D3E0</sub> |\r\n| <sub>Steam++_win_x64_v2.8.4.exe</sub> | <sub>B0A3A6EF2156C007AF0FA311AB1470524F0BF94F5E1D4420772320F13680DFD4</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.4.exe</sub> | <sub>FFE6D2DA7A5DED8D82DEFC27BFC63F335C09CA761599A6AB93C35076EFA3BB16</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.4.7z</sub> | <sub>4414DB0168B1044119C1F7B49F732D8B963AD47CDB4FE9F5FFFC9FAD8E7550FA</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.4.7z</sub> | <sub>2D8F9ECD3F4055CC2986F8F7AF01586E3922DDB832D5EB765AFFC2E31D35C56C</sub> |\r\n| <sub>Steam++_win_x86_v2.8.4.exe</sub> | <sub>A02EAEAC1A3E04F2E8804A11BF9E37B01EB0CC88FA6433C33798CA59B4B0E84D</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.4.exe</sub> | <sub>796F2B24385FEEC5559047915B11236DCE0224ED306B02DB01AEDE2C64E7A443</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.4.tar.zst</sub> | <sub>54398FA7FDDC725DF263BCE131842151C4AA7BCDD3C19E75C7751E1E9A3E57D3</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.tar.zst</sub> | <sub>902F0AE9E8685F1C40BBD4CED250178509C917134D3C787F748D6D274E2DCFD3</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.4.deb</sub> | <sub>B38E02F112A68FD4ED986DFB3B698BAEEB7E2569079C0FFF0E834035E942047B</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.deb</sub> | <sub>FFCF650C31A0EBA3FAC464A9EA5D6B419828C2FA251E412A86F28779531A9DFC</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.4.rpm</sub> | <sub>BBA12A9A6F4B0FDEFBE4884BA3FD680FC1082C0655CB0BD9056B9E0E41160B03</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.rpm</sub> | <sub>6C3B787C0B31AF1F56452FD2E470F7129C4F6F4BA34A1A85C86D37F015BC1042</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.4.dmg</sub> | <sub>DBE227F9D2D819698744CCA32B6C52473B88058249480A226501ADDE8C395B86</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.4.dmg</sub> | <sub>B321B7B549680BDFCAC8201DD5F1945120F3B30FCA033F035387E182801DCE74</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.4](https://img.shields.io/badge/Steam++-v2.8.4-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92sob6g5p2h",
+      "mqf92spg7l3zl1",
+      "mqf92sqg6pi5uw",
+      "mqf92srika60ew",
+      "mqf92ssiqpvwro",
+      "mqf92stclk8yqz",
+      "mqf92stzmq4640",
+      "mqf92sukx3melk",
+      "mqf92svba50kjq",
+      "mqf92svx1ru71v",
+      "mqf92swlh3mwjt",
+      "mqf92sxaqd9cht",
+      "mqf92sy0olgdsx",
+      "mqf92syqdpdjin",
+      "mqf92szg91aofq",
+      "mqf92t06xig06j"
+    ]
+  },
+  {
+    "id": "mqf92t0yg929g4",
+    "projectId": "mqf92p952kk8p0",
+    "version": "2.8.3",
+    "publishedAt": "2022-08-14T15:30:17Z",
+    "changelog": "### 版本亮点\r\n1. .NET 运行时升级至 6.0.8，使用 fde 版本需要升级运行时\r\n2. ASF 升级至 V5.2.8.4\r\n\r\n### 修复问题\r\n1. 修复 2.8.0 ~ 2.8.2 中 AppData/Config.mpo 文件大小为 0 时导致的程序无法正常启动\r\n2. 修复 Windows 上版本更新在 2.8.0 ~ 2.8.2 中非 FDE 版本识别为 FDE 版\r\n3. 改进 调整代理模式顺序，Hosts 模式置顶\r\n4. 修复 划词翻译等一些 JS 脚本\r\n5. 改进 macOS 上的证书安装\r\n6. 尝试修复 网络加速中能导致内存泄露的问题\r\n7. 改进 非简中默认隐藏加速与脚本仅在 Windows 上生效\r\n8. 改进 减少 Android 上的启动时间\r\n9. 修复 退出程序时可能引发的闪退\r\n10. 修复 macOS/Linux 上设置页面打不开的问题\r\n11. 修复 网络加速中网页上出现 Because https://... actually points to WattToolkit itself...\r\n12. 尝试修复 ASF 控制台中输入时卡死\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_android_v2.8.3.apk</sub> | <sub>35E21659EDD28D642BEB14B5D0F044983CA3023FBF7C2C638CDF945C2ECBE4AA</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.3](https://img.shields.io/badge/Steam++-v2.8.3-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
+    "downloadIds": [
+      "mqf92t1p9qcbr7"
+    ]
+  },
+  {
     "id": "mqf8eoqlmqnjeq",
     "projectId": "mqf8eoolhym84x",
     "version": "v2.4.6",
@@ -399,302 +695,6 @@
     "changelog": "## What's Changed\r\n* Added ability to edit onscreen and physical controllers by @Mondyro \r\n* Fixed cloud saves for various games (Castle Crashers, The Binding of Isaac, etc)\r\n* Fixed GameNative being reported as malware\r\n* Fixed bugs around loading certain custom contents (DXVK etc) by @Arihany \r\n* Fix error with saves in some games (Witcher 3, others) by @joshuatam\r\n* Add simplified chinese translation by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/335\r\n* Add french language by @Robilol in https://github.com/utkarshdalal/GameNative/pull/349\r\n* Add support for hidden dlc for games like Lies of P by @joshuatam in https://github.com/utkarshdalal/GameNative/pull/333\r\n* Added latest FEX and VKD3D, made Bionic the default for all users, fixed app stuck on \"Installing Mono...\" in Bionic\r\n\r\n## New Contributors\r\n* @joshuatam made their first contribution in https://github.com/utkarshdalal/GameNative/pull/326\r\n* @Arihany made their first contribution in https://github.com/utkarshdalal/GameNative/pull/332\r\n* @Robilol made their first contribution in https://github.com/utkarshdalal/GameNative/pull/349\r\n\r\n**Full Changelog**: https://github.com/utkarshdalal/GameNative/compare/v0.6.0...v0.6.1",
     "downloadIds": [
       "mqf8l5dbem40bq"
-    ]
-  },
-  {
-    "id": "mqf92pbg5hrksq",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.1.0",
-    "publishedAt": "2026-03-11T18:03:11Z",
-    "changelog": "### 更新说明\r\n\r\n1. 修复 Epic 账号切换失效\r\n2. 升级 .NET 10\r\n3. 升级 Avalonia 11.3.12\r\n4. 修复一些动图渲染问题\r\n5. 修复开启加速关机时可能导致的错误弹窗\r\n6. 修复加速启用脚本时 Github 页面会导致无法打开的错误\r\n7. 修复成就管理对 Steam 新的成就数据格式会卡无限加载的问题\r\n8. Steam 库存编辑功能加入导入导出备份功能\r\n9. 修复了一些失效加速项\r\n10. Steam 挂卡增加黑名单功能\r\n11. 其它一些小问题修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.1.0_win_x64.7z</sub> | <sub>74D0EB1FD67E8EB0914A9962244FC4251993061DF77E6E6C0DFE8A4A899D5AE4</sub> |\r\n| <sub>Steam++_v3.1.0_win_x64.exe</sub> | <sub>EDAC49338697EA4F3EBC0B5BADC7DDAA91EB1BF0C97ED16F4CBA37F8D543B911</sub> |\r\n|||\r\n| <sub>Steam++_v3.1.0_linux_x64.tgz</sub> | <sub>FB99BCD4FA6AC649228700F908819FE19A16CC29A866AD43D2873E504A41783F</sub> |\r\n|||\r\n| <sub>Steam++_v3.1.0_macos.dmg</sub> | <sub>4016ED6BBA5F4EEF14EE7DA550DFF2D29A8D85483AF2FCAD77EBDA02EBC0BE7D</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.1.0](https://img.shields.io/badge/Steam++-v3.1.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92pcaltxliw",
-      "mqf92pden5wdrs",
-      "mqf92peeulq4m0",
-      "mqf92pfcm982nk"
-    ]
-  },
-  {
-    "id": "mqf92pgck7vnpb",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.16",
-    "publishedAt": "2025-03-27T03:10:57Z",
-    "changelog": "### 更新说明\r\n\r\n1. 修复图标错位问题\r\n2. 升级 Avalonia 至11.2.5\r\n3. 修复 docker hub 加速\r\n4. 新增反代 http3 支持\r\n5. 修复加速项存在部分选中时，加速后依然错误的全选生效问题\r\n6. 修复网络测试出现错误会导致程序崩溃问题\r\n7. 修复游戏加速插件下载时程序卡死问题\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于快速帮定位问题解决。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.16_win_x64.7z</sub> | <sub>36EB952EEC538AF7E2C4D5B8D7BED8E9232E7349F054F094221E4486F0DBE893</sub> |\r\n| <sub>Steam++_v3.0.0-rc.16_win_x64.exe</sub> | <sub>C3754C0913F69AD89C04292E3388A72C40967D4F7123AC3A58512FF65FFD26C0</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.16_linux_x64.tgz</sub> | <sub>99493F821F063D8C21B39399CCAA2B90D20C30A97E6A616BC1B4ED1F40271D32</sub> |\r\n| <sub>Steam++_v3.0.0-rc.16_linux_arm64.tgz</sub> | <sub>C5FCF1C7130AB28330C3D3F307F9EF45CC6A3AACA7EB97AC72FC64CCAF5CB02A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.16_macos.dmg</sub> | <sub>FB25C8923C2F60B55EF680A7909DE75841FDD2C525B0CD19F49D64121997DF61</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc16](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92ph86abhkk",
-      "mqf92pi744ckjo",
-      "mqf92pj5etxv65",
-      "mqf92pk3a3an8a",
-      "mqf92pl1y4vlas"
-    ]
-  },
-  {
-    "id": "mqf92pm61hv5un",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.15",
-    "publishedAt": "2025-02-12T18:29:32Z",
-    "changelog": "### 更新说明\r\n因最近默认 DOH、DNS 地址失效导致许多人加速不可用所以发布此版做自动选择可用 DNS 来解决，\r\n不想更新的自行在加速设置-代理设置中切换可用DOH或者DNS重开加速也可解决，验证 DOH、DNS 是否可用可在网络加速中的 网络测试-DNS测试中验证。\r\n\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于我快速帮你定位问题告知你如何解决。\r\n\r\n1. 修复因 steam 更新导致的【steam 挂卡】、【本地令牌】登录失效\r\n2. 新增 greasyfork 加速\r\n3. 修复 docker hub 加速\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n因升级 Avalonia 11.2.3 和 SkiaSharp 3.x 导致目前有一些图标错位问题，和图片质量较低等已知问题，需继续等待上游修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.15_win_x64.7z</sub> | <sub>B99D65E9A9A8E23C7858617897E8A6F324A36C06153A8F77EE8375B18FC8A0CB</sub> |\r\n| <sub>Steam++_v3.0.0-rc.15_win_x64.exe</sub> | <sub>E395DC14F2605DB7EDC5623DF570C016A9BC064024CD2CF6691BFC59B3FB3289</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.15_linux_x64.tgz</sub> | <sub>81EACD85100EFF2E8F294CE0BEEF0A8B9CE25A724E42AA680495318E4DD02782</sub> |\r\n| <sub>Steam++_v3.0.0-rc.15_linux_arm64.tgz</sub> | <sub>80E3E233DC8E9D64FA5B4E70739E509F03235483EF516FE22AF9362544D8F6E8</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.15_macos.dmg</sub> | <sub>3266CE7761235F3CA5537068A376CFEF8C0770D5D617A62C7E78B8DB9C122B63</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc15](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92pn581qkw8",
-      "mqf92poewaltk0",
-      "mqf92ppfr4tq29",
-      "mqf92pqg2e92qg",
-      "mqf92prjb3aov6"
-    ]
-  },
-  {
-    "id": "mqf92psklwhyfb",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.14",
-    "publishedAt": "2025-01-23T12:35:59Z",
-    "changelog": "### 更新说明\r\n因最近默认 DOH、DNS 地址失效导致许多人加速不可用所以发布此版做自动选择可用 DNS 来解决，\r\n不想更新的自行在加速设置-代理设置中切换可用DOH或者DNS重开加速也可解决，验证 DOH、DNS 是否可用可在网络加速中的 网络测试-DNS测试中验证。\r\n\r\n如有任何加速问题需私信我反馈请说明具体状况并带上【加速日志】 一并反馈，便于我快速帮你定位问题告知你如何解决。\r\n\r\n1. 升级 Avalonia 到11.2.3\r\n2. 新增 启动加速时检查 DNS 可用性并自动切换可用 DNS 功能，以解决最近因默认 DNS、DOH不稳定导致的加速后无法访问网络情况\r\n3. 修复 macOS 中挂时长列表项 UI 显示问题\r\n4. 调整 账号切换 中 Steam 家庭共享库管理说明文本，因 Steam 已抛弃旧版本家庭共享故此功能将在后续更新中移除\r\n5. 感谢 @NeKoOuO 提交的繁体翻译文本\r\n6. 感谢 @4Darmygeometry 提交的龙架构(LoongArch)编译版本\r\n\r\n### 已知问题\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB (程序体积并非内存！)\r\n因升级 Avalonia 11.2.3 和 SkiaSharp 3.x 导致目前有一些图标错位问题，和图片质量较低等已知问题，需继续等待上游修复\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.14_win_x64.7z</sub> | <sub>C37E209A960ACB5CF90D315A61B99363056D9F5DEF777D34317B2F4EC2D5F16A</sub> |\r\n| <sub>Steam++_v3.0.0-rc.14_win_x64.exe</sub> | <sub>DFA3CB72966AAA5C79A1A79A58FC86EAF9F1A479A649031A9CFBF8A3A90BB6BF</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.14_linux_x64.tgz</sub> | <sub>2E2A4DF79A01A5F9232B26367537F125EFB50BDF4B6D1D441A8D93593D8C6F09</sub> |\r\n| <sub>Steam++_v3.0.0-rc.14_linux_arm64.tgz</sub> | <sub>37CB0FE2108CD24632BC8EDF59B78B8123F9358EB29F43787624FCC8CB5E6F6E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.14_macos.dmg</sub> | <sub>C412DB0A8A49BA9179C3398AED5D32D653D5F2D7FEEB88150D7D15DF6A18E2DF</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc14](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92ptistq0kh",
-      "mqf92pui4cmu9n",
-      "mqf92pvhox1v4b",
-      "mqf92pwimm8o7j",
-      "mqf92pxjmlm2fy"
-    ]
-  },
-  {
-    "id": "mqf92pylctu9d4",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.13",
-    "publishedAt": "2024-12-02T07:22:16Z",
-    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB\r\n\r\n1. 调整 网络检测 DNS 检测 域名合法的正则验证\r\n2. 调整 网络测试 延迟值指示的提示改进\r\n3. 调整 ASF 插件 文档链接可直接访问\r\n4. 修复 ASF 插件 一键下载在低版本 Windows 系统上报错问题\r\n5. 修复 网络加速 因证书过期而导致的加速失效问题\r\n6. 修复 ASF 插件 Release 版进程残留问题，启动优化，打开文件夹提示优化\r\n7. 修复 网络加速 加速过程中证书过期没有正确处理的问题\r\n8. 修复 挂卡和令牌确认交易中可能出现系统代理更改时网络请求出错的问题\r\n9. 修复 ASF 下载通知问题\r\n10. 修复 Windows 关机时没有正常退出程序导致报错\r\n11. 修复 库存游戏 新版 Steam 客户端编辑游戏功能保存不生效问题\r\n12. 调整 账号切换 其它平台现在不在默认以管理员方式启动\r\n13. 修复 账号切换 战网无法正确切换国服和国际服账号，并且国服国际服账号名称相同时无法正常保存问题\r\n14. 调整 现在需要登录才能使用的功能提示更友好\r\n15. 升级 .NET 到 9.0\r\n16. 升级 Avalonia 到 11.1.5\r\n17. 修复 在较旧版本的 Windows 10 上因 CET 导致网络加速页卡死\r\n18. 修复 战网账号切换对旧版本数据支持问题\r\n19. 修复 战网安装有多个存在时保存账号闪退问题\r\n20. 调整 macOS 托盘标题显示\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.13_win_x64.7z</sub> | <sub>F3609623F44E191488B1EB84045646C8F72352E345562810AE082511B0077D34</sub> |\r\n| <sub>Steam++_v3.0.0-rc.13_win_x64.exe</sub> | <sub>BD7E3DE13B058C8FBF0FD9B384E906FA0A1805638725008FEF4AA10B3FD868E9</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.13_linux_x64.tgz</sub> | <sub>FDB1F1FC1D7AA8E22365D9B26FC9B6D0E7B5396E17366CD4253003207DDB2E8E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.13_macos.dmg</sub> | <sub>761BA21CF31E00DD24A28BF67076D12A14A5BE48E72BB478DD21AA674DC47902</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc13](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92pzk1fncn4",
-      "mqf92q0jsyi00z",
-      "mqf92q1jsykj5t",
-      "mqf92q2jzon681"
-    ]
-  },
-  {
-    "id": "mqf92q3ktuv3u8",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.12",
-    "publishedAt": "2024-11-28T10:27:09Z",
-    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\n因升级 .NET 9.0 Windows 的 TFM 发生一些变动，导致 Windows 版本运行环境体积增长了 30MB\r\n\r\n1. 调整 网络检测 DNS 检测 域名合法的正则验证\r\n2. 调整 网络测试 延迟值指示的提示改进\r\n3. 调整 ASF 插件 文档链接可直接访问\r\n4. 修复 ASF 插件 一键下载在低版本 Windows 系统上报错问题\r\n5. 修复 网络加速 因证书过期而导致的加速失效问题\r\n6. 修复 ASF 插件 Release 版进程残留问题，启动优化，打开文件夹提示优化\r\n7. 修复 网络加速 加速过程中证书过期没有正确处理的问题\r\n8. 修复 挂卡和令牌确认交易中可能出现系统代理更改时网络请求出错的问题\r\n9. 修复 ASF 下载通知问题\r\n10. 修复 Windows 关机时没有正常退出程序导致报错\r\n11. 修复 库存游戏 新版 Steam 客户端编辑游戏功能保存不生效问题\r\n12. 调整 账号切换 其它平台现在不在默认以管理员方式启动\r\n13. 修复 账号切换 战网无法正确切换国服和国际服账号，并且国服国际服账号名称相同时无法正常保存问题\r\n14. 调整 现在需要登录才能使用的功能提示更友好\r\n15. 升级 .NET 到 9.0\r\n16. 升级 Avalonia 到 11.1.5\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.12_win_x64.7z</sub> | <sub>37A4237EAD9977C5DA46BAECAC625F05E7EC4356D7645F28EBD8CB8ABC8FEA21</sub> |\r\n| <sub>Steam++_v3.0.0-rc.12_win_x64.exe</sub> | <sub>B72D622B9D4E78A8F3188A1B206608619DE64339F6C95DE5F9EF15C562BBD718</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.12_linux_x64.tgz</sub> | <sub>E9CAC12799F2D6AA1E038AB20F291B9F0F604A624A6168A9341D4861CF37350B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.12_macos.dmg</sub> | <sub>AFB7ACA80818BAD5947503220FFCB0577F7889EB60941CBD35F57FF2D7E2B5AB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc12](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92q4ikt14ps",
-      "mqf92q5gll0yk1",
-      "mqf92q6edgvq14",
-      "mqf92q7euej8un"
-    ]
-  },
-  {
-    "id": "mqf92q8g3gbgjl",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.11",
-    "publishedAt": "2024-09-26T06:20:58Z",
-    "changelog": "### 更新说明\r\n因数字签名到期暂未续费，该版本可能被杀毒软件误报需手动加一下白名单\r\nmacOS 15 2024-10-10 发布.NET 8.0.10版本修复证书问题\r\n\r\n1. 修复 网络加速 因默认doh地址失效导致的加速无法正常生效问题\r\n2. 修复 启动时最小化 打开时，可能在某些情况下造成程序 Toast 无法正常显示问题\r\n3. 调整 网络加速 中的 IPV6 测试 UI\r\n4. 修复 公告通知弹出过于频繁的问题\r\n5. 修复 程序启动时自动启动加速后 加速服务没有正常显示的问题\r\n6. 在 网络加速-代理设置 中新增了一个重置按钮\r\n7. 新增 ASF控制台 插件功能\r\n8. 修复公告信息没有正确根据平台展示问题\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.11_win_x64.7z</sub> | <sub>DED75062BF20A549722E2DA43CC04C13D24C6ACEF3B9536BB32EB7C4D80163FC</sub> |\r\n| <sub>Steam++_v3.0.0-rc.11_win_x64.exe</sub> | <sub>BC5AD7BE6D07CF0D489263FDF8F2456C48428A1404D026BD360B1319493ED5EB</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.11_linux_x64.tgz</sub> | <sub>1E3C4A82EAC5DD9A3B5C6F5D0150787863AC4025959425754295FEC6ECCD77F5</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.11_macos.dmg</sub> | <sub>1250134FB7BA8E8E395F53532E0C97BCA645A013D7007BA18FDBAC793A754D56</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc11](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92q9bxhm66y",
-      "mqf92qabl2eru8",
-      "mqf92qb9hfrtga",
-      "mqf92qcb128l9n"
-    ]
-  },
-  {
-    "id": "mqf92qdejxrodq",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.10",
-    "publishedAt": "2024-09-01T13:31:27Z",
-    "changelog": "### 更新说明\r\n\r\n1. 新增 网络加速 NAT网络类型检测功能\r\n2. 新增 网络加速 加速日志选项卡，实时查看加速日志\r\n3. 新增 网络加速 DNS检测功能\r\n4. 新增 网络加速 加速后加速服务连通性测试功能\r\n5. 新增 账号切换 GOG 平台账号切换支持\r\n6. 修复 账号切换 Riot Games 无法保存账号的问题\r\n7. 修复 账号切换 在 Steam 默认未登录过任何账号情况下 登录新账号无效问题\r\n8. 新增 游戏工具 CS2 VAC修复功能\r\n9. 调整 游戏工具 游戏无边框窗口化 UI 改进\r\n10. 升级 Avalonia 至 11.1.3\r\n\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.10_win_x64.7z</sub> | <sub>652ECA2568A914FCEF9A43AAED69F4583324BC97974983D816FB0B508CF90A04</sub> |\r\n| <sub>Steam++_v3.0.0-rc.10_win_x64.exe</sub> | <sub>84A43EDD37270A3631DA79A5B60D7AEA65AF61FC294E28EC1F8A77766360F428</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.10_linux_x64.tgz</sub> | <sub>9C2C0A465AD9BDC7053AEAD5278CF5C416F6FA5C8441FC5BFBBB50DA22733C9A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.10_macos.dmg</sub> | <sub>12BEB2BB8B221C2CC8B860AB1A974900A06083B94336A7FE798B19E524185C99</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc10](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/main/download-guide.md)",
-    "downloadIds": [
-      "mqf92qeb5r5zy7",
-      "mqf92qf9658jcn",
-      "mqf92qgayrfmg2",
-      "mqf92qh9s2aze7"
-    ]
-  },
-  {
-    "id": "mqf92qicf0w9tl",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.9",
-    "publishedAt": "2024-07-02T09:51:55Z",
-    "changelog": "### 更新说明\r\n\r\n1. 新增 网络加速 二级代理功能和相关设置项\r\n2. 新增 本地令牌 Steam App共存令牌导入方式，此方式导入令牌可与 Steam App 保持同步\r\n3. 修复 库存游戏 新版本 Steam Beta Client 游戏数据解析出错问题\r\n4. 修复 Steam 挂卡 仅剩一个游戏时发生闪退的问题\r\n5. 修复 Steam 挂时长 启动和暂停按钮重叠显示问题\r\n6. 修复 Steam 账号切换 对蒸汽平台的切换没有正确生效问题\r\n7. 新增 账号切换 显示账号用户名的选项\r\n8. 修复 网络加速 在某些计算机名称为特殊字符开头的电脑上加速出现错误的问题\r\n9. 修复 网络加速 Linux 非 Host 模式不检测 443 占用\r\n10. 修复 程序每次启动 窗口大小发生变化的问题\r\n11. 修复 挂卡与确认交易功能 记住的登录状态失效过于频繁的问题\r\n12. 更新 Avalonia 版本到 11.1.0-rc1\r\n13. 改进 网络加速 现在不默认启用 DoH\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.9_win_x64.7z</sub> | <sub>FC568B2B8E8490CB73719DC1AA77B33E9A3CE8B5D3E1EB03884A0F49D9FB3F2E</sub> |\r\n| <sub>Steam++_v3.0.0-rc.9_win_x64.exe</sub> | <sub>D7713BE239D16E19F0BAC6A7D31AF59109C6E0B318DC337AFC471D1A36DDD39E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.9_linux_x64.tgz</sub> | <sub>B733C83AABA7BB6713C97B6C3FB1EC4651A0BEFEA9341FB4CE6E6CDA53945CE7</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.9_macos.dmg</sub> | <sub>D0D61583530C0E4F09B888D12B582704F972786AC4B0CDC5C5575F71741A1371</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc9](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92qjaqwubld",
-      "mqf92qk7ietoj4",
-      "mqf92ql6opxr20",
-      "mqf92qmf58bxgx"
-    ]
-  },
-  {
-    "id": "mqf92qnfslph7x",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.8",
-    "publishedAt": "2024-04-30T13:40:15Z",
-    "changelog": "### 公告\r\n此版本针对这段时间以来各位的差评进行改动，有错就要认挨打要立正，能快速改进的就马上改了，不方便快速改动的也在计划之中改动了。\r\n\r\n我们是一个商业产品的同时也是个开源项目，也欢迎各位加入开发提交代码，这段时间以来遇到的许多bug，加上代码混乱有挺多原因造成的，允许我简单的辩解一下，一部分原因是因为我们也在招人，有人员流动和开发水平不一的情况，再加上开发人员紧张测试环节有所纰漏，造成上线版本质量不合格，给大家造成困扰和问题还是说声抱歉。\r\n\r\n我们也是一个爱研究爱钻研技术的团队，我们有很多时间花在了琢磨一些新技术新功能上，有些功能可能只是一个尝试，也会花费大量的时间心血，最终也不一定能落地上线，同时因为我们总爱追新框架，新版本底层有一些破坏性更改或者其它问题也导致了程序的质量不一，(Watt Toolkit) Steam++ 也发布有四年了，这一路大家可以从我们的更新日志和 Release 看出来，我们的底层从最初1.x版本的 .Net Framework 4.7.2 + WPF 到 2.x 的 .NET 5 + Avalonia 0.10.x 到现在最新的 .NET 8 + Avalonia 11.1.0-beta2，我们一直在更新底层的同时，重构软件架构，维护现有功能的同时研究新功能开发。\r\n\r\n我们做了很多东西，也有许多东西有一些问题或者其它考虑没有开源，有很多人其实只是想要一个单一的免费加速器，很抱歉这不是 Steam++ 一直以来的目标，Steam++ 的目标一直都是一个综合的游戏性瑞士军刀类工具平台，我们的开发方向也是如此。\r\n\r\n### 更新说明\r\n1. 修复挂卡首次登录后数据加载失败\r\n2. 新增查看证书信息\r\n3. 修复启动时弹出 iotest.tmp 错误\r\n4. 新增账号切换功能可支持对账号创建桌面快捷方式，无需启动软件的情况下也可以通过快捷方式快速切号\r\n5. hosts 文件加速时监听修改自动重置\r\n6. 优化 Steam 账号加载方式\r\n7. 优化挂卡功能快速挂卡模式，改进挂卡完成提示，启动失败提示\r\n8. 游戏加速新增启动游戏\r\n9. 修复隔行扫描 GIF 图像显示不正确\r\n10. 改进点击链接跳转官网与商城自动登录\r\n11. 新增游戏加速会员时长显示与联系客服\r\n12. 修复平台加速无限修改 hosts 出现的死循环\r\n13. 修复替换令牌时恢复代码不显示\r\n14. 修复 Steam 账号登录添加令牌与短信验证的显示\r\n15. 现在可支持未绑定手机号的 Steam账号 直接生成导入令牌\r\n16. 默认启动页现在改为插件商店，并且所有用户都可以在界面设置中修改默认起始页\r\n17. 调整标题栏高度\r\n18. 修复挂卡价格显示\r\n19. 新增服务端加速，代理支持 HTTP3\r\n20. 修复 Twitch 登录、直播聊天、面板内图片加载失效\r\n21. 修复 GitHub Docs、Education 代理无效且异常重定向\r\n22. 修复 Gravatar 加速失效\r\n23. 新增 Open Spotify、GitHub Dev 加速\r\n24. 修复 MEGA 网盘首页无限加载问题\r\n25. 新增 Spotify 加速\r\n26. 新增 Mod.io 加速\r\n27. 新增 Roblox 加速\r\n28. 新增 huggingface 加速\r\n29. 新增 Docker Hub 加速\r\n30. 加速按钮逻辑改为异步，解决某些情况下可能循环启动加速失败造成提示轰炸等问题\r\n31. 升级 Avalonia 版本至 11.1.0-beta2\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.8_win_x64.7z</sub> | <sub>1778004F43BA8669DD38722B1F2E47C4E9E816E22512C70C0C7F840D91113E21</sub> |\r\n| <sub>Steam++_v3.0.0-rc.8_win_x64.exe</sub> | <sub>CACD614C26D879B7797E4ED1556521B3D8B3CF36749919AD98FDD6B7E7593F04</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.8_linux_x64.tgz</sub> | <sub>5C6464F526C1204B7C26ECE519B69AC44943963D97BC69392D0B8D3DF877B600</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.8_macos.dmg</sub> | <sub>371EAEBF1EBB10E13F52AC11BAE032DE7A3FDB65C4379F26FF296922BD4A7969</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc7](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92qospormyy",
-      "mqf92qpqeunltq",
-      "mqf92qqp32dc0m",
-      "mqf92qrr5uiy8a"
-    ]
-  },
-  {
-    "id": "mqf92qsrejjsr0",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.7",
-    "publishedAt": "2024-03-19T11:02:40Z",
-    "changelog": "### 更新说明\r\n1. 修复 Steam 账号切换删除时缓存没有正常清理问题\r\n2. 修复加速项目勾选三级菜单启动加速没生效问题\r\n3. 支持设置启动时默认页\r\n4. 修复应用商店版本 Epic 无法保存账号\r\n5. 修复挂时长在游戏列表未加载完成时进入错误的标注了游戏所属\r\n6. 修复显示加速模式与脚本状态\r\n7. 平台加速与游戏加速顺序调整，启动时显示上次使用的页面\r\n8. 修复账号切换第一次进入加载时间过长问题\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.7_win_x64.7z</sub> | <sub>5D3B84FF90624B4486C6454E2A9653A9E745506763AEC54709FD0EF71BE08424</sub> |\r\n| <sub>Steam++_v3.0.0-rc.7_win_x64.exe</sub> | <sub>37BBB7DE041FE934FC121D1AA7A2D237D2A128FBC86C6F75876898C45D1365F3</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.7_linux_x64.tgz</sub> | <sub>764108DCE14807257ED5686A9C07B6C477C2394BA28FB791F6EE7488AC8F7A7E</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.7_macos.dmg</sub> | <sub>0010AA2F5323DF74FAFBE8E158E01243018EDAC3DCB26D2AAEA2CBF8819CFA84</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc7](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92qtqz1fj46",
-      "mqf92qupn96tnl",
-      "mqf92qvqr3yz71",
-      "mqf92qwp3co56v"
-    ]
-  },
-  {
-    "id": "mqf92qxndrxn4k",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.5",
-    "publishedAt": "2024-03-08T11:25:18Z",
-    "changelog": "### 更新说明\r\n1. 修复账号切换 [Riot Games](https://www.riotgames.com/en)、[Rockstar Games](https://www.rockstargames.com/)\r\n2. 修复微软商店版本 DNS 加速模式\r\n3. 修复脚本文件强制替换删除后未移动文件导致的丢失\r\n4. 修复最小化启动失效\r\n5. 修复微软商店版本开机自启失效\r\n6. 修复挂卡登录的异常处理\r\n7. 修复图片加载缓存失效\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.5_win_x64.7z</sub> | <sub>D3E632C83DB5ED277AAAF2185F0FBF274C98CF4B7664AFC35E810DA49E9E0087</sub> |\r\n| <sub>Steam++_v3.0.0-rc.5_win_x64.exe</sub> | <sub>6BC0F45D8034B5C107AAC5A342A6CF08DCF73B7AA7C5BF0110DEE464AB4A3C71</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.5_linux_x64.tgz</sub> | <sub>869ED9E1FC20EE54D4B667B4B990FF001C2ABD66EF0C2340CAEA3C32D701A34B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.5_macos.dmg</sub> | <sub>6E5160938CD87B4EC4E47F93C50554D88EF849CA3B9BC5AF1B2DE38FB71779AB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc5](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92qyme8dedj",
-      "mqf92qzsd5uy4x",
-      "mqf92r0rst6xu1",
-      "mqf92r1p2m23rj"
-    ]
-  },
-  {
-    "id": "mqf92r2pnwvbvw",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.4",
-    "publishedAt": "2024-03-06T06:01:07Z",
-    "changelog": "### 更新说明\r\n1. 新增与迅游合作推出的游戏加速功能\r\n2. 修复令牌确认交易时某些状况下导致程序闪退和错误\r\n3. 新增令牌搜索\r\n4. 修复挂卡某些用户无法正常获取卡片数据导致无法启动挂卡\r\n5. 修复脚本在某些情况下失效问题\r\n6. 账号切换数据加载性能优化\r\n7. 修复账号切换 [Riot Games](https://www.riotgames.com/en)、[Rockstar Games](https://www.rockstargames.com/) 等平台出现问题\r\n8. 修复开机启动任务计划请求的操作需要提升\r\n9. 此版本开始将恢复微软商店版本更新\r\n10. 修复开启最小化启动情况下解锁成就、云存档管理也被错误的最小化导致无法使用问题\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.4_win_x64.7z</sub> | <sub>7D0F44DC472CB40899FAE6805374AEDFF3FB15EFA7B72E581A9D712890D4CAD8</sub> |\r\n| <sub>Steam++_v3.0.0-rc.4_win_x64.exe</sub> | <sub>8C09B94D3B673A5202DF4F374E6B8A5159454206C13D118DF6141FA29C0A0260</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.4_linux_x64.tgz</sub> | <sub>53C76CF3FFF3F793487233125F41C9AF478C8987FDD9FDE029AA6C30C1914101</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.4_macos.dmg</sub> | <sub>7440091C2BA1E8AF52BB0E3FB695E8F8946EA8E64E21211244CE9208CA2FF4DB</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc3](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92r3qv2wxvo",
-      "mqf92r4pe6e225",
-      "mqf92r5p0dlfre",
-      "mqf92r6rui5mr5"
-    ]
-  },
-  {
-    "id": "mqf92r7ri75xeg",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.3",
-    "publishedAt": "2023-11-30T10:00:07Z",
-    "changelog": "### 公告\r\nrc 版本为测试版本，微软商店等待正式版本更新  \r\n因特殊原因停止部分网站加速支持，敬请谅解，待后续适配完成会新增其它一些可支持的加速网站。\r\n\r\n### 更新说明\r\n1. Steam 账号切换增加离线启动选项\r\n2. 修复加速时会出现 421 Misdirected Request 错误\r\n3. 优化程序内打开个人中心网页可自动登录\r\n4. 优化 Linux 证书工具兼容，修复 Linux 证书安装错误\r\n5. 修复 Linux 卸载脚本错误\r\n6. 修复版本迁移导致脚本失效\r\n7. 优化支持 macOS UrlSchemes 协议快速登录\r\n8. 修复 vdf 写入错误导致修改家庭共享数据被清理\r\n9. 修复 Steam 账号切换后在某些情况下仍需要登录问题\r\n10. 修复账号切换中没有正确使用管理员权限执行操作导致的失败\r\n11. 优化 macOS 信任证书可能等待过久导致程序闪退\r\n12. 更新到 Avalonia 11.0.5\r\n13. 修复加速列表缓存数据丢失选中状态问题\r\n14. 新增 Steam 挂卡功能，支持多种挂卡算法逻辑快速掉卡挂卡模式（不同于2.8.6版本的 ASF 挂卡，ASF 挂卡功能仍在适配开发中）\r\n15. 修复 Steam 令牌在某些情况下查看详情确认交易会导致程序闪退问题\r\n16. 令牌功能添加搜索框\r\n17. 提高 Steam 账号切换首次启动时加载速度，无需再等待\r\n18. 托盘账号切换无需再点开账号切换功能加载后才可展示\r\n19. 调整主页数据加载和UI展示逻辑\r\n20. .NET 框架升级至.NET 8\r\n21. 修复 macOS\\Liunx 无法获取当前 Steam 客户端登录用户问题\r\n22. 修复本地令牌锁定后仍可通过菜单托盘栏获取 5 位数验证码\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨大版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.3_win_x64.7z</sub> | <sub>DDF50E364215466CD038A572C7DA736ECBF5205E72F6B2B871F514A793A4C921</sub> |\r\n| <sub>Steam++_v3.0.0-rc.3_win_x64.exe</sub> | <sub>65BF6230D033AC680C69A69F69B603BC54D4B227892E5C0B0E524B2DD335002B</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.3_linux_x64.tgz</sub> | <sub>A869507634904450B04D156A095DD1A550D28CE70961DD52DC1F1BF4644E8E0A</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.3_macos.dmg</sub> | <sub>49E5A29AE0651D5E347FE6001C459BC73C857C424EFBD683703D572D1694EB6A</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc3](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92r8rw1i0uv",
-      "mqf92r9srdpm48",
-      "mqf92ray0sd2fd",
-      "mqf92rbyqho8we"
-    ]
-  },
-  {
-    "id": "mqf92rcwksyt7q",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.2",
-    "publishedAt": "2023-09-23T09:37:55Z",
-    "changelog": "### 公告\r\nrc 版本为测试版本，微软商店等待正式版本更新\r\n\r\n### 更新说明\r\n1. 修复启动时最小化设置无效\r\n2. 修复 mafile 文件导入的令牌在某些情况下导致程序闪退问题\r\n3. 调整启动软件时开启加速的 UI\r\n4. 修复因 HTTP/2 代理导致的 某些加速项失效问题\r\n5. 托盘现在可支持开关加速、账号切换、复制令牌\r\n6. 修复 macOS 等待验证密码输入过久闪退的问题\r\n7. 修复检查更新在有活动窗口时会导致闪退\r\n8. 修复功能菜单排序中主页不生效\r\n9. 修复 macOS Arm64 代码签名\r\n10. 修复脚本配置中缓存脚本文件路径错误\r\n11. 修复账号切换中没有正确使用管理员权限执行操作导致的失败\r\n12. 新增网络加速代理设置中的 DoH 配置\r\n13. 修复 macOS 输入密码时等待过长导致的闪退\r\n14. 升级 .NET 运行时至 7.0.11\r\n\r\n### 注意事项\r\n为避免意外丢失数据，跨版本覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.2_win_x64.7z</sub> | <sub>E665F6C080311DBF02E5A3F630D54FFEDA978A64E6FFBA887943115CEC817276</sub> |\r\n| <sub>Steam++_v3.0.0-rc.2_win_x64.exe</sub> | <sub>FCEE297F6A25CF1FC279515F5F19E9EE185FFED277CF026FA20F75BDDBEE6388</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.2_linux_x64.tgz</sub> | <sub>F71E08DE51423905C1B18C6B62562687A8DA5F99E97C5D9D757558F856D5FDC6</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.2_macos.dmg</sub> | <sub>161347FA7468BEE29FA7F1BA4830B895058BA39F62820E979951F5EA220B0F17</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc2](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92rdvxhwbpa",
-      "mqf92ret40ix41",
-      "mqf92rfsd2euz9",
-      "mqf92rgtks079u"
-    ]
-  },
-  {
-    "id": "mqf92rhs8u9ug4",
-    "projectId": "mqf92p952kk8p0",
-    "version": "3.0.0-rc.1",
-    "publishedAt": "2023-09-07T14:38:21Z",
-    "changelog": "### 公告\r\n3.0 全新版本发布 🎉🎉🎉  \r\n全新 UI，底层重构  \r\n新版本中重构了所有功能，所有功能都为独立的插件，现在大家可以按需删除和禁用你不想用的功能。  \r\n我们之后也会开源一个插件的模板仓库，欢迎各位自己制作插件在我们的插件商店中上传分发。\r\n\r\n同时 Steam 版本也正在审核中、Steam 版本可多拥有 Steam 云存档功能同步配置文件和令牌、且能使用 Steam 创意工坊去分发和制作更多的插件✨\r\n\r\n### 版本亮点\r\n1. 全新的加速功能现在是作为独立进程运行，更低占用，更快速度。\r\n2. 账号切换支持 Steam 切换登录时显示状态，除此之外还增加了更多的平台账号切换支持 Ubisoft、Epic Games、EA Desktop、Origin、Riot Games、Rockstar、BattleNet 等更多平台或软件。\r\n3. 全新的库存游戏页面、更好用的操作逻辑、新支持了对应游戏的 Steam 截图管理功能。\r\n4. 本地令牌支持了非 Steam 令牌导入、Steam 账号登录导入方式现在可以直接替换式导入、冷却时间仅 2 天，Steam 令牌交易确认功能基于新接口实现，更快速便捷的一键确认。\r\n5. 更多的新功能都正在以插件形式开发中，都可以按需安装使用。\r\n6. 若干旧版本 Bug 修复。\r\n\r\n### 注意事项\r\n为避免意外丢失数据，覆盖升级时注意备份旧版本重要数据（比如令牌）。\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_v3.0.0-rc.1_win_x64.7z</sub> | <sub>AB9E678E1290B71C14EC8678FA1F5937E6CB2F8FA54038EFC9705031C8C6D1D5</sub> |\r\n| <sub>Steam++_v3.0.0-rc.1_win_x64.exe</sub> | <sub>EBF635B976B553DFF4B3B8B5361AFC8BCCCC272D5AA5794F35C1E807D4020314</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.1_linux_x64.tgz</sub> | <sub>848CC725D8B97D23D56B8B3FDC38B70B5BB6E0E345D48CC06AAD2684452ED376</sub> |\r\n|||\r\n| <sub>Steam++_v3.0.0-rc.1_macos.dmg</sub> | <sub>8D8544FA06EE9F64DD7648CBBF15B9C9C5AE416994F4C8C7E68EB94DF299CCC8</sub> |\r\n  \r\n  \r\n[![Official steampp.net](https://img.shields.io/badge/Official-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v3.0.0-rc1](https://img.shields.io/badge/Steam++-v3.0.0-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92ripqh0y93",
-      "mqf92rjtenrps2",
-      "mqf92rksra90ei",
-      "mqf92rlzpkmcbh"
-    ]
-  },
-  {
-    "id": "mqf92rn0e1k0lj",
-    "projectId": "mqf92p952kk8p0",
-    "version": "2.8.6",
-    "publishedAt": "2022-12-19T14:42:09Z",
-    "changelog": "### 公告\r\n这是一个修复目前累积问题的版本，也是最后一个.NET 6 的版本，\r\n之后桌面端程序将使用.NET 7 + Avalonia 11.0 重构发布新版本。\r\n届时也会放弃继续对 Win7/8.1 系统的支持，所以这也意味着这是最后一个支持 Win7/8.1 的版本。\r\n也请各位敬请期待之后的 3.0 版本吧~\r\n\r\n### 修复问题\r\n1. 改进 Mac 安装证书的提示，显示执行命令\r\n2. 修复 Steam 启动参数在一些场景下无效\r\n3. 修复 网络加速 关闭 http 重定向到 https 依然监听 80 端口错误\r\n4. 修复 网络加速 仅启用脚本功能 导致代理网站无法访问的错误\r\n5. 修复 网络加速 开启系统代理和 PAC 代理后，非代理网站无法正常访问的错误\r\n6. 修改 证书安装路径 为本地计算机 而不在是 当前用户 以支持跨用户访问，这项改动可能导致大家需要重新安装一次证书\r\n7. 修复 库存游戏 因 Steam 客户端更新导致的加载游戏数据失败问题\r\n8. 修复 捐助列表金额显示错位问题\r\n9. 修复 Twitch 聊天连接失败问题\r\n10. 修复 discord.gg 无法访问导致无法加入频道分享链接问题\r\n11. 修复 Steam 没有正确识别 Steam 国服提示问题\r\n12. ASF 升级至 V5.3.2.4\r\n13. .NET 运行时升级至 6.0.12，使用 fde 版本需要升级运行时\r\n14. 新增 Steam 设置可设置 模拟蒸汽平台启动参数\r\n15. 修复 Steam 启动时没有正确识别 -steamchina 国服的问题\r\n16. 修复 Steam Beta 版库存游戏加载不出游戏详情和名称 \r\n17. 修复 成就管理、云存档管理 无法打开\r\n18. 修复 库存游戏 首次加载后，游戏加载失败提示文本依然存在\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.6.7z</sub> | <sub>9C31E5241EBDD9747EC185F7C34C104A6382C8303D739CECB5904E7A2D01ED2A</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.6.7z</sub> | <sub>489FF3C61FB5D55F13D70E8404D68EE52367C46BFA8C999FB96FDE562C47952B</sub> |\r\n| <sub>Steam++_win_x64_v2.8.6.exe</sub> | <sub>0DD385D0B84DE22AC4C682E170A28811E4456BB0BA3B7730FD23EFA0919E4B08</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.6.exe</sub> | <sub>7C98402680899F68B6584FBFD2F1C49E092E2C77BE6A2064E838BB55B91D2ABB</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.6.7z</sub> | <sub>80DF3E7CBCCC7B7A606AB71BA63333CED8E162DD80094B06B87F21398BD2E905</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.6.7z</sub> | <sub>262B36F857714C25C6E96DAAC16A19368DB54C7A44181BFAD9813B33B4732AFE</sub> |\r\n| <sub>Steam++_win_x86_v2.8.6.exe</sub> | <sub>86DBBCE27797890745A76FDB22D1134939D3B74E891A5D82EE9D3A81E722C340</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.6.exe</sub> | <sub>6D7D17F85BC7226E021C24BC5FBD30FE44ABBDB9B088163E13F89E85F05EA85E</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.6.tar.zst</sub> | <sub>B96E029631F66FD5194D9F31565027053DC80C20A9E6F3BCBFE1A5224DB18B40</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.tar.zst</sub> | <sub>8232F9A3025C28A69453819FA729C7B63FF04FEF9AD16D0D45AB3CB858BAB30A</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.6.deb</sub> | <sub>2D51A0A75A8CEE5B7F022C0C64627BDB8F10951A96430FA3A131E884E84863A0</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.deb</sub> | <sub>EE7D520073A3CD5421F99951A97193AA08B948D7657DBDD88936CF6AF24C72CC</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.6.rpm</sub> | <sub>299A535D4F1D95C3BB571A1EE7E066889FBC9EFC67BE78A7190EC5148895651B</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.6.rpm</sub> | <sub>F68803475D596B12F89B02DA7F21094722267AE7E74273AA6C9279B5D83F8DB8</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.6.dmg</sub> | <sub>6C03B9358532254C2AE3329FCDBDAD58C165F08343F759064F3A5C20BC59212E</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.6.dmg</sub> | <sub>772CFB10035F5DC290AA6A1E6F373826DB4F45E8BD65E4D06083E4973B576DAD</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.6](https://img.shields.io/badge/Steam++-v2.8.6-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92rnzuh0eyu",
-      "mqf92roytsswf4",
-      "mqf92rq305tgio",
-      "mqf92rr5rbalsm",
-      "mqf92rslrnwvya",
-      "mqf92rtnt169p0",
-      "mqf92rupzylvjt",
-      "mqf92rvrmj8x4x",
-      "mqf92rwrkraa36",
-      "mqf92rxszorj4v",
-      "mqf92rytgr4gl6",
-      "mqf92rztqyt7m7",
-      "mqf92s0tgh4z2l",
-      "mqf92s1wfm8027",
-      "mqf92s2w10d8bl",
-      "mqf92s43pijtwa"
-    ]
-  },
-  {
-    "id": "mqf92s547k6vne",
-    "projectId": "mqf92p952kk8p0",
-    "version": "2.8.5",
-    "publishedAt": "2022-12-15T11:06:44Z",
-    "changelog": "### 公告\r\n这是一个修复目前累积问题的版本，也是最后一个.NET 6 的版本，\r\n之后桌面端程序将使用 .NET 7 + Avalonia 11 重构发布新版本。\r\n届时也会放弃继续对 Win7/8.1 系统的支持，所以这也意味着这是最后一个支持 Win7/8.1 的版本。\r\n也请各位敬请期待之后的 3.0 版本吧~\r\n\r\n### 修复问题\r\n1. 改进 Mac 安装证书的提示，显示执行命令\r\n2. 修复 Steam 启动参数在一些场景下无效\r\n3. 修复 网络加速 关闭 http 重定向到 https 依然监听 80 端口错误\r\n4. 修复 网络加速 仅启用脚本功能 导致代理网站无法访问的错误\r\n5. 修复 网络加速 开启系统代理和 PAC 代理后，非代理网站无法正常访问的错误\r\n6. 修改 证书安装路径 为本地计算机 而不在是 当前用户 以支持跨用户访问，这项改动可能导致大家需要重新安装一次证书\r\n7. 修复 库存游戏 因 Steam 客户端更新导致的加载游戏数据失败问题\r\n8. 修复 捐助列表金额显示错位问题\r\n9. 修复 Twitch 聊天连接失败问题\r\n10. 修复 discord.gg 无法访问导致无法加入频道分享链接问题\r\n11. 修复 Steam 没有正确识别 Steam 国服提示问题\r\n12. ASF 升级至 V5.3.2.4\r\n13. .NET 运行时升级至 6.0.12，使用 fde 版本需要升级运行时\r\n14. 新增 Steam 设置可设置 模拟蒸汽平台启动参数\r\n15. 修复 Steam 启动时没有正确识别 -steamchina 国服的问题\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.5.7z</sub> | <sub>839923D91D354B786880BFE6D7C4A0216843A1ABAF472191E58954012BEFAAD4</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.5.7z</sub> | <sub>FE1657749CFA319C534E9495E19EA766F2BD194478F016EDCC4127D0AAFAD53A</sub> |\r\n| <sub>Steam++_win_x64_v2.8.5.exe</sub> | <sub>3A8C396709D693D9A6056B74722088CEB5881B93765DF71F7124B1756BB7E72F</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.5.exe</sub> | <sub>D7ADB17672AF478571C6E555630E38087BC9517F735C9B7539C3BCFF42A9CFE7</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.5.7z</sub> | <sub>4AAEC829FEA3449C9A9A84EBDDF6158804EB8A21DB631E42174738607391EB8A</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.5.7z</sub> | <sub>ED287428B8594138480C307303987B8448AE27AA44C4830ABCA5AFC3BF4E4A60</sub> |\r\n| <sub>Steam++_win_x86_v2.8.5.exe</sub> | <sub>8293E850BD294A0C0E6A7F645001014333A60CBE0F7475AF76A2341C12DFA8BC</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.5.exe</sub> | <sub>3CE5315319C599B213F096503366FAD21EA44CB2E297302500757FFEC9535306</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.5.tar.zst</sub> | <sub>09024917D7FBE706354CBB07332701DC50459D45E758FA046F691757491F29F6</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.tar.zst</sub> | <sub>03D16F3D0CEBE9FDF700E2282D4651340821BE0D2B76FA8C0713CA82944BE5F5</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.5.deb</sub> | <sub>E02462C4F7262227DE0D60CADAFC112E2FC3DBC8DF44A11B6ECAF305DC377928</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.deb</sub> | <sub>B3EE814714D94C66F5F25085E7E6392E9F50C54FE8BCABE1B4A4672EC2B75A19</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.5.rpm</sub> | <sub>2607632514BE92850F426BCACFDC3EE80662C66EB69E8B4068105FCD89FB58F6</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.5.rpm</sub> | <sub>655BA09F65C54F297D6933E3D29435BD8F787E58D14AE48822CD43DC1D3AE21E</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.5.dmg</sub> | <sub>BB506447EAF8649FF55D559F9FDBC950C6F5C66D7C0095863EC8E9B1220F0F92</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.5.dmg</sub> | <sub>1989DE947FD6608314A0C53DCC6C0D58D98167A5BDA0806745D3C12760FC8F5C</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.5](https://img.shields.io/badge/Steam++-v2.8.5-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92s61kmkxx7",
-      "mqf92s72v2qme5",
-      "mqf92s840671wy",
-      "mqf92s95vzpocd",
-      "mqf92sa5bpv4d4",
-      "mqf92sb8j8uu77",
-      "mqf92sc8xt1h85",
-      "mqf92sd9pzxe6o",
-      "mqf92se9qrr3qn",
-      "mqf92sff4fnu2c",
-      "mqf92sgi0xwtw5",
-      "mqf92shkddyy05",
-      "mqf92siqsmd47z",
-      "mqf92sjuat222k",
-      "mqf92sl8crtaoy",
-      "mqf92sm96le20t"
-    ]
-  },
-  {
-    "id": "mqf92snctjjdls",
-    "projectId": "mqf92p952kk8p0",
-    "version": "2.8.4",
-    "publishedAt": "2022-08-16T11:13:37Z",
-    "changelog": "### 版本亮点\r\n1. .NET 运行时升级至 6.0.8，使用 fde 版本需要升级运行时\r\n2. ASF 升级至 V5.2.8.4\r\n3. Avalonia 升级至 0.10.18\r\n\r\n### 修复问题\r\n1. 修复 2.8.0 ~ 2.8.2 中 AppData/Config.mpo 文件大小为 0 时导致的程序无法正常启动\r\n2. 修复 Windows 上版本更新在 2.8.0 ~ 2.8.2 中非 FDE 版本识别为 FDE 版\r\n3. 改进 调整代理模式顺序，Hosts 模式置顶\r\n4. 修复 划词翻译等一些 JS 脚本\r\n5. 改进 macOS 上的证书安装\r\n6. 尝试修复 网络加速中能导致内存泄露的问题\r\n7. 改进 非简中默认隐藏加速与脚本仅在 Windows 上生效\r\n8. 改进 减少 Android 上的启动时间\r\n9. 修复 退出程序时可能引发的闪退\r\n10. 修复 macOS/Linux 上设置页面打不开的问题\r\n11. 修复 网络加速中网页上出现 Because https://... actually points to WattToolkit itself...\r\n12. 尝试修复 ASF 控制台中输入时卡死\r\n13. 修复 首次使用 Windows 安装版(非应用商店版) 可能导致程序无法正常启动\r\n14. 修复 2.8.3 中 win-x64 覆盖导致丢失配置文件等用户数据的问题\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_win_x64_v2.8.4.7z</sub> | <sub>E797CB455740DE75EEF5EEA0433D7F37551E75A2061C62C3E7670333598C7281</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.4.7z</sub> | <sub>A57FF8C2A4E19D9C324988E5D361E230FF63902FE71589370B6DF1BAC330D3E0</sub> |\r\n| <sub>Steam++_win_x64_v2.8.4.exe</sub> | <sub>B0A3A6EF2156C007AF0FA311AB1470524F0BF94F5E1D4420772320F13680DFD4</sub> |\r\n| <sub>Steam++_win_x64_fde_v2.8.4.exe</sub> | <sub>FFE6D2DA7A5DED8D82DEFC27BFC63F335C09CA761599A6AB93C35076EFA3BB16</sub> |\r\n|||\r\n| <sub>Steam++_win_x86_v2.8.4.7z</sub> | <sub>4414DB0168B1044119C1F7B49F732D8B963AD47CDB4FE9F5FFFC9FAD8E7550FA</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.4.7z</sub> | <sub>2D8F9ECD3F4055CC2986F8F7AF01586E3922DDB832D5EB765AFFC2E31D35C56C</sub> |\r\n| <sub>Steam++_win_x86_v2.8.4.exe</sub> | <sub>A02EAEAC1A3E04F2E8804A11BF9E37B01EB0CC88FA6433C33798CA59B4B0E84D</sub> |\r\n| <sub>Steam++_win_x86_fde_v2.8.4.exe</sub> | <sub>796F2B24385FEEC5559047915B11236DCE0224ED306B02DB01AEDE2C64E7A443</sub> |\r\n|||\r\n| <sub>Steam++_linux_x64_v2.8.4.tar.zst</sub> | <sub>54398FA7FDDC725DF263BCE131842151C4AA7BCDD3C19E75C7751E1E9A3E57D3</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.tar.zst</sub> | <sub>902F0AE9E8685F1C40BBD4CED250178509C917134D3C787F748D6D274E2DCFD3</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.4.deb</sub> | <sub>B38E02F112A68FD4ED986DFB3B698BAEEB7E2569079C0FFF0E834035E942047B</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.deb</sub> | <sub>FFCF650C31A0EBA3FAC464A9EA5D6B419828C2FA251E412A86F28779531A9DFC</sub> |\r\n| <sub>Steam++_linux_x64_v2.8.4.rpm</sub> | <sub>BBA12A9A6F4B0FDEFBE4884BA3FD680FC1082C0655CB0BD9056B9E0E41160B03</sub> |\r\n| <sub>Steam++_linux_arm64_v2.8.4.rpm</sub> | <sub>6C3B787C0B31AF1F56452FD2E470F7129C4F6F4BA34A1A85C86D37F015BC1042</sub> |\r\n|||\r\n| <sub>Steam++_macos_x64_v2.8.4.dmg</sub> | <sub>DBE227F9D2D819698744CCA32B6C52473B88058249480A226501ADDE8C395B86</sub> |\r\n| <sub>Steam++_macos_arm64_v2.8.4.dmg</sub> | <sub>B321B7B549680BDFCAC8201DD5F1945120F3B30FCA033F035387E182801DCE74</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.4](https://img.shields.io/badge/Steam++-v2.8.4-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92sob6g5p2h",
-      "mqf92spg7l3zl1",
-      "mqf92sqg6pi5uw",
-      "mqf92srika60ew",
-      "mqf92ssiqpvwro",
-      "mqf92stclk8yqz",
-      "mqf92stzmq4640",
-      "mqf92sukx3melk",
-      "mqf92svba50kjq",
-      "mqf92svx1ru71v",
-      "mqf92swlh3mwjt",
-      "mqf92sxaqd9cht",
-      "mqf92sy0olgdsx",
-      "mqf92syqdpdjin",
-      "mqf92szg91aofq",
-      "mqf92t06xig06j"
-    ]
-  },
-  {
-    "id": "mqf92t0yg929g4",
-    "projectId": "mqf92p952kk8p0",
-    "version": "2.8.3",
-    "publishedAt": "2022-08-14T15:30:17Z",
-    "changelog": "### 版本亮点\r\n1. .NET 运行时升级至 6.0.8，使用 fde 版本需要升级运行时\r\n2. ASF 升级至 V5.2.8.4\r\n\r\n### 修复问题\r\n1. 修复 2.8.0 ~ 2.8.2 中 AppData/Config.mpo 文件大小为 0 时导致的程序无法正常启动\r\n2. 修复 Windows 上版本更新在 2.8.0 ~ 2.8.2 中非 FDE 版本识别为 FDE 版\r\n3. 改进 调整代理模式顺序，Hosts 模式置顶\r\n4. 修复 划词翻译等一些 JS 脚本\r\n5. 改进 macOS 上的证书安装\r\n6. 尝试修复 网络加速中能导致内存泄露的问题\r\n7. 改进 非简中默认隐藏加速与脚本仅在 Windows 上生效\r\n8. 改进 减少 Android 上的启动时间\r\n9. 修复 退出程序时可能引发的闪退\r\n10. 修复 macOS/Linux 上设置页面打不开的问题\r\n11. 修复 网络加速中网页上出现 Because https://... actually points to WattToolkit itself...\r\n12. 尝试修复 ASF 控制台中输入时卡死\r\n\r\n## 文件校验\r\n|  File  | Checksum (SHA256)  |\r\n| :- | :- |\r\n| <sub>Steam++_android_v2.8.3.apk</sub> | <sub>35E21659EDD28D642BEB14B5D0F044983CA3023FBF7C2C638CDF945C2ECBE4AA</sub> |\r\n  \r\n  \r\n[![WebSite steampp.net](https://img.shields.io/badge/WebSite-steampp.net-brightgreen.svg?style=flat-square&color=61dafb)](https://steampp.net)\r\n[![Steam++ v2.8.3](https://img.shields.io/badge/Steam++-v2.8.3-brightgreen.svg?style=flat-square&color=512bd4)]()\r\n\r\n##### [不知道该下载哪个文件?](https://github.com/BeyondDimension/SteamTools/blob/develop/download-guide.md)",
-    "downloadIds": [
-      "mqf92t1p9qcbr7"
     ]
   }
 ]

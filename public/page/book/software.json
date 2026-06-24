@@ -9,14 +9,14 @@
     "featured": false,
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 295,
-    "forks": 14,
+    "stars": 269,
+    "forks": 12,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzx80hhogwvh",
-    "latestUpdateTime": "2026-06-22T11:14:34Z",
-    "latestVersion": "archive-v3-3.26.06221859"
+    "latestUpdateTime": "2026-05-07T05:24:16Z",
+    "categorySlug": "book"
   },
   {
     "id": "mqdordihsc5rxn",
@@ -29,9 +29,10 @@
     "githubRepo": "anxcye/anx-reader",
     "githubUrl": "https://github.com/anxcye/anx-reader",
     "latestUpdateTime": "2025-11-01T13:17:04Z",
-    "stars": 8365,
-    "forks": 563,
-    "latestVersionId": "mqdzx94ic2xzm0"
+    "stars": 8353,
+    "forks": 564,
+    "latestVersionId": "mqdzx94ic2xzm0",
+    "categorySlug": "book"
   },
   {
     "id": "mpwowqbvn123ig",
@@ -43,13 +44,14 @@
     "featured": false,
     "githubRepo": "skybbk1001/legadoT",
     "githubUrl": "https://github.com/skybbk1001/legadoT",
-    "stars": 52,
-    "forks": 15,
+    "stars": 47,
+    "forks": 13,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzx9wjw77iny",
-    "latestUpdateTime": "2026-06-06T13:27:18Z"
+    "latestUpdateTime": "2026-06-06T13:27:18Z",
+    "categorySlug": "book"
   },
   {
     "id": "mpwouieuddbq2d",
@@ -61,14 +63,15 @@
     "featured": false,
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4668,
-    "forks": 483,
+    "stars": 4599,
+    "forks": 478,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxbdokth5o5",
-    "latestUpdateTime": "2026-06-20T17:37:42Z",
-    "latestVersion": "3.26.13-beta.31"
+    "latestUpdateTime": "2026-06-18T16:38:25Z",
+    "latestVersion": "3.26.13-beta.28",
+    "categorySlug": "book"
   },
   {
     "id": "mpwp1hvpsn5ffl",
@@ -80,14 +83,15 @@
     "featured": false,
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 218,
-    "forks": 29,
+    "stars": 215,
+    "forks": 31,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxbsj4f5axz",
     "latestUpdateTime": "2026-06-17T15:43:18Z",
-    "latestVersion": "beta-3.26.061723"
+    "latestVersion": "beta-3.26.061723",
+    "categorySlug": "book"
   },
   {
     "id": "mq1yoxoecx1loi",
@@ -102,7 +106,8 @@
     "latestUpdateTime": "2026-05-24T00:00:00.000Z",
     "stars": 46893,
     "forks": 5717,
-    "latestVersionId": "mqei13n3189p82"
+    "latestVersionId": "mqei13n3189p82",
+    "categorySlug": "book"
   },
   {
     "id": "mpwoyw5uynpmko",
@@ -114,14 +119,15 @@
     "featured": false,
     "githubRepo": "LegadoTeam/Legado-Tauri-Release",
     "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
-    "stars": 176,
+    "stars": 177,
     "forks": 14,
     "platforms": [
       "Windows",
       "Android"
     ],
     "latestVersionId": "mqdzxd02ytw8go",
-    "latestUpdateTime": "2026-05-27T15:09:57Z"
+    "latestUpdateTime": "2026-05-27T15:09:57Z",
+    "categorySlug": "book"
   },
   {
     "id": "mpwomjebv153ry",
@@ -133,13 +139,14 @@
     "featured": false,
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1804,
-    "forks": 299,
+    "stars": 1785,
+    "forks": 287,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxdaw5dxjry",
-    "latestUpdateTime": "2025-11-16T14:19:20Z"
+    "latestUpdateTime": "2025-11-16T14:19:20Z",
+    "categorySlug": "book"
   },
   {
     "id": "mqe091nl2j14ej",
@@ -151,10 +158,11 @@
     "featured": false,
     "githubRepo": "readest/readest",
     "githubUrl": "https://github.com/readest/readest",
-    "latestUpdateTime": "2026-06-20T04:43:57Z",
-    "stars": 21703,
-    "forks": 1290,
+    "latestUpdateTime": "2026-06-19T14:05:40Z",
+    "stars": 21599,
+    "forks": 1273,
     "latestVersionId": "mqe099q50edkdy",
-    "latestVersion": "v0.11.12"
+    "latestVersion": "v0.11.10",
+    "categorySlug": "book"
   }
 ]

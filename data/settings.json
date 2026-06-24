@@ -1,10 +1,10 @@
 {
-  "siteName": "Software Hub",
+  "siteName": "StarVault",
   "logo": "https://i.postimg.cc/j5yhCmXp/dog.png",
   "admins": [
     "Pi3-14-15926"
   ],
-  "footer": "Powered by Software Hub",
+  "footer": "© 2026 StarVault • Built by 齐尹秦",
   "storageNote": "收藏精品软件",
   "ghProxyEnabled": true,
   "ghProxyUrl": "https://gh-proxy.com/",
