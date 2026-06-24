@@ -122,7 +122,7 @@ SoftwareHub/
 │           ├── versions.json     # 该分类下的版本数据
 │           └── downloads.json    # 该分类下的下载数据
 ├── public/                       # 静态资源（构建后原样输出）
-│   ├── CNAME                     # 自定义域名：app.qiyinqin.cn
+│   ├── CNAME                     # 自定义域名：app.qiyinqin.top
 │   ├── data/                     # 发布的 JSON 数据
 │   ├── page/                     # 发布的分类页面数据
 │   ├── favicon.svg               # 网站图标
@@ -489,7 +489,7 @@ WEBDAV_BASE_DIR=/SoftwareHub
 当前通过 `public/CNAME` 文件配置自定义域名：
 
 ```
-app.qiyinqin.cn
+app.qiyinqin.top
 ```
 
 ### 配置步骤
