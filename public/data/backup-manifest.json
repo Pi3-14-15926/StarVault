@@ -3,34 +3,34 @@
     {
       "category": "阅读",
       "project": "阅读_Archive",
-      "versionDir": "阅读/阅读_Archive/2026-06-07_archive-v3-3.26.06071119",
+      "versionDir": "阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221859",
       "files": [
         {
-          "name": "legado-arm64-v8a_app_3.26.06071119_29680039.apk",
-          "size": 36385587.2,
-          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-07_archive-v3-3.26.06071119/legado-arm64-v8a_app_3.26.06071119_29680039.apk"
+          "name": "legado-arm64-v8a_app_3.26.06221859_29702099.apk",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221859/legado-arm64-v8a_app_3.26.06221859_29702099.apk"
         },
         {
-          "name": "legado-armeabi-v7a_app_3.26.06071119_29680039.apk",
-          "size": 36280729.6,
-          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-07_archive-v3-3.26.06071119/legado-armeabi-v7a_app_3.26.06071119_29680039.apk"
+          "name": "legado-armeabi-v7a_app_3.26.06221859_29702099.apk",
+          "size": 38482739.2,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221859/legado-armeabi-v7a_app_3.26.06221859_29702099.apk"
         }
       ]
     },
     {
       "category": "阅读",
       "project": "阅读_Archive",
-      "versionDir": "阅读/阅读_Archive/2026-06-06_archive-v3-3.26.06070308",
+      "versionDir": "阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221730",
       "files": [
         {
-          "name": "legado-arm64-v8a_app_3.26.06070308_29679548.apk",
-          "size": 36385587.2,
-          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-06_archive-v3-3.26.06070308/legado-arm64-v8a_app_3.26.06070308_29679548.apk"
+          "name": "legado-arm64-v8a_app_3.26.06221730_29702010.apk",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221730/legado-arm64-v8a_app_3.26.06221730_29702010.apk"
         },
         {
-          "name": "legado-armeabi-v7a_app_3.26.06070308_29679548.apk",
-          "size": 36280729.6,
-          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-06_archive-v3-3.26.06070308/legado-armeabi-v7a_app_3.26.06070308_29679548.apk"
+          "name": "legado-armeabi-v7a_app_3.26.06221730_29702010.apk",
+          "size": 38482739.2,
+          "url": "/SoftwareHub/阅读/阅读_Archive/2026-06-22_archive-v3-3.26.06221730/legado-armeabi-v7a_app_3.26.06221730_29702010.apk"
         }
       ]
     },
@@ -123,49 +123,54 @@
     {
       "category": "阅读",
       "project": "阅读_MD3",
-      "versionDir": "阅读/阅读_MD3/2026-06-18_3.26.13-beta.28",
+      "versionDir": "阅读/阅读_MD3/2026-06-20_3.26.13-beta.31",
       "files": [
         {
-          "name": "legado-3.26.13-beta.28-arm64-v8a.apk",
+          "name": "legado-3.26.13-beta.31-arm64-v8a.apk",
           "size": 17406361.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28-arm64-v8a.apk"
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.31/legado-3.26.13-beta.31-arm64-v8a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.28-armeabi-v7a.apk",
+          "name": "legado-3.26.13-beta.31-armeabi-v7a.apk",
           "size": 16882073.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28-armeabi-v7a.apk"
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.31/legado-3.26.13-beta.31-armeabi-v7a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.28.apk",
-          "size": 23907532.8,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/legado-3.26.13-beta.28.apk"
+          "name": "legado-3.26.13-beta.31.apk",
+          "size": 24012390.4,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.31/legado-3.26.13-beta.31.apk"
         },
         {
           "name": "mapping.txt",
-          "size": 217474662.4,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-18_3.26.13-beta.28/mapping.txt"
+          "size": 217579520,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.31/mapping.txt"
         }
       ]
     },
     {
       "category": "阅读",
       "project": "阅读_MD3",
-      "versionDir": "阅读/阅读_MD3/2026-06-17_3.26.13-beta.27",
+      "versionDir": "阅读/阅读_MD3/2026-06-20_3.26.13-beta.30",
       "files": [
         {
-          "name": "legado-3.26.13-beta.27-arm64-v8a.apk",
+          "name": "legado-3.26.13-beta.30-arm64-v8a.apk",
           "size": 17406361.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27-arm64-v8a.apk"
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.30/legado-3.26.13-beta.30-arm64-v8a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.27-armeabi-v7a.apk",
+          "name": "legado-3.26.13-beta.30-armeabi-v7a.apk",
           "size": 16882073.6,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27-armeabi-v7a.apk"
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.30/legado-3.26.13-beta.30-armeabi-v7a.apk"
         },
         {
-          "name": "legado-3.26.13-beta.27.apk",
-          "size": 23907532.8,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-17_3.26.13-beta.27/legado-3.26.13-beta.27.apk"
+          "name": "legado-3.26.13-beta.30.apk",
+          "size": 24012390.4,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.30/legado-3.26.13-beta.30.apk"
+        },
+        {
+          "name": "mapping.txt",
+          "size": 217579520,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-06-20_3.26.13-beta.30/mapping.txt"
         }
       ]
     },
@@ -358,6 +363,163 @@
     {
       "category": "阅读",
       "project": "Readest",
+      "versionDir": "阅读/Readest/2026-06-20_v0.11.12",
+      "files": [
+        {
+          "name": "latest.json",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/latest.json"
+        },
+        {
+          "name": "Readest-0.11.12-1.aarch64.rpm",
+          "size": 38692454.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest-0.11.12-1.aarch64.rpm"
+        },
+        {
+          "name": "Readest-0.11.12-1.aarch64.rpm.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest-0.11.12-1.aarch64.rpm.sig"
+        },
+        {
+          "name": "Readest-0.11.12-1.koplugin.zip",
+          "size": 209715.2,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest-0.11.12-1.koplugin.zip"
+        },
+        {
+          "name": "Readest-0.11.12-1.x86_64.rpm",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest-0.11.12-1.x86_64.rpm"
+        },
+        {
+          "name": "Readest-0.11.12-1.x86_64.rpm.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest-0.11.12-1.x86_64.rpm.sig"
+        },
+        {
+          "name": "Readest_0.11.12_aarch64.AppImage",
+          "size": 143130624,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_aarch64.AppImage"
+        },
+        {
+          "name": "Readest_0.11.12_aarch64.AppImage.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_aarch64.AppImage.sig"
+        },
+        {
+          "name": "Readest_0.11.12_amd64.AppImage",
+          "size": 152043520,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_amd64.AppImage"
+        },
+        {
+          "name": "Readest_0.11.12_amd64.AppImage.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_amd64.AppImage.sig"
+        },
+        {
+          "name": "Readest_0.11.12_amd64.deb",
+          "size": 38587596.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_amd64.deb"
+        },
+        {
+          "name": "Readest_0.11.12_amd64.deb.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_amd64.deb.sig"
+        },
+        {
+          "name": "Readest_0.11.12_arm64-portable.exe",
+          "size": 56413388.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64-portable.exe"
+        },
+        {
+          "name": "Readest_0.11.12_arm64-portable.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64-portable.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.12_arm64-setup.exe",
+          "size": 30723276.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64-setup.exe"
+        },
+        {
+          "name": "Readest_0.11.12_arm64-setup.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64-setup.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.12_arm64.apk",
+          "size": 66899148.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64.apk"
+        },
+        {
+          "name": "Readest_0.11.12_arm64.apk.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64.apk.sig"
+        },
+        {
+          "name": "Readest_0.11.12_arm64.deb",
+          "size": 38692454.4,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64.deb"
+        },
+        {
+          "name": "Readest_0.11.12_arm64.deb.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_arm64.deb.sig"
+        },
+        {
+          "name": "Readest_0.11.12_universal.apk",
+          "size": 243479347.2,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_universal.apk"
+        },
+        {
+          "name": "Readest_0.11.12_universal.apk.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_universal.apk.sig"
+        },
+        {
+          "name": "Readest_0.11.12_universal.dmg",
+          "size": 74029465.6,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_universal.dmg"
+        },
+        {
+          "name": "Readest_0.11.12_x64-portable.exe",
+          "size": 64277708.8,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_x64-portable.exe"
+        },
+        {
+          "name": "Readest_0.11.12_x64-portable.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_x64-portable.exe.sig"
+        },
+        {
+          "name": "Readest_0.11.12_x64-setup.exe",
+          "size": 31981568,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_x64-setup.exe"
+        },
+        {
+          "name": "Readest_0.11.12_x64-setup.exe.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_0.11.12_x64-setup.exe.sig"
+        },
+        {
+          "name": "Readest_universal.app.tar.gz",
+          "size": 73400320,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_universal.app.tar.gz"
+        },
+        {
+          "name": "Readest_universal.app.tar.gz.sig",
+          "size": 0,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/Readest_universal.app.tar.gz.sig"
+        },
+        {
+          "name": "release-notes.json",
+          "size": 104857.6,
+          "url": "/SoftwareHub/阅读/Readest/2026-06-20_v0.11.12/release-notes.json"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "Readest",
       "versionDir": "阅读/Readest/2026-06-19_v0.11.10",
       "files": [
         {
@@ -509,163 +671,6 @@
           "name": "release-notes.json",
           "size": 104857.6,
           "url": "/SoftwareHub/阅读/Readest/2026-06-19_v0.11.10/release-notes.json"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
-      "project": "Readest",
-      "versionDir": "阅读/Readest/2026-06-02_v0.11.4",
-      "files": [
-        {
-          "name": "latest.json",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/latest.json"
-        },
-        {
-          "name": "Readest-0.11.4-1.aarch64.rpm",
-          "size": 38168166.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest-0.11.4-1.aarch64.rpm"
-        },
-        {
-          "name": "Readest-0.11.4-1.aarch64.rpm.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest-0.11.4-1.aarch64.rpm.sig"
-        },
-        {
-          "name": "Readest-0.11.4-1.koplugin.zip",
-          "size": 209715.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest-0.11.4-1.koplugin.zip"
-        },
-        {
-          "name": "Readest-0.11.4-1.x86_64.rpm",
-          "size": 38063308.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest-0.11.4-1.x86_64.rpm"
-        },
-        {
-          "name": "Readest-0.11.4-1.x86_64.rpm.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest-0.11.4-1.x86_64.rpm.sig"
-        },
-        {
-          "name": "Readest_0.11.4_aarch64.AppImage",
-          "size": 142711193.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_aarch64.AppImage"
-        },
-        {
-          "name": "Readest_0.11.4_aarch64.AppImage.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_aarch64.AppImage.sig"
-        },
-        {
-          "name": "Readest_0.11.4_amd64.AppImage",
-          "size": 151414374.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_amd64.AppImage"
-        },
-        {
-          "name": "Readest_0.11.4_amd64.AppImage.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_amd64.AppImage.sig"
-        },
-        {
-          "name": "Readest_0.11.4_amd64.deb",
-          "size": 38063308.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_amd64.deb"
-        },
-        {
-          "name": "Readest_0.11.4_amd64.deb.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_amd64.deb.sig"
-        },
-        {
-          "name": "Readest_0.11.4_arm64-portable.exe",
-          "size": 55364812.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64-portable.exe"
-        },
-        {
-          "name": "Readest_0.11.4_arm64-portable.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64-portable.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.4_arm64-setup.exe",
-          "size": 30513561.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64-setup.exe"
-        },
-        {
-          "name": "Readest_0.11.4_arm64-setup.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64-setup.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.4_arm64.apk",
-          "size": 65221427.2,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64.apk"
-        },
-        {
-          "name": "Readest_0.11.4_arm64.apk.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64.apk.sig"
-        },
-        {
-          "name": "Readest_0.11.4_arm64.deb",
-          "size": 38168166.4,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64.deb"
-        },
-        {
-          "name": "Readest_0.11.4_arm64.deb.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_arm64.deb.sig"
-        },
-        {
-          "name": "Readest_0.11.4_universal.apk",
-          "size": 237502464,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_universal.apk"
-        },
-        {
-          "name": "Readest_0.11.4_universal.apk.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_universal.apk.sig"
-        },
-        {
-          "name": "Readest_0.11.4_universal.dmg",
-          "size": 72980889.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_universal.dmg"
-        },
-        {
-          "name": "Readest_0.11.4_x64-portable.exe",
-          "size": 63019417.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_x64-portable.exe"
-        },
-        {
-          "name": "Readest_0.11.4_x64-portable.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_x64-portable.exe.sig"
-        },
-        {
-          "name": "Readest_0.11.4_x64-setup.exe",
-          "size": 31771852.8,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_x64-setup.exe"
-        },
-        {
-          "name": "Readest_0.11.4_x64-setup.exe.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_0.11.4_x64-setup.exe.sig"
-        },
-        {
-          "name": "Readest_universal.app.tar.gz",
-          "size": 72351744,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_universal.app.tar.gz"
-        },
-        {
-          "name": "Readest_universal.app.tar.gz.sig",
-          "size": 0,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/Readest_universal.app.tar.gz.sig"
-        },
-        {
-          "name": "release-notes.json",
-          "size": 104857.6,
-          "url": "/SoftwareHub/阅读/Readest/2026-06-02_v0.11.4/release-notes.json"
         }
       ]
     },
@@ -1489,6 +1494,143 @@
     {
       "category": "动漫",
       "project": "Animeko",
+      "versionDir": "动漫/Animeko/2026-06-21_v5.7.0-beta02",
+      "files": [
+        {
+          "name": "ani-5.7.0-beta02-arm64-v8a.apk",
+          "size": 23802675.2,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-arm64-v8a.apk"
+        },
+        {
+          "name": "ani-5.7.0-beta02-arm64-v8a.apk.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-arm64-v8a.apk.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-armeabi-v7a.apk",
+          "size": 23278387.2,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-armeabi-v7a.apk"
+        },
+        {
+          "name": "ani-5.7.0-beta02-armeabi-v7a.apk.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-armeabi-v7a.apk.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-linux-x86_64.appimage",
+          "size": 266757734.4,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-linux-x86_64.appimage"
+        },
+        {
+          "name": "ani-5.7.0-beta02-linux-x86_64.appimage.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-linux-x86_64.appimage.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-macos-aarch64.dmg",
+          "size": 308176486.4,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-macos-aarch64.dmg"
+        },
+        {
+          "name": "ani-5.7.0-beta02-macos-aarch64.dmg.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-macos-aarch64.dmg.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-macos-x86_64.zip",
+          "size": 305345331.2,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-macos-x86_64.zip"
+        },
+        {
+          "name": "ani-5.7.0-beta02-macos-x86_64.zip.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-macos-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk",
+          "size": 35651584,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk.cloudflare.qrcode.png",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk.cloudflare.qrcode.png.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk.github.qrcode.png",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk.github.qrcode.png.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-universal.apk.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-universal.apk.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-windows-x86_64.zip",
+          "size": 334390886.4,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-windows-x86_64.zip"
+        },
+        {
+          "name": "ani-5.7.0-beta02-windows-x86_64.zip.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-windows-x86_64.zip.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02-x86_64.apk",
+          "size": 23907532.8,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-x86_64.apk"
+        },
+        {
+          "name": "ani-5.7.0-beta02-x86_64.apk.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02-x86_64.apk.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa",
+          "size": 30513561.6,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa.cloudflare.qrcode.png",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa.cloudflare.qrcode.png"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa.cloudflare.qrcode.png.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa.cloudflare.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa.github.qrcode.png",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa.github.qrcode.png"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa.github.qrcode.png.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa.github.qrcode.png.sha1"
+        },
+        {
+          "name": "ani-5.7.0-beta02.ipa.sha1",
+          "size": 0,
+          "url": "/SoftwareHub/动漫/Animeko/2026-06-21_v5.7.0-beta02/ani-5.7.0-beta02.ipa.sha1"
+        }
+      ]
+    },
+    {
+      "category": "动漫",
+      "project": "Animeko",
       "versionDir": "动漫/Animeko/2026-06-17_v5.7.0-beta01",
       "files": [
         {
@@ -1624,143 +1766,6 @@
       ]
     },
     {
-      "category": "动漫",
-      "project": "Animeko",
-      "versionDir": "动漫/Animeko/2026-06-10_v5.7.0-alpha01",
-      "files": [
-        {
-          "name": "ani-5.7.0-alpha01-arm64-v8a.apk",
-          "size": 23697817.6,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-arm64-v8a.apk"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-arm64-v8a.apk.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-arm64-v8a.apk.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-armeabi-v7a.apk",
-          "size": 23173529.6,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-armeabi-v7a.apk"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-armeabi-v7a.apk.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-armeabi-v7a.apk.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-linux-x86_64.appimage",
-          "size": 266548019.2,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-linux-x86_64.appimage"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-linux-x86_64.appimage.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-linux-x86_64.appimage.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-macos-aarch64.dmg",
-          "size": 307757056,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-macos-aarch64.dmg"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-macos-aarch64.dmg.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-macos-aarch64.dmg.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-macos-x86_64.zip",
-          "size": 305135616,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-macos-x86_64.zip"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-macos-x86_64.zip.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-macos-x86_64.zip.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk",
-          "size": 35546726.4,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk.cloudflare.qrcode.png",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk.cloudflare.qrcode.png"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk.cloudflare.qrcode.png.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk.cloudflare.qrcode.png.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk.github.qrcode.png",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk.github.qrcode.png"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk.github.qrcode.png.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk.github.qrcode.png.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-universal.apk.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-universal.apk.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-windows-x86_64.zip",
-          "size": 334181171.2,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-windows-x86_64.zip"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-windows-x86_64.zip.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-windows-x86_64.zip.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-x86_64.apk",
-          "size": 23802675.2,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-x86_64.apk"
-        },
-        {
-          "name": "ani-5.7.0-alpha01-x86_64.apk.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01-x86_64.apk.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa",
-          "size": 30303846.4,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa.cloudflare.qrcode.png",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa.cloudflare.qrcode.png"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa.cloudflare.qrcode.png.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa.cloudflare.qrcode.png.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa.github.qrcode.png",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa.github.qrcode.png"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa.github.qrcode.png.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa.github.qrcode.png.sha1"
-        },
-        {
-          "name": "ani-5.7.0-alpha01.ipa.sha1",
-          "size": 0,
-          "url": "/SoftwareHub/动漫/Animeko/2026-06-10_v5.7.0-alpha01/ani-5.7.0-alpha01.ipa.sha1"
-        }
-      ]
-    },
-    {
       "category": "游戏",
       "project": "SteamTools",
       "versionDir": "游戏/SteamTools/2026-03-11_3.1.0",
@@ -1846,6 +1851,23 @@
     {
       "category": "游戏",
       "project": "GameNative_游戏模拟器",
+      "versionDir": "游戏/GameNative_游戏模拟器/2026-06-23_v1.1.0-prerelease",
+      "files": [
+        {
+          "name": "gamenative-v1.1.0-prerelease-legacy-xr.apk",
+          "size": 562246451.2,
+          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-06-23_v1.1.0-prerelease/gamenative-v1.1.0-prerelease-legacy-xr.apk"
+        },
+        {
+          "name": "gamenative-v1.1.0-prerelease.apk",
+          "size": 562246451.2,
+          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-06-23_v1.1.0-prerelease/gamenative-v1.1.0-prerelease.apk"
+        }
+      ]
+    },
+    {
+      "category": "游戏",
+      "project": "GameNative_游戏模拟器",
       "versionDir": "游戏/GameNative_游戏模拟器/2026-06-06_v1.0.0",
       "files": [
         {
@@ -1854,24 +1876,7 @@
           "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-06-06_v1.0.0/gamenative-v1.0.0.apk"
         }
       ]
-    },
-    {
-      "category": "游戏",
-      "project": "GameNative_游戏模拟器",
-      "versionDir": "游戏/GameNative_游戏模拟器/2026-05-30_v1.0.0-prerelease",
-      "files": [
-        {
-          "name": "gamenative-v1.0.0-prerelease-modern.apk",
-          "size": 560988160,
-          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-05-30_v1.0.0-prerelease/gamenative-v1.0.0-prerelease-modern.apk"
-        },
-        {
-          "name": "gamenative-v1.0.0-prerelease.apk",
-          "size": 560988160,
-          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-05-30_v1.0.0-prerelease/gamenative-v1.0.0-prerelease.apk"
-        }
-      ]
     }
   ],
-  "updatedAt": "2026-06-24T05:53:11.420Z"
+  "updatedAt": "2026-06-24T15:19:13.787Z"
 }

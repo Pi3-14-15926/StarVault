@@ -1,5 +1,49 @@
 [
   {
+    "id": "mqs5xk4tiq7f34",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06221859",
+    "publishedAt": "2026-06-22T11:14:34Z",
+    "changelog": "阅读Archive 第十版问题修复更新\n\n本次更新集中修复近期反馈的阅读页、书架、目录、书源管理、主题、导出和 Compose 新界面兼容性问题，并针对 OOM 与部分机型崩溃做了稳定性加固。\n\n新增：\n- 新增 Compose 快速滑动条，覆盖书架、目录、搜索结果、设置管理等长列表页面。\n- 新增书籍详情 useWeb 弹窗多窗口支持，修复 WebView 内图片弹窗无法正常加载的问题。\n- 新增应用主题手动新建入口，可基于当前配置生成组合主题并进入编辑。\n\n优化：\n- 优化目录页顶部与分卷展示，保留吸顶分卷，同时避免章节内容从透明卷标题下透出。\n- 优化正文菜单顶部按钮触控区域，减少“换源 / 刷新 / 缓存”等操作误触。\n- 优化正文长按菜单布局，改善部分机型按钮提前换行、右侧留白的问题。\n- 优化老三键导航栏适配，阅读菜单、弹窗和统计页底部内容避开系统导航栏。\n- 优化朗读页封面获取逻辑，使用更完整的封面解析结果。\n- 优化启动页逻辑，默认使用系统 splash 和应用图标，减少启动黑屏、白闪和欢迎页停顿。\n- 优化应用主题导出结构，根目录直接写入 appearance_kit.json，并允许仅布局/默认组件配置导出。\n\n修复：\n- 修复书源、RSS 等管理页胶囊开关点击后 UI 不实时更新的问题。\n- 修复书源管理拖拽排序后状态不同步、需要退出重进才显示的问题。\n- 修复管理列表同对象更新时 Compose 行项目不刷新的问题。\n- 修复发现页、书架页透明顶栏下列表内容透出的显示问题。\n- 修复阅读页、详情页、搜索进入阅读后返回路径不一致的问题，现在统一回到书架。\n- 修复阅读页 Android 10 设备可能一直显示“数据加载中”的问题。\n- 修复目录页分卷吸顶后无法回落、章节无法滑到顶部的问题。\n- 修复快速滑动条透明触摸层遮挡书源、RSS 等管理页编辑/更多/开关按钮的问题。\n- 修复搜索结果 LazyColumn 重复 key 导致偶发崩溃的问题。\n- 修复正文刷新长按选项丢失的问题。\n- 修复 AI 内置阅读菜单按钮删除后无法重新添加的问题。\n- 修复正文虚拟气泡图片 dp: 路径被错误缓存/下载的问题。\n- 修复主题圆球中文字溢出圆形区域的问题。\n- 修复主题、封面、背景等 Compose 图片释放时可能触发 Glide destroyed activity 崩溃的问题。\n- 修复沉浸式顶栏、主题预览、封面集合等页面销毁时 Glide 加载崩溃的问题。\n- 修复卓易通等环境导出的 zip 包可能无法解压的问题，并增加导出后 zip 可读性校验。\n- 修复主题 zip 文件通过文件关联打开时识别不完整的问题。\n- 修复应用主题 zip 因 appearance_kit.json 位于嵌套目录而被误判为普通主题包、提示缺少 theme.json 的问题。\n- 修复普通界面主题导入入口误选应用主题包时仍走 theme.json 检查的问题。\n- 修复旧版/已导出的嵌套应用主题包无法从文件关联和管理页正常导入的问题。\n- 修复更新弹窗底部留白过大的问题。\n- 修复统计页底部内容被主界面悬浮底栏遮挡的问题。\n- 修复本地文件保存、压缩包图片读取、data-url 图片、用户图片解码等场景的 OOM 风险。\n- 修复路径包含性检查不严格带来的潜在安全风险。\n- 修复缓存大小估算不准导致内存缓存风险偏高的问题。\n- 修复详情页云端入口选中状态不可见的问题。\n- 修复段落规则编辑器启动阻塞过久的问题。\n\n本次共整理并修复 36 类问题，重点是 Compose 改造后的实时刷新、列表滚动、弹窗布局、系统导航栏适配、WebView 弹窗、应用主题导入导出和内存稳定性。\n",
+    "downloadIds": [
+      "mqs5xk4tuqxwbk",
+      "mqs5xk4tu5r1s4"
+    ]
+  },
+  {
+    "id": "mqs5xk4tqxvkku",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06221730",
+    "publishedAt": "2026-06-22T09:45:12Z",
+    "changelog": "阅读Archive 第十版问题修复更新\n\n本次更新集中修复近期反馈的阅读页、书架、目录、书源管理、主题、导出和 Compose 新界面兼容性问题，并针对 OOM 与部分机型崩溃做了稳定性加固。\n\n新增：\n- 新增 Compose 快速滑动条，覆盖书架、目录、搜索结果、设置管理等长列表页面。\n- 新增书籍详情 useWeb 弹窗多窗口支持，修复 WebView 内图片弹窗无法正常加载的问题。\n\n优化：\n- 优化目录页顶部与分卷展示，保留吸顶分卷，同时避免章节内容从透明卷标题下透出。\n- 优化正文菜单顶部按钮触控区域，减少“换源 / 刷新 / 缓存”等操作误触。\n- 优化正文长按菜单布局，改善部分机型按钮提前换行、右侧留白的问题。\n- 优化老三键导航栏适配，阅读菜单、弹窗和统计页底部内容避开系统导航栏。\n- 优化朗读页封面获取逻辑，使用更完整的封面解析结果。\n- 优化启动页逻辑，默认使用系统 splash 和应用图标，减少启动黑屏、白闪和欢迎页停顿。\n\n修复：\n- 修复书源、RSS 等管理页胶囊开关点击后 UI 不实时更新的问题。\n- 修复书源管理拖拽排序后状态不同步、需要退出重进才显示的问题。\n- 修复管理列表同对象更新时 Compose 行项目不刷新的问题。\n- 修复发现页、书架页透明顶栏下列表内容透出的显示问题。\n- 修复阅读页、详情页、搜索进入阅读后返回路径不一致的问题，现在统一回到书架。\n- 修复阅读页 Android 10 设备可能一直显示“数据加载中”的问题。\n- 修复目录页分卷吸顶后无法回落、章节无法滑到顶部的问题。\n- 修复快速滑动条透明触摸层遮挡书源、RSS 等管理页编辑/更多/开关按钮的问题。\n- 修复搜索结果 LazyColumn 重复 key 导致偶发崩溃的问题。\n- 修复正文刷新长按选项丢失的问题。\n- 修复 AI 内置阅读菜单按钮删除后无法重新添加的问题。\n- 修复正文虚拟气泡图片 dp: 路径被错误缓存/下载的问题。\n- 修复主题圆球中文字溢出圆形区域的问题。\n- 修复主题、封面、背景等 Compose 图片释放时可能触发 Glide destroyed activity 崩溃的问题。\n- 修复沉浸式顶栏、主题预览、封面集合等页面销毁时 Glide 加载崩溃的问题。\n- 修复卓易通等环境导出的 zip 包可能无法解压的问题，并增加导出后 zip 可读性校验。\n- 修复主题 zip 文件通过文件关联打开时识别不完整的问题。\n- 修复更新弹窗底部留白过大的问题。\n- 修复统计页底部内容被主界面悬浮底栏遮挡的问题。\n- 修复本地文件保存、压缩包图片读取、data-url 图片、用户图片解码等场景的 OOM 风险。\n- 修复路径包含性检查不严格带来的潜在安全风险。\n- 修复缓存大小估算不准导致内存缓存风险偏高的问题。\n- 修复详情页云端入口选中状态不可见的问题。\n- 修复段落规则编辑器启动阻塞过久的问题。\n\n本次共整理并修复 33 类问题，重点是 Compose 改造后的实时刷新、列表滚动、弹窗布局、系统导航栏适配、WebView 弹窗和内存稳定性。\n",
+    "downloadIds": [
+      "mqs5xk4t1zpb56",
+      "mqs5xk4tl5no61"
+    ]
+  },
+  {
+    "id": "mqs5xk4t3dbydi",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06221650",
+    "publishedAt": "2026-06-22T09:07:46Z",
+    "changelog": "阅读Archive 第十版问题修复更新\n\n本次更新集中修复近期反馈的阅读页、书架、目录、书源管理、主题、导出和 Compose 新界面兼容性问题，并针对 OOM 与部分机型崩溃做了稳定性加固。\n\n新增：\n- 新增 Compose 快速滑动条，覆盖书架、目录、搜索结果、设置管理等长列表页面。\n- 新增书籍详情 useWeb 弹窗多窗口支持，修复 WebView 内图片弹窗无法正常加载的问题。\n\n优化：\n- 优化目录页顶部与分卷展示，保留吸顶分卷，同时避免章节内容从透明卷标题下透出。\n- 优化正文菜单顶部按钮触控区域，减少“换源 / 刷新 / 缓存”等操作误触。\n- 优化正文长按菜单布局，改善部分机型按钮提前换行、右侧留白的问题。\n- 优化老三键导航栏适配，阅读菜单、弹窗和统计页底部内容避开系统导航栏。\n- 优化朗读页封面获取逻辑，使用更完整的封面解析结果。\n- 优化启动页逻辑，默认使用系统 splash 和应用图标，减少启动黑屏、白闪和欢迎页停顿。\n\n修复：\n- 修复书源、RSS 等管理页胶囊开关点击后 UI 不实时更新的问题。\n- 修复书源管理拖拽排序后状态不同步、需要退出重进才显示的问题。\n- 修复管理列表同对象更新时 Compose 行项目不刷新的问题。\n- 修复发现页、书架页透明顶栏下列表内容透出的显示问题。\n- 修复阅读页、详情页、搜索进入阅读后返回路径不一致的问题，现在统一回到书架。\n- 修复阅读页 Android 10 设备可能一直显示“数据加载中”的问题。\n- 修复搜索结果 LazyColumn 重复 key 导致偶发崩溃的问题。\n- 修复正文刷新长按选项丢失的问题。\n- 修复 AI 内置阅读菜单按钮删除后无法重新添加的问题。\n- 修复正文虚拟气泡图片 dp: 路径被错误缓存/下载的问题。\n- 修复主题圆球中文字溢出圆形区域的问题。\n- 修复主题、封面、背景等 Compose 图片释放时可能触发 Glide destroyed activity 崩溃的问题。\n- 修复沉浸式顶栏、主题预览、封面集合等页面销毁时 Glide 加载崩溃的问题。\n- 修复卓易通等环境导出的 zip 包可能无法解压的问题，并增加导出后 zip 可读性校验。\n- 修复主题 zip 文件通过文件关联打开时识别不完整的问题。\n- 修复更新弹窗底部留白过大的问题。\n- 修复统计页底部内容被主界面悬浮底栏遮挡的问题。\n- 修复本地文件保存、压缩包图片读取、data-url 图片、用户图片解码等场景的 OOM 风险。\n- 修复路径包含性检查不严格带来的潜在安全风险。\n- 修复缓存大小估算不准导致内存缓存风险偏高的问题。\n- 修复详情页云端入口选中状态不可见的问题。\n- 修复段落规则编辑器启动阻塞过久的问题。\n\n本次共整理并修复 31 类问题，重点是 Compose 改造后的实时刷新、列表滚动、弹窗布局、系统导航栏适配、WebView 弹窗和内存稳定性。\n",
+    "downloadIds": [
+      "mqs5xk4tssthk3",
+      "mqs5xk4t3r9loa"
+    ]
+  },
+  {
+    "id": "mqs5xk4t6k4oat",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06192315",
+    "publishedAt": "2026-06-19T15:32:43Z",
+    "changelog": "阅读Archive 第十版补充更新\n\n祝大家端午安康。本次更新修复了若干功能，新增了若干 bug，UI 大范围升级为 Compose 控件，并支持导入非加密 .red 文件。\n\n新增：\n- 支持导入非加密 .red 主题文件，兼容 RED v4、Red10 等主题包格式。\n- 新增主题管理与预览能力，支持主题重命名、编辑、删除和应用。\n- 新增主题扩展颜色、背景图片、GIF / WebP 动态背景资源识别与绑定。\n- 新增书架布局实时预览，可在调整封面尺寸、排列方式、列表样式时直接查看效果。\n- 新增书架 Compose 网格与列表样式，封面、书名、作者、未读角标、分组标签展示更统一。\n- 新增阅读页新版菜单，整合顶部工具栏、书源操作、刷新、缓存、更多操作等入口。\n- 新增阅读页新版进度、亮度、边距等调节控件，交互更接近新版 UI 风格。\n- 新增 usehtml 文本框与容器盒模型能力，支持对齐、缩进、边距、宽高、圆角、背景和分页容器等效果。\n- 新增漫画颜色滤镜、底部设置、电子纸相关设置的新界面。\n- 新增朗读、视频、音频跳过片头片尾等配置的新式弹窗体验。\n\n优化：\n- UI 大范围升级为 Compose 控件，常用弹窗、设置项、动作菜单、列表行、底部面板等整体样式更加统一。\n- 优化设置中心体验，备份、主题、封面、发现、订阅、AI、朗读、阅读设置等页面视觉与交互更一致。\n- 优化通用弹窗体验，输入、多选、确认、文本列表、动作列表、数字选择、来源选择等弹窗滚动和按钮布局更稳定。\n- 优化阅读菜单视觉层级，减少多余阴影、分割线和拥挤的文字按钮。\n- 优化书源操作菜单、VIP 章节购买入口、刷新和缓存入口的显示逻辑。\n- 优化书架卡片与封面显示，列表封面更大，未读角标和标签位置更清晰。\n- 优化书架滚动状态保存、刷新、布局切换和重建逻辑。\n- 优化目录页体验，搜索、标签、空状态、加载状态和当前章节高亮更清楚。\n- 优化阅读记录页面，概览、排行、目标卡片、封面行和组件配置展示更统一。\n- 优化发现页现代列表和网格，减少滚动抖动、刷新开销和列表重组。\n- 优化书源、替换规则等管理列表，统一行样式、勾选反馈、开关状态和批量管理表现。\n- 优化动图背景播放，顶部栏和主页背景中的 GIF / WebP 更可靠地保持动画效果。\n- 优化封面显示分辨率，不同页面中的封面清晰度和尺寸表现更一致。\n- 优化数据库查询，减少书架匹配、阅读记录面板等场景对完整书籍数据的读取。\n\n修复：\n- 修复登录或脚本触发 showBrowser 底部浏览器时，部分系统全面屏返回无法正常收起的问题。\n- 修复从弹出菜单等临时上下文触发 showBrowser 时，Activity 生命周期异常可能导致崩溃的问题。\n- 修复 showBrowser 内 WebView 返回、网页全屏、自定义历史栈处理在部分入口下不一致的问题。\n- 修复书库容器管理页转为 Compose 后缺少导入、导出入口的问题。\n- 修复发现页现代列表在滚动时内容透过标签栏显示的问题。\n- 修复发现页部分 tag 只有少量书籍时，到达底部后持续触发加载的问题。\n- 修复段落规则点击、图片点击、usehtml 气泡点击等场景中的点击来源传递问题。\n- 修复 usehtml 文本框标点对齐、测量行对齐、右对齐裁剪和细微偏移问题。\n- 修复 usehtml 容器在分页时圆角、背景和边距显示异常的问题。\n- 修复阅读页滑杆拖动被背景层拦截、亮度和进度调节不顺畅的问题。\n- 修复阅读页背景点击关闭、菜单进出动画、白闪、底部对齐等交互细节。\n- 修复 VIP 章节购买入口在阅读菜单和书源弹窗中的显示问题。\n- 修复书架布局切换后内容未及时重建、滚动回调失效、刷新状态不一致的问题。\n- 修复目录页缺少书籍数据、刷新处理、搜索滚动和空状态显示问题。\n- 修复发现页现代列表滚动异常和下拉刷新后标签缺失问题。\n- 修复主题导入格式兼容、透明度应用、主题刷新和编辑草稿状态丢失问题。\n- 修复顶部栏动图背景裁剪、保存、播放和默认标签透明度相关问题。\n- 修复配置页工具栏菜单空间、设置跳转、禁用状态、选择弹窗即时反馈等问题。\n- 修复漫画滤镜预览刷新过频、底部设置状态恢复不完整的问题。\n- 修复搜索页、书签页、导入勾选、日志和更新类弹窗等多处界面显示与交互细节。\n",
+    "downloadIds": [
+      "mqs5xk4tlmcer6",
+      "mqs5xk4tzzg9ut"
+    ]
+  },
+  {
     "id": "mqdzx7tpfgaqq2",
     "projectId": "mpwoxcif3y72eu",
     "version": "archive-v3-3.26.06071119",
@@ -198,6 +242,17 @@
     ]
   },
   {
+    "id": "mqdzx80hhogwvh",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.0507",
+    "publishedAt": "2026-05-07T05:24:16Z",
+    "changelog": "阅读Archive 第四版\n\n新增：\n- 新增底栏管理，支持保存多套底栏配置，并可分别设置日间、夜间图标。\n- 新增统计页组件化展示，可按需启用阅读目标、最近在读和阅读排行等组件。\n- 新增界面圆角与透明度配置，主要界面控件显示更统一。\n\n修复：\n- 修复发现页 WebView 长期驻留可能影响正文段评弹窗的问题。\n- 修复高级标题页面底部少一行、滚动模式显示异常的问题。\n- 修复详情页按钮样式、最近在读刷新不及时的问题。\n- 修复底栏主题重命名、删除和导出入口相关问题。\n- 修复主题背景图、在线图片和管理页显示相关问题。\n- 修复搜索页夜间模式遮罩偏白、层次不协调的问题。\n- 修复设置页点击态、书架图标夜间颜色和主界面状态栏开关异常的问题。\n- 修复部分华为/鸿蒙 4.2-4.3 及桌易通设备隐藏状态栏后顶部出现黑边的问题。\n",
+    "downloadIds": [
+      "mqdzx80jgduolz",
+      "mqdzx80mrxnocz"
+    ]
+  },
+  {
     "id": "mqdzx8085br26m",
     "projectId": "mpwoxcif3y72eu",
     "version": "archive-v3-3.26.050710",
@@ -209,14 +264,14 @@
     ]
   },
   {
-    "id": "mqdzx80hhogwvh",
+    "id": "mqs5xk4tswt10m",
     "projectId": "mpwoxcif3y72eu",
-    "version": "archive-v3-3.26.0507",
-    "publishedAt": "2026-05-07T05:24:16Z",
-    "changelog": "阅读Archive 第四版\n\n新增：\n- 新增底栏管理，支持保存多套底栏配置，并可分别设置日间、夜间图标。\n- 新增统计页组件化展示，可按需启用阅读目标、最近在读和阅读排行等组件。\n- 新增界面圆角与透明度配置，主要界面控件显示更统一。\n\n修复：\n- 修复发现页 WebView 长期驻留可能影响正文段评弹窗的问题。\n- 修复高级标题页面底部少一行、滚动模式显示异常的问题。\n- 修复详情页按钮样式、最近在读刷新不及时的问题。\n- 修复底栏主题重命名、删除和导出入口相关问题。\n- 修复主题背景图、在线图片和管理页显示相关问题。\n- 修复搜索页夜间模式遮罩偏白、层次不协调的问题。\n- 修复设置页点击态、书架图标夜间颜色和主界面状态栏开关异常的问题。\n- 修复部分华为/鸿蒙 4.2-4.3 及桌易通设备隐藏状态栏后顶部出现黑边的问题。\n",
+    "version": "latest-arm64-release",
+    "publishedAt": "2026-04-27T09:57:12Z",
+    "changelog": "阅读Archive 第十版问题修复更新\n\n本次更新集中修复近期反馈的阅读页、书架、目录、书源管理、主题、导出和 Compose 新界面兼容性问题，并针对 OOM 与部分机型崩溃做了稳定性加固。\n\n新增：\n- 新增 Compose 快速滑动条，覆盖书架、目录、搜索结果、设置管理等长列表页面。\n- 新增书籍详情 useWeb 弹窗多窗口支持，修复 WebView 内图片弹窗无法正常加载的问题。\n- 新增应用主题手动新建入口，可基于当前配置生成组合主题并进入编辑。\n\n优化：\n- 优化目录页顶部与分卷展示，保留吸顶分卷，同时避免章节内容从透明卷标题下透出。\n- 优化正文菜单顶部按钮触控区域，减少“换源 / 刷新 / 缓存”等操作误触。\n- 优化正文长按菜单布局，改善部分机型按钮提前换行、右侧留白的问题。\n- 优化老三键导航栏适配，阅读菜单、弹窗和统计页底部内容避开系统导航栏。\n- 优化朗读页封面获取逻辑，使用更完整的封面解析结果。\n- 优化启动页逻辑，默认使用系统 splash 和应用图标，减少启动黑屏、白闪和欢迎页停顿。\n- 优化应用主题导出结构，根目录直接写入 appearance_kit.json，并允许仅布局/默认组件配置导出。\n\n修复：\n- 修复书源、RSS 等管理页胶囊开关点击后 UI 不实时更新的问题。\n- 修复书源管理拖拽排序后状态不同步、需要退出重进才显示的问题。\n- 修复管理列表同对象更新时 Compose 行项目不刷新的问题。\n- 修复发现页、书架页透明顶栏下列表内容透出的显示问题。\n- 修复阅读页、详情页、搜索进入阅读后返回路径不一致的问题，现在统一回到书架。\n- 修复阅读页 Android 10 设备可能一直显示“数据加载中”的问题。\n- 修复目录页分卷吸顶后无法回落、章节无法滑到顶部的问题。\n- 修复快速滑动条透明触摸层遮挡书源、RSS 等管理页编辑/更多/开关按钮的问题。\n- 修复搜索结果 LazyColumn 重复 key 导致偶发崩溃的问题。\n- 修复正文刷新长按选项丢失的问题。\n- 修复 AI 内置阅读菜单按钮删除后无法重新添加的问题。\n- 修复正文虚拟气泡图片 dp: 路径被错误缓存/下载的问题。\n- 修复主题圆球中文字溢出圆形区域的问题。\n- 修复主题、封面、背景等 Compose 图片释放时可能触发 Glide destroyed activity 崩溃的问题。\n- 修复沉浸式顶栏、主题预览、封面集合等页面销毁时 Glide 加载崩溃的问题。\n- 修复卓易通等环境导出的 zip 包可能无法解压的问题，并增加导出后 zip 可读性校验。\n- 修复主题 zip 文件通过文件关联打开时识别不完整的问题。\n- 修复应用主题 zip 因 appearance_kit.json 位于嵌套目录而被误判为普通主题包、提示缺少 theme.json 的问题。\n- 修复普通界面主题导入入口误选应用主题包时仍走 theme.json 检查的问题。\n- 修复旧版/已导出的嵌套应用主题包无法从文件关联和管理页正常导入的问题。\n- 修复更新弹窗底部留白过大的问题。\n- 修复统计页底部内容被主界面悬浮底栏遮挡的问题。\n- 修复本地文件保存、压缩包图片读取、data-url 图片、用户图片解码等场景的 OOM 风险。\n- 修复路径包含性检查不严格带来的潜在安全风险。\n- 修复缓存大小估算不准导致内存缓存风险偏高的问题。\n- 修复详情页云端入口选中状态不可见的问题。\n- 修复段落规则编辑器启动阻塞过久的问题。\n\n本次共整理并修复 36 类问题，重点是 Compose 改造后的实时刷新、列表滚动、弹窗布局、系统导航栏适配、WebView 弹窗、应用主题导入导出和内存稳定性。\n",
     "downloadIds": [
-      "mqdzx80jgduolz",
-      "mqdzx80mrxnocz"
+      "mqs5xk4tdynnfo",
+      "mqs5xk4t09rft1"
     ]
   },
   {
@@ -607,6 +662,45 @@
     "changelog": "## 近期更新：\r\n1.Material Design 3 视觉改版，大量组件使用md3风格，更多圆角，更多色彩风格\r\n2.主题设置新增沉浸式操作栏开关，开启后顶栏和底栏透明并沉浸\r\n3.增加高亮功能，支持多种样式组合、批注式高亮和规则高亮(正则/关键词)\r\n4.书架管理支持批量定时更新\r\n",
     "downloadIds": [
       "mqdzx9wsjzdo0s"
+    ]
+  },
+  {
+    "id": "mqs5xlp3jqy4e8",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.31",
+    "publishedAt": "2026-06-20T17:37:42Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 修正嵌套分页惯性滑动",
+    "downloadIds": [
+      "mqs5xlp3hfky5s",
+      "mqs5xlp3flgetd",
+      "mqs5xlp3djqd82",
+      "mqs5xlp3v1v069"
+    ]
+  },
+  {
+    "id": "mqs5xlp3wbljc1",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.30",
+    "publishedAt": "2026-06-20T16:58:22Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* Use Legado theme colors for Miuix dropdown items\n* Avoid initial loading indicator on book info\n* fix: 修复分页嵌套滑动冲突\n* fix: 修复书架封面与更新标志显示\n* fix: 修复阅读界面导航与朗读配置问题\n* refactor: TextSelectMenuFilterSheet 遵循项目规范\n* fix：菜单切换深浅色一些按钮变化延迟的问题\n* feat: 新增文字选择菜单第三方应用过滤功能并优化加载性能",
+    "downloadIds": [
+      "mqs5xlp3nqlpie",
+      "mqs5xlp3z1jldj",
+      "mqs5xlp3geuzwo",
+      "mqs5xlp32ngkgm"
+    ]
+  },
+  {
+    "id": "mqs5xlp343oyl0",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.29",
+    "publishedAt": "2026-06-19T16:38:08Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 清理字体选择器冗余转换\n* perf: 优化字体选择器性能 (#1497)\n* feat: 增加是否展示菜单项图标的配置开关 (#1502)\n* fix: 优化书籍详情内存占用\n* fix: 修复内容编辑定位崩溃",
+    "downloadIds": [
+      "mqs5xlp336rjz4",
+      "mqs5xlp3qv0tgr",
+      "mqs5xlp3r5475s",
+      "mqs5xlp32yrj57"
     ]
   },
   {
@@ -1251,6 +1345,45 @@
     "downloadIds": [
       "mqdzxdb5lnla46",
       "mqdzxdbb1uke0t"
+    ]
+  },
+  {
+    "id": "mqs5xo8tofsxxg",
+    "projectId": "mqe091nl2j14ej",
+    "version": "v0.11.12",
+    "publishedAt": "2026-06-20T04:43:57Z",
+    "changelog": "## Release Highlight\n* Reading: Fixed full-page cover images and cover backgrounds that didn't display correctly under a page texture\n* Reading: Fixed a crash when opening large PDF files on mobile devices\n* Reading: You can now save or share an image straight from the image viewer\n* Speed Reading: Fixed the control bar overlapping the playback controls on mobile\n* Sync: Books without a reading status no longer jump back to the top after every sync\n* Sync: Your per-device reading view settings now stay local instead of syncing between devices\n* OPDS: Fixed the Add Catalog dialog appearing behind Settings on mobile\n\n## What's Changed\n* fix(opds): show Add Catalog dialog above Settings on mobile by @chrox in https://github.com/readest/readest/pull/4669\n* fix(pdf): throttle PDF range reads to fix large-file OOM on Android/iOS (#3470) by @chrox in https://github.com/readest/readest/pull/4670\n* fix(rsvp): restore in-flow control bar layout reverted by #4589 by @chrox in https://github.com/readest/readest/pull/4671\n* fix(opds): make saved catalog card hover distinct from dialog background by @chrox in https://github.com/readest/readest/pull/4673\n* fix(sync): keep view settings device-local and exclude them from sync by @chrox in https://github.com/readest/readest/pull/4672\n* fix(reader): keep cover background-image visible under a texture by @chrox in https://github.com/readest/readest/pull/4675\n* fix(sync): stop re-pinning statusless books to the top of the library after every sync by @chrox in https://github.com/readest/readest/pull/4677\n* fix(reader): stretch fullscreen cover to fill the page by @chrox in https://github.com/readest/readest/pull/4679\n* feat(reader): add save/share button to image gallery toolbar by @chrox in https://github.com/readest/readest/pull/4680\n* release: version 0.11.12 by @chrox in https://github.com/readest/readest/pull/4682\n\n\n**Full Changelog**: https://github.com/readest/readest/compare/v0.11.10...v0.11.12",
+    "downloadIds": [
+      "mqs5xo8ulzeffw",
+      "mqs5xo8usak795",
+      "mqs5xo8umq2bdn",
+      "mqs5xo8u44tq8g",
+      "mqs5xo8u9a96zm",
+      "mqs5xo8ul07g4k",
+      "mqs5xo8u9o2rwq",
+      "mqs5xo8usfm3o0",
+      "mqs5xo8uoi21jw",
+      "mqs5xo8uhcvef1",
+      "mqs5xo8u91a0zh",
+      "mqs5xo8up0rpzm",
+      "mqs5xo8uwdct92",
+      "mqs5xo8unngb6y",
+      "mqs5xo8ul2csoj",
+      "mqs5xo8u4z1ojh",
+      "mqs5xo8u0e507i",
+      "mqs5xo8u7xrxqw",
+      "mqs5xo8ujb81kg",
+      "mqs5xo8u7rfqrl",
+      "mqs5xo8uy3r93v",
+      "mqs5xo8u6wst2h",
+      "mqs5xo8ugpmjr7",
+      "mqs5xo8u3qoexo",
+      "mqs5xo8usmul5i",
+      "mqs5xo8u3r3s1n",
+      "mqs5xo8ukgzsxp",
+      "mqs5xo8ufkpf6g",
+      "mqs5xo8ul4mopt",
+      "mqs5xo8u1sifhm"
     ]
   },
   {

@@ -9,8 +9,8 @@
     "featured": true,
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51647,
-    "forks": 6872,
+    "stars": 51758,
+    "forks": 6879,
     "platforms": [
       "Linux",
       "Other",
@@ -18,8 +18,7 @@
       "Windows"
     ],
     "latestVersionId": "mpwreeavwjr9sc",
-    "latestUpdateTime": "2026-05-01T05:35:34Z",
-    "categorySlug": "music"
+    "latestUpdateTime": "2026-05-01T05:35:34Z"
   },
   {
     "id": "mqdz0w9jb6a6mx",
@@ -33,10 +32,9 @@
     "githubUrl": "https://github.com/lyswhut/lx-music-mobile",
     "latestUpdateTime": "2023-03-26T12:18:06Z",
     "website": "LX Music 移动版",
-    "stars": 17217,
-    "forks": 1969,
-    "latestVersionId": "mqdz0wkh0n4nc6",
-    "categorySlug": "music"
+    "stars": 17271,
+    "forks": 1979,
+    "latestVersionId": "mqdz0wkh0n4nc6"
   },
   {
     "id": "mqdz4vlw18enkx",
@@ -49,10 +47,9 @@
     "githubRepo": "maotoumao/MusicFree",
     "githubUrl": "https://github.com/maotoumao/MusicFree",
     "latestUpdateTime": "2023-03-26T15:46:45Z",
-    "stars": 25276,
-    "forks": 1774,
-    "latestVersionId": "mqdz4vvp4x6d5o",
-    "categorySlug": "music"
+    "stars": 25351,
+    "forks": 1783,
+    "latestVersionId": "mqdz4vvp4x6d5o"
   },
   {
     "id": "mqdz5tn7va86j4",
@@ -65,10 +62,9 @@
     "githubRepo": "maotoumao/MusicFreeDesktop",
     "githubUrl": "https://github.com/maotoumao/MusicFreeDesktop",
     "latestUpdateTime": "2023-07-23T14:37:10Z",
-    "stars": 8488,
-    "forks": 809,
-    "latestVersionId": "mqdz5twauyyawp",
-    "categorySlug": "music"
+    "stars": 8505,
+    "forks": 817,
+    "latestVersionId": "mqdz5twauyyawp"
   },
   {
     "id": "mqdzbe8bbd2xu8",
@@ -81,10 +77,9 @@
     "githubRepo": "kejichangqing/QingMusic",
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
     "latestUpdateTime": "2025-04-26T08:38:19Z",
-    "stars": 1289,
-    "forks": 62,
-    "latestVersionId": "mqdzbefc3z1ebn",
-    "categorySlug": "music"
+    "stars": 1297,
+    "forks": 63,
+    "latestVersionId": "mqdzbefc3z1ebn"
   },
   {
     "id": "mqdzae23et9isy",
@@ -97,10 +92,9 @@
     "githubRepo": "Moriafly/SaltPlayerSource",
     "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
     "latestUpdateTime": "2026-06-18T02:05:44Z",
-    "stars": 6897,
+    "stars": 6938,
     "forks": 202,
     "latestVersionId": "mqdzae9ef24yz5",
-    "latestVersion": "12.0.0",
-    "categorySlug": "music"
+    "latestVersion": "12.0.0"
   }
 ]
