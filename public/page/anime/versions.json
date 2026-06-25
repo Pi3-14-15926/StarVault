@@ -422,6 +422,24 @@
     ]
   },
   {
+    "id": "mqtlel4p8nmql7",
+    "projectId": "mpzjkpvzeuh3zl",
+    "version": "2.1.7",
+    "publishedAt": "2026-06-25T13:27:15Z",
+    "changelog": "- 现在 Bangumi 镜像功能与 Bangumi 同步功能可以兼容 (@Predidit)\r\n- 现在缓存视频支持播放记录功能 (@liangyuR)\r\n- 新增可选的追番计数器功能 (@UzawaReisaQwQ)\r\n- 新增实验性 windows arm 支持 (@NihilDigit)",
+    "downloadIds": [
+      "mqtlel4pvbkjoa",
+      "mqtlel4pnqawtg",
+      "mqtlel4p4wakrc",
+      "mqtlel4pav42uu",
+      "mqtlel4pdfxita",
+      "mqtlel4p5mj63d",
+      "mqtlel4phk9lt7",
+      "mqtlel4pk9t5qk",
+      "mqtlel4pufcr5g"
+    ]
+  },
+  {
     "id": "mqjmldl0yugbt9",
     "projectId": "mpzjkpvzeuh3zl",
     "version": "2.1.6",
