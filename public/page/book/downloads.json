@@ -1,5 +1,53 @@
 [
   {
+    "id": "mqv0jvp65byv9h",
+    "versionId": "mqv0jvp66zpqpn",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06262133_29708013.apk",
+    "size": "37.1 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06262133/legado-arm64-v8a_app_3.26.06262133_29708013.apk"
+  },
+  {
+    "id": "mqv0jvp675vm6e",
+    "versionId": "mqv0jvp66zpqpn",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06262133_29708013.apk",
+    "size": "37.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06262133/legado-armeabi-v7a_app_3.26.06262133_29708013.apk"
+  },
+  {
+    "id": "mqv0jvp6mde86g",
+    "versionId": "mqv0jvp64o5rg2",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06261301_29707501.apk",
+    "size": "37.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06261301/legado-arm64-v8a_app_3.26.06261301_29707501.apk"
+  },
+  {
+    "id": "mqv0jvp6gmyvvx",
+    "versionId": "mqv0jvp64o5rg2",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06261301_29707501.apk",
+    "size": "37.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06261301/legado-armeabi-v7a_app_3.26.06261301_29707501.apk"
+  },
+  {
+    "id": "mqv0jvp6edp5s6",
+    "versionId": "mqv0jvp66c38cw",
+    "platform": "Android",
+    "filename": "legado-arm64-v8a_app_3.26.06260247_29706887.apk",
+    "size": "37.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06260247/legado-arm64-v8a_app_3.26.06260247_29706887.apk"
+  },
+  {
+    "id": "mqv0jvp6v2hq90",
+    "versionId": "mqv0jvp66c38cw",
+    "platform": "Android",
+    "filename": "legado-armeabi-v7a_app_3.26.06260247_29706887.apk",
+    "size": "37.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.06260247/legado-armeabi-v7a_app_3.26.06260247_29706887.apk"
+  },
+  {
     "id": "mqtleb4ltvbv59",
     "versionId": "mqtleb4ljvx6wh",
     "platform": "Android",

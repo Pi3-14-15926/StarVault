@@ -9,14 +9,14 @@
     "featured": false,
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 307,
+    "stars": 312,
     "forks": 15,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzx80hhogwvh",
-    "latestUpdateTime": "2026-06-24T18:43:14Z",
-    "latestVersion": "archive-v3-3.26.06250226"
+    "latestUpdateTime": "2026-06-26T13:42:43Z",
+    "latestVersion": "archive-v3-3.26.06262133"
   },
   {
     "id": "mqdordihsc5rxn",
@@ -29,8 +29,8 @@
     "githubRepo": "anxcye/anx-reader",
     "githubUrl": "https://github.com/anxcye/anx-reader",
     "latestUpdateTime": "2025-11-01T13:17:04Z",
-    "stars": 8380,
-    "forks": 565,
+    "stars": 8384,
+    "forks": 566,
     "latestVersionId": "mqdzx94ic2xzm0"
   },
   {
@@ -43,7 +43,7 @@
     "featured": false,
     "githubRepo": "skybbk1001/legadoT",
     "githubUrl": "https://github.com/skybbk1001/legadoT",
-    "stars": 53,
+    "stars": 54,
     "forks": 15,
     "platforms": [
       "Android"
@@ -61,8 +61,8 @@
     "featured": false,
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4698,
-    "forks": 488,
+    "stars": 4719,
+    "forks": 494,
     "platforms": [
       "Android"
     ],
@@ -80,7 +80,7 @@
     "featured": false,
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 224,
+    "stars": 227,
     "forks": 29,
     "platforms": [
       "Android"
@@ -114,7 +114,7 @@
     "featured": false,
     "githubRepo": "LegadoTeam/Legado-Tauri-Release",
     "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
-    "stars": 177,
+    "stars": 178,
     "forks": 14,
     "platforms": [
       "Windows",
@@ -133,8 +133,8 @@
     "featured": false,
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1827,
-    "forks": 310,
+    "stars": 1842,
+    "forks": 312,
     "platforms": [
       "Android"
     ],
@@ -152,8 +152,8 @@
     "githubRepo": "readest/readest",
     "githubUrl": "https://github.com/readest/readest",
     "latestUpdateTime": "2026-06-20T04:43:57Z",
-    "stars": 21775,
-    "forks": 1300,
+    "stars": 21803,
+    "forks": 1301,
     "latestVersionId": "mqe099q50edkdy",
     "latestVersion": "v0.11.12"
   }
