@@ -709,6 +709,19 @@
     ]
   },
   {
+    "id": "mqwe66i99jdvfw",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.32",
+    "publishedAt": "2026-06-27T02:29:23Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\r\n### [发布页](https://t.me/materado)\r\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\r\n\r\n### 更新内容\r\n\r\n总的来说，多了四个主要功能\r\n一个是醒目标签功能，可以正则匹配某些标签，以更醒目的方式显示\r\n一个是根据标签分组功能，和完本已读、连载已读\r\n一个是AI功能（当然这个只实现了基础）\r\n一个是sigma的更多回调\r\n\r\n* feat: 优化AI聊天侧栏，添加搜索过滤、时间标签、圆角卡片和窄宽度\r\n* chore: 更新数据库schema到版本92\r\n* fix: 书籍详情页添加标签高亮显示\r\n* refactor: 重构TXT目录规则界面为MVI架构\r\n* refactor: 重构替换规则界面为MVI架构\r\n* feat: 添加高亮标签规则配置入口和导航\r\n* feat: 添加标签分组规则功能，支持按书籍标签自动匹配分组\r\n* feat: 添加连载已读/完本已读分组，基于canUpdate字段自动分类\r\n* fix: 合并标签分组与传统分组编辑界面，支持在分组编辑中查看和修改匹配规则\r\n* feat: ai底座\r\n* refactor(bookshelf): use graphicsLayer lambda for drag alpha per review\r\n* fix: improve manual sort drag visual feedback and selection handling\r\n* fix: improve manual sort drag visual feedback and selection handling\r\n* fix: improve manual sort drag visual feedback and selection handling\r\n* feat: 合并 sigma 书源编辑与 JS 扩展功能\r\n* fix：样式更新后，菜单内列未更新的问题\r\n* fix：修改样式名称时，bottomsheet被抬高的问题\r\n* fix：阅读界面竖排亮度条二级菜单打开时隐藏\r\n\r\n## What's Changed\r\n* fix：阅读界面竖排亮度条二级菜单打开时隐藏 by @fansangg in https://github.com/HapeLee/legado-with-MD3/pull/1544\r\n* fix：修改样式名称时，bottomsheet被抬高的问题 by @fansangg in https://github.com/HapeLee/legado-with-MD3/pull/1545\r\n* fix：样式更新后，菜单内列未更新的问题 by @fansangg in https://github.com/HapeLee/legado-with-MD3/pull/1546\r\n* fix(bookshelf): improve manual sort drag visual feedback and selection handling by @qyo123oyq in https://github.com/HapeLee/legado-with-MD3/pull/1568\r\n* feat: AI底座 by @HapeLee in https://github.com/HapeLee/legado-with-MD3/pull/1571\r\n\r\n## New Contributors\r\n* @qyo123oyq made their first contribution in https://github.com/HapeLee/legado-with-MD3/pull/1568\r\n\r\n**Full Changelog**: https://github.com/HapeLee/legado-with-MD3/compare/3.26.13-beta.31...3.26.13-beta.32",
+    "downloadIds": [
+      "mqwe66i98fkwn4",
+      "mqwe66i9wcz2zz",
+      "mqwe66i95lxgd0",
+      "mqwe66i936mapk"
+    ]
+  },
+  {
     "id": "mqs5xlp3jqy4e8",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.31",

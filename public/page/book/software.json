@@ -9,7 +9,7 @@
     "featured": false,
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 312,
+    "stars": 318,
     "forks": 15,
     "platforms": [
       "Android"
@@ -29,7 +29,7 @@
     "githubRepo": "anxcye/anx-reader",
     "githubUrl": "https://github.com/anxcye/anx-reader",
     "latestUpdateTime": "2025-11-01T13:17:04Z",
-    "stars": 8384,
+    "stars": 8383,
     "forks": 566,
     "latestVersionId": "mqdzx94ic2xzm0"
   },
@@ -61,14 +61,14 @@
     "featured": false,
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 4719,
-    "forks": 494,
+    "stars": 4734,
+    "forks": 496,
     "platforms": [
       "Android"
     ],
     "latestVersionId": "mqdzxbdokth5o5",
-    "latestUpdateTime": "2026-06-20T17:37:42Z",
-    "latestVersion": "3.26.13-beta.31"
+    "latestUpdateTime": "2026-06-27T02:29:23Z",
+    "latestVersion": "3.26.13-beta.32"
   },
   {
     "id": "mpwp1hvpsn5ffl",
@@ -80,7 +80,7 @@
     "featured": false,
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 227,
+    "stars": 229,
     "forks": 29,
     "platforms": [
       "Android"
@@ -114,7 +114,7 @@
     "featured": false,
     "githubRepo": "LegadoTeam/Legado-Tauri-Release",
     "githubUrl": "https://github.com/LegadoTeam/Legado-Tauri-Release",
-    "stars": 178,
+    "stars": 179,
     "forks": 14,
     "platforms": [
       "Windows",
@@ -133,8 +133,8 @@
     "featured": false,
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 1842,
-    "forks": 312,
+    "stars": 1847,
+    "forks": 316,
     "platforms": [
       "Android"
     ],
@@ -152,8 +152,8 @@
     "githubRepo": "readest/readest",
     "githubUrl": "https://github.com/readest/readest",
     "latestUpdateTime": "2026-06-20T04:43:57Z",
-    "stars": 21803,
-    "forks": 1301,
+    "stars": 21829,
+    "forks": 1308,
     "latestVersionId": "mqe099q50edkdy",
     "latestVersion": "v0.11.12"
   }
