@@ -1415,6 +1415,17 @@
     ]
   },
   {
+    "id": "mr0q5bu8bvsfya",
+    "projectId": "mqdzbe8bbd2xu8",
+    "version": "v1.3.7",
+    "publishedAt": "2026-06-30T06:24:55Z",
+    "changelog": "1、修复播放器页面出现卡住点不动按钮问题\r\n2、修复小窝线路翻译歌词混乱问题\r\n3、优化播放器页面，全屏歌词\r\n4、修复小狗歌单更新变成300首问题\r\n5、MV页面新增：我喜欢、观看记录\r\n6、搜索歌曲页面新增【播放全部】按钮\r\n7、歌曲播放记录新增到500条记录\r\n8、自建歌单、本地乐库歌曲支持下一首播放功能\r\n9、打开播放列表自动定位正在播放的歌曲\r\n10、升级播放器内核，解决本地高采样率歌曲出现播放卡住问题\r\n11、自建歌单改成获取最新歌词数据，以防旧的坏歌词影响\r\n12、修复小绿MV线路问题\r\n13、优化容易误触长按模式的问题\r\n14、优化下载历史页面，支持筛选记录、显示下载路径\r\n15、修复小Q、小狗线路翻译歌词\r\n16、优化歌词同步问题",
+    "downloadIds": [
+      "mr0q5bu86y5ofp",
+      "mr0q5bu8lwpshk"
+    ]
+  },
+  {
     "id": "mqdzbe8t0tqs3z",
     "projectId": "mqdzbe8bbd2xu8",
     "version": "v1.3.6",
@@ -1589,6 +1600,16 @@
     "changelog": "1、优化APP首页UI界面样式\r\n2、优化播放器页面（可切换大专辑图和歌词）\r\n3、修复批量下载歌曲封面不正确问题\r\n4、添加深色模式，可切换浅色/深色\r\n5、修复本地歌曲无法切换下一曲上一曲问题\r\n6、增加搜索页面右侧图标触摸范围，防止误触播放歌曲\r\n7、新增超时检测，歌曲播放卡住超6秒自动播放下一曲\r\n8、新增搜索歌曲可以加载下一页更多歌曲\r\n9、搜索歌曲不同线路单独统计滚动位置",
     "downloadIds": [
       "mqdzbeffgvhcvm"
+    ]
+  },
+  {
+    "id": "mr0q5cdhn070sx",
+    "projectId": "mqdzae23et9isy",
+    "version": "12.1.0-beta01",
+    "publishedAt": "2026-06-28T01:05:46Z",
+    "changelog": "新增 Audiophile Pack 拓展包（独立购买）\r\n新增 USB 独占模式，支持 DAC 硬件音量控制、采样率兼容回退、多声道下混 / 直通切换、实时源位深检测与诊断反馈（Audiophile Pack 解锁）\r\n新增无间隙播放支持（支持 AudioTrack / OpenSL ES / AAudio / USB 独占模式，不支持 Direct）\r\n优化一些界面的手势滚动体验\r\n优化一些 UI 组件、导航\r\n其他的优化和改进",
+    "downloadIds": [
+      "mr0q5cdhpaum4i"
     ]
   },
   {

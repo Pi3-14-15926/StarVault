@@ -1,5 +1,15 @@
 [
   {
+    "id": "mr0q542mmxy3yu",
+    "projectId": "mpwoxcif3y72eu",
+    "version": "archive-v3-3.26.06301304",
+    "publishedAt": "2026-06-30T05:18:36Z",
+    "changelog": "阅读 Archive 底栏与滑动条优化更新\n\n本次更新集中处理底栏管理、应用主题实时应用、列表展示、快速滑动条、目录性能和封面图集管理等问题，并继续修正更新发布链路。\n\n新增：\n- 新增底栏按钮管理，可在底栏管理中调整书架、发现、订阅、统计、设置等入口顺序，并支持隐藏可选入口。\n- 新增封面图集详情页长按图片删除，删除前会弹出确认框，删除后自动刷新图集列表。\n- 新增搜索、发现等带封面列表的书籍预览卡片长按入口，书架保持原有行为。\n- 新增关于页内测版更新设置，可配置内测密钥和地址后参与内测更新检测。\n\n修复：\n- 修复应用主题保存后没有重新应用关联的界面主题、顶栏、底栏等配置的问题。\n- 修复界面主题编辑保存后部分主界面样式刷新不及时的问题。\n- 修复详情页换源弹窗关闭后仍收到列表更新，可能触发 Fragment viewLifecycleOwner 崩溃的问题。\n- 修复列表和搜索结果中简介信息被挤掉、useWeb 简介没有提取主要文字的问题。\n- 修复设置页在系统字体较大时，部分按钮文字下半部分被裁剪的问题。\n- 修复悬浮底栏从玻璃材质切换到常规材质后，不透明度 100 仍偏透明的问题。\n- 修复书籍预览卡片收回时出现白色覆盖形状的问题。\n\n调整：\n- 优化快速滑动条常态手感，固定触控热区，减少布局动画，降低滚动时的顿挫感。\n- 优化快速滑动条在列表较少时的显示长度，避免滑块过长导致常态滚动显得一顿一顿。\n- 优化快速滑动条拖动手感，按住右侧热区即可立即拖动，不需要等待列表停止或再次点击。\n- 优化快速滑动条进度计算，列表使用可见项平均高度，网格使用可见行高度，减少不同高度条目导致的跳动。\n- 优化目录页加载与列表渲染，降低大目录或低性能设备上的卡顿。\n- 优化正文日间/夜间切换后的页面刷新，减少部分已加载页面仍保留旧字体颜色的问题。\n- 调整搜索、发现和书架相关列表的简介展示密度，使主要简介内容更容易看到。",
+    "downloadIds": [
+      "mr0q542m91xn4t"
+    ]
+  },
+  {
     "id": "mqv0jvp66zpqpn",
     "projectId": "mpwoxcif3y72eu",
     "version": "archive-v3-3.26.06262133",
@@ -709,6 +719,71 @@
     ]
   },
   {
+    "id": "mr0q55yr47wiu7",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.37",
+    "publishedAt": "2026-06-30T01:17:06Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 书签界面\n* fix: WebDAV错误触发的崩溃\n* fix: 只有模块集时正确的顶部边距\n* fix: 修复自定义主题切换并区分日夜配色",
+    "downloadIds": [
+      "mr0q55yrq4b2gd",
+      "mr0q55yryy0h5c",
+      "mr0q55yrn5vj2u",
+      "mr0q55yrv7jkte"
+    ]
+  },
+  {
+    "id": "mr0q55yr376quy",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.36",
+    "publishedAt": "2026-06-29T18:38:51Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: RecentBooksRow 中 bookUrl 为 null 时 key 重复导致崩溃",
+    "downloadIds": [
+      "mr0q55yrv34xow",
+      "mr0q55yr0tjjjl",
+      "mr0q55yrmghxns",
+      "mr0q55yr8juh49"
+    ]
+  },
+  {
+    "id": "mr0q55yrrjlt4t",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.35",
+    "publishedAt": "2026-06-29T18:06:32Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* 修复一些问题\n* 油画首页\n* 这扯不扯\n* feat:添加浅色、深色切换提醒功能 (#1584)",
+    "downloadIds": [
+      "mr0q55yraf6nk5",
+      "mr0q55yr5pcraq",
+      "mr0q55yrl9iid6",
+      "mr0q55yrmjwwf7"
+    ]
+  },
+  {
+    "id": "mr0q55yrmbry19",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.34",
+    "publishedAt": "2026-06-28T18:53:05Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: HomeScreen 统计卡片点击导航至阅读记录/阅读总览\n* fix: 字典重命名通过事务删除旧主键并插入新记录\n* fix: 双击底栏书架滚动当前分组到顶，Pager 惯性传递移至 MainScreen\n* fix: 书签编辑移至独立 AppModalBottomSheet，修复液态玻璃亮度滑块拖动结束未保存\n* fix: 系统 TTS 调速立即重播当前位置\n* fix: 非书架书籍打开目录前添加 BookType.notShelf\n* fix: 详情页搜索等待并使用已设置的搜索范围，返回不再清空结果\n* feat: add home dashboard and discovery modes\n* 界面优化\n* feat: improve i18n support - extract hardcoded Chinese and fill missing translations\n* 界面优化\n* fix：阅读界面切换深浅色后，排版问题 (#1576)\n* fix：三星Spen失效的问题，并添加上一章和下一章的操作选项 (#1583)",
+    "downloadIds": [
+      "mr0q55yrb4hzb6",
+      "mr0q55yrr6wnb4",
+      "mr0q55yrqhi808",
+      "mr0q55yrm5rgor"
+    ]
+  },
+  {
+    "id": "mr0q55yrba2rgn",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.33",
+    "publishedAt": "2026-06-27T18:33:04Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 修复阅读界面功能问题\n* fix: 按醒目标签规则排序书籍详情标签\n* feat: 完善 AI 对话界面与交互",
+    "downloadIds": [
+      "mr0q55yroi7rfr",
+      "mr0q55yr7aps6h",
+      "mr0q55yrwv5eqg",
+      "mr0q55yrx4hdq3"
+    ]
+  },
+  {
     "id": "mqwe66i99jdvfw",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.32",
@@ -1402,6 +1477,84 @@
     "downloadIds": [
       "mqdzxdb5lnla46",
       "mqdzxdbb1uke0t"
+    ]
+  },
+  {
+    "id": "mr0q58usf0ylmb",
+    "projectId": "mqe091nl2j14ej",
+    "version": "v0.11.17",
+    "publishedAt": "2026-06-29T02:22:17Z",
+    "changelog": "## Release Highlight\n* Sync: Added WebDAV and Google Drive sync for your books and reading data\n* Widgets: Added home-screen reading widgets on mobile so you can jump straight back into your book\n* Reading: You can now open and read Markdown(.md) files\n* Reading: You can select a word by double-clicking it, and search gained regex and nearby-words modes\n* Reading: Added a sticky progress bar with chapter markers, and keyboard shortcuts to fine-tune text selection\n* Library: Added a Recently Read shelf to quickly pick up where you left off, plus a separate background texture for your library\n* Text-to-Speech: Added offline voices on iOS, a setting to highlight by word or by sentence\n* PDF: Smoother pinch-zoom and panning, faster scrolling on mobile, and a new contrast option in the view menu\n* More: Customize the highlight toolbar across all books, filter exported annotations by color and style\n\n## What's Changed\n* fix(widget): avoid recycling aliased source bitmap for 2:3 covers by @chrox in https://github.com/readest/readest/pull/4850\n* ci(release): add GitHub artifact attestation to release and nightly builds by @chrox in https://github.com/readest/readest/pull/4851\n* release: version 0.11.17 (hotfix for an Android crash) by @chrox in https://github.com/readest/readest/pull/4852\n\n\n**Full Changelog**: https://github.com/readest/readest/compare/v0.11.16...v0.11.17",
+    "downloadIds": [
+      "mr0q58us1zv05j",
+      "mr0q58us9f9gjh",
+      "mr0q58us5qzc13",
+      "mr0q58usl1ktrt",
+      "mr0q58usw5u1pk",
+      "mr0q58uss7snrg",
+      "mr0q58uso1nonu",
+      "mr0q58usy8toro",
+      "mr0q58us0q8r15",
+      "mr0q58uspht6n5",
+      "mr0q58usnvtg1g",
+      "mr0q58usb873ho",
+      "mr0q58usqvffl5",
+      "mr0q58usildixq",
+      "mr0q58uslekbvt",
+      "mr0q58usaawzug",
+      "mr0q58uszlsev1",
+      "mr0q58usenn9ui",
+      "mr0q58usc89gp4",
+      "mr0q58usarxycu",
+      "mr0q58usgge87h",
+      "mr0q58usjjzrdx",
+      "mr0q58usugvtz6",
+      "mr0q58us713b10",
+      "mr0q58usdd501b",
+      "mr0q58usvwyq6l",
+      "mr0q58usglv29t",
+      "mr0q58usoq1818",
+      "mr0q58usrkurb1",
+      "mr0q58usw393z8"
+    ]
+  },
+  {
+    "id": "mr0q58usktaply",
+    "projectId": "mqe091nl2j14ej",
+    "version": "v0.11.16",
+    "publishedAt": "2026-06-28T18:51:29Z",
+    "changelog": "## Release Highlight\r\n* Sync: Added WebDAV and Google Drive sync for your books and reading data\r\n* Widgets: Added home-screen reading widgets on mobile so you can jump straight back into your book\r\n* Reading: You can now open and read Markdown(.md) files\r\n* Reading: You can select a word by double-clicking it, and search gained regex and nearby-words modes\r\n* Reading: Added a sticky progress bar with chapter markers, and keyboard shortcuts to fine-tune text selection\r\n* Library: Added a Recently Read shelf to quickly pick up where you left off, plus a separate background texture for your library\r\n* Text-to-Speech: Added offline voices on iOS, a setting to highlight by word or by sentence\r\n* PDF: Smoother pinch-zoom and panning, faster scrolling on mobile, and a new contrast option in the view menu\r\n* More: Customize the highlight toolbar across all books, filter exported annotations by color and style\r\n\r\n## What's Changed\r\n* fix(deps): bump undici and dompurify overrides for security advisories by @chrox in https://github.com/readest/readest/pull/4684\r\n* chore(release): fastlane for iOS and macOS release by @chrox in https://github.com/readest/readest/pull/4685\r\n* fix(payment): reflect highest active plan across overlapping Stripe subscriptions by @chrox in https://github.com/readest/readest/pull/4694\r\n* fix(reader): reset scroll to top on paginated fit-width page turn (#4683) by @chrox in https://github.com/readest/readest/pull/4695\r\n* fix(library): preserve original files when deleting \"read in place\" books by @chrox in https://github.com/readest/readest/pull/4696\r\n* feat(tts): add native local iOS TTS (AVSpeechSynthesizer) by @chrox in https://github.com/readest/readest/pull/4697\r\n* feat(payment): handle App Store and Google Play subscription webhooks by @chrox in https://github.com/readest/readest/pull/4701\r\n* feat(payment): observability for store subscription webhooks by @chrox in https://github.com/readest/readest/pull/4704\r\n* feat(library): add opt-in \"purge reading data\" toggle to delete confirm (#4698) by @chrox in https://github.com/readest/readest/pull/4705\r\n* fix(backup): normalize Windows backslash paths in backup zip entries (#4703) by @chrox in https://github.com/readest/readest/pull/4706\r\n* feat(reader): proofread rule sync, regex, reorder, and dialog refresh (#4700) by @chrox in https://github.com/readest/readest/pull/4708\r\n* feat(reader): add sticky progress bar with chapter ticks by @chrox in https://github.com/readest/readest/pull/4707\r\n* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/4709\r\n* fix(kosync): reject non-KOReader-Sync server URLs on connect (#4692) by @chrox in https://github.com/readest/readest/pull/4711\r\n* fix(reader): release volume-key page-flip while TTS is playing (#4691) by @chrox in https://github.com/readest/readest/pull/4710\r\n* fix(reader): remove 1px white seam in PDF spread at fractional DPI (#4587) by @chrox in https://github.com/readest/readest/pull/4713\r\n* feat(sync): decouple the incremental-pull cursor from updated_at via server synced_at (#4678) by @chrox in https://github.com/readest/readest/pull/4712\r\n* fix(tts): recover native System TTS auto-advance when offline (#4613) by @chrox in https://github.com/readest/readest/pull/4716\r\n* fix(reader): add Alt+P proofread shortcut and let Shift+P exit paragraph mode (#4717) by @chrox in https://github.com/readest/readest/pull/4723\r\n* feat(translator): add Urdu as a Translate Text target language (#4721) by @chrox in https://github.com/readest/readest/pull/4726\r\n* fix(reader): make Shift+P toggle, exit, and resume paragraph mode reliably (#4717) by @chrox in https://github.com/readest/readest/pull/4725\r\n* fix(library): keep in-place book paths absolute so uploads stay in fs scope (#4720) by @chrox in https://github.com/readest/readest/pull/4730\r\n* fix(reader): smooth single-notch wheel scroll over PDF pages in scrolled mode (#4727) by @chrox in https://github.com/readest/readest/pull/4732\r\n* fix(sync): sync updated book covers across devices (#4544) by @chrox in https://github.com/readest/readest/pull/4731\r\n* feat(dictionary): add adjustable dictionary popup font size (#4443) by @chrox in https://github.com/readest/readest/pull/4734\r\n* fix(reader): stop per-chapter listener leak that degrades paragraph mode by @chrox in https://github.com/readest/readest/pull/4735\r\n* feat(android): add monochrome themed launcher icon (#4733) by @chrox in https://github.com/readest/readest/pull/4736\r\n* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/4737\r\n* feat(reader): adjust text selection with Shift/Ctrl/Opt+Arrow keys (#4728) by @chrox in https://github.com/readest/readest/pull/4738\r\n* fix(reader): show the centred section's chapter title in scrolled mode (#4436) by @chrox in https://github.com/readest/readest/pull/4739\r\n* feat(wordlens): en-en glosses, styling, derivation lemmas, display-time cap by @chrox in https://github.com/readest/readest/pull/4744\r\n* fix(reader): require a still-hold before instant-highlight on touch by @chrox in https://github.com/readest/readest/pull/4745\r\n* fix(library): import books opened via \"Open with\" by default on mobile (#4746) by @chrox in https://github.com/readest/readest/pull/4747\r\n* fix(reader): stop trackpad pinch-zoom flicker on image viewer (#4742) by @chrox in https://github.com/readest/readest/pull/4748\r\n* fix(opds): dereference publication self link for full metadata (#4749) by @chrox in https://github.com/readest/readest/pull/4753\r\n* feat(library): separate background texture for library and reader by @chrox in https://github.com/readest/readest/pull/4754\r\n* feat(opds): show groups as horizontal carousels when 2+ groups (#4750) by @chrox in https://github.com/readest/readest/pull/4755\r\n* fix(reader): make annotation toolbar customization apply to all books by @chrox in https://github.com/readest/readest/pull/4760\r\n* fix(security): iframe srcdoc atrribute can lead to XSS attack by @chrox in https://github.com/readest/readest/pull/4762\r\n* fix(css): multiply mix blend for images in dark override color mode by @chrox in https://github.com/readest/readest/pull/4763\r\n* feat(reader): add regex and nearby-words search modes (#4560) by @chrox in https://github.com/readest/readest/pull/4764\r\n* feat(koplugin): bulk download all cloud books from Library view (#4751) by @chrox in https://github.com/readest/readest/pull/4765\r\n* fix(reader): zoom linked images on single tap (#4757) by @chrox in https://github.com/readest/readest/pull/4766\r\n* feat(reader): extend selections and highlights across pages (#4741) by @chrox in https://github.com/readest/readest/pull/4767\r\n* fix(reader): stop iOS page-turn animation stutter (#4768) by @chrox in https://github.com/readest/readest/pull/4772\r\n* refactor(settings): polish sync and integration panels by @chrox in https://github.com/readest/readest/pull/4774\r\n* fix(sync): WebDAV Sync now pulls latest book metadata and merges config (#4756) by @chrox in https://github.com/readest/readest/pull/4776\r\n* chore(deps): bump the github-actions group with 2 updates by @dependabot[bot] in https://github.com/readest/readest/pull/4775\r\n* fix(reader): stop a quick-deleted highlight from being re-drawn (#4773) by @chrox in https://github.com/readest/readest/pull/4779\r\n* feat(reader): sync per-book proofread rules across devices by @chrox in https://github.com/readest/readest/pull/4781\r\n* refactor(sync): provider-agnostic file-sync engine with incremental WebDAV sync by @chrox in https://github.com/readest/readest/pull/4784\r\n* fix(opds): hide popular catalog after adding it to My Catalogs (#4782) by @chrox in https://github.com/readest/readest/pull/4787\r\n* feat(webdav): sort and filter the WebDAV browser by @chrox in https://github.com/readest/readest/pull/4786\r\n* fix(sync): keep WebDAV connection after restart when a pull overlaps it by @chrox in https://github.com/readest/readest/pull/4793\r\n* fix(hardcover): never send a book id as edition_id (#4792) by @chrox in https://github.com/readest/readest/pull/4794\r\n* feat(reader): glue non-breaking spaces after short Russian words (#4769) by @chrox in https://github.com/readest/readest/pull/4798\r\n* feat(reader): add contrast option to PDF/CBZ view menu by @chrox in https://github.com/readest/readest/pull/4800\r\n* fix(library): prevent series and description overlap in list view (#4796) by @chrox in https://github.com/readest/readest/pull/4799\r\n* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/4802\r\n* fix(settings): keep global settings in sync across windows (#4580) by @chrox in https://github.com/readest/readest/pull/4803\r\n* fix(annotator): clean up empty highlight on annotation cancel (#4791) by @chrox in https://github.com/readest/readest/pull/4804\r\n* feat(reader): filter exported annotations by color and style (#4801) by @chrox in https://github.com/readest/readest/pull/4806\r\n* feat(reader): add TTS highlight granularity setting (word or sentence) by @chrox in https://github.com/readest/readest/pull/4807\r\n* fix(reader): keep negative table margins from clipping wrapped layout tables (#4439) by @chrox in https://github.com/readest/readest/pull/4808\r\n* perf(reader): stop per-frame background reflow on swipe page turns (#4785) by @chrox in https://github.com/readest/readest/pull/4814\r\n* fix(reader): eliminate PDF scrolled-mode rendering lag on mobile (#4795) by @chrox in https://github.com/readest/readest/pull/4813\r\n* feat(reader): import and render Markdown (.md) files (#774) by @chrox in https://github.com/readest/readest/pull/4816\r\n* fix(sync): sync WebDAV credentials across devices (#4810) by @chrox in https://github.com/readest/readest/pull/4818\r\n* fix(reader): cap auto page-turn corner zone size (#4812) by @chrox in https://github.com/readest/readest/pull/4820\r\n* fix(node): ensure correct cross-platform path resolution in NodeAppService by @luiscortesdev in https://github.com/readest/readest/pull/4819\r\n* feat(sync): Google Drive cloud sync + premium Third-party Cloud Sync section (desktop) by @chrox in https://github.com/readest/readest/pull/4821\r\n* fix(reader): smooth pinch-zoom, pan for scrolled PDF by @chrox in https://github.com/readest/readest/pull/4817\r\n* feat(reader): add e-ink screen refresh page-turner action (#4687) by @chrox in https://github.com/readest/readest/pull/4822\r\n* feat(sync): stream Google Drive book uploads/downloads from disk by @chrox in https://github.com/readest/readest/pull/4824\r\n* feat(sync): Google Drive sign-in on Android + iOS (mobile OAuth) by @chrox in https://github.com/readest/readest/pull/4823\r\n* fix(sync): retry thrown transport errors in Google Drive sync (Android) by @chrox in https://github.com/readest/readest/pull/4827\r\n* fix(sync): cloud-sync settings polish + temporary premium ungate by @chrox in https://github.com/readest/readest/pull/4828\r\n* feat(library): add recently read shelf to the library (#3797) by @chrox in https://github.com/readest/readest/pull/4829\r\n* fix(reader): render code operators literally instead of as ligatures (#4830) by @chrox in https://github.com/readest/readest/pull/4832\r\n* chore(agent): update agent memories by @chrox in https://github.com/readest/readest/pull/4833\r\n* feat(sync): library-scoped auto-sync for third-party cloud (WebDAV / Drive) by @chrox in https://github.com/readest/readest/pull/4835\r\n* fix(eink): render Customize Toolbar preview as bordered surface, not black bar (#4839) by @chrox in https://github.com/readest/readest/pull/4841\r\n* feat(widget): mobile home-screen reading widgets (#1602) by @chrox in https://github.com/readest/readest/pull/4842\r\n* feat(sync): Google Drive on web via full-page redirect OAuth by @chrox in https://github.com/readest/readest/pull/4843\r\n* fix(translate): align RTL translated text to the start by @chrox in https://github.com/readest/readest/pull/4844\r\n* feat(reader): select word on double-click and run instant action or toolbar by @chrox in https://github.com/readest/readest/pull/4846\r\n* fix(sync): silence third-party cloud-sync error toasts by @chrox in https://github.com/readest/readest/pull/4845\r\n* release: version 0.11.16 by @chrox in https://github.com/readest/readest/pull/4847\r\n\r\n## New Contributors\r\n* @luiscortesdev made their first contribution in https://github.com/readest/readest/pull/4819\r\n\r\n**Full Changelog**: https://github.com/readest/readest/compare/v0.11.12...v0.11.16",
+    "downloadIds": [
+      "mr0q58us1hc424",
+      "mr0q58us2bf81x",
+      "mr0q58us2zep7p",
+      "mr0q58uswrbn1a",
+      "mr0q58usvi67vj",
+      "mr0q58usl8mmhy",
+      "mr0q58us2srx7m",
+      "mr0q58us3xk2fx",
+      "mr0q58usqh0g6p",
+      "mr0q58us8hm71s",
+      "mr0q58usfkt24u",
+      "mr0q58ussem9wu",
+      "mr0q58usr4h5mh",
+      "mr0q58us6zfx6n",
+      "mr0q58usz3nu4y",
+      "mr0q58us53hke6",
+      "mr0q58us7ulza6",
+      "mr0q58usvkzmrd",
+      "mr0q58usl028eq",
+      "mr0q58uspoqjv8",
+      "mr0q58uslhf5vl",
+      "mr0q58usm3yntk",
+      "mr0q58usg6d5yb",
+      "mr0q58us2rxho3",
+      "mr0q58uscb4cyr",
+      "mr0q58uscvi3jf",
+      "mr0q58ust5ok3p",
+      "mr0q58usxkph3i",
+      "mr0q58usv5jcdo",
+      "mr0q58usqc5tv0"
     ]
   },
   {

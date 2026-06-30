@@ -7670,6 +7670,22 @@
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   },
   {
+    "id": "mr0q5bu86y5ofp",
+    "versionId": "mr0q5bu8bvsfya",
+    "platform": "Android",
+    "filename": "QingMusic-v1.3.7-arm.apk",
+    "size": "49.5 MB",
+    "url": "https://github.com/kejichangqing/QingMusic/releases/download/v1.3.7/QingMusic-v1.3.7-arm.apk"
+  },
+  {
+    "id": "mr0q5bu8lwpshk",
+    "versionId": "mr0q5bu8bvsfya",
+    "platform": "Android",
+    "filename": "QingMusic-v1.3.7-x86.apk",
+    "size": "55.1 MB",
+    "url": "https://github.com/kejichangqing/QingMusic/releases/download/v1.3.7/QingMusic-v1.3.7-x86.apk"
+  },
+  {
     "id": "mqdzbe8wic7i7e",
     "versionId": "mqdzbe8t0tqs3z",
     "platform": "Android",
@@ -8178,6 +8194,14 @@
     "url": "https://github.com/kejichangqing/QingMusic/releases/download/v1.0.6/qingmusic_v1.0.6.apk",
     "downloadCount": 294,
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
+  },
+  {
+    "id": "mr0q5cdhpaum4i",
+    "versionId": "mr0q5cdhn070sx",
+    "platform": "Android",
+    "filename": "12.1.0-beta01-2026062801-official-arm64-v8a.apk",
+    "size": "11.6 MB",
+    "url": "https://github.com/Moriafly/SaltPlayerSource/releases/download/12.1.0-beta01/12.1.0-beta01-2026062801-official-arm64-v8a.apk"
   },
   {
     "id": "mqjmlcnp4yvcrv",

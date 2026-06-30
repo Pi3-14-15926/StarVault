@@ -9,8 +9,8 @@
     "featured": true,
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 51815,
-    "forks": 6884,
+    "stars": 51878,
+    "forks": 6886,
     "platforms": [
       "Linux",
       "Other",
@@ -32,8 +32,8 @@
     "githubUrl": "https://github.com/lyswhut/lx-music-mobile",
     "latestUpdateTime": "2023-03-26T12:18:06Z",
     "website": "LX Music 移动版",
-    "stars": 17297,
-    "forks": 1980,
+    "stars": 17334,
+    "forks": 1986,
     "latestVersionId": "mqdz0wkh0n4nc6"
   },
   {
@@ -47,8 +47,8 @@
     "githubRepo": "maotoumao/MusicFree",
     "githubUrl": "https://github.com/maotoumao/MusicFree",
     "latestUpdateTime": "2023-03-26T15:46:45Z",
-    "stars": 25375,
-    "forks": 1786,
+    "stars": 25397,
+    "forks": 1789,
     "latestVersionId": "mqdz4vvp4x6d5o"
   },
   {
@@ -62,8 +62,8 @@
     "githubRepo": "maotoumao/MusicFreeDesktop",
     "githubUrl": "https://github.com/maotoumao/MusicFreeDesktop",
     "latestUpdateTime": "2023-07-23T14:37:10Z",
-    "stars": 8520,
-    "forks": 823,
+    "stars": 8528,
+    "forks": 827,
     "latestVersionId": "mqdz5twauyyawp"
   },
   {
@@ -76,10 +76,11 @@
     "featured": false,
     "githubRepo": "kejichangqing/QingMusic",
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
-    "latestUpdateTime": "2025-04-26T08:38:19Z",
-    "stars": 1306,
-    "forks": 63,
-    "latestVersionId": "mqdzbefc3z1ebn"
+    "latestUpdateTime": "2026-06-30T06:24:55Z",
+    "stars": 1316,
+    "forks": 64,
+    "latestVersionId": "mqdzbefc3z1ebn",
+    "latestVersion": "v1.3.7"
   },
   {
     "id": "mqdzae23et9isy",
@@ -91,10 +92,10 @@
     "featured": false,
     "githubRepo": "Moriafly/SaltPlayerSource",
     "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
-    "latestUpdateTime": "2026-06-18T02:05:44Z",
-    "stars": 6956,
-    "forks": 203,
+    "latestUpdateTime": "2026-06-28T01:05:46Z",
+    "stars": 6976,
+    "forks": 202,
     "latestVersionId": "mqdzae9ef24yz5",
-    "latestVersion": "12.0.0"
+    "latestVersion": "12.1.0-beta01"
   }
 ]
