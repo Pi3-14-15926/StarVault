@@ -719,6 +719,19 @@
     ]
   },
   {
+    "id": "mr265md4mvcodp",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.13-beta.38",
+    "publishedAt": "2026-06-30T17:18:23Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix: 优化目录替换处理体验\n* fix: 暂停屏幕外书源 GIF 动画\n* fix: 修正规则编辑器状态与更新逻辑\n* fix: 保留书架滚动状态并避免空白闪烁\n* fix: 添加预设字体粗细控制\n* fix: 使用图片选择器并支持九宫格高亮背景\n* fix: 支持封面图集与 ZIP 主题包\n* feat(cache): 添加漫画图片缓存功能及图片缓存进度跟踪功能 (#1610)",
+    "downloadIds": [
+      "mr265md4sw6ex3",
+      "mr265md44f891d",
+      "mr265md4pqgsx6",
+      "mr265md4qmc1n3"
+    ]
+  },
+  {
     "id": "mr0q55yr47wiu7",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.13-beta.37",
