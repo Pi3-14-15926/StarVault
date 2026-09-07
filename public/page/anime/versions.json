@@ -548,6 +548,24 @@
     ]
   },
   {
+    "id": "mtrhvj0p2c62he",
+    "projectId": "mpzjkpvzeuh3zl",
+    "version": "2.3.1",
+    "publishedAt": "2026-09-07T14:33:57Z",
+    "changelog": "- 重新设计的时间表页面 (@Predidit)\r\n- 重新设计的追番页面 (@Predidit)\r\n- 重新设计的我的页面 (@Predidit)\r\n- 重新设计的视频播放页面 (@Predidit)\r\n- 重新设计的规则管理页面 (@Predidit)\r\n- 重新设计的同步设置页面 (@Predidit)\r\n- 改进Bangumi同步流程 (@zhn1100)",
+    "downloadIds": [
+      "mtrhvj0ppamo8a",
+      "mtrhvj0pgqvmt6",
+      "mtrhvj0ptfd0bc",
+      "mtrhvj0p4pdkad",
+      "mtrhvj0pf7j8gv",
+      "mtrhvj0pubhfko",
+      "mtrhvj0pbbjaw2",
+      "mtrhvj0pcel4rh",
+      "mtrhvj0pp5sxzg"
+    ]
+  },
+  {
     "id": "mtdh86fehr1kh0",
     "projectId": "mpzjkpvzeuh3zl",
     "version": "2.3.0",

@@ -6120,6 +6120,46 @@
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   },
   {
+    "id": "mtrhvh0hdok1sc",
+    "versionId": "mtrhvh0h94f42u",
+    "platform": "Android",
+    "filename": "app-arm64-v8a-release.apk",
+    "size": "26.0 MB",
+    "url": "https://github.com/maotoumao/MusicFree/releases/download/v1.0.0-beta.2/app-arm64-v8a-release.apk"
+  },
+  {
+    "id": "mtrhvh0hmy6xyz",
+    "versionId": "mtrhvh0h94f42u",
+    "platform": "Android",
+    "filename": "app-armeabi-v7a-release.apk",
+    "size": "24.3 MB",
+    "url": "https://github.com/maotoumao/MusicFree/releases/download/v1.0.0-beta.2/app-armeabi-v7a-release.apk"
+  },
+  {
+    "id": "mtrhvh0huduqjc",
+    "versionId": "mtrhvh0h94f42u",
+    "platform": "Android",
+    "filename": "app-universal-release.apk",
+    "size": "62.9 MB",
+    "url": "https://github.com/maotoumao/MusicFree/releases/download/v1.0.0-beta.2/app-universal-release.apk"
+  },
+  {
+    "id": "mtrhvh0hdb5i7y",
+    "versionId": "mtrhvh0h94f42u",
+    "platform": "Android",
+    "filename": "app-x86-release.apk",
+    "size": "27.0 MB",
+    "url": "https://github.com/maotoumao/MusicFree/releases/download/v1.0.0-beta.2/app-x86-release.apk"
+  },
+  {
+    "id": "mtrhvh0h1q1pls",
+    "versionId": "mtrhvh0h94f42u",
+    "platform": "Android",
+    "filename": "app-x86_64-release.apk",
+    "size": "26.7 MB",
+    "url": "https://github.com/maotoumao/MusicFree/releases/download/v1.0.0-beta.2/app-x86_64-release.apk"
+  },
+  {
     "id": "mtpxib0dhlxji3",
     "versionId": "mtpxib0db81rbs",
     "platform": "Android",

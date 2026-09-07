@@ -972,6 +972,20 @@
     ]
   },
   {
+    "id": "mtrhvh0h94f42u",
+    "projectId": "mqdz4vlw18enkx",
+    "version": "v1.0.0-beta.2",
+    "publishedAt": "2026-09-06T16:13:31Z",
+    "changelog": "修复了一些bug",
+    "downloadIds": [
+      "mtrhvh0hdok1sc",
+      "mtrhvh0hmy6xyz",
+      "mtrhvh0huduqjc",
+      "mtrhvh0hdb5i7y",
+      "mtrhvh0h1q1pls"
+    ]
+  },
+  {
     "id": "mtpxib0db81rbs",
     "projectId": "mqdz4vlw18enkx",
     "version": "v1.0.0-beta.1",

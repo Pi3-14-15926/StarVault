@@ -893,6 +893,19 @@
     ]
   },
   {
+    "id": "mtrhvd4hs83jw4",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.29",
+    "publishedAt": "2026-09-06T20:18:43Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: 阅读器相关问题\n* feat: 阅读器相关问题\n* feat: 允许字典打开网页，修复一些问题\n* feat: 阅读器相关优化与修复 允许书签角标大小为0",
+    "downloadIds": [
+      "mtrhvd4i6pc0dn",
+      "mtrhvd4inb4w8o",
+      "mtrhvd4igl3rej",
+      "mtrhvd4i4u4cb1"
+    ]
+  },
+  {
     "id": "mtpxi7cmmfgvji",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.28",
