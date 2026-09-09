@@ -9,8 +9,8 @@
     "featured": true,
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 53417,
-    "forks": 6986,
+    "stars": 53432,
+    "forks": 6991,
     "platforms": [
       "Linux",
       "Other",
@@ -32,8 +32,8 @@
     "githubUrl": "https://github.com/lyswhut/lx-music-mobile",
     "latestUpdateTime": "2023-03-26T12:18:06Z",
     "website": "LX Music 移动版",
-    "stars": 18145,
-    "forks": 2082,
+    "stars": 18151,
+    "forks": 2086,
     "latestVersionId": "mqdz0wkh0n4nc6"
   },
   {
@@ -47,8 +47,8 @@
     "githubRepo": "maotoumao/MusicFree",
     "githubUrl": "https://github.com/maotoumao/MusicFree",
     "latestUpdateTime": "2026-09-06T16:13:31Z",
-    "stars": 26713,
-    "forks": 1915,
+    "stars": 26746,
+    "forks": 1921,
     "latestVersionId": "mqdz4vvp4x6d5o",
     "latestVersion": "v1.0.0-beta.2"
   },
@@ -63,8 +63,8 @@
     "githubRepo": "maotoumao/MusicFreeDesktop",
     "githubUrl": "https://github.com/maotoumao/MusicFreeDesktop",
     "latestUpdateTime": "2023-07-23T14:37:10Z",
-    "stars": 8809,
-    "forks": 851,
+    "stars": 8816,
+    "forks": 852,
     "latestVersionId": "mqdz5twauyyawp"
   },
   {
@@ -78,7 +78,7 @@
     "githubRepo": "kejichangqing/QingMusic",
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
     "latestUpdateTime": "2026-08-05T13:55:26Z",
-    "stars": 1493,
+    "stars": 1497,
     "forks": 70,
     "latestVersionId": "mqdzbefc3z1ebn",
     "latestVersion": "v1.3.8"
@@ -94,8 +94,8 @@
     "githubRepo": "Moriafly/SaltPlayerSource",
     "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
     "latestUpdateTime": "2026-09-06T12:59:47Z",
-    "stars": 7336,
-    "forks": 212,
+    "stars": 7338,
+    "forks": 213,
     "latestVersionId": "mqdzae9ef24yz5",
     "latestVersion": "12.3.2"
   }

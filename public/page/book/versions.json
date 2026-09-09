@@ -893,6 +893,19 @@
     ]
   },
   {
+    "id": "mtu9y0ap8w5vfz",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.31",
+    "publishedAt": "2026-09-08T19:07:35Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: 阅读器相关问题",
+    "downloadIds": [
+      "mtu9y0apnidik5",
+      "mtu9y0apk09tns",
+      "mtu9y0apsse3i3",
+      "mtu9y0apuhev1f"
+    ]
+  },
+  {
     "id": "mtsunnuzx1qdue",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.30",
