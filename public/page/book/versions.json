@@ -893,6 +893,32 @@
     ]
   },
   {
+    "id": "mtvp7uqehry85c",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.33",
+    "publishedAt": "2026-09-09T20:49:13Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: 滚动时上下边距问题",
+    "downloadIds": [
+      "mtvp7uqegd5lyz",
+      "mtvp7uqeg61oad",
+      "mtvp7uqe73vggi",
+      "mtvp7uqe07k53m"
+    ]
+  },
+  {
+    "id": "mtvp7uqeyvdb5u",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.32",
+    "publishedAt": "2026-09-09T20:03:43Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: 书源兼容性\n* feat: 阅读器相关问题",
+    "downloadIds": [
+      "mtvp7uqeit9xa7",
+      "mtvp7uqe8zi54v",
+      "mtvp7uqe89b2he",
+      "mtvp7uqeyeiy6e"
+    ]
+  },
+  {
     "id": "mtu9y0ap8w5vfz",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.31",
