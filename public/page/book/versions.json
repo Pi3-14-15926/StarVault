@@ -893,6 +893,19 @@
     ]
   },
   {
+    "id": "mtx4pl57mdinim",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.34",
+    "publishedAt": "2026-09-10T17:26:07Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* feat: 漫画问题\n* feat: 高亮问题\n* feat: 下划线问题\n* feat: 浏览器闪烁\n* feat: 神秘",
+    "downloadIds": [
+      "mtx4pl57ze85sp",
+      "mtx4pl57swlytk",
+      "mtx4pl571gf2o3",
+      "mtx4pl57bel531"
+    ]
+  },
+  {
     "id": "mtvp7uqehry85c",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.33",
