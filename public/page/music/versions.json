@@ -1,5 +1,73 @@
 [
   {
+    "id": "mtyiaf3g3mkfo2",
+    "projectId": "mpwreu1xdmxt5v",
+    "version": "v2.12.4",
+    "publishedAt": "2026-09-12T13:11:02Z",
+    "changelog": "目前新项目 Any Listen 的桌面版、Web 版已实现 LX Music 的大部分功能，并额外支持 WebDAV 歌曲播放、WebDAV 数据同步、独立播放列表等功能。\r\n以后的开发精力将主要集中在新项目上，之前大家在 LX Music 提的功能我们也会考虑在新项目中添加。\r\n对于日常使用 LX Music 的人可以试试迁移到 Any Listen，若遇到任何问题可以发 issue 反馈。\r\nAny Listen 的项目地址为 https://github.com/any-listen/any-listen\r\n\r\n### 修复\r\n\r\n- 修复自定义主题背景图片无法显示的问题\r\n\r\n### 安装包快捷链接\r\n\r\n- Windows x64: [lx-music-desktop-v2.12.4-x64-Setup.exe](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-x64-Setup.exe)\r\n- MacOS arm64: [lx-music-desktop-2.12.4-arm64.dmg](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-2.12.4-arm64.dmg)\r\n- Linux amd64 deb: [lx-music-desktop_2.12.4_amd64.deb](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop_2.12.4_amd64.deb)\r\n\r\n### File MD5\r\n\r\n```\r\n11DEB150E3F3FB6BE83684AAB9D9BD79  lx-music-desktop-v2.12.4-arm64-Setup.exe\r\nEF111435343AE47193274386339A3B17  lx-music-desktop-v2.12.4-x64-Setup.exe\r\n328EAB7C41894DEE6903B96FA29ABE35  lx-music-desktop-v2.12.4-win_arm64-green.7z\r\n4536C1764A111A72F0FFD1B6BC26B291  lx-music-desktop-v2.12.4-win_x64-green.7z\r\n0A268A2418F778624A28D5AC64A78174  lx-music-desktop-v2.12.4-win7_x64-Setup.exe\r\n65E3B8416832022A5855508F0667C5E8  lx-music-desktop-v2.12.4-win7_x64-green.7z\r\n8E113992FD5840170FDA8104E78450E7  lx-music-desktop-v2.12.4-win7_x86-green.7z\r\n\r\nMD5 (lx-music-desktop-2.12.4-arm64.dmg) = 2d8c164fe7f03ecbcca61a97ddb5d402\r\nMD5 (lx-music-desktop-2.12.4-x64.dmg) = e36d2a257fe75f3bd7791d8f1b6bb5e1\r\n\r\n47ea6b3bf407b030f61a730915501343  lx-music-desktop_2.12.4_amd64.deb\r\nff9530f5c73eed058b615514e4ad6520  lx-music-desktop_2.12.4_arm64.deb\r\nba8c4187d1f87506f4aef7bd29a652ac  lx-music-desktop_2.12.4_armv7l.deb\r\n4f4f88296dc6fabaf2691c23a014e137  lx-music-desktop-2.12.4.x64.rpm\r\n921585545c6bb143e6b4f039b5740d4b  lx-music-desktop_2.12.4_x64.pacman\r\ne66d340d73c2673f4a7dec1523441d0e  lx-music-desktop_2.12.4_x64.AppImage\r\n```\r\n\r\n[软件安装包说明](https://lyswhut.github.io/lx-music-doc/download#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E8%AF%B4%E6%98%8E)\r\n",
+    "downloadIds": [
+      "mtyiaf3gnzjsdw",
+      "mtyiaf3gek8o9i",
+      "mtyiaf3gws3j7l",
+      "mtyiaf3g1cf3a4",
+      "mtyiaf3gyfvcrq",
+      "mtyiaf3gbqs3xd",
+      "mtyiaf3giyfy67",
+      "mtyiaf3g9qhyui",
+      "mtyiaf3grddvke",
+      "mtyiaf3g5cl5mx",
+      "mtyiaf3g2eu9j2",
+      "mtyiaf3guca9ee",
+      "mtyiaf3g7sexa1",
+      "mtyiaf3gji9s0h",
+      "mtyiaf3g6rmifa",
+      "mtyiaf3g61fpjn",
+      "mtyiaf3g8jm82z",
+      "mtyiaf3g0zj15a",
+      "mtyiaf3g3j0wi4",
+      "mtyiaf3g5q8q42",
+      "mtyiaf3g7e7pjb",
+      "mtyiaf3gbkvxfp",
+      "mtyiaf3gmdfwj5",
+      "mtyiaf3godgzi0",
+      "mtyiaf3gjt2h9f"
+    ]
+  },
+  {
+    "id": "mtyiaf3govlw1r",
+    "projectId": "mpwreu1xdmxt5v",
+    "version": "v2.12.3",
+    "publishedAt": "2026-09-12T05:23:58Z",
+    "changelog": "目前新项目 Any Listen 的桌面版、Web 版已实现 LX Music 的大部分功能，并额外支持 WebDAV 歌曲播放、WebDAV 数据同步、独立播放列表等功能。\r\n以后的开发精力将主要集中在新项目上，之前大家在 LX Music 提的功能我们也会考虑在新项目中添加。\r\n对于日常使用 LX Music 的人可以试试迁移到 Any Listen，若遇到任何问题可以发 issue 反馈。\r\nAny Listen 的项目地址为 https://github.com/any-listen/any-listen\r\n\r\n### 优化\r\n\r\n- 优化kw歌单列表数据显示\r\n- 同步服务在连接时允许URL重定向\r\n- Linux 点击托盘时将显示主界面（#2840）\r\n- 优化自动换源歌曲匹配机制\r\n\r\n### 修复\r\n\r\n- 修复 kg 搜索结果显示问题 (#2782)\r\n- 修复某些情况下开放 API 获取到的音量为 0 的问题 (#2790)\r\n- 修复 mg 图片、歌词获取\r\n- 修复某些 tx 歌单打开失败的问题 (#1060, @ght-000)\r\n- 修复在某些情况下添加、移动歌曲时可能导致保存的歌曲顺序不对的问题（#2842）\r\n- 修复歌词标签解析格式没有严格按照标准的问题（#2855）\r\n- 修复 tx 歌曲搜索失败的问题（#2848, @ikun0014）\r\n\r\n### 安装包快捷链接\r\n\r\n- Windows x64: [lx-music-desktop-v2.12.3-x64-Setup.exe](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.3/lx-music-desktop-v2.12.3-x64-Setup.exe)\r\n- MacOS arm64: [lx-music-desktop-2.12.3-arm64.dmg](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.3/lx-music-desktop-2.12.3-arm64.dmg)\r\n- Linux amd64 deb: [lx-music-desktop_2.12.3_amd64.deb](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.3/lx-music-desktop_2.12.3_amd64.deb)\r\n\r\n### File MD5\r\n\r\n```\r\nDC099FE3EEB367887A10D69049AD5E3F  lx-music-desktop-v2.12.3-arm64-Setup.exe\r\n58089AF957A54E7C0BB4A08507782835  lx-music-desktop-v2.12.3-x64-Setup.exe\r\nAEE8A2E55C2E5426E74AC83C357F7A2B  lx-music-desktop-v2.12.3-win_arm64-green.7z\r\nD2B168210746F7E36CB5ECD42C10ED2D  lx-music-desktop-v2.12.3-win_x64-green.7z\r\nFF90AB7A89137B2E919DE0F99E3CBFEF  lx-music-desktop-v2.12.3-win7_x64-Setup.exe\r\n6E2BA0A3BD3415075BC170FC025D481B  lx-music-desktop-v2.12.3-win7_x64-green.7z\r\n8F2F9ABC8E042E5F7AE30B766276FC16  lx-music-desktop-v2.12.3-win7_x86-green.7z\r\n\r\nMD5 (lx-music-desktop-2.12.3-arm64.dmg) = b9aacbc215a53b1bf53811be97216162\r\nMD5 (lx-music-desktop-2.12.3-x64.dmg) = f3025a03a08d5d235d0d822b5dd8c10f\r\n\r\n9f4878fbf52206ba13c3621af340ded3  lx-music-desktop_2.12.3_amd64.deb\r\nd3ac513e3aac266fb5c7b9b002677c04  lx-music-desktop_2.12.3_arm64.deb\r\n93d90cf28133c3643983caffc8cd8141  lx-music-desktop_2.12.3_armv7l.deb\r\na67f12fc55022aefaa4c4a2ea845b0c0  lx-music-desktop-2.12.3.x64.rpm\r\n6ba62ac35d1a7ee0caf2148eae71438c  lx-music-desktop_2.12.3_x64.pacman\r\n9491b256f1255f734152e3b217dd5553  lx-music-desktop_2.12.3_x64.AppImage\r\n```\r\n\r\n[软件安装包说明](https://lyswhut.github.io/lx-music-doc/download#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E8%AF%B4%E6%98%8E)\r\n",
+    "downloadIds": [
+      "mtyiaf3gjo3nsn",
+      "mtyiaf3gl4qjq6",
+      "mtyiaf3gcsyv2d",
+      "mtyiaf3grbipum",
+      "mtyiaf3gbze0xm",
+      "mtyiaf3gyui2te",
+      "mtyiaf3gjs3l4r",
+      "mtyiaf3g41klo1",
+      "mtyiaf3gklgtfb",
+      "mtyiaf3gfgoywu",
+      "mtyiaf3gkhbpnl",
+      "mtyiaf3g6us6ae",
+      "mtyiaf3gl50yno",
+      "mtyiaf3gknlvsk",
+      "mtyiaf3guleq4t",
+      "mtyiaf3gnvb9uy",
+      "mtyiaf3gfzaibk",
+      "mtyiaf3gjm5cnu",
+      "mtyiaf3gsed5uz",
+      "mtyiaf3ggupyi3",
+      "mtyiaf3gbap7ve",
+      "mtyiaf3gtuanio",
+      "mtyiaf3gsv7zbe",
+      "mtyiaf3goodaao",
+      "mtyiaf3g5gju5o"
+    ]
+  },
+  {
     "id": "mpwreeavwjr9sc",
     "projectId": "mpwreu1xdmxt5v",
     "version": "v2.12.2",
@@ -682,6 +750,20 @@
       "dl_hyype4e10p",
       "dl_lmghy686wo",
       "dl_c4kmw0av2x"
+    ]
+  },
+  {
+    "id": "mtyiafiemyi3r8",
+    "projectId": "mqdz0w9jb6a6mx",
+    "version": "v1.9.0",
+    "publishedAt": "2026-09-12T04:48:29Z",
+    "changelog": "### 新增\n\n- 歌曲菜单新增 “清理缓存” 按钮，可用于清理 URL 缓存，当某首歌获取到了错误的歌曲链接时，可以使用该功能清理与其关联的歌曲URL缓存\n\n### 优化\n\n- 优化自动换源歌曲匹配机制\n\n### 修复\n\n- 修复 kg 搜索结果显示问题\n- 修复某些 tx 歌单打开失败的问题 (@ght-000)\n- 修复 mg 图片、歌词获取\n- 修复 tx 歌单翻页问题 (#1107, @jtcai)\n- 修复 tx 歌曲搜索失败的问题（@ikun0014）\n\n### File MD5\n```\n632b0de28e880a6caaea4c5200ed3f73  lx-music-mobile-v1.9.0-arm64-v8a.apk\ne66c56379f906d6619f8664a1d10ac88  lx-music-mobile-v1.9.0-armeabi-v7a.apk\nc59cec19807f2e4efb31119b93650c5b  lx-music-mobile-v1.9.0-universal.apk\ne4b4b7d2d113a99891f007a4afb60158  lx-music-mobile-v1.9.0-x86.apk\nc12353c7908ba85337bf412c5a509d7c  lx-music-mobile-v1.9.0-x86_64.apk\n```\n\n\n[软件安装包说明](https://lyswhut.github.io/lx-music-doc/download#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E8%AF%B4%E6%98%8E)\n\n",
+    "downloadIds": [
+      "mtyiafiestruee",
+      "mtyiafie8zppg0",
+      "mtyiafied9a7e6",
+      "mtyiafie05hzii",
+      "mtyiafie0fgs2u"
     ]
   },
   {
