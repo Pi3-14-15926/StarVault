@@ -123,6 +123,33 @@
     {
       "category": "阅读",
       "project": "阅读_MD3",
+      "versionDir": "阅读/阅读_MD3/2026-09-12_3.26.16-beta.36",
+      "files": [
+        {
+          "name": "legado-3.26.16-beta.36-arm64-v8a.apk",
+          "size": 19608371.2,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-12_3.26.16-beta.36/legado-3.26.16-beta.36-arm64-v8a.apk"
+        },
+        {
+          "name": "legado-3.26.16-beta.36-armeabi-v7a.apk",
+          "size": 19188940.8,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-12_3.26.16-beta.36/legado-3.26.16-beta.36-armeabi-v7a.apk"
+        },
+        {
+          "name": "legado-3.26.16-beta.36.apk",
+          "size": 26214400,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-12_3.26.16-beta.36/legado-3.26.16-beta.36.apk"
+        },
+        {
+          "name": "mapping.txt",
+          "size": 265604300.8,
+          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-12_3.26.16-beta.36/mapping.txt"
+        }
+      ]
+    },
+    {
+      "category": "阅读",
+      "project": "阅读_MD3",
       "versionDir": "阅读/阅读_MD3/2026-09-11_3.26.16-beta.35",
       "files": [
         {
@@ -144,33 +171,6 @@
           "name": "mapping.txt",
           "size": 265499443.2,
           "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-11_3.26.16-beta.35/mapping.txt"
-        }
-      ]
-    },
-    {
-      "category": "阅读",
-      "project": "阅读_MD3",
-      "versionDir": "阅读/阅读_MD3/2026-09-10_3.26.16-beta.34",
-      "files": [
-        {
-          "name": "legado-3.26.16-beta.34-arm64-v8a.apk",
-          "size": 19608371.2,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-10_3.26.16-beta.34/legado-3.26.16-beta.34-arm64-v8a.apk"
-        },
-        {
-          "name": "legado-3.26.16-beta.34-armeabi-v7a.apk",
-          "size": 19188940.8,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-10_3.26.16-beta.34/legado-3.26.16-beta.34-armeabi-v7a.apk"
-        },
-        {
-          "name": "legado-3.26.16-beta.34.apk",
-          "size": 26214400,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-10_3.26.16-beta.34/legado-3.26.16-beta.34.apk"
-        },
-        {
-          "name": "mapping.txt",
-          "size": 265499443.2,
-          "url": "/SoftwareHub/阅读/阅读_MD3/2026-09-10_3.26.16-beta.34/mapping.txt"
         }
       ]
     },
@@ -1025,6 +1025,38 @@
     {
       "category": "音乐",
       "project": "MusicFree_移动版",
+      "versionDir": "音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3",
+      "files": [
+        {
+          "name": "app-arm64-v8a-release.apk",
+          "size": 27367833.6,
+          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3/app-arm64-v8a-release.apk"
+        },
+        {
+          "name": "app-armeabi-v7a-release.apk",
+          "size": 25480396.8,
+          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3/app-armeabi-v7a-release.apk"
+        },
+        {
+          "name": "app-universal-release.apk",
+          "size": 66060288,
+          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3/app-universal-release.apk"
+        },
+        {
+          "name": "app-x86-release.apk",
+          "size": 28416409.6,
+          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3/app-x86-release.apk"
+        },
+        {
+          "name": "app-x86_64-release.apk",
+          "size": 28101836.8,
+          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-13_v1.0.0-beta.3/app-x86_64-release.apk"
+        }
+      ]
+    },
+    {
+      "category": "音乐",
+      "project": "MusicFree_移动版",
       "versionDir": "音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.2",
       "files": [
         {
@@ -1051,38 +1083,6 @@
           "name": "app-x86_64-release.apk",
           "size": 27996979.2,
           "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.2/app-x86_64-release.apk"
-        }
-      ]
-    },
-    {
-      "category": "音乐",
-      "project": "MusicFree_移动版",
-      "versionDir": "音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1",
-      "files": [
-        {
-          "name": "app-arm64-v8a-release.apk",
-          "size": 27262976,
-          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1/app-arm64-v8a-release.apk"
-        },
-        {
-          "name": "app-armeabi-v7a-release.apk",
-          "size": 25480396.8,
-          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1/app-armeabi-v7a-release.apk"
-        },
-        {
-          "name": "app-universal-release.apk",
-          "size": 65955430.4,
-          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1/app-universal-release.apk"
-        },
-        {
-          "name": "app-x86-release.apk",
-          "size": 28311552,
-          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1/app-x86-release.apk"
-        },
-        {
-          "name": "app-x86_64-release.apk",
-          "size": 27996979.2,
-          "url": "/SoftwareHub/音乐/MusicFree_移动版/2026-09-06_v1.0.0-beta.1/app-x86_64-release.apk"
         }
       ]
     },
@@ -1881,6 +1881,23 @@
     {
       "category": "游戏",
       "project": "GameNative_游戏模拟器",
+      "versionDir": "游戏/GameNative_游戏模拟器/2026-09-13_v1.2.1",
+      "files": [
+        {
+          "name": "gamenative-v1.2.1-legacy-xr.apk",
+          "size": 568537907.2,
+          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-09-13_v1.2.1/gamenative-v1.2.1-legacy-xr.apk"
+        },
+        {
+          "name": "gamenative-v1.2.1.apk",
+          "size": 567279616,
+          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-09-13_v1.2.1/gamenative-v1.2.1.apk"
+        }
+      ]
+    },
+    {
+      "category": "游戏",
+      "project": "GameNative_游戏模拟器",
       "versionDir": "游戏/GameNative_游戏模拟器/2026-09-06_v1.2.1-prerelease",
       "files": [
         {
@@ -1894,24 +1911,7 @@
           "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-09-06_v1.2.1-prerelease/gamenative-v1.2.1-prerelease.apk"
         }
       ]
-    },
-    {
-      "category": "游戏",
-      "project": "GameNative_游戏模拟器",
-      "versionDir": "游戏/GameNative_游戏模拟器/2026-08-25_v1.2.0",
-      "files": [
-        {
-          "name": "gamenative-v1.2.0-legacy-xr.apk",
-          "size": 566965043.2,
-          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-08-25_v1.2.0/gamenative-v1.2.0-legacy-xr.apk"
-        },
-        {
-          "name": "gamenative-v1.2.0.apk",
-          "size": 566755328,
-          "url": "/SoftwareHub/游戏/GameNative_游戏模拟器/2026-08-25_v1.2.0/gamenative-v1.2.0.apk"
-        }
-      ]
     }
   ],
-  "updatedAt": "2026-09-12T18:51:46.002Z"
+  "updatedAt": "2026-09-13T18:04:19.980Z"
 }

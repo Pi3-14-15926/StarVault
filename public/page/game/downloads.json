@@ -1386,6 +1386,22 @@
     "downloadCountSyncedAt": "2026-06-16T09:42:58.547Z"
   },
   {
+    "id": "mtzz20ocbsezim",
+    "versionId": "mtzz20ocj9z59s",
+    "platform": "Android",
+    "filename": "gamenative-v1.2.1-legacy-xr.apk",
+    "size": "542.2 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.2.1/gamenative-v1.2.1-legacy-xr.apk"
+  },
+  {
+    "id": "mtzz20ocqg6gph",
+    "versionId": "mtzz20ocj9z59s",
+    "platform": "Android",
+    "filename": "gamenative-v1.2.1.apk",
+    "size": "541.0 MB",
+    "url": "https://github.com/utkarshdalal/GameNative/releases/download/v1.2.1/gamenative-v1.2.1.apk"
+  },
+  {
     "id": "mtpxiepgh7bqtv",
     "versionId": "mtpxiepgo6era5",
     "platform": "Android",
