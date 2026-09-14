@@ -697,6 +697,138 @@
     {
       "category": "音乐",
       "project": "LX_Music_桌面版",
+      "versionDir": "音乐/LX_Music_桌面版/2026-09-13_v2.12.5",
+      "files": [
+        {
+          "name": "latest-linux-arm.yml",
+          "size": 0,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/latest-linux-arm.yml"
+        },
+        {
+          "name": "latest-linux-arm64.yml",
+          "size": 0,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/latest-linux-arm64.yml"
+        },
+        {
+          "name": "latest-linux.yml",
+          "size": 0,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/latest-linux.yml"
+        },
+        {
+          "name": "latest-mac.yml",
+          "size": 0,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/latest-mac.yml"
+        },
+        {
+          "name": "latest.yml",
+          "size": 0,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/latest.yml"
+        },
+        {
+          "name": "lx-music-desktop-2.12.5-arm64.dmg",
+          "size": 131176857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-2.12.5-arm64.dmg"
+        },
+        {
+          "name": "lx-music-desktop-2.12.5-arm64.dmg.blockmap",
+          "size": 104857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-2.12.5-arm64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.5-x64.dmg",
+          "size": 135161446.4,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-2.12.5-x64.dmg"
+        },
+        {
+          "name": "lx-music-desktop-2.12.5-x64.dmg.blockmap",
+          "size": 104857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-2.12.5-x64.dmg.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-2.12.5.x64.rpm",
+          "size": 96364134.4,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-2.12.5.x64.rpm"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-arm64-Setup.exe",
+          "size": 116706508.8,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-arm64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-arm64-Setup.exe.blockmap",
+          "size": 104857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-arm64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win7_x64-green.7z",
+          "size": 70674022.4,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win7_x64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win7_x64-Setup.exe",
+          "size": 84829798.4,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win7_x64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win7_x64-Setup.exe.blockmap",
+          "size": 104857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win7_x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win7_x86-green.7z",
+          "size": 67213721.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win7_x86-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win_arm64-green.7z",
+          "size": 94896128,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win_arm64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-win_x64-green.7z",
+          "size": 100873011.2,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-win_x64-green.7z"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-x64-Setup.exe",
+          "size": 121634816,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-x64-Setup.exe"
+        },
+        {
+          "name": "lx-music-desktop-v2.12.5-x64-Setup.exe.blockmap",
+          "size": 104857.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop-v2.12.5-x64-Setup.exe.blockmap"
+        },
+        {
+          "name": "lx-music-desktop_2.12.5_amd64.deb",
+          "size": 109366476.8,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop_2.12.5_amd64.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.5_arm64.deb",
+          "size": 104438169.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop_2.12.5_arm64.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.5_armv7l.deb",
+          "size": 107374182.4,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop_2.12.5_armv7l.deb"
+        },
+        {
+          "name": "lx-music-desktop_2.12.5_x64.AppImage",
+          "size": 139565465.6,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop_2.12.5_x64.AppImage"
+        },
+        {
+          "name": "lx-music-desktop_2.12.5_x64.pacman",
+          "size": 98880716.8,
+          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-13_v2.12.5/lx-music-desktop_2.12.5_x64.pacman"
+        }
+      ]
+    },
+    {
+      "category": "音乐",
+      "project": "LX_Music_桌面版",
       "versionDir": "音乐/LX_Music_桌面版/2026-09-12_v2.12.4",
       "files": [
         {
@@ -823,138 +955,6 @@
           "name": "lx-music-desktop_2.12.4_x64.pacman",
           "size": 98880716.8,
           "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.4/lx-music-desktop_2.12.4_x64.pacman"
-        }
-      ]
-    },
-    {
-      "category": "音乐",
-      "project": "LX_Music_桌面版",
-      "versionDir": "音乐/LX_Music_桌面版/2026-09-12_v2.12.3",
-      "files": [
-        {
-          "name": "latest-linux-arm.yml",
-          "size": 0,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/latest-linux-arm.yml"
-        },
-        {
-          "name": "latest-linux-arm64.yml",
-          "size": 0,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/latest-linux-arm64.yml"
-        },
-        {
-          "name": "latest-linux.yml",
-          "size": 0,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/latest-linux.yml"
-        },
-        {
-          "name": "latest-mac.yml",
-          "size": 0,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/latest-mac.yml"
-        },
-        {
-          "name": "latest.yml",
-          "size": 0,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/latest.yml"
-        },
-        {
-          "name": "lx-music-desktop-2.12.3-arm64.dmg",
-          "size": 131176857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-2.12.3-arm64.dmg"
-        },
-        {
-          "name": "lx-music-desktop-2.12.3-arm64.dmg.blockmap",
-          "size": 104857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-2.12.3-arm64.dmg.blockmap"
-        },
-        {
-          "name": "lx-music-desktop-2.12.3-x64.dmg",
-          "size": 135161446.4,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-2.12.3-x64.dmg"
-        },
-        {
-          "name": "lx-music-desktop-2.12.3-x64.dmg.blockmap",
-          "size": 104857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-2.12.3-x64.dmg.blockmap"
-        },
-        {
-          "name": "lx-music-desktop-2.12.3.x64.rpm",
-          "size": 96259276.8,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-2.12.3.x64.rpm"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-arm64-Setup.exe",
-          "size": 116706508.8,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-arm64-Setup.exe"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-arm64-Setup.exe.blockmap",
-          "size": 104857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-arm64-Setup.exe.blockmap"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win7_x64-green.7z",
-          "size": 70674022.4,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win7_x64-green.7z"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win7_x64-Setup.exe",
-          "size": 84829798.4,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win7_x64-Setup.exe"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win7_x64-Setup.exe.blockmap",
-          "size": 104857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win7_x64-Setup.exe.blockmap"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win7_x86-green.7z",
-          "size": 67213721.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win7_x86-green.7z"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win_arm64-green.7z",
-          "size": 94791270.4,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win_arm64-green.7z"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-win_x64-green.7z",
-          "size": 100873011.2,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-win_x64-green.7z"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-x64-Setup.exe",
-          "size": 121634816,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-x64-Setup.exe"
-        },
-        {
-          "name": "lx-music-desktop-v2.12.3-x64-Setup.exe.blockmap",
-          "size": 104857.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop-v2.12.3-x64-Setup.exe.blockmap"
-        },
-        {
-          "name": "lx-music-desktop_2.12.3_amd64.deb",
-          "size": 109261619.2,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop_2.12.3_amd64.deb"
-        },
-        {
-          "name": "lx-music-desktop_2.12.3_arm64.deb",
-          "size": 104438169.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop_2.12.3_arm64.deb"
-        },
-        {
-          "name": "lx-music-desktop_2.12.3_armv7l.deb",
-          "size": 107269324.8,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop_2.12.3_armv7l.deb"
-        },
-        {
-          "name": "lx-music-desktop_2.12.3_x64.AppImage",
-          "size": 139565465.6,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop_2.12.3_x64.AppImage"
-        },
-        {
-          "name": "lx-music-desktop_2.12.3_x64.pacman",
-          "size": 98880716.8,
-          "url": "/SoftwareHub/音乐/LX_Music_桌面版/2026-09-12_v2.12.3/lx-music-desktop_2.12.3_x64.pacman"
         }
       ]
     },
@@ -1913,5 +1913,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-13T18:04:19.980Z"
+  "updatedAt": "2026-09-14T18:14:32.027Z"
 }

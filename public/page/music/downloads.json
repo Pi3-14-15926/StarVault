@@ -1,5 +1,205 @@
 [
   {
+    "id": "mu1itpkdjgtxyb",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "latest-linux-arm.yml",
+    "size": "0.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/latest-linux-arm.yml"
+  },
+  {
+    "id": "mu1itpkdnrh4d5",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "latest-linux-arm64.yml",
+    "size": "0.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/latest-linux-arm64.yml"
+  },
+  {
+    "id": "mu1itpkd1v56zf",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "latest-linux.yml",
+    "size": "0.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/latest-linux.yml"
+  },
+  {
+    "id": "mu1itpkd28uf3t",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "latest-mac.yml",
+    "size": "0.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/latest-mac.yml"
+  },
+  {
+    "id": "mu1itpkdrxcwii",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "latest.yml",
+    "size": "0.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/latest.yml"
+  },
+  {
+    "id": "mu1itpkd15ox3d",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "MacOS",
+    "filename": "lx-music-desktop-2.12.5-arm64.dmg",
+    "size": "125.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-2.12.5-arm64.dmg"
+  },
+  {
+    "id": "mu1itpkdamtha4",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "MacOS",
+    "filename": "lx-music-desktop-2.12.5-arm64.dmg.blockmap",
+    "size": "0.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-2.12.5-arm64.dmg.blockmap"
+  },
+  {
+    "id": "mu1itpkduaax8s",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "MacOS",
+    "filename": "lx-music-desktop-2.12.5-x64.dmg",
+    "size": "128.9 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-2.12.5-x64.dmg"
+  },
+  {
+    "id": "mu1itpkdrk8jge",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "MacOS",
+    "filename": "lx-music-desktop-2.12.5-x64.dmg.blockmap",
+    "size": "0.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-2.12.5-x64.dmg.blockmap"
+  },
+  {
+    "id": "mu1itpkdxib7hu",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop-2.12.5.x64.rpm",
+    "size": "91.9 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-2.12.5.x64.rpm"
+  },
+  {
+    "id": "mu1itpkdzbg42t",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-arm64-Setup.exe",
+    "size": "111.3 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-arm64-Setup.exe"
+  },
+  {
+    "id": "mu1itpkdoh12rt",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-arm64-Setup.exe.blockmap",
+    "size": "0.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-arm64-Setup.exe.blockmap"
+  },
+  {
+    "id": "mu1itpkdyk1w6x",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop-v2.12.5-win7_x64-green.7z",
+    "size": "67.4 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win7_x64-green.7z"
+  },
+  {
+    "id": "mu1itpkd3ozwuv",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-win7_x64-Setup.exe",
+    "size": "80.9 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win7_x64-Setup.exe"
+  },
+  {
+    "id": "mu1itpkda54v25",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-win7_x64-Setup.exe.blockmap",
+    "size": "0.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win7_x64-Setup.exe.blockmap"
+  },
+  {
+    "id": "mu1itpkdhgunuh",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop-v2.12.5-win7_x86-green.7z",
+    "size": "64.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win7_x86-green.7z"
+  },
+  {
+    "id": "mu1itpkdseh0z5",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop-v2.12.5-win_arm64-green.7z",
+    "size": "90.5 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win_arm64-green.7z"
+  },
+  {
+    "id": "mu1itpkdk6hokt",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop-v2.12.5-win_x64-green.7z",
+    "size": "96.2 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win_x64-green.7z"
+  },
+  {
+    "id": "mu1itpkdtwjhq4",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-x64-Setup.exe",
+    "size": "116.0 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-x64-Setup.exe"
+  },
+  {
+    "id": "mu1itpkdm7hreb",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Windows",
+    "filename": "lx-music-desktop-v2.12.5-x64-Setup.exe.blockmap",
+    "size": "0.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-x64-Setup.exe.blockmap"
+  },
+  {
+    "id": "mu1itpkda1qcrj",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "lx-music-desktop_2.12.5_amd64.deb",
+    "size": "104.3 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop_2.12.5_amd64.deb"
+  },
+  {
+    "id": "mu1itpkd2d007d",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "lx-music-desktop_2.12.5_arm64.deb",
+    "size": "99.6 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop_2.12.5_arm64.deb"
+  },
+  {
+    "id": "mu1itpkdskzxmz",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "lx-music-desktop_2.12.5_armv7l.deb",
+    "size": "102.4 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop_2.12.5_armv7l.deb"
+  },
+  {
+    "id": "mu1itpkdf5r8a9",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Linux",
+    "filename": "lx-music-desktop_2.12.5_x64.AppImage",
+    "size": "133.1 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop_2.12.5_x64.AppImage"
+  },
+  {
+    "id": "mu1itpkdkfsgd4",
+    "versionId": "mu1itpkdbu4mu1",
+    "platform": "Other",
+    "filename": "lx-music-desktop_2.12.5_x64.pacman",
+    "size": "94.3 MB",
+    "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop_2.12.5_x64.pacman"
+  },
+  {
     "id": "mtyiaf3gnzjsdw",
     "versionId": "mtyiaf3g3mkfo2",
     "platform": "Linux",
