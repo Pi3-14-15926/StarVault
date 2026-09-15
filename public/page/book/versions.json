@@ -893,6 +893,19 @@
     ]
   },
   {
+    "id": "mu2v8r74u10cps",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.37",
+    "publishedAt": "2026-09-14T19:23:30Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\r\n### [发布页](https://t.me/materado)\r\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\r\n\r\n### 更新内容\r\n\r\n* recover(reader): 重建滚动阅读修复分支\r\n* fix: 封面持久化缓存与离线加载、目录字数剔除富文本、书架滚动性能等修复 (#2242)\r\n* fix(source-management): 完善删除确认与书源操作提示 (#2238)\r\n* fix(readaloud): AI 朗读分析补推理级别开关，默认关闭思考 (#2244)\r\n* fix(search): 全文搜索历史只记录确认过的查询 (#2245)\r\n* fix(rhino): 脚本入口先确保上下文工厂已安装，修 RhinoContext 强转崩溃 (#2258)\r\n\r\n## What's Changed\r\n* fix(rhino): 脚本入口先确保上下文工厂已安装，修 RhinoContext 强转崩溃 by @Mupceet in https://github.com/HapeLee/legado-with-MD3/pull/2258\r\n* fix(search): 全文搜索历史只记录确认过的查询 by @kungunier in https://github.com/HapeLee/legado-with-MD3/pull/2245\r\n* fix(readaloud): AI 朗读分析补推理级别开关，默认关闭思考 by @kungunier in https://github.com/HapeLee/legado-with-MD3/pull/2244\r\n* fix(source-management): 完善删除确认与书源操作提示 by @coastline-echo in https://github.com/HapeLee/legado-with-MD3/pull/2238\r\n* fix: 封面持久化缓存与离线加载、目录字数剔除富文本、书架滚动性能等修复 by @2408893730 in https://github.com/HapeLee/legado-with-MD3/pull/2242\r\n\r\n## New Contributors\r\n* @2408893730 made their first contribution in https://github.com/HapeLee/legado-with-MD3/pull/2242\r\n\r\n**Full Changelog**: https://github.com/HapeLee/legado-with-MD3/compare/3.26.16-beta.36...3.26.16-beta.37",
+    "downloadIds": [
+      "mu2v8r741u7q0j",
+      "mu2v8r74yrl5pv",
+      "mu2v8r748r2b3a",
+      "mu2v8r74omn4ws"
+    ]
+  },
+  {
     "id": "mtzz1t7hi874uc",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.36",

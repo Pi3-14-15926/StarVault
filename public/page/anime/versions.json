@@ -548,6 +548,42 @@
     ]
   },
   {
+    "id": "mu2v8wqpujlyna",
+    "projectId": "mpzjkpvzeuh3zl",
+    "version": "2.3.3",
+    "publishedAt": "2026-09-15T14:24:43Z",
+    "changelog": "> [!NOTE]\r\n> 这是 2.3.2 的热修复版本，更多更新日志参考 2.3.2",
+    "downloadIds": [
+      "mu2v8wqpktsek6",
+      "mu2v8wqpi3s6af",
+      "mu2v8wqptpijhv",
+      "mu2v8wqpby42ba",
+      "mu2v8wqptjuyxw",
+      "mu2v8wqp7h9bq2",
+      "mu2v8wqppbqbrn",
+      "mu2v8wqpjctl65",
+      "mu2v8wqpmgl020"
+    ]
+  },
+  {
+    "id": "mu2v8wqpcidvsw",
+    "projectId": "mpzjkpvzeuh3zl",
+    "version": "2.3.2",
+    "publishedAt": "2026-09-15T12:11:13Z",
+    "changelog": "- 优化平板电脑与折叠屏布局适配 (@Predidit)\r\n- 设置页面现在支持宽屏分栏布局 (@LiggMax) (@Predidit)\r\n- 支持通过 WebDAV 同步弹幕屏蔽规则 (#1141 #2503) (@Predidit)\r\n- 低内存模式现在可以在数据网络下禁用 (#2514) (@Predidit)\r\n- 修复关闭评分显示后搜索结果和追番页面仍显示评分的问题 (#2545) (@Predidit)\r\n- 修复搜索结果中部分番剧标题显示不全的问题 (#2539) (@Predidit)\r\n- 修复搜索页面布局切换时输入法连接中断的问题 (@Predidit)\r\n- 修复未启用 WebDAV 观看历史同步时启动仍自动同步的问题 (@melancholyFishAndWater)\r\n- 修复退出播放页面时加载指示器一闪而过的问题 (@Predidit)\r\n- 其他 UI 调整 (@Predidit)",
+    "downloadIds": [
+      "mu2v8wqpvx6201",
+      "mu2v8wqp22p1ix",
+      "mu2v8wqpulzr21",
+      "mu2v8wqpialjrb",
+      "mu2v8wqptgkh66",
+      "mu2v8wqpfncsx4",
+      "mu2v8wqpjyxewy",
+      "mu2v8wqpoo5swt",
+      "mu2v8wqpxcov1k"
+    ]
+  },
+  {
     "id": "mtrhvj0p2c62he",
     "projectId": "mpzjkpvzeuh3zl",
     "version": "2.3.1",
