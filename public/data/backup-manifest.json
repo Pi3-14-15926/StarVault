@@ -1241,6 +1241,73 @@
     {
       "category": "动漫",
       "project": "AniCh",
+      "versionDir": "动漫/AniCh/2026-09-15_1.5.25",
+      "files": [
+        {
+          "name": "anich-android-arm64-v8a-1.5.25.apk",
+          "size": 26528972.8,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-android-arm64-v8a-1.5.25.apk"
+        },
+        {
+          "name": "anich-android-armeabi-v7a-1.5.25.apk",
+          "size": 24851251.2,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-android-armeabi-v7a-1.5.25.apk"
+        },
+        {
+          "name": "anich-android-universal-1.5.25.apk",
+          "size": 74973184,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-android-universal-1.5.25.apk"
+        },
+        {
+          "name": "anich-android-x86_64-1.5.25.apk",
+          "size": 26843545.6,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-android-x86_64-1.5.25.apk"
+        },
+        {
+          "name": "anich-ios-no_sign-1.5.25.ipa",
+          "size": 41209036.8,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-ios-no_sign-1.5.25.ipa"
+        },
+        {
+          "name": "anich-linux-1.5.25.deb",
+          "size": 22439526.4,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-linux-1.5.25.deb"
+        },
+        {
+          "name": "anich-linux-1.5.25.zip",
+          "size": 30198988.8,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-linux-1.5.25.zip"
+        },
+        {
+          "name": "anich-macos-1.5.25.dmg",
+          "size": 55889100.8,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-macos-1.5.25.dmg"
+        },
+        {
+          "name": "anich-macos-1.5.25.zip",
+          "size": 54630809.6,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-macos-1.5.25.zip"
+        },
+        {
+          "name": "anich-ohos-unsigned-1.5.25.hap",
+          "size": 71408025.6,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-ohos-unsigned-1.5.25.hap"
+        },
+        {
+          "name": "anich-windows-1.5.25.zip",
+          "size": 50017075.2,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-windows-1.5.25.zip"
+        },
+        {
+          "name": "anich-windows-installer-1.5.25.exe",
+          "size": 37748736,
+          "url": "/SoftwareHub/动漫/AniCh/2026-09-15_1.5.25/anich-windows-installer-1.5.25.exe"
+        }
+      ]
+    },
+    {
+      "category": "动漫",
+      "project": "AniCh",
       "versionDir": "动漫/AniCh/2026-09-04_1.5.24",
       "files": [
         {
@@ -1302,73 +1369,6 @@
           "name": "anich-windows-installer-1.5.24.exe",
           "size": 37748736,
           "url": "/SoftwareHub/动漫/AniCh/2026-09-04_1.5.24/anich-windows-installer-1.5.24.exe"
-        }
-      ]
-    },
-    {
-      "category": "动漫",
-      "project": "AniCh",
-      "versionDir": "动漫/AniCh/2026-08-24_1.5.23",
-      "files": [
-        {
-          "name": "anich-android-arm64-v8a-1.5.23.apk",
-          "size": 26424115.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-android-arm64-v8a-1.5.23.apk"
-        },
-        {
-          "name": "anich-android-armeabi-v7a-1.5.23.apk",
-          "size": 24851251.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-android-armeabi-v7a-1.5.23.apk"
-        },
-        {
-          "name": "anich-android-universal-1.5.23.apk",
-          "size": 74973184,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-android-universal-1.5.23.apk"
-        },
-        {
-          "name": "anich-android-x86_64-1.5.23.apk",
-          "size": 26843545.6,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-android-x86_64-1.5.23.apk"
-        },
-        {
-          "name": "anich-ios-no_sign-1.5.23.ipa",
-          "size": 41209036.8,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-ios-no_sign-1.5.23.ipa"
-        },
-        {
-          "name": "anich-linux-1.5.23.deb",
-          "size": 22439526.4,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-linux-1.5.23.deb"
-        },
-        {
-          "name": "anich-linux-1.5.23.zip",
-          "size": 30094131.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-linux-1.5.23.zip"
-        },
-        {
-          "name": "anich-macos-1.5.23.dmg",
-          "size": 55889100.8,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-macos-1.5.23.dmg"
-        },
-        {
-          "name": "anich-macos-1.5.23.zip",
-          "size": 54630809.6,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-macos-1.5.23.zip"
-        },
-        {
-          "name": "anich-ohos-unsigned-1.5.23.hap",
-          "size": 71408025.6,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-ohos-unsigned-1.5.23.hap"
-        },
-        {
-          "name": "anich-windows-1.5.23.zip",
-          "size": 50017075.2,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-windows-1.5.23.zip"
-        },
-        {
-          "name": "anich-windows-installer-1.5.23.exe",
-          "size": 37748736,
-          "url": "/SoftwareHub/动漫/AniCh/2026-08-24_1.5.23/anich-windows-installer-1.5.23.exe"
         }
       ]
     },
@@ -1913,5 +1913,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-15T18:09:01.505Z"
+  "updatedAt": "2026-09-16T18:01:19.274Z"
 }

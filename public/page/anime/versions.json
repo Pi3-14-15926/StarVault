@@ -1,5 +1,26 @@
 [
   {
+    "id": "mu4afctjcc481w",
+    "projectId": "mqa2ifsduzlphs",
+    "version": "1.5.25",
+    "publishedAt": "2026-09-15T22:35:34Z",
+    "changelog": "- 优化保存截图按钮的样式\r\n- 新增弹幕密度设置功能\r\n- 新增手动导入本地外挂字幕的功能\r\n- 新增画廊上划打开详情的功能\r\n- 新增开启公共模式时的二次确认的功能\r\n- 新增线路列表HLS格式视频的大小预估功能\r\n- 修复视频链接存在重定向时会下载失败的问题\r\n- 修复部分HLS格式视频假下载的问题\r\n- 修复部分视频链接可以访问却显示错误状态码的问题\r\n- 修复评分只显示整数的问题\r\n- 修复注册与修改用户名、密码失败时错误提示不够详细的问题",
+    "downloadIds": [
+      "mu4afctj8r21jd",
+      "mu4afctj9aw6ra",
+      "mu4afctje3gb6d",
+      "mu4afctjos4pkj",
+      "mu4afctjz9hhh9",
+      "mu4afctj4uamgc",
+      "mu4afctjtr2wfr",
+      "mu4afctjo33rji",
+      "mu4afctjuqjk6x",
+      "mu4afctjys945q",
+      "mu4afctjqbbxux",
+      "mu4afctjvcznsj"
+    ]
+  },
+  {
     "id": "mtoha57o48o5il",
     "projectId": "mqa2ifsduzlphs",
     "version": "1.5.24",

@@ -1,5 +1,101 @@
 [
   {
+    "id": "mu4afctj8r21jd",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Android",
+    "filename": "anich-android-arm64-v8a-1.5.25.apk",
+    "size": "25.3 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-android-arm64-v8a-1.5.25.apk"
+  },
+  {
+    "id": "mu4afctj9aw6ra",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Android",
+    "filename": "anich-android-armeabi-v7a-1.5.25.apk",
+    "size": "23.7 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-android-armeabi-v7a-1.5.25.apk"
+  },
+  {
+    "id": "mu4afctje3gb6d",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Android",
+    "filename": "anich-android-universal-1.5.25.apk",
+    "size": "71.5 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-android-universal-1.5.25.apk"
+  },
+  {
+    "id": "mu4afctjos4pkj",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Android",
+    "filename": "anich-android-x86_64-1.5.25.apk",
+    "size": "25.6 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-android-x86_64-1.5.25.apk"
+  },
+  {
+    "id": "mu4afctjz9hhh9",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Other",
+    "filename": "anich-ios-no_sign-1.5.25.ipa",
+    "size": "39.3 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-ios-no_sign-1.5.25.ipa"
+  },
+  {
+    "id": "mu4afctj4uamgc",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Linux",
+    "filename": "anich-linux-1.5.25.deb",
+    "size": "21.4 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-linux-1.5.25.deb"
+  },
+  {
+    "id": "mu4afctjtr2wfr",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Linux",
+    "filename": "anich-linux-1.5.25.zip",
+    "size": "28.8 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-linux-1.5.25.zip"
+  },
+  {
+    "id": "mu4afctjo33rji",
+    "versionId": "mu4afctjcc481w",
+    "platform": "MacOS",
+    "filename": "anich-macos-1.5.25.dmg",
+    "size": "53.3 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-macos-1.5.25.dmg"
+  },
+  {
+    "id": "mu4afctjuqjk6x",
+    "versionId": "mu4afctjcc481w",
+    "platform": "MacOS",
+    "filename": "anich-macos-1.5.25.zip",
+    "size": "52.1 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-macos-1.5.25.zip"
+  },
+  {
+    "id": "mu4afctjys945q",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Other",
+    "filename": "anich-ohos-unsigned-1.5.25.hap",
+    "size": "68.1 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-ohos-unsigned-1.5.25.hap"
+  },
+  {
+    "id": "mu4afctjqbbxux",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Windows",
+    "filename": "anich-windows-1.5.25.zip",
+    "size": "47.7 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-windows-1.5.25.zip"
+  },
+  {
+    "id": "mu4afctjvcznsj",
+    "versionId": "mu4afctjcc481w",
+    "platform": "Windows",
+    "filename": "anich-windows-installer-1.5.25.exe",
+    "size": "36.0 MB",
+    "url": "https://github.com/Sle2p/AniCh/releases/download/1.5.25/anich-windows-installer-1.5.25.exe"
+  },
+  {
     "id": "mtoha57o033zxe",
     "versionId": "mtoha57o48o5il",
     "platform": "Android",
