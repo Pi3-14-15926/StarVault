@@ -1,5 +1,21 @@
 [
   {
+    "id": "mu5q47oreyky8m",
+    "versionId": "mu5q47or3co9w0",
+    "platform": "Android",
+    "filename": "legado_app_3.26.09160852-smooth_29825332.apk",
+    "size": "39.3 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.09160852-smooth/legado_app_3.26.09160852-smooth_29825332.apk"
+  },
+  {
+    "id": "mu5q47ore9a9wi",
+    "versionId": "mu5q47or3co9w0",
+    "platform": "Other",
+    "filename": "SHA256SUMS.txt",
+    "size": "0.0 MB",
+    "url": "https://github.com/Rimchars/legado/releases/download/archive-v3-3.26.09160852-smooth/SHA256SUMS.txt"
+  },
+  {
     "id": "mtn4fmq1n0dc4p",
     "versionId": "mtn4fmq1za7vjl",
     "platform": "Android",

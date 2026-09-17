@@ -7,11 +7,11 @@
     "description": "阅读Archive继承自 Lyc 维护的 Legado 分支，增强界面、AI、EPUB、漫画、视频和主题能力。",
     "logo": "https://raw.githubusercontent.com/Rimchars/legado/main/docs/archive_icon.svg",
     "featured": false,
-    "latestVersionId": "mtn4fmq1za7vjl",
-    "latestUpdateTime": "2026-09-04T06:46:01Z",
+    "latestVersionId": "mu5q47or3co9w0",
+    "latestUpdateTime": "2026-09-16T19:22:45Z",
     "githubRepo": "Rimchars/legado",
     "githubUrl": "https://github.com/Rimchars/legado",
-    "stars": 534,
+    "stars": 535,
     "forks": 32
   },
   {
@@ -26,8 +26,8 @@
     "latestUpdateTime": "2026-06-07T15:49:08Z",
     "githubRepo": "anxcye/anx-reader",
     "githubUrl": "https://github.com/anxcye/anx-reader",
-    "stars": 8857,
-    "forks": 629
+    "stars": 8862,
+    "forks": 630
   },
   {
     "id": "mpwowqbvn123ig",
@@ -56,8 +56,8 @@
     "latestUpdateTime": "2026-09-14T19:23:30Z",
     "githubRepo": "HapeLee/legado-with-MD3",
     "githubUrl": "https://github.com/HapeLee/legado-with-MD3",
-    "stars": 6120,
-    "forks": 682
+    "stars": 6139,
+    "forks": 683
   },
   {
     "id": "mpwp1hvpsn5ffl",
@@ -71,7 +71,7 @@
     "latestUpdateTime": "2026-06-17T15:43:18Z",
     "githubRepo": "youfengknight/Legado_Max",
     "githubUrl": "https://github.com/youfengknight/Legado_Max",
-    "stars": 279,
+    "stars": 280,
     "forks": 34
   },
   {
@@ -116,7 +116,7 @@
     "latestUpdateTime": "2026-07-15T15:09:08Z",
     "githubRepo": "Luoyacheng/legado",
     "githubUrl": "https://github.com/Luoyacheng/legado",
-    "stars": 2667,
+    "stars": 2674,
     "forks": 626
   },
   {
@@ -131,8 +131,8 @@
     "latestUpdateTime": "2026-09-07T19:43:08Z",
     "githubRepo": "readest/readest",
     "githubUrl": "https://github.com/readest/readest",
-    "stars": 24375,
-    "forks": 1584
+    "stars": 24410,
+    "forks": 1586
   },
   {
     "id": "mpwreu1xdmxt5v",
@@ -146,8 +146,8 @@
     "latestUpdateTime": "2026-09-13T17:24:35Z",
     "githubRepo": "lyswhut/lx-music-desktop",
     "githubUrl": "https://github.com/lyswhut/lx-music-desktop",
-    "stars": 53663,
-    "forks": 7010
+    "stars": 53687,
+    "forks": 7011
   },
   {
     "id": "mqdz0w9jb6a6mx",
@@ -162,8 +162,8 @@
     "githubRepo": "lyswhut/lx-music-mobile",
     "githubUrl": "https://github.com/lyswhut/lx-music-mobile",
     "website": "LX Music 移动版",
-    "stars": 18290,
-    "forks": 2099
+    "stars": 18302,
+    "forks": 2103
   },
   {
     "id": "mqdz4vlw18enkx",
@@ -177,8 +177,8 @@
     "latestUpdateTime": "2026-09-13T14:28:51Z",
     "githubRepo": "maotoumao/MusicFree",
     "githubUrl": "https://github.com/maotoumao/MusicFree",
-    "stars": 26910,
-    "forks": 1936
+    "stars": 26933,
+    "forks": 1940
   },
   {
     "id": "mqdz5tn7va86j4",
@@ -192,7 +192,7 @@
     "latestUpdateTime": "2026-03-23T09:15:42Z",
     "githubRepo": "maotoumao/MusicFreeDesktop",
     "githubUrl": "https://github.com/maotoumao/MusicFreeDesktop",
-    "stars": 8853,
+    "stars": 8861,
     "forks": 860
   },
   {
@@ -207,7 +207,7 @@
     "latestUpdateTime": "2026-09-15T10:56:25Z",
     "githubRepo": "kejichangqing/QingMusic",
     "githubUrl": "https://github.com/kejichangqing/QingMusic",
-    "stars": 1587,
+    "stars": 1593,
     "forks": 74
   },
   {
@@ -222,7 +222,7 @@
     "latestUpdateTime": "2026-09-06T12:59:47Z",
     "githubRepo": "Moriafly/SaltPlayerSource",
     "githubUrl": "https://github.com/Moriafly/SaltPlayerSource",
-    "stars": 7360,
+    "stars": 7363,
     "forks": 216
   },
   {
@@ -237,7 +237,7 @@
     "latestUpdateTime": "2026-09-15T22:35:34Z",
     "githubRepo": "Sle2p/AniCh",
     "githubUrl": "https://github.com/Sle2p/AniCh",
-    "stars": 6377,
+    "stars": 6388,
     "forks": 131
   },
   {
@@ -252,8 +252,8 @@
     "latestUpdateTime": "2026-09-15T14:24:43Z",
     "githubRepo": "Predidit/Kazumi",
     "githubUrl": "https://github.com/Predidit/Kazumi",
-    "stars": 29973,
-    "forks": 893
+    "stars": 30007,
+    "forks": 895
   },
   {
     "id": "mpzjjzg2ylm14p",
@@ -263,12 +263,12 @@
     "description": "集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform",
     "logo": "https://avatars.githubusercontent.com/u/166622089?v=4",
     "featured": true,
-    "latestVersionId": "mtdh87005capu1",
-    "latestUpdateTime": "2026-08-28T16:41:30Z",
+    "latestVersionId": "mu5q4ezuydsmbe",
+    "latestUpdateTime": "2026-09-17T09:39:06Z",
     "githubRepo": "open-ani/animeko",
     "githubUrl": "https://github.com/open-ani/animeko",
-    "stars": 20125,
-    "forks": 567
+    "stars": 20136,
+    "forks": 568
   },
   {
     "id": "mqf2wp9ruusxo6",
@@ -306,8 +306,8 @@
     "latestUpdateTime": "2026-03-11T18:03:11Z",
     "githubRepo": "BeyondDimension/SteamTools",
     "githubUrl": "https://github.com/BeyondDimension/SteamTools",
-    "stars": 26857,
-    "forks": 1710
+    "stars": 26864,
+    "forks": 1711
   },
   {
     "id": "mqf8eoolhym84x",
@@ -321,7 +321,7 @@
     "latestUpdateTime": "2026-08-22T07:35:11Z",
     "githubRepo": "dyang886/Game-Cheats-Manager",
     "githubUrl": "https://github.com/dyang886/Game-Cheats-Manager",
-    "stars": 14704,
+    "stars": 14714,
     "forks": 498
   },
   {
@@ -336,7 +336,7 @@
     "latestUpdateTime": "2026-09-13T13:36:34Z",
     "githubRepo": "utkarshdalal/GameNative",
     "githubUrl": "https://github.com/utkarshdalal/GameNative",
-    "stars": 10588,
+    "stars": 10603,
     "forks": 420
   }
 ]
