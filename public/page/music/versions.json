@@ -1,5 +1,39 @@
 [
   {
+    "id": "mu8j4k5gcswg6z",
+    "projectId": "mpwreu1xdmxt5v",
+    "version": "v2.12.6",
+    "publishedAt": "2026-09-19T02:23:52Z",
+    "changelog": "目前新项目 Any Listen 的桌面版、Web 版已实现 LX Music 的大部分功能，并额外支持 WebDAV 歌曲播放、WebDAV 数据同步、独立播放列表等功能。\r\n以后的开发精力将主要集中在新项目上，之前大家在 LX Music 提的功能我们也会考虑在新项目中添加。\r\n对于日常使用 LX Music 的人可以试试迁移到 Any Listen，若遇到任何问题可以发 issue 反馈。\r\nAny Listen 的项目地址为 https://github.com/any-listen/any-listen\r\n\r\n### 优化\r\n\r\n- 优化 tx 推荐歌单列表\r\n- 优化禁用透明窗口的窗口边框显示效果\r\n\r\n### 修复\r\n\r\n- 修复打开某些 kg 歌单时歌曲丢失的问题\r\n- 修复 Windows 7 无法启动的问题\r\n- 修复禁用透明窗口时按 F11 无法全屏的问题\r\n\r\n### 安装包快捷链接\r\n\r\n- Windows x64: [lx-music-desktop-v2.12.6-x64-Setup.exe](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-v2.12.6-x64-Setup.exe)\r\n- MacOS arm64: [lx-music-desktop-2.12.6-arm64.dmg](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-2.12.6-arm64.dmg)\r\n- Linux amd64 deb: [lx-music-desktop_2.12.6_amd64.deb](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop_2.12.6_amd64.deb)\r\n\r\n### File MD5\r\n\r\n```\r\n\r\nEE6E6C58B4EBCBADD689A26904245412  lx-music-desktop-v2.12.6-arm64-Setup.exe\r\nFC8D5CA1486C20A80A3872CAC164BD96  lx-music-desktop-v2.12.6-x64-Setup.exe\r\nE465D42988B2DEB1524C3FB93FB8C93C  lx-music-desktop-v2.12.6-win_arm64-green.7z\r\nD45A6D2069F029152E114D8E6E4D3285  lx-music-desktop-v2.12.6-win_x64-green.7z\r\n555B3AE80DABAADC12BD9FAC054844B7  lx-music-desktop-v2.12.6-win7_x64-Setup.exe\r\n3FC618E78ACCDC3BCB84FE28506DD968  lx-music-desktop-v2.12.6-win7_x64-green.7z\r\n98C8CCAA07D25C9D8B3D93AE4145275E  lx-music-desktop-v2.12.6-win7_x86-green.7z\r\n\r\nMD5 (lx-music-desktop-2.12.6-arm64.dmg) = de41c1e9be5c1e761e35994f06a61bcf\r\nMD5 (lx-music-desktop-2.12.6-x64.dmg) = ad60f91f8ea01116e3518500d353b503\r\n\r\n8e3cec15c0ec0d0c56bff682a5e8bb54  lx-music-desktop_2.12.6_amd64.deb\r\n2811f0cd205af44246c004067711e7ba  lx-music-desktop_2.12.6_arm64.deb\r\nd43640d0971df6c4844a5a7ad63a7a9f  lx-music-desktop_2.12.6_armv7l.deb\r\n5f974677148d22eb692fc4c5b84c80d2  lx-music-desktop-2.12.6.x64.rpm\r\nfcf688e6ecfdbd92c39fa781fdf1a1f5  lx-music-desktop_2.12.6_x64.pacman\r\n9c1107bf03e4b3c5502ed47992706336  lx-music-desktop_2.12.6_x64.AppImage\r\n```\r\n\r\n[软件安装包说明](https://lyswhut.github.io/lx-music-doc/download#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E8%AF%B4%E6%98%8E)\r\n",
+    "downloadIds": [
+      "mu8j4k5grd50kk",
+      "mu8j4k5giqhgja",
+      "mu8j4k5gkk2gcf",
+      "mu8j4k5gqmtj2g",
+      "mu8j4k5g03z4uk",
+      "mu8j4k5g4jpam1",
+      "mu8j4k5gno7j06",
+      "mu8j4k5g8qpajv",
+      "mu8j4k5gqy1r6h",
+      "mu8j4k5gcoxdh3",
+      "mu8j4k5g85enuq",
+      "mu8j4k5gbbj1qj",
+      "mu8j4k5gxdrzz5",
+      "mu8j4k5gy92tvy",
+      "mu8j4k5gxo49rz",
+      "mu8j4k5ghohpgc",
+      "mu8j4k5gnzvel9",
+      "mu8j4k5g5qv7kz",
+      "mu8j4k5gniaavb",
+      "mu8j4k5gxq3krb",
+      "mu8j4k5gvmodkg",
+      "mu8j4k5gch9vsa",
+      "mu8j4k5g6vmego",
+      "mu8j4k5gfft41n",
+      "mu8j4k5gf54ph4"
+    ]
+  },
+  {
     "id": "mu1itpkdbu4mu1",
     "projectId": "mpwreu1xdmxt5v",
     "version": "v2.12.5",
@@ -784,6 +818,20 @@
       "dl_hyype4e10p",
       "dl_lmghy686wo",
       "dl_c4kmw0av2x"
+    ]
+  },
+  {
+    "id": "mu8j4kj0nuodw2",
+    "projectId": "mqdz0w9jb6a6mx",
+    "version": "v1.9.1",
+    "publishedAt": "2026-09-19T02:04:49Z",
+    "changelog": "### 优化\n\n- 优化 tx 推荐歌单列表\n\n### 修复\n\n- 修复打开某些 kg 歌单时歌曲丢失的问题\n\n### File MD5\n```\nacf082837b4340c89509b078af17de0c  lx-music-mobile-v1.9.1-arm64-v8a.apk\nd5bce179c988097f40628e9fb2607a86  lx-music-mobile-v1.9.1-armeabi-v7a.apk\n6e2f249f798f36e1fe41803deab575b1  lx-music-mobile-v1.9.1-universal.apk\n5ec9e4fc4056b027fc95f41a62bf8b61  lx-music-mobile-v1.9.1-x86.apk\n98f5040e8b13ea2870ff4c5d7cf8e2d7  lx-music-mobile-v1.9.1-x86_64.apk\n```\n\n\n[软件安装包说明](https://lyswhut.github.io/lx-music-doc/download#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E8%AF%B4%E6%98%8E)\n\n",
+    "downloadIds": [
+      "mu8j4kj06mx2ti",
+      "mu8j4kj0fucghe",
+      "mu8j4kj0ntonp1",
+      "mu8j4kj0sn8ttc",
+      "mu8j4kj0674t80"
     ]
   },
   {

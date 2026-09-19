@@ -904,6 +904,19 @@
     ]
   },
   {
+    "id": "mu8j4hmdubca4u",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.38",
+    "publishedAt": "2026-09-18T16:53:28Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\r\n### [发布页](https://t.me/materado)\r\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\r\n\r\n### 更新内容\r\n\r\n* feat: 油滑\r\n* feat: 适配Android 17的ACCESS_LOCAL_NETWORK权限\r\n* fix: 收掉 main 上的 CI 红灯并修正 Web 产物自动提交触发器 (#2281)\r\n* Bump web v3.26.091821\r\n* fix(web): 自动翻页章末与交互边界修正\r\n* fix(reader): Latin 换行回退不再制造行尾禁则违规\r\n* feat: 听书增加按章节定时，默认后台播放，全局播放胶囊等神秘功能\r\n* feat: 听书相关问题\r\n* feat: 增强章节编辑功能\r\n* Bump web v3.26.091800\r\n* feat: 添加 Xbox 手柄 LB 和 RB 按键支持，增加翻页功能\r\n* feat: 漫画条漫模式时的细线问题\r\n* feat: 阅读界面神必问题\r\n* fix(reader): preserve Latin word boundaries when wrapping\r\n* feat(reader): 预置 excludeActionImages 排版能力——带动作脚本的图片（段评气泡）可在测量层整体剔除\r\n* fix(app): 崩溃重启改走 launcher 组件解析——图标别名切换会禁用 MainActivity，显式 Intent 启动即崩\r\n* feat(web): 补全 BookChapter.vue 自动翻页核心逻辑（rAF 滚动 + 暂停恢复状态机）\r\n* feat(web): 阅读界面新增自动翻页功能（滚动模式）\r\n\r\n## What's Changed\r\n* feat(web)：阅读界面新增\"自动翻页\"功能（滚动模式） by @rinnki-L in https://github.com/HapeLee/legado-with-MD3/pull/2263\r\n* fix(app): 崩溃重启改走 launcher 组件解析——图标别名切换会禁用 MainActivity，显式 Intent 启动即崩 by @Mupceet in https://github.com/HapeLee/legado-with-MD3/pull/2266\r\n* feat(reader): 预置 excludeActionImages 排版能力——带动作脚本的图片（段评气泡）可在测量层整体剔除 by @Mupceet in https://github.com/HapeLee/legado-with-MD3/pull/2267\r\n* fix(reader): 修复英文/Latin 单词异常断行 by @ViqUey in https://github.com/HapeLee/legado-with-MD3/pull/2274\r\n* Add Xbox controller LB/RB support and paging feature by @mobeicanyue in https://github.com/HapeLee/legado-with-MD3/pull/2280\r\n* fix: 收掉 main 上的 CI 红灯（API 26 崩溃 / 规则引擎快捷路径 / lint / 文档死链） by @HapeLee in https://github.com/HapeLee/legado-with-MD3/pull/2281\r\n\r\n## New Contributors\r\n* @rinnki-L made their first contribution in https://github.com/HapeLee/legado-with-MD3/pull/2263\r\n* @ViqUey made their first contribution in https://github.com/HapeLee/legado-with-MD3/pull/2274\r\n\r\n**Full Changelog**: https://github.com/HapeLee/legado-with-MD3/compare/3.26.16-beta.37...3.26.16-beta.38",
+    "downloadIds": [
+      "mu8j4hmdh76wgk",
+      "mu8j4hmdjrf5bv",
+      "mu8j4hmdh0tmaj",
+      "mu8j4hmdahux9y"
+    ]
+  },
+  {
     "id": "mu2v8r74u10cps",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.37",
