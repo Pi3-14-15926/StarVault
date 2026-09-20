@@ -1857,6 +1857,23 @@
     {
       "category": "游戏",
       "project": "GameCheatsManager_游戏辅助管理",
+      "versionDir": "游戏/GameCheatsManager_游戏辅助管理/2026-09-19_v2.5.1",
+      "files": [
+        {
+          "name": "Game.Cheats.Manager.Portable.2.5.1.zip",
+          "size": 53791948.8,
+          "url": "/SoftwareHub/游戏/GameCheatsManager_游戏辅助管理/2026-09-19_v2.5.1/Game.Cheats.Manager.Portable.2.5.1.zip"
+        },
+        {
+          "name": "Game.Cheats.Manager.Setup.2.5.1.exe",
+          "size": 39426457.6,
+          "url": "/SoftwareHub/游戏/GameCheatsManager_游戏辅助管理/2026-09-19_v2.5.1/Game.Cheats.Manager.Setup.2.5.1.exe"
+        }
+      ]
+    },
+    {
+      "category": "游戏",
+      "project": "GameCheatsManager_游戏辅助管理",
       "versionDir": "游戏/GameCheatsManager_游戏辅助管理/2026-08-22_v2.5.0",
       "files": [
         {
@@ -1868,18 +1885,6 @@
           "name": "Game.Cheats.Manager.Setup.2.5.0.exe",
           "size": 40999321.6,
           "url": "/SoftwareHub/游戏/GameCheatsManager_游戏辅助管理/2026-08-22_v2.5.0/Game.Cheats.Manager.Setup.2.5.0.exe"
-        }
-      ]
-    },
-    {
-      "category": "游戏",
-      "project": "GameCheatsManager_游戏辅助管理",
-      "versionDir": "游戏/GameCheatsManager_游戏辅助管理/2026-03-16_v2.4.6",
-      "files": [
-        {
-          "name": "Game.Cheats.Manager.Setup.2.4.6.exe",
-          "size": 44669337.6,
-          "url": "/SoftwareHub/游戏/GameCheatsManager_游戏辅助管理/2026-03-16_v2.4.6/Game.Cheats.Manager.Setup.2.4.6.exe"
         }
       ]
     },
@@ -1918,5 +1923,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-19T21:10:42.460Z"
+  "updatedAt": "2026-09-20T19:18:21.503Z"
 }

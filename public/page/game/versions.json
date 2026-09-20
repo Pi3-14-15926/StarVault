@@ -296,6 +296,17 @@
     ]
   },
   {
+    "id": "mu9yqhqg6wn1je",
+    "projectId": "mqf8eoolhym84x",
+    "version": "v2.5.1",
+    "publishedAt": "2026-09-19T18:22:43Z",
+    "changelog": "## Patch Update\r\n\r\n### English\r\n- Completely overhauled trainer downloads and updates with end-to-end file validation, archive integrity checks, verified backups, automatic rollback on failure, clearer error reporting, and improved protection against incomplete or antivirus-blocked installations\r\n- Improved trainer sorting and searching\r\n- Improved FLiNG background-music removal, now `ResourceHacker.exe` is no longer needed as a dependency\r\n- Added safe-path support when launching `Cheat Engine` and `.ct/.cetrainer` files\r\n\r\n### 简体中文\r\n- 全面优化修改器的下载与更新流程，新增端到端文件验证、压缩包完整性检查、备份验证、失败自动回滚及更清晰的错误提示，并加强对文件不完整或被杀毒软件拦截等情况的防护\r\n- 改进修改器的排序与搜索功能\r\n- 改进 FLiNG 修改器背景音乐移除功能，不再需要依赖 `ResourceHacker.exe`\r\n- 为 `Cheat Engine` 及 `.ct/.cetrainer` 文件新增安全路径支持",
+    "downloadIds": [
+      "mu9yqhqgs0yubn",
+      "mu9yqhqg7ua3kh"
+    ]
+  },
+  {
     "id": "mt5sd27njke4z3",
     "projectId": "mqf8eoolhym84x",
     "version": "v2.5.0",
