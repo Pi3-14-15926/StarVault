@@ -904,6 +904,19 @@
     ]
   },
   {
+    "id": "mubjdi96xn6zkj",
+    "projectId": "mpwouieuddbq2d",
+    "version": "3.26.16-beta.39",
+    "publishedAt": "2026-09-20T20:41:28Z",
+    "changelog": "**此版本为测试版，会存在不稳定问题。**\n### [发布页](https://t.me/materado)\n### [反馈群组](https://t.me/+Yn1_v5PZqddmMjQ1)\n\n### 更新内容\n\n* fix(reader): preserve word selection until drag starts (#2288)\n* feat: 优化章节载入\n* feat: 优化换源与新书冲突\n* feat: 选择模式相关\n* feat: 高亮规则修复与预设\n* feat: 一些书源兼容性\n* feat: 神秘界面优化和依赖更新\n* feat: 听书底部按钮\n* feat: 详情页Web渲染\n* feat: 翻页速度\n* feat: 笔记样式优化\n* feat: 分组管理样式优化\n* fix(search): 从书籍详情返回后保留搜索关键词与结果列表\n* feat: 神秘黑客技能（很黑客）",
+    "downloadIds": [
+      "mubjdi96a5obfk",
+      "mubjdi96optpou",
+      "mubjdi96lzuxdn",
+      "mubjdi96xwou2h"
+    ]
+  },
+  {
     "id": "mu8j4hmdubca4u",
     "projectId": "mpwouieuddbq2d",
     "version": "3.26.16-beta.38",
