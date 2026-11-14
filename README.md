@@ -2,6 +2,7 @@
 
 一个现代化的多版本软件聚合平台，支持 GitHub Release 自动同步、多云盘备份、CDN 加速下载。
 
+
 > 自动从 GitHub Releases 同步版本、下载量等数据，提供分类浏览、全文搜索、排行榜等功能。
 > 后台管理面板支持 WebDAV / OneDrive / Google Drive 多渠道云盘备份。
 
